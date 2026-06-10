@@ -161,6 +161,8 @@ a.codelink{color:var(--accent);text-decoration:none}
 .mapedge{stroke:#46506180;stroke-width:1.3;fill:none}
 .mapedge.dang{stroke:var(--hi);stroke-dasharray:4 3}
 .maplbl{fill:var(--mut);font:600 12px sans-serif}
+body.gradmode .lvl-chip, body.gradmode #newOnly{display:none}
+#progSeg button.on{background:var(--accent2)}
 </style>
 </head>
 <body>
@@ -173,6 +175,10 @@ a.codelink{color:var(--accent);text-decoration:none}
     <div class="spacer"></div>
     <button class="editbtn" id="editBtn" title="Toggle editing of instructors and issue status">&#9998; Edit</button>
     <button class="exportbtn" id="exportBtn" title="Download overrides.json to commit">&#8681; Export overrides</button>
+    <div class="seg" id="progSeg" title="Undergraduate BSc vs Graduate MSc calendar">
+      <button data-p="ug" class="on">Undergrad BSc</button>
+      <button data-p="grad">Graduate MSc</button>
+    </div>
     <div class="seg" id="yearSeg">
       <button data-y="2025/2026">2025/2026</button>
       <button data-y="2026/2027" class="on">2026/2027</button>
@@ -259,18 +265,22 @@ function mergeOverrides(remote){
     status:      Object.assign({}, BASE_OVERRIDES.status||{},      (remote&&remote.status)||{},      local.status||{}),
   };
 }
-const state = {year:"2026/2027", tab:"courses", view:"expanded", lvl:"all", q:"", issuesOnly:false, newOnly:false, edit:false};
+const state = {year:"2026/2027", program:"ug", tab:"courses", view:"expanded", lvl:"all", q:"", issuesOnly:false, newOnly:false, edit:false};
 const $ = s=>document.querySelector(s);
 const lvlColor = l=>({100:"var(--l100)",200:"var(--l200)",300:"var(--l300)",400:"var(--l400)"}[l]||"#555");
+const gradColors={"Core":"#3a7bd5","MMSC electives":"#c0556a","CPPH electives":"#2bb3a3","Shared electives":"#c98a2b","Thesis & directed":"#7c5cff","Other":"#555"};
+const gradColor = g=>gradColors[g]||"#555";
 const sevRank = {hi:0,med:1,low:2};
+const isGrad = ()=>state.program==="grad";
 
-function newCodes(){ // primaries present in 26/27 but not 25/26
-  const a=new Set(DATA["2025/2026"].map(c=>c.primary));
-  return new Set(DATA["2026/2027"].filter(c=>!a.has(c.primary)).map(c=>c.primary));
+function setFor(yr){ return isGrad()? DATA.grad[yr] : DATA[yr]; }
+function newCodes(){ // primaries present in 26/27 but not 25/26 (within current program)
+  const a=new Set(setFor("2025/2026").map(c=>c.primary));
+  return new Set(setFor("2026/2027").filter(c=>!a.has(c.primary)).map(c=>c.primary));
 }
-const NEW = newCodes();
+let NEW = newCodes();
 
-function courses(){return DATA[state.year];}
+function courses(){return setFor(state.year);}
 function topSev(c){ if(!c.issues.length) return null;
   return c.issues.slice().sort((x,y)=>sevRank[x.sev]-sevRank[y.sev])[0].sev; }
 
@@ -321,14 +331,16 @@ function cardHTML(c){
   const xl = c.code.includes("/")?`<div class="xlist">cross-listed: ${c.code}</div>`:"";
   const instr=getInstr(c.primary);
   const instrLine = instr?`<div class="xlist" style="color:var(--mut)">&#128100; ${esc(instr)}</div>`:"";
+  const stripe = isGrad()? gradColor(c.group) : lvlColor(c.level);
+  const tag = isGrad()? c.group : (c.level+" level");
   return `<div class="card" data-code="${c.code}">
-    <div class="lvl" style="background:${lvlColor(c.level)}"></div>
+    <div class="lvl" style="background:${stripe}"></div>
     <div class="badges">${badges.join("")}</div>
     <h3>${c.primary}</h3>
     <div class="ttl">${c.title||"<span class='placeholder'>(untitled)</span>"}</div>
     <div class="meta"><span class="pill">${(c.credit||"?").replace(' Credit','&nbsp;cr')}</span>
       <span class="pill">${c.term||"term n/s"}</span>
-      <span class="pill">${c.level} level</span></div>
+      <span class="pill">${tag}</span></div>
     ${xl}${instrLine}
     <a class="cardlink" href="${c.url}" target="_blank" rel="noopener" onclick="event.stopPropagation()">calendar &#8599;</a>
   </div>`;
@@ -340,17 +352,23 @@ function miniHTML(c){
   const ni = NEW.has(c.primary)?`<span class="ni" title="New in 2026/27"></span>`:"";
   return `<div class="minibox${flag}" data-code="${c.code}" title="${(c.title||'').replace(/"/g,'&quot;')}">${c.primary}${ni}</div>`;
 }
-function colHTML(level,items){
+function colHTML(label,color,items){
   const empty = items.length?"":" empty";
   return `<div class="col${empty}">
-    <div class="col-h"><span class="swatch" style="background:${lvlColor(level)}"></span>
-      <b>${level} level</b><span class="ct">${items.length}</span></div>
+    <div class="col-h"><span class="swatch" style="background:${color}"></span>
+      <b>${label}</b><span class="ct">${items.length}</span></div>
     <div class="boxes">${items.map(miniHTML).join("")||'<span class="placeholder" style="font-size:12px">none</span>'}</div>
   </div>`;
 }
+// grouping abstraction for the collapsed view (level for UG, curriculum role for grad)
+function grouping(){
+  if(isGrad()) return {order:DATA.gradGroupOrder, of:c=>c.group, label:g=>g, color:gradColor};
+  const levels = state.lvl!=="all" ? [+state.lvl] : [100,200,300,400];
+  return {order:levels, of:c=>c.level, label:L=>L+" level", color:lvlColor};
+}
 function renderGrid(){
   let list=courses().slice();
-  if(state.lvl!=="all") list=list.filter(c=>c.level==+state.lvl);
+  if(!isGrad() && state.lvl!=="all") list=list.filter(c=>c.level==+state.lvl);
   if(state.issuesOnly) list=list.filter(c=>c.issues.length);
   if(state.newOnly) list=list.filter(c=>NEW.has(c.primary));
   if(state.q){const q=state.q.toLowerCase();
@@ -358,8 +376,8 @@ function renderGrid(){
   list.sort((a,b)=>a.level-b.level || a.primary.localeCompare(b.primary));
   renderStats(courses());
   if(state.view==="collapsed"){
-    const levels = state.lvl!=="all" ? [+state.lvl] : [100,200,300,400];
-    const cols = levels.map(L=>colHTML(L, list.filter(c=>c.level===L)));
+    const g=grouping();
+    const cols = g.order.map(k=>colHTML(g.label(k), g.color(k), list.filter(c=>g.of(c)===k)));
     $("#grid").innerHTML=`<div class="cols">${cols.join("")}</div>`;
   } else {
     $("#grid").innerHTML=`<div class="grid-cards">${list.map(cardHTML).join("")}</div>`
@@ -395,9 +413,10 @@ function openModal(code){
     <div class="kv">
       <span class="pill">${c.credit||"credit n/s"}</span>
       <span class="pill">${c.term||"term not specified"}</span>
-      <span class="pill">${c.level} level</span>
+      <span class="pill">${isGrad()?c.group:(c.level+" level")}</span>
       ${c.code.includes("/")?`<span class="pill">cross-listed: ${c.code}</span>`:""}
     </div>
+    ${isGrad()&&c.roles&&c.roles.length?`<div class="sec"><h4>Counts toward</h4><div style="display:flex;gap:6px;flex-wrap:wrap">${c.roles.map(r=>`<span class="rl">${r}</span>`).join("")}</div></div>`:""}
     <div class="sec"><h4>Description</h4>
       <p>${c.description? c.description : '<span class="placeholder">No description in the calendar.</span>'}</p></div>
     ${c.hours?`<div class="sec"><h4>Hours</h4><p>${c.hours}</p></div>`:""}
@@ -417,9 +436,13 @@ $("#scrim").onclick=closeModal;
 function allIssueRows(){
   const rows=[];
   courses().forEach(c=>c.issues.forEach((i,idx)=>rows.push({code:c.primary,title:c.title,k:issueKey(c.primary,idx),...i})));
-  DATA.programIssues.forEach((i,idx)=>rows.push({code:"PROGRAM",title:"Degree structure",k:issueKey("PROGRAM",idx),...i}));
+  if(isGrad()){
+    DATA.gradProgramIssues.forEach((i,idx)=>rows.push({code:"MSc PROGRAM",title:"MSc structure",k:issueKey("GPROGRAM",idx),...i}));
+  } else {
+    DATA.programIssues.forEach((i,idx)=>rows.push({code:"PROGRAM",title:"Degree structure",k:issueKey("PROGRAM",idx),...i}));
+    DATA.globalIssues.forEach((i,idx)=>rows.push({code:"GLOBAL",title:"Both years / site-wide",k:issueKey("GLOBAL",idx),...i}));
+  }
   (DATA.facultyIssues||[]).forEach((i,idx)=>rows.push({code:"FACULTY",title:"Faculty roster",k:issueKey("FACULTY",idx),...i}));
-  DATA.globalIssues.forEach((i,idx)=>rows.push({code:"GLOBAL",title:"Both years / site-wide",k:issueKey("GLOBAL",idx),...i}));
   return rows;
 }
 function renderIssues(){
@@ -441,11 +464,16 @@ function renderIssues(){
 }
 
 function renderProgram(){
-  const pi=DATA.programIssues.slice().sort((a,b)=>sevRank[a.sev]-sevRank[b.sev]);
-  $("#programIssues").innerHTML=pi.map(i=>
+  const pIssues = isGrad()? DATA.gradProgramIssues : DATA.programIssues;
+  const pText   = isGrad()? DATA.gradProgram[state.year] : DATA.program[state.year];
+  const pUrl    = isGrad()? DATA.gradProgramUrl[state.year] : DATA.programUrl[state.year];
+  const pi=pIssues.slice().sort((a,b)=>sevRank[a.sev]-sevRank[b.sev]);
+  const coord = isGrad()? `<div class="note">Graduate Program Coordinator: ${DATA.gradCoordinator}. The MSc has two options (Thesis, Coursework) across two specializations (MMSC, CPPH).</div>` : "";
+  $("#programIssues").innerHTML=coord+pi.map(i=>
     `<div class="issue ${i.sev}"><div class="tag"><b>${i.sev.toUpperCase()}</b> &middot; ${i.cat}</div>${i.msg}</div>`).join("");
-  $("#progText").textContent=DATA.program[state.year];
-  $("#progLink").href=DATA.programUrl[state.year];
+  $("#progText").textContent=pText;
+  $("#progLink").href=pUrl;
+  $("#progLink").firstChild&&($("#progLink").innerHTML=(isGrad()?"Open MSc Health Sciences page on WLU calendar":"Open Honours BSc page on WLU calendar")+" &#8599;");
 }
 
 function renderFaculty(){
@@ -493,6 +521,10 @@ function buildMap(){
   return {nodes,edges};
 }
 function renderMap(){
+  if(isGrad()){
+    $("#mapWrap").innerHTML=`<div style="padding:22px" class="note">Graduate (MSc) courses do not list prerequisites - eligibility is governed by program option and specialization rather than a prerequisite chain. See the <b>Program structure</b> tab for the Thesis and Coursework pathways, and each course card's "Counts toward" badges.</div>`;
+    return;
+  }
   const {nodes,edges}=buildMap();
   const cols={100:[],200:[],300:[],400:[]};
   Object.values(nodes).forEach(n=>{const L=[100,200,300,400].includes(n.level)?n.level:100;cols[L].push(n);});
@@ -523,7 +555,7 @@ function renderMap(){
 
 // ---- Year diff 2025/26 -> 2026/27 ----
 function renderDiff(){
-  const A=DATA["2025/2026"], B=DATA["2026/2027"];
+  const A=setFor("2025/2026"), B=setFor("2026/2027");
   const byA={},byB={}; A.forEach(c=>byA[c.primary]=c); B.forEach(c=>byB[c.primary]=c);
   const added=B.filter(c=>!byA[c.primary]);
   const removed=A.filter(c=>!byB[c.primary]);
@@ -549,7 +581,10 @@ function renderDiff(){
       changed.map(d=>d.ch.map((row,i)=>`<tr>${i===0?`<td rowspan="${d.ch.length}"><b>${d.code}</b></td>`:""}<td>${row[0]}</td><td>${row[1]}</td><td>${row[2]}</td></tr>`).join("")).join("")+`</table>`
       : `<div class="note">No title/prereq/exclusion changes among shared courses.</div>`;
   h+=`</div>`;
-  h+=`<div class="diffsec"><h3>Not fixed</h3><div class="issue med"><div class="tag"><b>GLOBAL</b></div>Every spelling, grammar, and dangling-reference issue from 2025/26 (HE302, HE434, HE211, the Year-4 list, the program-note typos) is reproduced unchanged in 2026/27.</div></div>`;
+  const notFixed = isGrad()
+    ? `The 2026/27 change was splitting admission requirements into separate thesis-stream and coursework-stream paragraphs. The 'optio n' and 'BSC' typos and the undefined HE699 asterisk persist unchanged in both years.`
+    : `Every spelling, grammar, and dangling-reference issue from 2025/26 (HE302, HE434, HE211, the Year-4 list, the program-note typos) is reproduced unchanged in 2026/27.`;
+  h+=`<div class="diffsec"><h3>Notable change / not fixed</h3><div class="issue med"><div class="tag"><b>${isGrad()?"MSc":"BSc"}</b></div>${notFixed}</div></div>`;
   $("#diffBody").innerHTML=h;
 }
 
@@ -573,6 +608,13 @@ $("#tabs").onclick=e=>{if(e.target.dataset.t)setTab(e.target.dataset.t);};
 $("#yearSeg").onclick=e=>{if(e.target.dataset.y){
   state.year=e.target.dataset.y;
   document.querySelectorAll("#yearSeg button").forEach(b=>b.classList.toggle("on",b.dataset.y===state.year));
+  rerender();}};
+$("#progSeg").onclick=e=>{if(e.target.dataset.p){
+  state.program=e.target.dataset.p;
+  document.querySelectorAll("#progSeg button").forEach(b=>b.classList.toggle("on",b.dataset.p===state.program));
+  document.body.classList.toggle("gradmode", isGrad());
+  state.lvl="all"; document.querySelectorAll(".lvl-chip").forEach(x=>x.classList.toggle("on",x.dataset.lvl==="all"));
+  NEW=newCodes();
   rerender();}};
 function setView(v){
   state.view=v;

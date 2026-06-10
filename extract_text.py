@@ -33,3 +33,9 @@ for yr, f in [("2025_26","prog_2025.html"),("2026_27","prog_2026.html")]:
     txt = program_text(os.path.join(base,"raw","program",f))
     open(os.path.join(base, f"program_text_{yr}.txt"), "w", encoding="utf-8").write(txt)
     print(f"wrote program_text_{yr}.txt ({len(txt)} chars)")
+
+# graduate program pages (MSc: Thesis + Coursework options)
+for yr, f in [("2025_26","prog_grad_2025.html"),("2026_27","prog_grad_2026.html")]:
+    txt = program_text(os.path.join(base,"raw","grad",f))
+    open(os.path.join(base, f"grad_program_text_{yr}.txt"), "w", encoding="utf-8").write(txt)
+    print(f"wrote grad_program_text_{yr}.txt ({len(txt)} chars)")

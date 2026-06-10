@@ -1,0 +1,254 @@
+[
+  {
+    "file": "c_74102.html",
+    "year": "2025/2026",
+    "code": "HE601",
+    "title": "Interdisciplinary Approaches to Health Sciences",
+    "credit": "0.5 Credit",
+    "term": "",
+    "hours": "",
+    "description": "This weekly seminar includes a combination of guest speakers from various disciplines within the health sciences (clinicians, public health practitioners, research scientists, policymakers), and faculty within the Department and/or University, and from other universities. Diverse approaches to studying the health sciences is the focus of the course . Completion of workshops from the 5 ASPIRE pillars (Teaching, Professional, Research, Career, Wellness) are included in this course. Additional topics may include grant writing, scientific communication including creating conference posters, the peer-reviewed publication process, etc. Multidisciplinary in nature, the seminar provides students an opportunity to broaden their skillsets/exposure to different issues in the health sciences. The course culminates in students working in groups to identify and present on a relevant health sciences issue.",
+    "requirements": {},
+    "prereq_links": []
+  },
+  {
+    "file": "c_74103.html",
+    "year": "2025/2026",
+    "code": "HE602",
+    "title": "Cell-to-Society Perspectives in Health Sciences",
+    "credit": "0.5 Credit",
+    "term": "",
+    "hours": "",
+    "description": "In this course , students explore issues in the health sciences (e.g., HIV, COVID-19, chronic stress, cancer, epigenetics, etc.) from a ‘cell-to-society’ lens. This course explores pathways to health and wellbeing, and how they are understood by varied disciplines within the health sciences.",
+    "requirements": {},
+    "prereq_links": []
+  },
+  {
+    "file": "c_74104.html",
+    "year": "2025/2026",
+    "code": "HE699",
+    "title": "Master's Thesis",
+    "credit": "1.0 Credit",
+    "term": "",
+    "hours": "",
+    "description": "In this course , students produce a master’s thesis - individual research paper(s), which meet the general requirements for peer-reviewed scientific publication. The purpose of the master's thesis is intensive mentoring by one’s supervisor to undertake independent research, including study design, data collection and analysis, and written results and discussion, including a plan for knowledge translation.",
+    "requirements": {},
+    "prereq_links": []
+  },
+  {
+    "file": "c_74105.html",
+    "year": "2025/2026",
+    "code": "HE650",
+    "title": "Directed Studies",
+    "credit": "0.5 Credit",
+    "term": "",
+    "hours": "",
+    "description": "This course allows students an opportunity for in-depth exploration of issues (methodological/theoretical, etc.) related to their theses under the guidance of research advisor.",
+    "requirements": {},
+    "prereq_links": []
+  },
+  {
+    "file": "c_77753.html",
+    "year": "2025/2026",
+    "code": "HE603",
+    "title": "Critical Appraisal of Health Research",
+    "credit": "0.5 Credit",
+    "term": "",
+    "hours": "",
+    "description": "Critical appraisal is a key responsibility for all research scientists, public health leaders and healthcare professionals engaged in research or evidence-based practice. In this course , students learn to assess evidence and develop the skills needed to systematically and effectively synthesize research findings. These abilities enable students to create evidence-based practices that enhance programs, policies, services, and systems. Students gain a clearer understanding of the concepts and theories surrounding the issues of research and critical appraisal in health. Students will explore the different methods, reporting, and critical evaluation of various knowledge synthesis techniques frequently employed in health decision-making, such as primary research, reviews, and meta-analyses. The interactive teaching and learning style, drawing on the expertise of both students and faculty, provides students with numerous opportunities to practice the new skills that students learn in this course.",
+    "requirements": {
+      "Notes": "Mode of delivery is in person."
+    },
+    "prereq_links": []
+  },
+  {
+    "file": "c_77754.html",
+    "year": "2025/2026",
+    "code": "HE604A",
+    "title": "Applied Methods in Community, Public and Population Health",
+    "credit": "0.5 Credit",
+    "term": "",
+    "hours": "",
+    "description": "This course is designed to introduce students to community, public, and population health (CPPH) research methods and to help develop research and analytical skills. Students actively engage with the theory and logic behind CPPH research, exploring ethical principles guiding the research process, and learning about the varied research methods commonly used in the CPPH field . Special attention is paid to research ethics, design, data collection, data analysis, and report writing. Research excellence through diversity is explored to demonstrate the importance of equity, diversity, and inclusion best practices in CPPH research. The emphasis of this course is to provide students with practical knowledge of the research process and prepare them to conduct their own research. At the end, students have a better understanding of how to evaluate both their own research and that of others and how to strategically and logically develop a research plan.",
+    "requirements": {
+      "Notes": "Mode of delivery is in person."
+    },
+    "prereq_links": []
+  },
+  {
+    "file": "c_77756.html",
+    "year": "2025/2026",
+    "code": "HE604B",
+    "title": "Applied Methods in Molecular and Medical Sciences",
+    "credit": "0.5 Credit",
+    "term": "",
+    "hours": "",
+    "description": "This course is designed to introduce students to molecular medical sciences (MMS) research and to help develop research and analytical skills. Students actively engage with the theory and logic of MMS research, exploring the ethical principles guiding the research process, and learning about a variety of research methodologies commonly used in the MMS field . Topics include experimental design, data collection and analysis of results, and how to present and communicate scientific information in both oral and written formats. Research excellence through diversity is explored to demonstrate the importance of equity, diversity, and inclusion best practices in basic science research. The emphasis of this course is to provide students with practical knowledge of the research process and prepare them for conducting their own research. At the end, students have a better understanding of how to evaluate both their own research and that of others, and how to strategically and logically develop a research plan.",
+    "requirements": {
+      "Notes": "Mode of delivery is in person."
+    },
+    "prereq_links": []
+  },
+  {
+    "file": "c_77757.html",
+    "year": "2025/2026",
+    "code": "HE605",
+    "title": "Health Sciences Knowledge Mobilization",
+    "credit": "0.5 Credit",
+    "term": "",
+    "hours": "",
+    "description": "In the rapidly evolving landscape of health sciences research, effective knowledge mobilization (KM) is crucial for translating research findings into effective practices that improve human health and well-being. This course equips students with the skills necessary to bridge the gap between research and practice, ensuring that evidence-based knowledge is effectively disseminated and implemented. Specific emphasis is placed on understanding models of KM, research communication, ethical considerations in KM, practical tools and strategies for effective KM, implementation science, and the role of collaborations and partnerships in effective KM.",
+    "requirements": {
+      "Notes": "Mode of delivery is in person."
+    },
+    "prereq_links": []
+  },
+  {
+    "file": "c_77758.html",
+    "year": "2025/2026",
+    "code": "HE606",
+    "title": "Health Equity in Health Sciences",
+    "credit": "0.5 Credit",
+    "term": "",
+    "hours": "",
+    "description": "In this course we delve into the critical intersection of health sciences and health equity with populations who experience social exclusion and discrimination. We examine unique health challenges faced by groups including Indigenous peoples, racialized minorities, gender and sexual minorities, socioeconomically disadvantaged individuals, and persons with disabilities. Through an interdisciplinary lens, students explore social factors and how they ‘get under the skin’ to affect human biology. This course integrates current research, case studies, and real-world examples to provide students with a comprehensive understanding of the multifaceted challenges and opportunities in promoting health and well-being among marginalized populations.",
+    "requirements": {
+      "Notes": "Mode of delivery is in person."
+    },
+    "prereq_links": []
+  },
+  {
+    "file": "c_77759.html",
+    "year": "2025/2026",
+    "code": "HE638",
+    "title": "Cancer Biology",
+    "credit": "0.5 Credit",
+    "term": "",
+    "hours": "",
+    "description": "Cancer is defined as the uncontrolled growth of cells. The complexity of its causes and the diversity of cell types involved underscore the need for a deeper understanding of cancer's basic biology. Advances in basic and biomedical research have led to more effective treatments, improved detection methods, and better prevention strategies. This course is organized into two themes: an introduction to fundamental concepts in the cellular and molecular biology of cancer and an introduction to the clinical aspects of oncology. Additionally, the course explores the development and clinical use of therapies based on major discoveries in cancer biology research.",
+    "requirements": {
+      "Exclusions": "HE440S, HE438"
+    },
+    "prereq_links": []
+  },
+  {
+    "file": "c_77761.html",
+    "year": "2025/2026",
+    "code": "HE600",
+    "title": "Multidisciplinary Seminar in Critical Health Issues",
+    "credit": "0.5 Credit",
+    "term": "",
+    "hours": "",
+    "description": "Students identify, investigate and discuss critical health issues by integrating a range of social and biomedical perspectives and working toward a cell-to-society understanding. Activities in class include group work to develop colloquia on special topics, critical discussion of readings and films and some traditional lectures to provide core content. The course culminates in a research project. Course evaluation is focussed on students' ability to think critically about complex health problems and concrete solutions; participation in group work and class discussions; and proficiency in verbal and written communication.",
+    "requirements": {
+      "Exclusions": "HE400",
+      "Notes": "Available for credit only to students in the MSc Health Sciences coursework option. Mode of delivery is in person."
+    },
+    "prereq_links": []
+  },
+  {
+    "file": "c_77762.html",
+    "year": "2025/2026",
+    "code": "HE610",
+    "title": "Aging and Health",
+    "credit": "0.5 Credit",
+    "term": "",
+    "hours": "",
+    "description": "A study of aging and health from a variety of perspectives including bio-physiological, psycho-social, health-care system, cultural, legal, ethical and political. Topics may include the aging process, falls, mental health, medication and co-morbidity, death and dying and others. There are several interactive/hands-on components in the course .",
+    "requirements": {
+      "Exclusions": "HE410",
+      "Notes": "Available for credit only to students in the MSc Health Sciences coursework option. Mode of delivery is in person."
+    },
+    "prereq_links": []
+  },
+  {
+    "file": "c_77763.html",
+    "year": "2025/2026",
+    "code": "HE611",
+    "title": "Critical Perspectives in Public Health",
+    "credit": "0.5 Credit",
+    "term": "",
+    "hours": "",
+    "description": "An examination of the practice of public health in Canada and internationally, with emphasis on social and political impacts on the application of knowledge to practice. Models of health promotion, population health, health determinants and health behaviour will form the theoretical basis for exploration of public health research and practice.",
+    "requirements": {
+      "Exclusions": "HE411",
+      "Notes": "Available for credit only to students in the MSc Health Sciences coursework option. Mode of delivery is in person."
+    },
+    "prereq_links": []
+  },
+  {
+    "file": "c_77764.html",
+    "year": "2025/2026",
+    "code": "HE631",
+    "title": "Pathophysiology",
+    "credit": "0.5 Credit",
+    "term": "",
+    "hours": "",
+    "description": "An examination of functional changes in cells, tissues and organs consequent to disease or injury. Topics may include the mechanisms of inflammation, hypertension, coronary artery disease, concussion, asthma, hepatitis, dysentery as well as other multi-organ conditions from environmental or other types of stress.",
+    "requirements": {
+      "Exclusions": "HE431, BI416",
+      "Notes": "Available for credit only to students in the MSc Health Sciences coursework option. Mode of delivery is in person."
+    },
+    "prereq_links": []
+  },
+  {
+    "file": "c_77765.html",
+    "year": "2025/2026",
+    "code": "HE632",
+    "title": "Biomedical Virology",
+    "credit": "0.5 Credit",
+    "term": "",
+    "hours": "",
+    "description": "An examination of topics related to biomedical virology including but not limited to: virus structure and replication strategies; immune response to virus infections along with the role of vaccines and antiviral drugs in combating virus infections; the beneficial uses of viruses; the emergence, spread and extinction of viruses and current diagnosis and detection methods.",
+    "requirements": {
+      "Exclusions": "HE432, BI470",
+      "Notes": "Available for credit only to students in the MSc Health Sciences coursework option. Mode of delivery is in person."
+    },
+    "prereq_links": []
+  },
+  {
+    "file": "c_77766.html",
+    "year": "2025/2026",
+    "code": "HE640",
+    "title": "Special Topics",
+    "credit": "0.5 Credit",
+    "term": "",
+    "hours": "",
+    "description": "Irregular Course",
+    "requirements": {
+      "Exclusions": "HE440",
+      "Notes": "Available for credit only to students in the MSc Health Sciences coursework option. Mode of delivery is in person."
+    },
+    "prereq_links": []
+  },
+  {
+    "file": "c_77767.html",
+    "year": "2025/2026",
+    "code": "HE636",
+    "title": "Health and Human Rights",
+    "credit": "0.5 Credit",
+    "term": "",
+    "hours": "",
+    "description": "Human health and wellbeing are inextricably associated with access to fundamental human rights. When human rights (e.g., access to food and housing, experiencing forms of discrimination) are violated, various pathways to ill-health become evident. This course covers the links between public health policies, political circumstances, and social and economic conditions on the health of individuals and populations using a human rights framework. Important domains of the health and human rights associations are used to ensure that students have a broad understanding of key concepts, and are able to apply them in research methods, program development, policy analysis, healthcare delivery, and leadership positions.",
+    "requirements": {
+      "Exclusions": "HE436",
+      "Notes": "Available for credit only to students in the MSc Health Sciences coursework option. Mode of delivery is in person."
+    },
+    "prereq_links": []
+  },
+  {
+    "file": "c_77768.html",
+    "year": "2025/2026",
+    "code": "HE637",
+    "title": "Principles of Population Health",
+    "credit": "0.5 Credit",
+    "term": "",
+    "hours": "",
+    "description": "This course delves into population health issues that have been briefly highlighted in previous methods courses, and introduces students to the principles of population health, related terminology, structural systems and population data analytics.",
+    "requirements": {
+      "Exclusions": "HE437",
+      "Notes": "Available for credit only to students in the MSc Health Sciences coursework option. Mode of delivery is in person."
+    },
+    "prereq_links": []
+  }
+]

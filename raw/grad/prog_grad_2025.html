@@ -1,0 +1,312 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html lang="en">
+
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+	<title>Wilfrid Laurier University - Graduate Calendar - 2025/2026 - Faculty of Science - Health Sciences</title>
+	<LINK REL=StyleSheet HREF="css/style_wlu.css?ts=20200602_01" TYPE="text/css" MEDIA="screen,print">
+	<LINK REL=StyleSheet HREF="css/style_wlu_print.css?ts=20200602_01" TYPE="text/css" MEDIA="print">
+	<LINK REL=StyleSheet HREF="css/style_cal.css?ts=20200602_01" TYPE="text/css" MEDIA="screen">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+	<!--[if IE 6]><link rel="stylesheet" href="css/style_wlu_ie6.css" type="text/css" media="screen" /><![endif]-->
+	<!--[if lte IE 9]><link rel="stylesheet" href="css/style_wlu_ie.css" type="text/css" media="screen" /><![endif]-->
+
+	<script type="text/javascript">
+		<!--
+		function findPos(obj) {
+			// gets the 'top' and 'left' positions of the object.
+
+			var curtop = 0;
+			var curleft = 0;
+			if (obj.offsetParent) {
+				while (obj.offsetParent) {
+					curtop += obj.offsetTop;
+					curleft += obj.offsetLeft;
+					obj = obj.offsetParent;
+				}
+			} else {
+				if (obj.y) curtop += obj.y;
+				if (obj.x) curleft += obj.x;
+			}
+			var r = Array();
+			r[0] = curtop;
+			r[1] = curleft;
+			return r;
+		}
+
+		function showGlossaryDef(obj, def) {
+			// will move a special "glossary DIV" to appropriate spot and put term information into it.
+
+			gPos = findPos(obj);
+			if ((gPos[0] > 0) && (gPos[1] > 0)) {
+				gDiv = document.getElementById("glossaryDef");
+				if (gDiv) {
+					gDiv.innerHTML = def.replace(/#QUOTE#/g, '"');
+					gDiv.style.top = (gPos[0] + 15) + "px";
+					gDiv.style.left = gPos[1] + "px";
+					gDiv.style.visibility = "visible";
+					gDiv.style.display = "inline";
+				}
+			}
+		}
+
+		function hideGlossaryDef() {
+			gDiv = document.getElementById("glossaryDef");
+			if (gDiv) {
+				gDiv.style.visibility = "hidden";
+				gDiv.style.display = "none";
+			}
+		}
+
+		function hideSelect() {
+			var DL_bIE = document.all ? true : false; // initialize var to identify IE
+			if (DL_bIE) { // if browser is IE, then...
+				var numforms = document.forms.length;
+				for (f = 1; f < numforms; f++) {
+					var numformelements = document.forms[f].elements.length;
+					for (counter = 0; counter < numformelements; counter++) {
+						var thisselect = document.forms[f].elements[counter];
+						thisselect.style.visibility = "hidden";
+					}
+				}
+			}
+		}
+
+		function showSelect() {
+			var numforms = document.forms.length;
+			for (f = 1; f < numforms; f++) {
+				var numformelements = document.forms[f].elements.length;
+				for (counter = 0; counter < numformelements; counter++) {
+					var thisselect = document.forms[f].elements[counter];
+					thisselect.style.visibility = "visible";
+				}
+			}
+		}
+
+
+		startList = function() {
+			if (document.all && document.getElementById) {
+				navRoot = document.getElementById("nav");
+				for (i = 0; i < navRoot.childNodes.length; i++) {
+					node = navRoot.childNodes[i];
+					if (node.nodeName == "LI") {
+						node.onmouseover = function() {
+							this.className += " over";
+						}
+						node.onmouseout = function() {
+							this.className = this.className.replace(" over", "");
+						}
+					}
+				}
+			}
+		}
+		window.onload = startList;
+		//
+		-->
+	</script>
+</head>
+
+<body>
+
+	<div class="header clearfix" role="banner">
+
+		<a class="skip-to-content-link" href="#main">Skip to content</a>
+		<a class="top-link" name="top"></a>
+
+		<div class="header-logo">
+			<a href="http://www.wlu.ca/">
+				<img src="images/layout/laurier_logo.gif" alt="Wilfrid Laurier University">
+			</a>
+		</div>
+
+		
+		<div class="header-decoration">
+			<img class="book-image" src="images/layout/book_white.gif" alt="Book decoration" role="presentation" aria-hidden="true" />
+			<a href="index.php?cal=3&amp;y=91">
+				<img src="./images/cms/corner/91/grad-calendar-2025-2026.gif" width="268" height="101" alt="Graduate Calendar - 2025/2026" />
+			</a>
+		</div>
+
+		<div class="header-tagline">
+			<img src="images/layout/canadian-excellence.gif" width="267" height="18" alt="Canadian Excellence">
+		</div>
+	</div>
+
+	
+	<div class="wrapper">
+
+		<div id="deptnav" class="sidebar" role="navigation" aria-label="Left side navigation">
+
+			<h2><A href="index_old.php?cal=3&amp;y=91">Graduate Calendar 2025/2026</A></h2>
+<ul>
+	<li><a href="section.php?cal=3&amp;s=1135&amp;y=91">The University</a></li>
+	<li><a href="section.php?cal=3&amp;s=1136&amp;y=91">University Graduate Regulations</a></li>
+	<li><a href="section.php?cal=3&amp;s=1137&amp;y=91">University Policies</a></li>
+	<li><a href="section.php?cal=3&amp;s=1138&amp;y=91">Faculty of Arts</a></li>
+	<li><a href="section.php?cal=3&amp;s=1147&amp;y=91">Faculty of Education</a></li>
+	<li><a href="section.php?cal=3&amp;s=1149&amp;y=91">Faculty of Human and Social Sciences</a></li>
+	<li><a href="section.php?cal=3&amp;s=1148&amp;y=91">Faculty of Liberal Arts</a></li>
+	<li><a href="section.php?cal=3&amp;s=1140&amp;y=91">Faculty of Music</a></li>
+	<li class="current"><a href="section.php?cal=3&amp;s=1134&amp;y=91">Faculty of Science</a></li>
+	<li><a href="section.php?cal=3&amp;s=1139&amp;y=91">Lazaridis School of Business and Economics</a></li>
+	<li><a href="section.php?cal=3&amp;s=1141&amp;y=91">Lyle S. Hallman Faculty of Social Work</a></li>
+	<li><a href="section.php?cal=3&amp;s=1146&amp;y=91">School of International Policy and Governance</a></li>
+	<li><a href="section.php?cal=3&amp;s=1142&amp;y=91">Martin Luther University College</a></li>
+	<li><a href="section.php?cal=3&amp;s=1143&amp;y=91">Fees and Financial Support</a></li>
+	<li><a href="section.php?cal=3&amp;s=1144&amp;y=91">Fellowships and Scholarships</a></li>
+	<li><a href="section.php?cal=3&amp;s=1145&amp;y=91">Academic Medals</a></li>
+</ul>
+<hr/>
+<ul>
+	<li><a href="index_old.php?cal=3&amp;y=91">Search this Calendar</a></li>
+	<li><a href="glossary.php?cal=3&amp;y=91">Glossary</a></li>
+</ul>
+			<div id="deptcontact">
+	<h1>Contact Us:</h1>
+		<strong>Dr Ketan Shankardass, Graduate Co-ordinator</strong><br />			email: <a href="mailto:&#0107;&#0115;&#0104;&#0097;&#0110;&#0107;&#0097;&#0114;&#0100;&#0097;&#0115;&#0115;&#0064;&#0119;&#0108;&#0117;&#0046;&#0099;&#0097;">&#0107;&#0115;&#0104;&#0097;&#0110;&#0107;&#0097;&#0114;&#0100;&#0097;&#0115;&#0115;&#0064;&#0119;&#0108;&#0117;&#0046;&#0099;&#0097;</a><br />
+				</div>
+
+		</div>
+
+		<div id="main" class="main" role="main">
+
+			<a name="mcontent"></a>
+
+			<div class="breadcrumb">
+<img src="images/layout/redlistarrow.gif" alt="List bullet" role="presentation" aria-hidden="true"> <a href="section.php?cal=3&amp;s=1134&amp;y=91">Faculty of Science</a>&nbsp;<img src="images/layout/redlistsmbullet.gif" alt="list bullet" role="presentation" aria-hidden="true"> <a href="department.php?cal=3&amp;d=3043&amp;s=1134&amp;y=91">Health Sciences</a>&nbsp;<img src="images/layout/redlistsmbullet.gif" alt="list bullet" role="presentation" aria-hidden="true"> <a href="program.php?cal=3&amp;d=3043&amp;p=6903&amp;s=1134&amp;y=91">MSc in Health Sciences</a>&nbsp;</div>
+
+			<div class="content">
+<h1>MSc in Health Sciences</h1>
+<p>
+
+   
+   
+    <p>Graduate Program Coordinator:</p> 
+    <p>Ketan Shankardass, PhD<br /><a href="mailto:kshankardass@wlu.ca">kshankardass@wlu.ca</a> </p> 
+  
+</p><div class="reqs">
+<div class="greyheading">Additional Information</div>
+<ul class="proginfo">
+<li><a href="#Admission_Requirements">Admission Requirements</a></li>
+<li><a href="#Program_Requirements">Program Requirements</a></li>
+</ul>
+<div class="clear">&nbsp;</div>
+</div>
+<div class="reqs">
+<div class="heading"><A name="Admission_Requirements"></A>Admission Requirements</div>
+<p><p><span style="font-size: 11.2px;">To be admitted to the Master of Science (MSc) in Health Sciences program, an applicant must meet the general admission requirements of the university, and must possess an honours undergraduate degree in a related discipline (e.g., Health Sciences, Life Sciences, Biomedical Sciences, Biology, Psychology), with an A- average in the last two years of study. Completion of research methods <A href="glossary.php?cal=3&amp;g=1535&amp;y=91" class="glossaryTerm" onMouseOver="showGlossaryDef(this,'<P><p>a unit of study in a discipline identified by a unique course number and having a specific credit weight. </p></P>')" onMouseOut="hideGlossaryDef()">courses</A> and an honours thesis are typically expected. Applicants who do not meet these requirements but who have other research experiences may still apply, but may be expected to complete additional courses. An appropriate match with a supervisor is required.</span></p>
+  <p>Applications are reviewed by the graduate admissions committee, which considers academic performance to date, a statement of interest, a writing sample, and letters of reference.</p>
+  <p>Proficiency in English usage, both written and oral, is essential to pursue graduate studies at Laurier. Applicants whose language of instruction during the undergraduate degree was not English, must furnish evidence of superior <a href="/section.php?cal=3&amp;s=1136&amp;sp=3774&amp;ss=4540&amp;y=91">proficiency in English </a>prior to admission.</p>
+  <p><span style="font-size: 11.2px;">Possession of minimum qualifications does not necessarily guarantee admission.&nbsp;</span></p></p>
+<div class="clear">&nbsp;</div>
+<div class="returntotop"><a href="#top">Top</a></div>
+</div>
+<div class="reqs">
+<div class="heading"><A name="Program_Requirements"></A>Program Requirements</div>
+<p>
+
+   
+   
+    <p><span style="font-size: 11.2px;">Recognizing the strengths of an interdisciplinary approach to health sciences, and the unique learning needs of its students, two <A href="glossary.php?cal=3&amp;g=1542&amp;y=91" class="glossaryTerm" onMouseOver="showGlossaryDef(this,'<P><span style=#QUOTE#font-size: 11.2px;#QUOTE#>an area of specialization or concentration that is related to the demonstrable and collective strengths of the program’s faculty</span></P>')" onMouseOut="hideGlossaryDef()">fields</A> of specialization are offered: <strong>Molecular and Medical Sciences (MMSC)&nbsp;</strong>and <strong>Community, Public and Population Health (CPPH)</strong>. <br /><br />The MSc in Health Sciences is offered in two options: Thesis and Coursework. The thesis option is normally completed in six consecutive academic terms (two academic years). Full-time students must complete the program within three years of initial registration. The coursework option is normally completed in three&nbsp; consecutive academic terms (one academic year).<br /><br />The <strong>Thesis option</strong> requires the successful completion of two courses (1.0 credits for students in the MMSC specialization) and three courses (1.5 credits) for those in the CPPH specialization. Students in both specializations will also complete a master’s thesis (1.0 credits). A description of program components for each field is provided below.</span></p> 
+    <p><strong>Molecular and Medical Sciences</strong></p> 
+    <p>Year 1: <a href="course.php?c=74102&amp;cal=3&amp;d=3043&amp;s=1134&amp;y=91">HE601</a>, <a href="course.php?c=74103&amp;cal=3&amp;d=3043&amp;s=1134&amp;y=91">HE602</a>, <a href="course.php?c=74104&amp;cal=3&amp;d=3043&amp;s=1134&amp;y=91">HE699</a>*<br />Year 2: <a href="course.php?c=74104&amp;cal=3&amp;d=3043&amp;s=1134&amp;y=91">HE699</a>*</p> 
+    <p><strong>Community, Public and Population Health</strong></p> 
+    <p>Year 1: <a href="course.php?c=74102&amp;cal=3&amp;d=3043&amp;s=1134&amp;y=91">HE601</a>, <a href="course.php?c=74103&amp;cal=3&amp;d=3043&amp;s=1134&amp;y=91">HE602</a>, Elective or <a href="course.php?c=74105&amp;cal=3&amp;d=3043&amp;s=1134&amp;y=91">HE650</a><br />Year 2: HE699&nbsp;</p> 
+    <p>The <strong>Coursework optio</strong><strong>n</strong> is normally completed full-time, over three consecutive terms and requires the successful completion of nine courses (4.5 credits) to graduate. Students in both specializations (Molecular and Medical Sciences, and Community, Public and Population Health) must take:<br /> </p> 
+    <ul> 
+      <li><a href="course.php?c=77761&amp;cal=3&amp;d=3043&amp;s=1134&amp;y=91">HE600</a> - Multidisciplinary Seminar in Critical Health Issues</li> 
+      <li><a href="course.php?c=77754&amp;cal=3&amp;d=3043&amp;s=1134&amp;y=91">HE604A</a> - Applied Methods in Community, Public and Population Health or <a href="course.php?c=77756&amp;cal=3&amp;d=3043&amp;s=1134&amp;y=91">HE604B</a> - Applied Methods in Molecular and Medical Sciences</li> 
+    </ul> 
+    <p>&nbsp;And all of the following:</p> 
+    <ul> 
+      <li><a href="course.php?c=74102&amp;cal=3&amp;d=3043&amp;s=1134&amp;y=91">HE601</a> - Interdisciplinary Approaches to Health Sciences</li> 
+      <li><a href="course.php?c=74103&amp;cal=3&amp;d=3043&amp;s=1134&amp;y=91">HE602</a> - Cell-to-Society Perspectives in Health Sciences</li> 
+      <li><a href="course.php?c=77753&amp;cal=3&amp;d=3043&amp;s=1134&amp;y=91">HE603</a> - Critical Appraisal of Health Research</li> 
+      <li><a href="course.php?c=77757&amp;cal=3&amp;d=3043&amp;s=1134&amp;y=91">HE605</a> - Health Sciences Knowledge Mobilization</li> 
+      <li><a href="course.php?c=77758&amp;cal=3&amp;d=3043&amp;s=1134&amp;y=91">HE606</a> - Health Equity in Health Sciences</li> 
+    </ul> 
+    <p>Students will also select 1.0 credits from the following electives:</p> 
+    <p>MMSC specialization electives:<br /> </p> 
+    <ul> 
+      <li><a href="course.php?c=77764&amp;cal=3&amp;d=3043&amp;s=1134&amp;y=91">HE631</a> - Pathophysiology</li> 
+      <li><a href="course.php?c=77765&amp;cal=3&amp;d=3043&amp;s=1134&amp;y=91">HE632</a> - Biomedical Virology</li> 
+      <li><a href="course.php?c=77768&amp;cal=3&amp;d=3043&amp;s=1134&amp;y=91">HE637</a> - Principles of Population Health</li> 
+      <li><a href="course.php?c=77759&amp;cal=3&amp;d=3043&amp;s=1134&amp;y=91">HE638</a> - Cancer Biology</li> 
+      <li><a href="course.php?c=77766&amp;cal=3&amp;d=3043&amp;s=1134&amp;y=91">HE640</a> - Special Topics</li> 
+    </ul> 
+    <p>CPPH specialization electives:</p> 
+    <ul> 
+      <li><a href="course.php?c=77762&amp;cal=3&amp;d=3043&amp;s=1134&amp;y=91">HE610</a> - Aging and Health</li> 
+      <li><a href="course.php?c=77763&amp;cal=3&amp;d=3043&amp;s=1134&amp;y=91">HE611</a> - Critical Perspectives in Public Health</li> 
+      <li><a href="course.php?c=77767&amp;cal=3&amp;d=3043&amp;s=1134&amp;y=91">HE636</a> - Health and Human Rights</li> 
+      <li><a href="course.php?c=77768&amp;cal=3&amp;d=3043&amp;s=1134&amp;y=91">HE637</a> - Principles of Population Health</li> 
+      <li><a href="course.php?c=77766&amp;cal=3&amp;d=3043&amp;s=1134&amp;y=91">HE640</a> - Special Topics</li> 
+    </ul> 
+    <p>Note: Students entering from the Laurier Honours BSc Health Sciences program are required to complete eight&nbsp; courses at the 600-level (4.0 credits) as they are granted an <A href="glossary.php?cal=3&amp;g=1541&amp;y=91" class="glossaryTerm" onMouseOver="showGlossaryDef(this,'<P><p><!--StartFragment -->a statement indicating either that a student cannot hold credit for both the course to which the exclusion statement is attached and any course listed in the exclusion statement or that the course cannot be counted for credit in the program or towards the degree listed </p></P>')" onMouseOut="hideGlossaryDef()">exclusion</A> from the required <A href="glossary.php?cal=3&amp;g=1535&amp;y=91" class="glossaryTerm" onMouseOver="showGlossaryDef(this,'<P><p>a unit of study in a discipline identified by a unique course number and having a specific credit weight. </p></P>')" onMouseOut="hideGlossaryDef()">course</A> <a href="course.php?c=77761&amp;cal=3&amp;d=3043&amp;s=1134&amp;y=91">HE600</a> - Multidisciplinary Seminar in Critical Health Issues based on their earned Laurier BSC Health Sciences degree.</p> 
+    <p>Full-time students must complete the program within two years of initial registration.</p> 
+  
+</p>
+<div class="clear">&nbsp;</div>
+<div class="returntotop"><a href="#top">Top</a></div>
+</div>
+			</div> <!-- /.content -->
+
+		</div> <!-- /.main -->
+
+		
+<div id="contentRHS" class="sidebar" role="navigation" aria-label="Right side navigation">
+	<img src="./images/layout/picture_right.gif" alt="Decorative image" role="presentation">
+
+		<div class="calright">
+	<h4>Academic &amp; Related Dates 2025/2026</h4>
+	<ul class="dates">
+	<li><a href="dates.php?cal=3&amp;y=91">All Dates</a></li>
+	</ul>
+
+			<hr class="calrightrule"/>
+	<h4>Other Calendars</h4>
+	<ul class="archivedcal">
+		<li class="ruled"><a href="index_old.php?cal=3&amp;y=94">Graduate Calendar (2026/2027)</a></li>
+		<li class="ruled"><a href="index_old.php?cal=3&amp;y=89">Graduate Calendar (2024/2025)</a></li>
+		<li class="ruled"><a href="index_old.php?cal=3&amp;y=88">Graduate Calendar (2023/2024)</a></li>
+		<li class="ruled"><a href="index_old.php?cal=3&amp;y=86">Graduate Calendar (2022/2023)</a></li>
+		<li><a href="/index.php">more...</a></li>
+		</ul>
+		</div>
+</div> <!-- /.sidebar -->
+
+	</div> <!-- /.wrapper -->
+
+	<div class="footer" role="contentinfo">
+
+		<div class="footer-top">
+			<div>
+				<a href="https://www.wlu.ca/about/locations-maps-and-parking/contact-us.html">Contact WLU</a>
+			</div>
+			<div>
+				<span>&copy; 2026 Wilfrid Laurier University</span>
+			</div>
+			<div>
+				<img src="images/layout/footer_red.gif" alt="Ontario, Canada" title="Ontario, Canada">
+			</div>
+		</div> <!-- /.footer-top -->
+
+		<div class="footer-bottom">
+			<div>
+				<span>Wilfrid Laurier University | 75 University Avenue West, Waterloo, Ontario, Canada  N2L 3C5</span>
+			</div>
+			<div>
+				<span>Phone: 519.884.1970 | Fax: 519.886.9351</span>
+			</div>
+			<div>
+				<span class="brantford">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
+			</div>
+		</div> <!-- /.footer-bottom -->
+
+	</div> <!-- /#footer -->
+
+	
+</body>
+</html>
+

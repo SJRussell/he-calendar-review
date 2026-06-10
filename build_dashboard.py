@@ -165,6 +165,73 @@ def merge(dataset, yr):
         out.append(rec)
     return out
 
+# ================= GRADUATE (MSc Health Sciences) =================
+GRADP = {
+  "2025/2026": {"d":3043,"s":1134,"y":91,"p":6903},
+  "2026/2027": {"d":3329,"s":1186,"y":94,"p":7783},
+}
+def grad_course_url(file, yr):
+    cid = re.search(r"c_(\d+)\.html", file).group(1)
+    pp = GRADP[yr]
+    return f"https://academic-calendar.wlu.ca/course.php?c={cid}&cal=3&d={pp['d']}&s={pp['s']}&y={pp['y']}"
+def grad_program_url(yr):
+    pp = GRADP[yr]
+    return f"https://academic-calendar.wlu.ca/program.php?cal=3&d={pp['d']}&p={pp['p']}&s={pp['s']}&y={pp['y']}"
+
+# curriculum role per grad course (drives the collapsed grouping + modal badges)
+GRAD_GROUP = {
+  "HE600":"Core","HE601":"Core","HE602":"Core","HE603":"Core","HE604A":"Core",
+  "HE604B":"Core","HE605":"Core","HE606":"Core",
+  "HE699":"Thesis & directed","HE650":"Thesis & directed",
+  "HE631":"MMSC electives","HE632":"MMSC electives","HE638":"MMSC electives",
+  "HE610":"CPPH electives","HE611":"CPPH electives","HE636":"CPPH electives",
+  "HE637":"Shared electives","HE640":"Shared electives",
+}
+GRAD_ROLES = {
+  "HE600":["Coursework core","Coursework option only"],
+  "HE601":["Coursework core","Thesis Year 1 (MMSC & CPPH)"],
+  "HE602":["Coursework core","Thesis Year 1 (MMSC & CPPH)"],
+  "HE603":["Coursework core"], "HE605":["Coursework core"], "HE606":["Coursework core"],
+  "HE604A":["Coursework core (choose 604A or 604B)"], "HE604B":["Coursework core (choose 604A or 604B)"],
+  "HE699":["Master's thesis (Thesis option)"], "HE650":["Directed studies (CPPH thesis elective)"],
+  "HE631":["MMSC elective","Coursework option only"], "HE632":["MMSC elective","Coursework option only"],
+  "HE638":["MMSC elective","Coursework option only"],
+  "HE610":["CPPH elective","Coursework option only"], "HE611":["CPPH elective","Coursework option only"],
+  "HE636":["CPPH elective","Coursework option only"],
+  "HE637":["MMSC + CPPH elective","Coursework option only"], "HE640":["MMSC + CPPH elective","Coursework option only"],
+}
+GRAD_GROUP_ORDER = ["Core","MMSC electives","CPPH electives","Shared electives","Thesis & directed"]
+
+GRAD_ISSUES = {
+  "HE600":[{"sev":"low","cat":"spelling","msg":"Description uses 'focussed'; the identical UG course HE400 uses 'focused'. Standardize one spelling."}],
+  "HE640":[{"sev":"low","cat":"style","msg":"Description field contains only the placeholder text 'Irregular Course' instead of an actual course description."}],
+}
+GRAD_PROGRAM_ISSUES = [
+  {"sev":"med","cat":"spelling","msg":"Program text reads 'The Coursework optio n is normally completed...' - 'optio n' is a broken word ('option')."},
+  {"sev":"low","cat":"spelling","msg":"'earned Laurier BSC Health Sciences degree' - 'BSC' should be 'BSc'."},
+  {"sev":"low","cat":"structure","msg":"The Thesis structure marks 'HE699 *' with an asterisk, but no footnote defining the asterisk appears anywhere on the page."},
+  {"sev":"low","cat":"style","msg":"The specialization is named 'Molecular and Medical Sciences (MMSC)', yet course HE604B abbreviates it 'MMS' ('molecular medical sciences (MMS)'). Inconsistent acronym."},
+  {"sev":"low","cat":"structure","msg":"HE637 (Principles of Population Health) and HE640 (Special Topics) appear under BOTH the MMSC and CPPH elective lists - confirm the dual-listing is intentional."},
+  {"sev":"low","cat":"structure","msg":"Both the 'optio n' and 'BSC' typos, and the undefined HE699 asterisk, are present unchanged in 2025/26 and 2026/27. The only 2026/27 change was splitting admission requirements into separate thesis-stream and coursework-stream paragraphs."},
+]
+
+def merge_grad(dataset, yr):
+    out=[]
+    for c in dataset:
+        rec=dict(c)
+        p=primary(c["code"])
+        rec["primary"]=p
+        rec["level"]=level(c["code"])
+        rec["group"]=GRAD_GROUP.get(p,"Other")
+        rec["roles"]=GRAD_ROLES.get(p,[])
+        rec["issues"]=GRAD_ISSUES.get(p, [])
+        rec["url"]=grad_course_url(c["file"], yr)
+        out.append(rec)
+    return out
+
+g25 = json.load(open(os.path.join(base,"grad_courses_2025.json"), encoding="utf-8"))
+g26 = json.load(open(os.path.join(base,"grad_courses_2026.json"), encoding="utf-8"))
+
 data = {
   "2025/2026": merge(d25, "2025/2026"),
   "2026/2027": merge(d26, "2026/2027"),
@@ -180,7 +247,23 @@ data = {
   "globalIssues": GLOBAL_ISSUES,
   "faculty": FACULTY,
   "facultyIssues": FACULTY_ISSUES,
+  "grad": {
+    "2025/2026": merge_grad(g25, "2025/2026"),
+    "2026/2027": merge_grad(g26, "2026/2027"),
+  },
+  "gradGroupOrder": GRAD_GROUP_ORDER,
+  "gradProgram": {
+    "2025/2026": open(os.path.join(base,"grad_program_text_2025_26.txt"),encoding="utf-8").read(),
+    "2026/2027": open(os.path.join(base,"grad_program_text_2026_27.txt"),encoding="utf-8").read(),
+  },
+  "gradProgramUrl": {
+    "2025/2026": grad_program_url("2025/2026"),
+    "2026/2027": grad_program_url("2026/2027"),
+  },
+  "gradProgramIssues": GRAD_PROGRAM_ISSUES,
+  "gradCoordinator": "Ketan Shankardass (kshankardass@wlu.ca)",
 }
 json.dump(data, open(os.path.join(base,"dashboard_data.json"),"w",encoding="utf-8"), indent=2, ensure_ascii=False)
 n_issues = sum(len(v) for v in ISSUES.values())+len(PROGRAM_ISSUES)+len(GLOBAL_ISSUES)+len(FACULTY_ISSUES)
-print(f"data built: {len(d25)} (25/26), {len(d26)} (26/27) courses; {n_issues} catalogued issues across {len(ISSUES)} courses + program + global")
+n_grad = sum(len(v) for v in GRAD_ISSUES.values())+len(GRAD_PROGRAM_ISSUES)
+print(f"data built: UG {len(d25)}/{len(d26)} courses, GR {len(g25)}/{len(g26)} courses; UG issues {n_issues}, GR issues {n_grad}")

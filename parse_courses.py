@@ -94,8 +94,13 @@ data2025 = run(os.path.join(base, "raw", "courses_2025"), "2025/2026")
 data2026 = run(os.path.join(base, "raw", "courses_2026"), "2026/2027")
 json.dump(data2025, open(os.path.join(base, "courses_2025.json"), "w", encoding="utf-8"), indent=2, ensure_ascii=False)
 json.dump(data2026, open(os.path.join(base, "courses_2026.json"), "w", encoding="utf-8"), indent=2, ensure_ascii=False)
-print(f"2025/26: {len(data2025)} courses")
-print(f"2026/27: {len(data2026)} courses")
-# quick print of codes
-print("2025 codes:", ", ".join(sorted(c["code"] for c in data2025)))
-print("2026 codes:", ", ".join(sorted(c["code"] for c in data2026)))
+print(f"UG 2025/26: {len(data2025)} courses")
+print(f"UG 2026/27: {len(data2026)} courses")
+
+# ---- Graduate (MSc Health Sciences) ----
+grad2025 = run(os.path.join(base, "raw", "grad", "courses_2025"), "2025/2026")
+grad2026 = run(os.path.join(base, "raw", "grad", "courses_2026"), "2026/2027")
+json.dump(grad2025, open(os.path.join(base, "grad_courses_2025.json"), "w", encoding="utf-8"), indent=2, ensure_ascii=False)
+json.dump(grad2026, open(os.path.join(base, "grad_courses_2026.json"), "w", encoding="utf-8"), indent=2, ensure_ascii=False)
+print(f"GR 2025/26: {len(grad2025)} courses ->", ", ".join(sorted(c['code'] for c in grad2025)))
+print(f"GR 2026/27: {len(grad2026)} courses ->", ", ".join(sorted(c['code'] for c in grad2026)))
