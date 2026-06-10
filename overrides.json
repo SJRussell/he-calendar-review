@@ -1,0 +1,5 @@
+{
+  "_comment": "Shared, committable layer on top of the scraped calendar data. Edit in-app (Edit mode) then use 'Export overrides' to regenerate this file and commit it, OR hand-edit. instructors keyed by primary course code; status keyed by '<CODE>|<index>' issue keys.",
+  "instructors": {},
+  "status": {}
+}

@@ -1,0 +1,450 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html lang="en">
+
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+	<title>Wilfrid Laurier University - Undergraduate Academic Calendar - 2025/2026 - Faculty of Science - Health Sciences</title>
+	<LINK REL=StyleSheet HREF="css/style_wlu.css?ts=20200602_01" TYPE="text/css" MEDIA="screen,print">
+	<LINK REL=StyleSheet HREF="css/style_wlu_print.css?ts=20200602_01" TYPE="text/css" MEDIA="print">
+	<LINK REL=StyleSheet HREF="css/style_cal.css?ts=20200602_01" TYPE="text/css" MEDIA="screen">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+	<!--[if IE 6]><link rel="stylesheet" href="css/style_wlu_ie6.css" type="text/css" media="screen" /><![endif]-->
+	<!--[if lte IE 9]><link rel="stylesheet" href="css/style_wlu_ie.css" type="text/css" media="screen" /><![endif]-->
+
+	<script type="text/javascript">
+		<!--
+		function findPos(obj) {
+			// gets the 'top' and 'left' positions of the object.
+
+			var curtop = 0;
+			var curleft = 0;
+			if (obj.offsetParent) {
+				while (obj.offsetParent) {
+					curtop += obj.offsetTop;
+					curleft += obj.offsetLeft;
+					obj = obj.offsetParent;
+				}
+			} else {
+				if (obj.y) curtop += obj.y;
+				if (obj.x) curleft += obj.x;
+			}
+			var r = Array();
+			r[0] = curtop;
+			r[1] = curleft;
+			return r;
+		}
+
+		function showGlossaryDef(obj, def) {
+			// will move a special "glossary DIV" to appropriate spot and put term information into it.
+
+			gPos = findPos(obj);
+			if ((gPos[0] > 0) && (gPos[1] > 0)) {
+				gDiv = document.getElementById("glossaryDef");
+				if (gDiv) {
+					gDiv.innerHTML = def.replace(/#QUOTE#/g, '"');
+					gDiv.style.top = (gPos[0] + 15) + "px";
+					gDiv.style.left = gPos[1] + "px";
+					gDiv.style.visibility = "visible";
+					gDiv.style.display = "inline";
+				}
+			}
+		}
+
+		function hideGlossaryDef() {
+			gDiv = document.getElementById("glossaryDef");
+			if (gDiv) {
+				gDiv.style.visibility = "hidden";
+				gDiv.style.display = "none";
+			}
+		}
+
+		function hideSelect() {
+			var DL_bIE = document.all ? true : false; // initialize var to identify IE
+			if (DL_bIE) { // if browser is IE, then...
+				var numforms = document.forms.length;
+				for (f = 1; f < numforms; f++) {
+					var numformelements = document.forms[f].elements.length;
+					for (counter = 0; counter < numformelements; counter++) {
+						var thisselect = document.forms[f].elements[counter];
+						thisselect.style.visibility = "hidden";
+					}
+				}
+			}
+		}
+
+		function showSelect() {
+			var numforms = document.forms.length;
+			for (f = 1; f < numforms; f++) {
+				var numformelements = document.forms[f].elements.length;
+				for (counter = 0; counter < numformelements; counter++) {
+					var thisselect = document.forms[f].elements[counter];
+					thisselect.style.visibility = "visible";
+				}
+			}
+		}
+
+
+		startList = function() {
+			if (document.all && document.getElementById) {
+				navRoot = document.getElementById("nav");
+				for (i = 0; i < navRoot.childNodes.length; i++) {
+					node = navRoot.childNodes[i];
+					if (node.nodeName == "LI") {
+						node.onmouseover = function() {
+							this.className += " over";
+						}
+						node.onmouseout = function() {
+							this.className = this.className.replace(" over", "");
+						}
+					}
+				}
+			}
+		}
+		window.onload = startList;
+		//
+		-->
+	</script>
+</head>
+
+<body>
+
+	<div class="header clearfix" role="banner">
+
+		<a class="skip-to-content-link" href="#main">Skip to content</a>
+		<a class="top-link" name="top"></a>
+
+		<div class="header-logo">
+			<a href="http://www.wlu.ca/">
+				<img src="images/layout/laurier_logo.gif" alt="Wilfrid Laurier University">
+			</a>
+		</div>
+
+		
+		<div class="header-decoration">
+			<img class="book-image" src="images/layout/book_white.gif" alt="Book decoration" role="presentation" aria-hidden="true" />
+			<a href="index.php?cal=1&amp;y=92">
+				<img src="./images/cms/corner/92/ug2025-2026.gif" width="287" height="101" alt="Undergraduate Academic Calendar - 2025/2026" />
+			</a>
+		</div>
+
+		<div class="header-tagline">
+			<img src="images/layout/canadian-excellence.gif" width="267" height="18" alt="Canadian Excellence">
+		</div>
+	</div>
+
+	
+	<div class="wrapper">
+
+		<div id="deptnav" class="sidebar" role="navigation" aria-label="Left side navigation">
+
+			<h2><A href="index_old.php?cal=1&amp;y=92">Undergraduate Academic Calendar 2025/2026</A></h2>
+<ul>
+	<li><a href="section.php?cal=1&amp;s=1159&amp;y=92">Areas of Study/Courses @ Laurier (Direct Links)</a></li>
+	<li><a href="section.php?cal=1&amp;s=1163&amp;y=92">Print Version 2023-24</a></li>
+	<li><a href="section.php?cal=1&amp;s=1167&amp;y=92">Using This Calendar</a></li>
+	<li><a href="section.php?cal=1&amp;s=1160&amp;y=92"> Recruitment and Admissions</a></li>
+	<li><a href="section.php?cal=1&amp;s=1158&amp;y=92">Student Awards and Financial Aid</a></li>
+	<li><a href="section.php?cal=1&amp;s=1157&amp;y=92">Financial Services</a></li>
+	<li><a href="section.php?cal=1&amp;s=1162&amp;y=92">Academic and Related Dates</a></li>
+	<li><a href="section.php?cal=1&amp;s=1156&amp;y=92">University Undergraduate Regulations</a></li>
+	<li><a href="department.php?cal=1&amp;d=3067&amp;s=1150&amp;y=92">Interdisciplinary Course Offerings</a></li>
+	<li><a href="section.php?cal=1&amp;s=1151&amp;y=92">Faculty of Arts</a></li>
+	<li><a href="section.php?cal=1&amp;s=1161&amp;y=92">Faculty of Education</a></li>
+	<li><a href="section.php?cal=1&amp;s=1165&amp;y=92">Faculty of Human and Social Sciences</a></li>
+	<li><a href="section.php?cal=1&amp;s=1153&amp;y=92">Faculty of Liberal Arts</a></li>
+	<li><a href="section.php?cal=1&amp;s=1155&amp;y=92">Faculty of Music</a></li>
+	<li class="current"><a href="section.php?cal=1&amp;s=1152&amp;y=92">Faculty of Science</a></li>
+		<li class="sublist"><a href="section.php?cal=1&amp;s=1152&amp;ss=4561&amp;y=92">BSc and BA Programs and Regulations</a></li>
+		<li class="sublist"><a href="section.php?cal=1&amp;s=1152&amp;ss=4562&amp;y=92">Academic Advising</a></li>
+		<li class="sublist"><a href="section.php?cal=1&amp;s=1152&amp;ss=4563&amp;y=92">Regulations for All Honours Programs</a></li>
+		<li class="sublist"><a href="section.php?cal=1&amp;s=1152&amp;ss=4564&amp;y=92">Regulations Combining Honours with a Secondary Minor/Option</a></li>
+		<li class="sublist"><a href="section.php?cal=1&amp;s=1152&amp;ss=4565&amp;y=92">Co-operative Education</a></li>
+		<li class="sublist"><a href="section.php?cal=1&amp;s=1152&amp;ss=4566&amp;y=92">Faculty of Science Campus Transfer Policy</a></li>
+	<li><a href="section.php?cal=1&amp;s=1154&amp;y=92">Lazaridis School of Business and Economics</a></li>
+	<li><a href="section.php?cal=1&amp;s=1166&amp;y=92">Lyle S Hallman Faculty of Social Work</a></li>
+	<li><a href="section.php?cal=1&amp;s=1164&amp;y=92">Martin Luther University College</a></li>
+</ul>
+<hr/>
+<ul>
+	<li><a href="index_old.php?cal=1&amp;y=92">Search this Calendar</a></li>
+	<li><a href="glossary.php?cal=1&amp;y=92">Glossary</a></li>
+</ul>
+			<div id="deptcontact">
+	<h1>Contact Us:</h1>
+		<strong>Contact Academic Department directly unless Calendar inquiry</strong><br />			email: <a href="mailto:&#0098;&#0118;&#0111;&#0105;&#0115;&#0105;&#0110;&#0101;&#0064;&#0119;&#0108;&#0117;&#0046;&#0099;&#0097;">Bonnie Voisine, Office of the Registrar</a><br />
+					phone: bvoisine@wlu.ca<br />
+					</div>
+
+		</div>
+
+		<div id="main" class="main" role="main">
+
+			<a name="mcontent"></a>
+
+			<div class="breadcrumb">
+<img src="images/layout/redlistarrow.gif" alt="List bullet" role="presentation" aria-hidden="true"> <a href="section.php?cal=1&amp;s=1152&amp;y=92">Faculty of Science</a>&nbsp;<img src="images/layout/redlistsmbullet.gif" alt="list bullet" role="presentation" aria-hidden="true"> <a href="department.php?cal=1&amp;d=3127&amp;s=1152&amp;y=92">Health Sciences</a>&nbsp;</div>
+
+			<div class="content">
+<h1>Health Sciences</h1>
+<div class="reqs">
+<div class="greyheading">Department Information on this page</div>
+<ul class="proginfo">
+<li><a href="#Faculty">Faculty</a></li>
+<li><a href="#Programs">Programs</a></li>
+<li><a href="#HN_Courses">HN Courses</a></li>
+<li><a href="#Course_Offerings">Course Offerings</a></li>
+</ul>
+<div class="clear">&nbsp;</div>
+</div>
+<div class="reqs">
+<div class="heading"><A name="Faculty"></A>Faculty</div>
+<p><div id="stafflist" name="stafflist"><strong>Full-Time Faculty</strong><ul>
+   <li><A href="mailto:&#0116;&#0099;&#0111;&#0108;&#0101;&#0109;&#0097;&#0110;&#0064;&#0119;&#0108;&#0117;&#0046;&#0099;&#0097;">Todd Coleman</A>, <i>PhD</i></li>
+   <li><A href="mailto:&#0115;&#0100;&#0101;&#0119;&#0105;&#0116;&#0116;&#0101;&#0111;&#0114;&#0114;&#0064;&#0119;&#0108;&#0117;&#0046;&#0099;&#0097;">Stephanie DeWitte-Orr</A>, <i>PhD</i></li>
+   <li><A href="mailto:&#0100;&#0103;&#0114;&#0101;&#0103;&#0111;&#0114;&#0121;&#0064;&#0119;&#0108;&#0117;&#0046;&#0099;&#0097;">Diane Gregory</A>, <i>PhD</i></li>
+   <li><A href="mailto:&#0114;&#0109;&#0097;&#0099;&#0112;&#0104;&#0101;&#0101;&#0064;&#0119;&#0108;&#0117;&#0046;&#0099;&#0097;">Renee MacPhee</A>, <i>PhD</i></li>
+   <li><A href="mailto:&#0109;&#0109;&#0111;&#0114;&#0116;&#0111;&#0110;&#0110;&#0105;&#0110;&#0111;&#0109;&#0105;&#0121;&#0097;&#0064;&#0119;&#0108;&#0117;&#0046;&#0099;&#0097;">Melody Morton Ninomiya</A>, <i>PhD</i></li>
+   <li><A href="mailto:&#0110;&#0109;&#0117;&#0114;&#0117;&#0103;&#0097;&#0110;&#0064;&#0119;&#0108;&#0117;&#0046;&#0099;&#0097;">Nirosha Murugan</A>, <i>PhD</i></li>
+   <li><A href="mailto:&#0115;&#0112;&#0111;&#0121;&#0110;&#0116;&#0101;&#0114;&#0064;&#0119;&#0108;&#0117;&#0046;&#0099;&#0097;">Sarah Poynter</A>, <i>PhD</i></li>
+   <li><A href="mailto:&#0110;&#0114;&#0111;&#0117;&#0108;&#0101;&#0097;&#0117;&#0064;&#0119;&#0108;&#0117;&#0046;&#0099;&#0097;">Nicolas Rouleau</A>, <i>PhD</i>, <i>Undergraduate Advisor</i></li>
+   <li><A href="mailto:&#0107;&#0115;&#0104;&#0097;&#0110;&#0107;&#0097;&#0114;&#0100;&#0097;&#0115;&#0115;&#0064;&#0119;&#0108;&#0117;&#0046;&#0099;&#0097;">Ketan Shankardass</A>, <i>PhD</i></li>
+   <li><A href="mailto:&#0114;&#0116;&#0114;&#0097;&#0118;&#0101;&#0114;&#0115;&#0064;&#0119;&#0108;&#0117;&#0046;&#0099;&#0097;">Robb Travers</A>, <i>PhD</i>, <i>Chair</i></li>
+</ul></div></p>
+<div class="clear">&nbsp;</div>
+<div class="returntotop"><a href="#top">Top</a></div>
+</div>
+<A name="Programs"></A>
+<div class="reqs">
+<div class="heading">Program Information</div>
+<P style="padding-top:0px;"><UL>
+<LI><A href="program.php?cal=1&amp;d=3127&amp;p=7164&amp;s=1152&amp;y=92">Honours BSc Health Sciences</A></LI>
+</UL></P>
+<div class="clear">&nbsp;</div>
+<div class="returntotop"><a href="#top">Top</a></div>
+</div>
+<div class="reqs">
+<div class="heading"><A name="HN_Courses"></A>HN Courses</div>
+<p>Refer to HN <A href="glossary.php?cal=1&amp;g=1555&amp;y=92" class="glossaryTerm" onMouseOver="showGlossaryDef(this,'<P>A unit of study in a given discipline identified by a unique number and name in a given department. (Refer to <a href=#QUOTE#https://academic-calendar.wlu.ca/section.php?cal=1&amp;s=1167&amp;ss=4631&amp;y=92#QUOTE#><b class=#QUOTE#Bold#QUOTE#>Course Description Definitions</b></a> for information concerning all related definitions.) The weight or value of a course is defined as follows: a 1.0 credit (or full-credit) course normally consists of three contact hours per week taken over an eight-month period (September - April). A half (0.5) credit course is normally conducted over a four-month period. A credit denotes a full-credit course with 1.0 indicated in the course description. A half-credit course is indicated with the 0.5 weight, and a quarter-credit course as 0.25 in the course description.</P>')" onMouseOut="hideGlossaryDef()">Course</A> Listing below HE courses</p>
+<div class="clear">&nbsp;</div>
+<div class="returntotop"><a href="#top">Top</a></div>
+</div>
+<A name="Course_Offerings"></A>
+<div class="reqs">
+<table>
+<caption>Course Offerings</caption>
+<tr><th>Course #</th><th>Title</th><th>Credits</th></tr>
+<tr class="zebra">
+   <td><a href="course.php?c=76605&amp;cal=1&amp;d=3127&amp;s=1152&amp;y=92">HE100</a></td>
+	<td>Health Issues I</td>
+	<td>0.5</td>
+</tr>
+<tr>
+   <td><a href="course.php?c=76606&amp;cal=1&amp;d=3127&amp;s=1152&amp;y=92">HE101</a></td>
+	<td>Health Issues II</td>
+	<td>0.5</td>
+</tr>
+<tr class="zebra">
+   <td><a href="course.php?c=76607&amp;cal=1&amp;d=3127&amp;s=1152&amp;y=92">HE201</a></td>
+	<td>Research Methods for the Health Sciences</td>
+	<td>0.5</td>
+</tr>
+<tr>
+   <td><a href="course.php?c=76614&amp;cal=1&amp;d=3127&amp;s=1152&amp;y=92">HE202</a></td>
+	<td>Foundations of the Canadian Healthcare System</td>
+	<td>0.5</td>
+</tr>
+<tr class="zebra">
+   <td><a href="course.php?c=76608&amp;cal=1&amp;d=3127&amp;s=1152&amp;y=92">HE300</a></td>
+	<td>Epidemiology</td>
+	<td>0.5</td>
+</tr>
+<tr>
+   <td><a href="course.php?c=76613&amp;cal=1&amp;d=3127&amp;s=1152&amp;y=92">HE301</a></td>
+	<td>Social Determinants of Health</td>
+	<td>0.5</td>
+</tr>
+<tr class="zebra">
+   <td><a href="course.php?c=76629&amp;cal=1&amp;d=3127&amp;s=1152&amp;y=92">HE303</a></td>
+	<td>Introduction to Immunology</td>
+	<td>0.5</td>
+</tr>
+<tr>
+   <td><a href="course.php?c=76628&amp;cal=1&amp;d=3127&amp;s=1152&amp;y=92">HE304</a></td>
+	<td>Introduction to Indigenous Health and Well-Being</td>
+	<td>0.5</td>
+</tr>
+<tr class="zebra">
+   <td><a href="course.php?c=76627&amp;cal=1&amp;d=3127&amp;s=1152&amp;y=92">HE305</a></td>
+	<td>Positive Psychology</td>
+	<td>0.5</td>
+</tr>
+<tr>
+   <td><a href="course.php?c=76618&amp;cal=1&amp;d=3127&amp;s=1152&amp;y=92">HE330</a></td>
+	<td>Human Nutrition and Health</td>
+	<td>0.5</td>
+</tr>
+<tr class="zebra">
+   <td><a href="course.php?c=76610&amp;cal=1&amp;d=3127&amp;s=1152&amp;y=92">HE340</a></td>
+	<td>Special Topics</td>
+	<td>0.5</td>
+</tr>
+<tr>
+   <td><a href="course.php?c=76624&amp;cal=1&amp;d=3127&amp;s=1152&amp;y=92">HE350</a></td>
+	<td>Directed Studies</td>
+	<td>0.5</td>
+</tr>
+<tr class="zebra">
+   <td><a href="course.php?c=76631&amp;cal=1&amp;d=3127&amp;s=1152&amp;y=92">HE368</a></td>
+	<td>Functional Neuroanatomy</td>
+	<td>0.5</td>
+</tr>
+<tr>
+   <td><a href="course.php?c=76609&amp;cal=1&amp;d=3127&amp;s=1152&amp;y=92">HE400</a></td>
+	<td>Multidisciplinary Seminar on Critical Health Issues</td>
+	<td>0.5</td>
+</tr>
+<tr class="zebra">
+   <td><a href="course.php?c=76616&amp;cal=1&amp;d=3127&amp;s=1152&amp;y=92">HE410</a></td>
+	<td>Aging and Health</td>
+	<td>0.5</td>
+</tr>
+<tr>
+   <td><a href="course.php?c=76617&amp;cal=1&amp;d=3127&amp;s=1152&amp;y=92">HE411</a></td>
+	<td>Critical perspectives in Public Health</td>
+	<td>0.5</td>
+</tr>
+<tr class="zebra">
+   <td><a href="course.php?c=76620&amp;cal=1&amp;d=3127&amp;s=1152&amp;y=92">HE430</a></td>
+	<td>Advanced nutrition and chronic disease</td>
+	<td>0.5</td>
+</tr>
+<tr>
+   <td><a href="course.php?c=76619&amp;cal=1&amp;d=3127&amp;s=1152&amp;y=92">HE431</a></td>
+	<td>Pathophysiology</td>
+	<td>0.5</td>
+</tr>
+<tr class="zebra">
+   <td><a href="course.php?c=76623&amp;cal=1&amp;d=3127&amp;s=1152&amp;y=92">HE432</a></td>
+	<td>Biomedical Virology</td>
+	<td>0.5</td>
+</tr>
+<tr>
+   <td><a href="course.php?c=76626&amp;cal=1&amp;d=3127&amp;s=1152&amp;y=92">HE435</a></td>
+	<td>Exercise is Medicine</td>
+	<td>0.5</td>
+</tr>
+<tr class="zebra">
+   <td><a href="course.php?c=76621&amp;cal=1&amp;d=3127&amp;s=1152&amp;y=92">HE436</a></td>
+	<td>Health and Human Rights</td>
+	<td>0.5</td>
+</tr>
+<tr>
+   <td><a href="course.php?c=76622&amp;cal=1&amp;d=3127&amp;s=1152&amp;y=92">HE437</a></td>
+	<td>Principles of Population Health</td>
+	<td>0.5</td>
+</tr>
+<tr class="zebra">
+   <td><a href="course.php?c=77683&amp;cal=1&amp;d=3127&amp;s=1152&amp;y=92">HE438</a></td>
+	<td>Cancer Biology</td>
+	<td>0.5</td>
+</tr>
+<tr>
+   <td><a href="course.php?c=76611&amp;cal=1&amp;d=3127&amp;s=1152&amp;y=92">HE440</a></td>
+	<td>Special Topics</td>
+	<td>0.5</td>
+</tr>
+<tr class="zebra">
+   <td><a href="course.php?c=76612&amp;cal=1&amp;d=3127&amp;s=1152&amp;y=92">HE450</a></td>
+	<td>Directed Studies</td>
+	<td>0.5</td>
+</tr>
+<tr>
+   <td><a href="course.php?c=76615&amp;cal=1&amp;d=3127&amp;s=1152&amp;y=92">HE490</a></td>
+	<td>Directed Research in Health Sciences</td>
+	<td>1.0</td>
+</tr>
+<tr class="zebra">
+   <td><a href="course.php?c=76630&amp;cal=1&amp;d=3127&amp;s=1152&amp;y=92">HN204</a></td>
+	<td>Systems Human Anatomy</td>
+	<td>0.5</td>
+</tr>
+<tr>
+   <td><a href="course.php?c=76603&amp;cal=1&amp;d=3127&amp;s=1152&amp;y=92">HN210</a></td>
+	<td>Human Anatomy</td>
+	<td>0.5</td>
+</tr>
+<tr class="zebra">
+   <td><a href="course.php?c=76604&amp;cal=1&amp;d=3127&amp;s=1152&amp;y=92">HN220</a></td>
+	<td>Human Physiology</td>
+	<td>0.5</td>
+</tr>
+<tr>
+   <td><a href="course.php?c=76625&amp;cal=1&amp;d=3127&amp;s=1152&amp;y=92">HN320</a></td>
+	<td>Human Physiology II: Control and Integration</td>
+	<td>0.5</td>
+</tr>
+</table>
+<div class="clear">&nbsp;</div>
+<div class="returntotop"><a href="#top">Top</a></div>
+</div>
+			</div> <!-- /.content -->
+
+		</div> <!-- /.main -->
+
+		
+<div id="contentRHS" class="sidebar" role="navigation" aria-label="Right side navigation">
+	<img src="./images/layout/picture_right.gif" alt="Decorative image" role="presentation">
+
+		<div class="calright">
+	<h4>Academic &amp; Related Dates 2025/2026</h4>
+	<ul class="dates">
+	<li><a href="dates.php?cal=1&amp;y=92">All Dates</a></li>
+	</ul>
+
+			<hr class="calrightrule"/>
+	<h4>Other Calendars</h4>
+	<ul class="archivedcal">
+		<li class="ruled"><a href="index_old.php?cal=1&amp;y=93">Undergraduate Academic Calendar (2026/2027)</a></li>
+		<li class="ruled"><a href="index_old.php?cal=1&amp;y=90">Undergraduate Academic Calendar (2024/2025)</a></li>
+		<li class="ruled"><a href="index_old.php?cal=1&amp;y=87">Undergraduate Academic Calendar (2023/2024)</a></li>
+		<li class="ruled"><a href="index_old.php?cal=1&amp;y=85">Undergraduate Academic Calendar (2022/2023)</a></li>
+		<li><a href="/index.php">more...</a></li>
+		</ul>
+		</div>
+</div> <!-- /.sidebar -->
+
+	</div> <!-- /.wrapper -->
+
+	<div class="footer" role="contentinfo">
+
+		<div class="footer-top">
+			<div>
+				<a href="https://www.wlu.ca/about/locations-maps-and-parking/contact-us.html">Contact WLU</a>
+			</div>
+			<div>
+				<span>&copy; 2026 Wilfrid Laurier University</span>
+			</div>
+			<div>
+				<img src="images/layout/footer_red.gif" alt="Ontario, Canada" title="Ontario, Canada">
+			</div>
+		</div> <!-- /.footer-top -->
+
+		<div class="footer-bottom">
+			<div>
+				<span>Wilfrid Laurier University | 75 University Avenue West, Waterloo, Ontario, Canada  N2L 3C5</span>
+			</div>
+			<div>
+				<span>Phone: 519.884.1970 | Fax: 519.886.9351</span>
+			</div>
+			<div>
+				<span class="brantford">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
+			</div>
+		</div> <!-- /.footer-bottom -->
+
+	</div> <!-- /#footer -->
+
+	
+</body>
+</html>
+

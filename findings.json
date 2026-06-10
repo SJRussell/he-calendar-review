@@ -1,0 +1,247 @@
+{
+  "f25": {
+    "label": "2025/2026",
+    "dangling_internal": [
+      {
+        "course": "HE410",
+        "field": "prereq/coreq",
+        "ref": "HE302"
+      },
+      {
+        "course": "HE411",
+        "field": "prereq/coreq",
+        "ref": "HE302"
+      },
+      {
+        "course": "HE330",
+        "field": "prereq/coreq",
+        "ref": "HE211"
+      },
+      {
+        "course": "HE431/BI416",
+        "field": "prereq/coreq",
+        "ref": "HE211"
+      }
+    ],
+    "self_exclusion": [
+      {
+        "course": "HE300/KP434",
+        "alias": "HE300"
+      },
+      {
+        "course": "HE300/KP434",
+        "alias": "KP434"
+      },
+      {
+        "course": "HE431/BI416",
+        "alias": "BI416"
+      },
+      {
+        "course": "HE432/BI470",
+        "alias": "HE432"
+      },
+      {
+        "course": "HE432/BI470",
+        "alias": "BI470"
+      },
+      {
+        "course": "HE303/BI317",
+        "alias": "BI317"
+      },
+      {
+        "course": "HE368/PS368",
+        "alias": "PS368"
+      }
+    ],
+    "unlinked_text_codes": [],
+    "missing_description": [],
+    "missing_term": [
+      "HN220/KP222",
+      "HE400",
+      "HE340",
+      "HE440",
+      "HE450",
+      "HE301",
+      "HE202",
+      "HE490",
+      "HE436",
+      "HE437",
+      "HE432/BI470",
+      "HE350",
+      "HE435/KP435",
+      "HE305/PS389",
+      "HE304",
+      "HE303/BI317",
+      "HN204",
+      "HE368/PS368",
+      "HE438"
+    ],
+    "crosslist_format": [
+      {
+        "course": "HN210/KP221",
+        "parenthesized": true,
+        "text": "( Cross-listed as KP221 .)"
+      },
+      {
+        "course": "HN220/KP222",
+        "parenthesized": true,
+        "text": "( Cross-listed as KP222 .)"
+      },
+      {
+        "course": "HE435/KP435",
+        "parenthesized": true,
+        "text": "( Cross-listed as KP435 .)"
+      },
+      {
+        "course": "HE368/PS368",
+        "parenthesized": true,
+        "text": "( Cross-listed with PS368 )"
+      }
+    ]
+  },
+  "f26": {
+    "label": "2026/2027",
+    "dangling_internal": [
+      {
+        "course": "HE410",
+        "field": "prereq/coreq",
+        "ref": "HE302"
+      },
+      {
+        "course": "HE411",
+        "field": "prereq/coreq",
+        "ref": "HE302"
+      },
+      {
+        "course": "HE330",
+        "field": "prereq/coreq",
+        "ref": "HE211"
+      },
+      {
+        "course": "HE431/BI416",
+        "field": "prereq/coreq",
+        "ref": "HE211"
+      }
+    ],
+    "self_exclusion": [
+      {
+        "course": "HE300/KP434",
+        "alias": "HE300"
+      },
+      {
+        "course": "HE300/KP434",
+        "alias": "KP434"
+      },
+      {
+        "course": "HE431/BI416",
+        "alias": "BI416"
+      },
+      {
+        "course": "HE432/BI470",
+        "alias": "HE432"
+      },
+      {
+        "course": "HE432/BI470",
+        "alias": "BI470"
+      },
+      {
+        "course": "HE303/BI317",
+        "alias": "BI317"
+      },
+      {
+        "course": "HE368/PS368",
+        "alias": "PS368"
+      },
+      {
+        "course": "HE224/KP224/HS202",
+        "alias": "KP224"
+      },
+      {
+        "course": "HE224/KP224/HS202",
+        "alias": "HS202"
+      },
+      {
+        "course": "HE225/KP225/HS204",
+        "alias": "KP225"
+      },
+      {
+        "course": "HE225/KP225/HS204",
+        "alias": "HS204"
+      },
+      {
+        "course": "HE320/KP320",
+        "alias": "KP320"
+      },
+      {
+        "course": "HE321/KP321",
+        "alias": "KP321"
+      }
+    ],
+    "unlinked_text_codes": [],
+    "missing_description": [],
+    "missing_term": [
+      "HN220/KP222",
+      "HE400",
+      "HE340",
+      "HE440",
+      "HE450",
+      "HE301",
+      "HE202",
+      "HE490",
+      "HE436",
+      "HE437",
+      "HE432/BI470",
+      "HE350",
+      "HE435/KP435",
+      "HE305/PS389",
+      "HE304",
+      "HE303/BI317",
+      "HN204",
+      "HE368/PS368",
+      "HE438",
+      "HE224/KP224/HS202",
+      "HE225/KP225/HS204",
+      "HE320/KP320",
+      "HE321/KP321"
+    ],
+    "crosslist_format": [
+      {
+        "course": "HN210/KP221",
+        "parenthesized": true,
+        "text": "( Cross-listed as KP221 .)"
+      },
+      {
+        "course": "HN220/KP222",
+        "parenthesized": true,
+        "text": "( Cross-listed as KP222 .)"
+      },
+      {
+        "course": "HE435/KP435",
+        "parenthesized": true,
+        "text": "( Cross-listed as KP435 .)"
+      },
+      {
+        "course": "HE368/PS368",
+        "parenthesized": true,
+        "text": "( Cross-listed with PS368 )"
+      },
+      {
+        "course": "HE320/KP320",
+        "parenthesized": false,
+        "text": "Cross-listed as KP320"
+      },
+      {
+        "course": "HE321/KP321",
+        "parenthesized": false,
+        "text": "Cross-listed as KP321"
+      }
+    ]
+  },
+  "added_2026": [
+    "HE224",
+    "HE225",
+    "HE320",
+    "HE321"
+  ],
+  "removed_2026": []
+}

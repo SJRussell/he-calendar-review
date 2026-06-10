@@ -1,0 +1,271 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html lang="en">
+
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+	<title>Wilfrid Laurier University - Undergraduate Academic Calendar - 2025/2026 - Faculty of Science - Health Sciences</title>
+	<LINK REL=StyleSheet HREF="css/style_wlu.css?ts=20200602_01" TYPE="text/css" MEDIA="screen,print">
+	<LINK REL=StyleSheet HREF="css/style_wlu_print.css?ts=20200602_01" TYPE="text/css" MEDIA="print">
+	<LINK REL=StyleSheet HREF="css/style_cal.css?ts=20200602_01" TYPE="text/css" MEDIA="screen">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+	<!--[if IE 6]><link rel="stylesheet" href="css/style_wlu_ie6.css" type="text/css" media="screen" /><![endif]-->
+	<!--[if lte IE 9]><link rel="stylesheet" href="css/style_wlu_ie.css" type="text/css" media="screen" /><![endif]-->
+
+	<script type="text/javascript">
+		<!--
+		function findPos(obj) {
+			// gets the 'top' and 'left' positions of the object.
+
+			var curtop = 0;
+			var curleft = 0;
+			if (obj.offsetParent) {
+				while (obj.offsetParent) {
+					curtop += obj.offsetTop;
+					curleft += obj.offsetLeft;
+					obj = obj.offsetParent;
+				}
+			} else {
+				if (obj.y) curtop += obj.y;
+				if (obj.x) curleft += obj.x;
+			}
+			var r = Array();
+			r[0] = curtop;
+			r[1] = curleft;
+			return r;
+		}
+
+		function showGlossaryDef(obj, def) {
+			// will move a special "glossary DIV" to appropriate spot and put term information into it.
+
+			gPos = findPos(obj);
+			if ((gPos[0] > 0) && (gPos[1] > 0)) {
+				gDiv = document.getElementById("glossaryDef");
+				if (gDiv) {
+					gDiv.innerHTML = def.replace(/#QUOTE#/g, '"');
+					gDiv.style.top = (gPos[0] + 15) + "px";
+					gDiv.style.left = gPos[1] + "px";
+					gDiv.style.visibility = "visible";
+					gDiv.style.display = "inline";
+				}
+			}
+		}
+
+		function hideGlossaryDef() {
+			gDiv = document.getElementById("glossaryDef");
+			if (gDiv) {
+				gDiv.style.visibility = "hidden";
+				gDiv.style.display = "none";
+			}
+		}
+
+		function hideSelect() {
+			var DL_bIE = document.all ? true : false; // initialize var to identify IE
+			if (DL_bIE) { // if browser is IE, then...
+				var numforms = document.forms.length;
+				for (f = 1; f < numforms; f++) {
+					var numformelements = document.forms[f].elements.length;
+					for (counter = 0; counter < numformelements; counter++) {
+						var thisselect = document.forms[f].elements[counter];
+						thisselect.style.visibility = "hidden";
+					}
+				}
+			}
+		}
+
+		function showSelect() {
+			var numforms = document.forms.length;
+			for (f = 1; f < numforms; f++) {
+				var numformelements = document.forms[f].elements.length;
+				for (counter = 0; counter < numformelements; counter++) {
+					var thisselect = document.forms[f].elements[counter];
+					thisselect.style.visibility = "visible";
+				}
+			}
+		}
+
+
+		startList = function() {
+			if (document.all && document.getElementById) {
+				navRoot = document.getElementById("nav");
+				for (i = 0; i < navRoot.childNodes.length; i++) {
+					node = navRoot.childNodes[i];
+					if (node.nodeName == "LI") {
+						node.onmouseover = function() {
+							this.className += " over";
+						}
+						node.onmouseout = function() {
+							this.className = this.className.replace(" over", "");
+						}
+					}
+				}
+			}
+		}
+		window.onload = startList;
+		//
+		-->
+	</script>
+</head>
+
+<body>
+
+	<div class="header clearfix" role="banner">
+
+		<a class="skip-to-content-link" href="#main">Skip to content</a>
+		<a class="top-link" name="top"></a>
+
+		<div class="header-logo">
+			<a href="http://www.wlu.ca/">
+				<img src="images/layout/laurier_logo.gif" alt="Wilfrid Laurier University">
+			</a>
+		</div>
+
+		
+		<div class="header-decoration">
+			<img class="book-image" src="images/layout/book_white.gif" alt="Book decoration" role="presentation" aria-hidden="true" />
+			<a href="index.php?cal=1&amp;y=92">
+				<img src="./images/cms/corner/92/ug2025-2026.gif" width="287" height="101" alt="Undergraduate Academic Calendar - 2025/2026" />
+			</a>
+		</div>
+
+		<div class="header-tagline">
+			<img src="images/layout/canadian-excellence.gif" width="267" height="18" alt="Canadian Excellence">
+		</div>
+	</div>
+
+	
+	<div class="wrapper">
+
+		<div id="deptnav" class="sidebar" role="navigation" aria-label="Left side navigation">
+
+			<h2><A href="index_old.php?cal=1&amp;y=92">Undergraduate Academic Calendar 2025/2026</A></h2>
+<ul>
+	<li><a href="section.php?cal=1&amp;s=1159&amp;y=92">Areas of Study/Courses @ Laurier (Direct Links)</a></li>
+	<li><a href="section.php?cal=1&amp;s=1163&amp;y=92">Print Version 2023-24</a></li>
+	<li><a href="section.php?cal=1&amp;s=1167&amp;y=92">Using This Calendar</a></li>
+	<li><a href="section.php?cal=1&amp;s=1160&amp;y=92"> Recruitment and Admissions</a></li>
+	<li><a href="section.php?cal=1&amp;s=1158&amp;y=92">Student Awards and Financial Aid</a></li>
+	<li><a href="section.php?cal=1&amp;s=1157&amp;y=92">Financial Services</a></li>
+	<li><a href="section.php?cal=1&amp;s=1162&amp;y=92">Academic and Related Dates</a></li>
+	<li><a href="section.php?cal=1&amp;s=1156&amp;y=92">University Undergraduate Regulations</a></li>
+	<li><a href="department.php?cal=1&amp;d=3067&amp;s=1150&amp;y=92">Interdisciplinary Course Offerings</a></li>
+	<li><a href="section.php?cal=1&amp;s=1151&amp;y=92">Faculty of Arts</a></li>
+	<li><a href="section.php?cal=1&amp;s=1161&amp;y=92">Faculty of Education</a></li>
+	<li><a href="section.php?cal=1&amp;s=1165&amp;y=92">Faculty of Human and Social Sciences</a></li>
+	<li><a href="section.php?cal=1&amp;s=1153&amp;y=92">Faculty of Liberal Arts</a></li>
+	<li><a href="section.php?cal=1&amp;s=1155&amp;y=92">Faculty of Music</a></li>
+	<li class="current"><a href="section.php?cal=1&amp;s=1152&amp;y=92">Faculty of Science</a></li>
+		<li class="sublist"><a href="section.php?cal=1&amp;s=1152&amp;ss=4561&amp;y=92">BSc and BA Programs and Regulations</a></li>
+		<li class="sublist"><a href="section.php?cal=1&amp;s=1152&amp;ss=4562&amp;y=92">Academic Advising</a></li>
+		<li class="sublist"><a href="section.php?cal=1&amp;s=1152&amp;ss=4563&amp;y=92">Regulations for All Honours Programs</a></li>
+		<li class="sublist"><a href="section.php?cal=1&amp;s=1152&amp;ss=4564&amp;y=92">Regulations Combining Honours with a Secondary Minor/Option</a></li>
+		<li class="sublist"><a href="section.php?cal=1&amp;s=1152&amp;ss=4565&amp;y=92">Co-operative Education</a></li>
+		<li class="sublist"><a href="section.php?cal=1&amp;s=1152&amp;ss=4566&amp;y=92">Faculty of Science Campus Transfer Policy</a></li>
+	<li><a href="section.php?cal=1&amp;s=1154&amp;y=92">Lazaridis School of Business and Economics</a></li>
+	<li><a href="section.php?cal=1&amp;s=1166&amp;y=92">Lyle S Hallman Faculty of Social Work</a></li>
+	<li><a href="section.php?cal=1&amp;s=1164&amp;y=92">Martin Luther University College</a></li>
+</ul>
+<hr/>
+<ul>
+	<li><a href="index_old.php?cal=1&amp;y=92">Search this Calendar</a></li>
+	<li><a href="glossary.php?cal=1&amp;y=92">Glossary</a></li>
+</ul>
+			<div id="deptcontact">
+	<h1>Contact Us:</h1>
+		<strong>Contact Academic Department directly unless Calendar inquiry</strong><br />			email: <a href="mailto:&#0098;&#0118;&#0111;&#0105;&#0115;&#0105;&#0110;&#0101;&#0064;&#0119;&#0108;&#0117;&#0046;&#0099;&#0097;">Bonnie Voisine, Office of the Registrar</a><br />
+					phone: bvoisine@wlu.ca<br />
+					</div>
+
+		</div>
+
+		<div id="main" class="main" role="main">
+
+			<a name="mcontent"></a>
+
+			<div class="breadcrumb">
+<img src="images/layout/redlistarrow.gif" alt="List bullet" role="presentation" aria-hidden="true"> <a href="section.php?cal=1&amp;s=1152&amp;y=92">Faculty of Science</a>&nbsp;<img src="images/layout/redlistsmbullet.gif" alt="list bullet" role="presentation" aria-hidden="true"> <a href="department.php?cal=1&amp;d=3127&amp;s=1152&amp;y=92">Health Sciences</a>&nbsp;<img src="images/layout/redlistsmbullet.gif" alt="list bullet" role="presentation" aria-hidden="true"> <a href="program.php?cal=1&amp;d=3127&amp;p=7164&amp;s=1152&amp;y=92">Honours BSc Health Sciences</a>&nbsp;</div>
+
+			<div class="content">
+<h1>Honours BSc Health Sciences</h1>
+<p><p>The Honours BSc Health Sciences <A href="glossary.php?cal=1&amp;g=1578&amp;y=92" class="glossaryTerm" onMouseOver="showGlossaryDef(this,'<P><p>A group of courses, generally a combination of required and elective courses, which leads to a degree.  </p><p><b class=#QUOTE#Bold#QUOTE#>General program:</b> A program consisting of a minimum of 15.0 credits and normally taken over three academic years.  </p><p><b class=#QUOTE#Bold#QUOTE#>Honours program: </b>A program consisting of a minimum of 20.0 credits and normally taken over four academic years with an area of specialization.</p></P>')" onMouseOut="hideGlossaryDef()">program</A> consists of 20.0 credits, of which at most 7.0 credits may be at the 100 level and no more than 4.5 credits may be from <A href="glossary.php?cal=1&amp;g=1562&amp;y=92" class="glossaryTerm" onMouseOver="showGlossaryDef(this,'<P>Same as a subject or major (e.g., English, history, physics). Refer to <b class=#QUOTE#Bold#QUOTE#><a href=#QUOTE#/section.php?cal=1&amp;y=92#QUOTE#>Discipline Codes</a></b> in <b class=#QUOTE#Bold#QUOTE#>Using this Calendar</b> section. Also, <a href=#QUOTE#/section.php?cal=1&amp;s=1156&amp;sp=3840&amp;ss=4584&amp;y=92#QUOTE#>Student Code of Conduct or Discipline</a>.<br /></P>')" onMouseOut="hideGlossaryDef()">disciplines</A> outside the Faculty of Science. Electives must include at least a 0.5 credit from each of English (EN) and Philosophy (PP). At least 2.0 credits must be from 400-level HE courses.&nbsp; For progression and graduation, a cumulative overall <A href="glossary.php?cal=1&amp;g=1568&amp;y=92" class="glossaryTerm" onMouseOver="showGlossaryDef(this,'<P><p>The average of the grade points attained in specific courses. For purposes of calculation, the grade point (GP) earned in a 0.5-credit course will be given half of the weight of that earned in a 1.0-credit course. Likewise the GP earned in a 0.25-credit course will be given a quarter of the weight of that earned in a 1.0-credit course.</p>    <p>GPAs are rounded to 2 decimal places.&nbsp;</p>    <p>(For an example of the calculation, refer to the <a href=#QUOTE#/section.php?cal=1&amp;s=1156&amp;sp=3826&amp;ss=4581&amp;y=92#QUOTE#><b class=#QUOTE#Bold#QUOTE#>Grading System</b></a> section of the <b class=#QUOTE#Bold#QUOTE#>University Undergraduate Regulations</b> chapter.)</p></P>')" onMouseOut="hideGlossaryDef()">GPA</A> of at least 6.0 is required.</p> 
+  <p><b>Year 1</b>: (5.0 credits)<br /><a href="course.php?c=76605&amp;cal=1&amp;d=3127&amp;s=1152&amp;y=92">HE100</a>, <a href="course.php?c=76606&amp;cal=1&amp;d=3127&amp;s=1152&amp;y=92">HE101</a>, <a href="course.php?c=76313&amp;cal=1&amp;d=3116&amp;s=1152&amp;y=92">BI110</a>, <a href="course.php?c=76314&amp;cal=1&amp;d=3116&amp;s=1152&amp;y=92">BI111</a>, <a href="course.php?c=76356&amp;cal=1&amp;d=3117&amp;s=1152&amp;y=92">CH110</a>, <a href="course.php?c=76357&amp;cal=1&amp;d=3117&amp;s=1152&amp;y=92">CH111</a>; <a href="course.php?c=76226&amp;cal=1&amp;d=3115&amp;s=1152&amp;y=92">PS101</a>, <a href="course.php?c=76276&amp;cal=1&amp;d=3115&amp;s=1152&amp;y=92">PS102</a>; <a href="course.php?c=76576&amp;cal=1&amp;d=3120&amp;s=1152&amp;y=92">MA100</a>;<br />0.5 elective credit (EN recommended) (Refer to Notes 1 and 2)</p> 
+  <p><b>Year 2</b>: (5.0 credits)<br /><a href="course.php?c=76607&amp;cal=1&amp;d=3127&amp;s=1152&amp;y=92">HE201</a>, <a href="course.php?c=76614&amp;cal=1&amp;d=3127&amp;s=1152&amp;y=92">HE202</a>, <a href="course.php?c=76630&amp;cal=1&amp;d=3127&amp;s=1152&amp;y=92">HN204</a>, <a href="course.php?c=76604&amp;cal=1&amp;d=3127&amp;s=1152&amp;y=92">HN220</a>/<a href="course.php?c=76467&amp;cal=1&amp;d=3119&amp;s=1152&amp;y=92">KP222</a>,&nbsp;<a href="course.php?c=76358&amp;cal=1&amp;d=3117&amp;s=1152&amp;y=92">CH202</a>, <a href="course.php?c=76591&amp;cal=1&amp;d=3120&amp;s=1152&amp;y=92">ST231</a>, <a href="course.php?c=76318&amp;cal=1&amp;d=3116&amp;s=1152&amp;y=92">BI236</a>;<br />0.5 senior PS credit (Refer to Note 4)<br />At most 1.0 elective credits (Refer to Notes 2 and 3)<br /> <br /><b>Year 3</b>: (5.0 credits)<br /><a href="course.php?c=76608&amp;cal=1&amp;d=3127&amp;s=1152&amp;y=92">HE300</a>/<a href="course.php?c=76509&amp;cal=1&amp;d=3119&amp;s=1152&amp;y=92">KP434</a>, <a href="course.php?c=76613&amp;cal=1&amp;d=3127&amp;s=1152&amp;y=92">HE301</a>, <a href="course.php?c=76629&amp;cal=1&amp;d=3127&amp;s=1152&amp;y=92">HE303</a>, <a href="course.php?c=76628&amp;cal=1&amp;d=3127&amp;s=1152&amp;y=92">HE304</a>, <a href="course.php?c=76618&amp;cal=1&amp;d=3127&amp;s=1152&amp;y=92">HE330</a>;<br />2.5 elective credits (see Note 3)</p> 
+  <p><b>Year 4</b>: (5.0 credits)<br /><a href="course.php?c=76609&amp;cal=1&amp;d=3127&amp;s=1152&amp;y=92">HE400</a>;<br />2.0 credits selected from: <a href="course.php?c=76616&amp;cal=1&amp;d=3127&amp;s=1152&amp;y=92">HE410</a>, <a href="course.php?c=76617&amp;cal=1&amp;d=3127&amp;s=1152&amp;y=92">HE411</a>, <a href="course.php?c=76620&amp;cal=1&amp;d=3127&amp;s=1152&amp;y=92">HE430</a>, <a href="course.php?c=76619&amp;cal=1&amp;d=3127&amp;s=1152&amp;y=92">HE431</a>, <a href="course.php?c=76623&amp;cal=1&amp;d=3127&amp;s=1152&amp;y=92">HE432</a>, HE434, <a href="course.php?c=76626&amp;cal=1&amp;d=3127&amp;s=1152&amp;y=92">HE435</a>, <a href="course.php?c=76611&amp;cal=1&amp;d=3127&amp;s=1152&amp;y=92">HE440</a>, <a href="course.php?c=76612&amp;cal=1&amp;d=3127&amp;s=1152&amp;y=92">HE450</a>, <a href="course.php?c=76615&amp;cal=1&amp;d=3127&amp;s=1152&amp;y=92">HE490</a>*;<br />2.5 elective credits (see Note 5)<br /></p></p><div class="reqs">
+<div class="greyheading">Additional Information</div>
+<ul class="proginfo">
+<li><a href="#Notes">Notes</a></li>
+</ul>
+<div class="clear">&nbsp;</div>
+</div>
+<div class="reqs">
+<div class="heading"><A name="Notes"></A>Notes</div>
+<p><ol> 
+    <li><A href="glossary.php?cal=1&amp;g=1580&amp;y=92" class="glossaryTerm" onMouseOver="showGlossaryDef(this,'<P>A student is a person who is registered in a program that leads to a degree, diploma or certificate of the university and includes all students described in the section, <a href=#QUOTE#https://academic-calendar.wlu.ca/section.php?cal=1&amp;s=1167&amp;ss=4630&amp;y=92#QUOTE#><b class=#QUOTE#Bold#QUOTE#>Classification of Students</b></a>, but does not include a visitor.</P>')" onMouseOut="hideGlossaryDef()">Students</A> working towards applying to professional <A href="glossary.php?cal=1&amp;g=1578&amp;y=92" class="glossaryTerm" onMouseOver="showGlossaryDef(this,'<P><p>A group of courses, generally a combination of required and elective courses, which leads to a degree.  </p><p><b class=#QUOTE#Bold#QUOTE#>General program:</b> A program consisting of a minimum of 15.0 credits and normally taken over three academic years.  </p><p><b class=#QUOTE#Bold#QUOTE#>Honours program: </b>A program consisting of a minimum of 20.0 credits and normally taken over four academic years with an area of specialization.</p></P>')" onMouseOut="hideGlossaryDef()">programs</A> (e.g., medicine, dental school, pharmacy, etc.)in the future and/or are interested in writing the MCAT, DAT or OAT are highly recommended to take <a href="course.php?c=76577&amp;cal=1&amp;d=3120&amp;s=1152&amp;y=92">MA101</a>, <a href="course.php?c=76527&amp;cal=1&amp;d=3120&amp;s=1152&amp;y=92">MA104</a>, <a href="course.php?c=76194&amp;cal=1&amp;d=3114&amp;s=1152&amp;y=92">PC141</a> (orPC131) and <a href="course.php?c=76195&amp;cal=1&amp;d=3114&amp;s=1152&amp;y=92">PC142</a> (or <a href="course.php?c=76192&amp;cal=1&amp;d=3114&amp;s=1152&amp;y=92">PC132</a>) among their <A href="glossary.php?cal=1&amp;g=1564&amp;y=92" class="glossaryTerm" onMouseOver="showGlossaryDef(this,'<P>A course chosen as part of a program but not a required course. The  choice of elective may be subject to departmental approval or may have  to be chosen from a stated group of courses in a program.  </P>')" onMouseOut="hideGlossaryDef()">electives</A>. Consult the relevant degree program or the HE Undergraduate Academic Advisor for further guidance.</li> 
+    <li>&nbsp;0.5 credit in English and 0.5 credit in Philosophy are required. English is recommended in year 1 and Philosophy in years 2, 3, or 4.</li> 
+    <li>For students working towards applying to a professional program (e.g., medicine, dental school, pharmacy, etc.),<a href="course.php?c=76359&amp;cal=1&amp;d=3117&amp;s=1152&amp;y=92">CH203</a> and <a href="course.php?c=76369&amp;cal=1&amp;d=3117&amp;s=1152&amp;y=92">CH250</a> are highly recommended.</li> 
+    <li>Students must select 0.5 credit from one of the following psychology courses to satisfy this requirement (<a href="course.php?c=76232&amp;cal=1&amp;d=3115&amp;s=1152&amp;y=92">PS263</a>, <a href="course.php?c=76275&amp;cal=1&amp;d=3115&amp;s=1152&amp;y=92">PS268</a>, <a href="course.php?c=76234&amp;cal=1&amp;d=3115&amp;s=1152&amp;y=92">PS270</a>, <a href="course.php?c=76240&amp;cal=1&amp;d=3115&amp;s=1152&amp;y=92">PS280</a>, <a href="course.php?c=76241&amp;cal=1&amp;d=3115&amp;s=1152&amp;y=92">PS282</a>, <a href="course.php?c=76274&amp;cal=1&amp;d=3115&amp;s=1152&amp;y=92">PS285</a>, <a href="course.php?c=76237&amp;cal=1&amp;d=3115&amp;s=1152&amp;y=92">PS275</a>, <a href="course.php?c=76238&amp;cal=1&amp;d=3115&amp;s=1152&amp;y=92">PS276</a>, <a href="course.php?c=76239&amp;cal=1&amp;d=3115&amp;s=1152&amp;y=92">PS377</a>).</li> 
+    <li>Depending on career objectives, students may wish to concentrate their electives in order to qualify for a Minor or Option as part of the Health Sciences BSc. In particular, with one additional <A href="glossary.php?cal=1&amp;g=1579&amp;y=92" class="glossaryTerm" onMouseOver="showGlossaryDef(this,'<P><p>  A course at the 200 – 499 level (e.g., FR438 or  HI247*). Such courses are normally restricted to senior students unless  otherwise specified in the course description.<br />&nbsp;&nbsp;</p></P>')" onMouseOut="hideGlossaryDef()">senior</A> BI course, students will qualify for a Minor in Biology. Students wishing to obtain a Minor or Option in a <A href="glossary.php?cal=1&amp;g=1562&amp;y=92" class="glossaryTerm" onMouseOver="showGlossaryDef(this,'<P>Same as a subject or major (e.g., English, history, physics). Refer to <b class=#QUOTE#Bold#QUOTE#><a href=#QUOTE#/section.php?cal=1&amp;y=92#QUOTE#>Discipline Codes</a></b> in <b class=#QUOTE#Bold#QUOTE#>Using this Calendar</b> section. Also, <a href=#QUOTE#/section.php?cal=1&amp;s=1156&amp;sp=3840&amp;ss=4584&amp;y=92#QUOTE#>Student Code of Conduct or Discipline</a>.<br /></P>')" onMouseOut="hideGlossaryDef()">discipline</A> other than Biology, particularly if it is offered by a <A href="glossary.php?cal=1&amp;g=1561&amp;y=92" class="glossaryTerm" onMouseOver="showGlossaryDef(this,'<P><p> An academic department as duly constituted by the  Senate and Board of Governors (e.g., Department of Anthropology,  Department of Physics &amp; Computer Science, Department of History). Also, a non-academic area of the university.</p></P>')" onMouseOut="hideGlossaryDef()">department</A> outside the Faculty of Science, should discuss their plans well in advance with the HE Undergraduate Academic Advisor.</li> 
+  </ol></p>
+<div class="clear">&nbsp;</div>
+<div class="returntotop"><a href="#top">Top</a></div>
+</div>
+			</div> <!-- /.content -->
+
+		</div> <!-- /.main -->
+
+		
+<div id="contentRHS" class="sidebar" role="navigation" aria-label="Right side navigation">
+	<img src="./images/layout/picture_right.gif" alt="Decorative image" role="presentation">
+
+		<div class="calright">
+	<h4>Academic &amp; Related Dates 2025/2026</h4>
+	<ul class="dates">
+	<li><a href="dates.php?cal=1&amp;y=92">All Dates</a></li>
+	</ul>
+
+			<hr class="calrightrule"/>
+	<h4>Other Calendars</h4>
+	<ul class="archivedcal">
+		<li class="ruled"><a href="index_old.php?cal=1&amp;y=93">Undergraduate Academic Calendar (2026/2027)</a></li>
+		<li class="ruled"><a href="index_old.php?cal=1&amp;y=90">Undergraduate Academic Calendar (2024/2025)</a></li>
+		<li class="ruled"><a href="index_old.php?cal=1&amp;y=87">Undergraduate Academic Calendar (2023/2024)</a></li>
+		<li class="ruled"><a href="index_old.php?cal=1&amp;y=85">Undergraduate Academic Calendar (2022/2023)</a></li>
+		<li><a href="/index.php">more...</a></li>
+		</ul>
+		</div>
+</div> <!-- /.sidebar -->
+
+	</div> <!-- /.wrapper -->
+
+	<div class="footer" role="contentinfo">
+
+		<div class="footer-top">
+			<div>
+				<a href="https://www.wlu.ca/about/locations-maps-and-parking/contact-us.html">Contact WLU</a>
+			</div>
+			<div>
+				<span>&copy; 2026 Wilfrid Laurier University</span>
+			</div>
+			<div>
+				<img src="images/layout/footer_red.gif" alt="Ontario, Canada" title="Ontario, Canada">
+			</div>
+		</div> <!-- /.footer-top -->
+
+		<div class="footer-bottom">
+			<div>
+				<span>Wilfrid Laurier University | 75 University Avenue West, Waterloo, Ontario, Canada  N2L 3C5</span>
+			</div>
+			<div>
+				<span>Phone: 519.884.1970 | Fax: 519.886.9351</span>
+			</div>
+			<div>
+				<span class="brantford">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
+			</div>
+		</div> <!-- /.footer-bottom -->
+
+	</div> <!-- /#footer -->
+
+	
+</body>
+</html>
+

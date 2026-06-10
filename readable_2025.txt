@@ -1,0 +1,143 @@
+### HN210/KP221 — Human Anatomy  [0.5 Credit | Fall]
+( Cross-listed as KP221 .)
+  Exclusions: HN204 , HS202 , HS204 , KP223
+
+### HN220/KP222 — Human Physiology  [0.5 Credit | ]
+( Cross-listed as KP222 .)
+
+### HE100 — Health Issues I  [0.5 Credit | Fall]
+An introduction to health issues pertinent to the individual and the community. Various health-related topics will be considered, such as defining health, determinants of health, risk factors and behaviour change and epidemiology.
+  Prerequisites: Registration status: Year 1 Honours BSc Health Sciences.
+  Exclusions: KP231 .
+
+### HE101 — Health Issues II  [0.5 Credit | Winter]
+A continuation of Health Issues I, possible topics including: risk behaviours and health promotion, chronic and infectious disease, complementary and alternative medicine, global health care systems and health communication.
+  Prerequisites: HE100 , and registration status: Year 1 Honours BSc Health Sciences.
+  Exclusions: KP232.
+
+### HE201 — Research Methods for the Health Sciences  [0.5 Credit | Fall]
+A thorough understanding of the health research process is required for decision-making in clinical practice and to lead more advanced research. This course will provide students with a comprehensive understanding of the basic principles and methodologies used in health research. Topics covered in this course include the design of research studies (observational and experimental), data collection techniques (including concepts of reliability and validity), ethical considerations unique to health research, and knowledge translation strategies. Through a combination of lectures and practical assignments, students will gain experience in developing research questions and designing study protocols.
+  Prerequisites: HE101 and registration status: Year 2: Honours BSc Health Sciences.
+  Exclusions: KP261, PS291, PS295 .
+
+### HE300/KP434 — Epidemiology  [0.5 Credit | Fall]
+An introduction to the field of chronic disease epidemiology with a focus on the ways in which epidemiologic methods can enhance our understanding of chronic illnesses such as heart disease, cancer and diabetes. In this course , students will build upon their skills in research design, interpretation of statistical data and critical evaluation of the scientific literature. ( Cross-listed as KP434 .)
+  Prerequisites: ( KP231 and KP390 ) OR (both HE201 and MA241 or ST231 ).
+  Exclusions: HE300 , HS320, KP340K, KP434 .
+
+### HE400 — Multidisciplinary Seminar on Critical Health Issues  [0.5 Credit | ]
+Students will identify, investigate and discuss critical health issues by integrating a range of social and biomedical perspectives and working toward a cell-to-society understanding. Activities in class will include group work to develop colloquia on special topics, critical discussion of readings and films and some traditional lectures to provide core content. The course will culminate in a research project. Course evaluation will be focused on students' ability to think critically about complex health problems and concrete solutions; participation in group work and class discussions; and proficiency in verbal and written communication.
+  Prerequisites: HE300 and HE301 ; registration status: Year 4 Honours BSc Health Sciences.
+
+### HE340 — Special Topics  [0.5 Credit | ]
+(NO DESCRIPTION)
+  Prerequisites: Registration status: Year 3 or 4 Honours BSc Health Sciences.
+  Notes: Irregular Course
+
+### HE440 — Special Topics  [0.5 Credit | ]
+(NO DESCRIPTION)
+  Prerequisites: Registration status: Year 4 Honours BSc Health Sciences
+  Notes: Irregular Course
+
+### HE450 — Directed Studies  [0.5 Credit | ]
+(NO DESCRIPTION)
+  Prerequisites: Registration status: Year 4 Honours BSc Health Sciences
+  Notes: Irregular Course
+
+### HE301 — Social Determinants of Health  [0.5 Credit | ]
+Increasingly, there is evidence that societal factors may be the primary determinants of why people stay healthy or become ill. Much of the medical and epidemiological literatures on health ‘disparities' have been descriptive in nature and fail to analytically account for increasing inequities in population health outcomes. This course moves beyond traditional ‘lifestyle' explanations of health and wellness and provides students with a solid understanding of how social factors contribute to inequities in health care access and population health outcomes. We will examine how social exclusion , income, early life experiences, employment and working conditions, unemployment and employment insecurity, housing, food security, Indigenous status, and social policy determine health. We also explore why the biomedical and lifestyle models of health are the primary ways that Canadians think about health, the policy implications of the current state of knowledge, and what can be done to inform change.
+  Prerequisites: HE201 .
+  Exclusions: HS200 .
+
+### HE202 — Foundations of the Canadian Healthcare System  [0.5 Credit | ]
+The course is intended to develop an awareness and understanding of the Canadian healthcare system. Topics may include: the historical foundations of Medicare; responsibilities of the provincial and federal governments with respect to allocation of resources; funding mechanisms; models of healthcare delivery; evolving roles of healthcare professionals, interdisciplinary and multidisciplinary teams; occupational health and safety of healthcare professionals; the Personal Health Protection Act in the role of electronic health records; legislation, including the Ontario Health Care Consent Act, the Ontario Public Hospitals Act, and the Ontario Regulated Health Professionals Act. Prerequisites :
+  Prerequisites: Registration Status: Minimum Year 2 Honours BSc Health Sciences
+  Exclusions: HS201 .
+
+### HE490 — Directed Research in Health Sciences  [1.0 Credit | ]
+This two-semester course is an independent thesis in Health Sciences under the direct supervision of a faculty member. The research project will culminate in a formal report and an oral presentation. Students wishing to complete a thesis must apply to the program co-ordinator for admission to HE490* by July 1 of Year 3.
+  Prerequisites: Admission requires a minimum GPA of 8.00 and permission of the program co-ordinator.
+
+### HE410 — Aging and Health  [0.5 Credit | Fall/Winter]
+A study of aging and health from a variety of perspectives including; bio-physiological, psycho-social, health-care system, cultural, legal, ethical and political. Topics may include; the aging process, falls, mental health, medication and co-morbidity, death and dying and others. There are several interactive/hands on components in the course .
+  Prerequisites: HE301 , HE302.
+  Exclusions: KP431 , HE440F.
+
+### HE411 — Critical perspectives in Public Health  [0.5 Credit | Fall/Winter]
+An examination of the practice of public health in Canada and internationally with emphasis on social and political impacts on the application of knowledge to practice. Models of health promotion, population health, health determinants and health behaviour will form the theoretical basis for exploration of public health research and practice.
+  Prerequisites: HE301 , HE302.
+  Exclusions: HE440E.
+
+### HE330 — Human Nutrition and Health  [0.5 Credit | Fall/Winter]
+An examination of issues and controversies in human nutrition from nutritional science, physiological, metabolic and public health perspectives covering topics including; dietary assessment and planning, micro and macronutrients, antioxidants, phytochemicals, functional foods, food labeling obesity and weight management and dietary practices associated with disease prevention and management.
+  Prerequisites: HE201 and HN220 (or HE211 or BI216 or KP220).
+  Exclusions: HE440D, KP332 .
+
+### HE431/BI416 — Pathophysiology  [0.5 Credit | Fall/Winter]
+An examination of functional changes in cells, tissues and organs consequent to disease or injury. Topics may include the mechanisms of inflammation, hypertension, coronary artery disease, concussion, asthma, hepatitis, dysentery as well as other multi-organ conditions from environmental or other types of stress. ( Cross-listed as BI416 .)
+  Prerequisites: HN220 (or HE211 or BI216 or KP220).
+  Exclusions: BI416 , HE440B, BI496R.
+
+### HE430 — Advanced nutrition and chronic disease  [0.5 Credit | Fall/Winter]
+This course will examine nutritional aspects of selected chronic diseases affecting the Canadian population. Using a case-based approach, students will explore the role of diet in the etiology, prevention and treatment of nutrition-related conditions across the lifecycle including obesity, dyslipidemia, hypertension, cardiovascular disease, diabetes, anemia, osteoporosis and cancer. Emphasis will be placed on critical appraisal of epidemiological and clinical evidence, underlying physiological mechanisms, nutritional assessment methods and diet interventions.
+  Prerequisites: HE300 / KP434 , HE330 .
+  Exclusions: HE440D.
+
+### HE436 — Health and Human Rights  [0.5 Credit | ]
+Human health and wellbeing are inextricably associated with access to fundamental human rights. When human rights (e.g., access to food and housing, experiencing forms of discrimination), are violated, various pathways to ill-health become evident. This course will cover the links between public health policies, political circumstances, and social and economic conditions on the health of individuals and populations using a human rights framework. Important domains of the health and human rights associations will be used to ensure that students have a broad understanding of key concepts, and are able to apply them in research methods, program development, policy analysis, healthcare delivery, and leadership positions.
+  Prerequisites: Registration Status: Year 3 or 4 Honours BSc Health Sciences
+  Exclusions: HE440I
+
+### HE437 — Principles of Population Health  [0.5 Credit | ]
+This course will delve into population health issues that have been briefly highlighted in previous methods courses, and introduce students to the principles of population health, related terminology, structural systems, and population data analytics.
+  Prerequisites: Registration Status: Year 3 or Year 4 Health Sciences
+  Exclusions: HE440R
+
+### HE432/BI470 — Biomedical Virology  [0.5 Credit | ]
+An examination of topics related to biomedical virology including but not limited to: virus structure and replication strategies, immune response to virus infections along with the role of vaccines and antiviral drugs in combating virus infections, the beneficial uses of viruses, the emergence, spread and extinction of viruses and current diagnosis and detection methods. ( Cross-listed as BI470 .)
+  Prerequisites: BI236 .
+  Exclusions: BI470 , BI496U, HE432 , HE440C.
+
+### HE350 — Directed Studies  [0.5 Credit | ]
+(NO DESCRIPTION)
+  Prerequisites: Registration status: Year 2 or Year 3 Honours BSc Health Sciences.
+  Notes: Irregular course
+
+### HN320 — Human Physiology II: Control and Integration  [0.5 Credit | Winter]
+The mechanisms, control and integration of human physiological processes at the genetic, cellular, tissue, organ and whole body levels of organization will be explored. Emphasis will be placed on understanding how the nervous and endocrine systems coordinate cardiovascular, renal, respiratory and reproductive processes, metabolism and other processes to maintain homeostasis.
+  Prerequisites: HN220 (or KP222 )
+  Co-requisites: CH350 .
+  Exclusions: BI217, HS340 .
+
+### HE435/KP435 — Exercise is Medicine  [0.5 Credit | ]
+( Cross-listed as KP435 .)
+
+### HE305/PS389 — Positive Psychology  [0.5 Credit | ]
+An introduction to the science and practice of well-being, including topics such as happiness, optimism, gratitude, mindfulness, positive mental health, character strengths, and positive relationships, with a focus on evidence-based strategies for optimizing individual and community functioning. Students will develop the skills to understand the theoretical and empirical underpinnings of positive psychology.
+  Prerequisites: One of: PS263 , PS264 , PS270 , PS275 , PS276 , PS280 , PS282 , PS283 , PS285
+
+### HE304 — Introduction to Indigenous Health and Well-Being  [0.5 Credit | ]
+Students will advance and critically examine their knowledge, perspectives, biases, and practices in relation to Indigenous peoples’ health. This introductory course will include lectures, Indigenous guest presenters, activities, and critical self-reflection to facilitate learning about a) Indigenous determinants of health, b) cultural humility, and c) strengths-based and promising approaches to health practices, research, policies, and programming.
+  Prerequisites: Registration Status: Year 3 or 4 of Honours Program
+  Exclusions: HE440L
+
+### HE303/BI317 — Introduction to Immunology  [0.5 Credit | ]
+Introduction to Immunology introduces the responses, cells, mediators and structures of the immune system. Innate immunity, including inflammation and adaptive immunity will be discussed, focusing on how both arms of the immune system are activated. The respective effector mechanisms for innate and adaptive immunity will be described. The role of the immune system in health and disease will be introduced, topics covered may include: immunodeficiency, autoimmunity, hypersensitivity, transplantation and tumor immunity.
+  Prerequisites: BI236
+  Exclusions: BI317 , HE434, BI417, HE440G, BI396M
+
+### HN204 — Systems Human Anatomy  [0.5 Credit | ]
+This course takes a systems approach to the anatomical study of the human integumentary, skeletal, muscular, nervous, endocrine, cardiovascular, lymphatic, respiratory, digestive, urinary and reproductive systems. Laboratory activities include active and experiential learning to promote consolidation of lecture material.
+  Prerequisites: BI110 , BI111
+  Exclusions: HS202 , HS204 , KP221 / HN210 , KP223
+
+### HE368/PS368 — Functional Neuroanatomy  [0.5 Credit | ]
+( Cross-listed with PS368 )
+  Prerequisites: One of: HN204 , HN210 , KP221 , PS263 , PS267
+  Exclusions: HE440V, PS368
+
+### HE438 — Cancer Biology  [0.5 Credit | ]
+Cancer is defined as the uncontrolled growth of cells. The complexity of its causes and the diversity of cell types involved underscore the need for a deeper understanding of cancer’s basic biology. Advances in basic and biomedical research have led to more effective treatments, improved detection methods, and better prevention strategies. This course is organized into two themes: an introduction to fundamental concepts in the cellular and molecular biology of cancer and an introduction to the clinical aspects of oncology. Additionally, the course explores the development and clinical use of therapies based on major discoveries in cancer biology research.
+  Prerequisites: BI236
+  Exclusions: HE440S
+

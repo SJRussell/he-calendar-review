@@ -1,0 +1,523 @@
+[
+  {
+    "file": "c_76603.html",
+    "year": "2025/2026",
+    "code": "HN210/KP221",
+    "title": "Human Anatomy",
+    "credit": "0.5 Credit",
+    "term": "Fall",
+    "hours": "",
+    "description": "( Cross-listed as KP221 .)",
+    "requirements": {
+      "Exclusions": "HN204 , HS202 , HS204 , KP223"
+    },
+    "prereq_links": [
+      "HN204",
+      "HS202",
+      "HS204"
+    ]
+  },
+  {
+    "file": "c_76604.html",
+    "year": "2025/2026",
+    "code": "HN220/KP222",
+    "title": "Human Physiology",
+    "credit": "0.5 Credit",
+    "term": "",
+    "hours": "",
+    "description": "( Cross-listed as KP222 .)",
+    "requirements": {},
+    "prereq_links": []
+  },
+  {
+    "file": "c_76605.html",
+    "year": "2025/2026",
+    "code": "HE100",
+    "title": "Health Issues I",
+    "credit": "0.5 Credit",
+    "term": "Fall",
+    "hours": "Hours per week: Lecture/Discussion: 3",
+    "description": "An introduction to health issues pertinent to the individual and the community. Various health-related topics will be considered, such as defining health, determinants of health, risk factors and behaviour change and epidemiology.",
+    "requirements": {
+      "Prerequisites": "Registration status: Year 1 Honours BSc Health Sciences.",
+      "Exclusions": "KP231 ."
+    },
+    "prereq_links": [
+      "KP231"
+    ]
+  },
+  {
+    "file": "c_76606.html",
+    "year": "2025/2026",
+    "code": "HE101",
+    "title": "Health Issues II",
+    "credit": "0.5 Credit",
+    "term": "Winter",
+    "hours": "Hours per week: Lecture/Discussion: 3",
+    "description": "A continuation of Health Issues I, possible topics including: risk behaviours and health promotion, chronic and infectious disease, complementary and alternative medicine, global health care systems and health communication.",
+    "requirements": {
+      "Prerequisites": "HE100 , and registration status: Year 1 Honours BSc Health Sciences.",
+      "Exclusions": "KP232."
+    },
+    "prereq_links": [
+      "HE100"
+    ]
+  },
+  {
+    "file": "c_76607.html",
+    "year": "2025/2026",
+    "code": "HE201",
+    "title": "Research Methods for the Health Sciences",
+    "credit": "0.5 Credit",
+    "term": "Fall",
+    "hours": "Hours per week: Lecture/Discussion: 3",
+    "description": "A thorough understanding of the health research process is required for decision-making in clinical practice and to lead more advanced research. This course will provide students with a comprehensive understanding of the basic principles and methodologies used in health research. Topics covered in this course include the design of research studies (observational and experimental), data collection techniques (including concepts of reliability and validity), ethical considerations unique to health research, and knowledge translation strategies. Through a combination of lectures and practical assignments, students will gain experience in developing research questions and designing study protocols.",
+    "requirements": {
+      "Prerequisites": "HE101 and registration status: Year 2: Honours BSc Health Sciences.",
+      "Exclusions": "KP261, PS291, PS295 ."
+    },
+    "prereq_links": [
+      "HE101",
+      "PS295"
+    ]
+  },
+  {
+    "file": "c_76608.html",
+    "year": "2025/2026",
+    "code": "HE300/KP434",
+    "title": "Epidemiology",
+    "credit": "0.5 Credit",
+    "term": "Fall",
+    "hours": "Hours per week: Lecture/Discussion: 3",
+    "description": "An introduction to the field of chronic disease epidemiology with a focus on the ways in which epidemiologic methods can enhance our understanding of chronic illnesses such as heart disease, cancer and diabetes. In this course , students will build upon their skills in research design, interpretation of statistical data and critical evaluation of the scientific literature. ( Cross-listed as KP434 .)",
+    "requirements": {
+      "Prerequisites": "( KP231 and KP390 ) OR (both HE201 and MA241 or ST231 ).",
+      "Exclusions": "HE300 , HS320, KP340K, KP434 ."
+    },
+    "prereq_links": [
+      "KP231",
+      "KP390",
+      "HE201",
+      "ST231",
+      "HE300",
+      "KP434"
+    ]
+  },
+  {
+    "file": "c_76609.html",
+    "year": "2025/2026",
+    "code": "HE400",
+    "title": "Multidisciplinary Seminar on Critical Health Issues",
+    "credit": "0.5 Credit",
+    "term": "",
+    "hours": "",
+    "description": "Students will identify, investigate and discuss critical health issues by integrating a range of social and biomedical perspectives and working toward a cell-to-society understanding. Activities in class will include group work to develop colloquia on special topics, critical discussion of readings and films and some traditional lectures to provide core content. The course will culminate in a research project. Course evaluation will be focused on students' ability to think critically about complex health problems and concrete solutions; participation in group work and class discussions; and proficiency in verbal and written communication.",
+    "requirements": {
+      "Prerequisites": "HE300 and HE301 ; registration status: Year 4 Honours BSc Health Sciences."
+    },
+    "prereq_links": [
+      "HE300",
+      "HE301"
+    ]
+  },
+  {
+    "file": "c_76610.html",
+    "year": "2025/2026",
+    "code": "HE340",
+    "title": "Special Topics",
+    "credit": "0.5 Credit",
+    "term": "",
+    "hours": "",
+    "description": "",
+    "requirements": {
+      "Prerequisites": "Registration status: Year 3 or 4 Honours BSc Health Sciences.",
+      "Notes": "Irregular Course"
+    },
+    "prereq_links": []
+  },
+  {
+    "file": "c_76611.html",
+    "year": "2025/2026",
+    "code": "HE440",
+    "title": "Special Topics",
+    "credit": "0.5 Credit",
+    "term": "",
+    "hours": "",
+    "description": "",
+    "requirements": {
+      "Prerequisites": "Registration status: Year 4 Honours BSc Health Sciences",
+      "Notes": "Irregular Course"
+    },
+    "prereq_links": []
+  },
+  {
+    "file": "c_76612.html",
+    "year": "2025/2026",
+    "code": "HE450",
+    "title": "Directed Studies",
+    "credit": "0.5 Credit",
+    "term": "",
+    "hours": "",
+    "description": "",
+    "requirements": {
+      "Prerequisites": "Registration status: Year 4 Honours BSc Health Sciences",
+      "Notes": "Irregular Course"
+    },
+    "prereq_links": []
+  },
+  {
+    "file": "c_76613.html",
+    "year": "2025/2026",
+    "code": "HE301",
+    "title": "Social Determinants of Health",
+    "credit": "0.5 Credit",
+    "term": "",
+    "hours": "Hours per week: Lecture/Discussion: 3",
+    "description": "Increasingly, there is evidence that societal factors may be the primary determinants of why people stay healthy or become ill. Much of the medical and epidemiological literatures on health ‘disparities' have been descriptive in nature and fail to analytically account for increasing inequities in population health outcomes. This course moves beyond traditional ‘lifestyle' explanations of health and wellness and provides students with a solid understanding of how social factors contribute to inequities in health care access and population health outcomes. We will examine how social exclusion , income, early life experiences, employment and working conditions, unemployment and employment insecurity, housing, food security, Indigenous status, and social policy determine health. We also explore why the biomedical and lifestyle models of health are the primary ways that Canadians think about health, the policy implications of the current state of knowledge, and what can be done to inform change.",
+    "requirements": {
+      "Prerequisites": "HE201 .",
+      "Exclusions": "HS200 ."
+    },
+    "prereq_links": [
+      "HE201",
+      "HS200"
+    ]
+  },
+  {
+    "file": "c_76614.html",
+    "year": "2025/2026",
+    "code": "HE202",
+    "title": "Foundations of the Canadian Healthcare System",
+    "credit": "0.5 Credit",
+    "term": "",
+    "hours": "Hours per week: Lecture/Discussion: 3",
+    "description": "The course is intended to develop an awareness and understanding of the Canadian healthcare system. Topics may include: the historical foundations of Medicare; responsibilities of the provincial and federal governments with respect to allocation of resources; funding mechanisms; models of healthcare delivery; evolving roles of healthcare professionals, interdisciplinary and multidisciplinary teams; occupational health and safety of healthcare professionals; the Personal Health Protection Act in the role of electronic health records; legislation, including the Ontario Health Care Consent Act, the Ontario Public Hospitals Act, and the Ontario Regulated Health Professionals Act. Prerequisites :",
+    "requirements": {
+      "Prerequisites": "Registration Status: Minimum Year 2 Honours BSc Health Sciences",
+      "Exclusions": "HS201 ."
+    },
+    "prereq_links": [
+      "HS201"
+    ]
+  },
+  {
+    "file": "c_76615.html",
+    "year": "2025/2026",
+    "code": "HE490",
+    "title": "Directed Research in Health Sciences",
+    "credit": "1.0 Credit",
+    "term": "",
+    "hours": "",
+    "description": "This two-semester course is an independent thesis in Health Sciences under the direct supervision of a faculty member. The research project will culminate in a formal report and an oral presentation. Students wishing to complete a thesis must apply to the program co-ordinator for admission to HE490* by July 1 of Year 3.",
+    "requirements": {
+      "Prerequisites": "Admission requires a minimum GPA of 8.00 and permission of the program co-ordinator."
+    },
+    "prereq_links": []
+  },
+  {
+    "file": "c_76616.html",
+    "year": "2025/2026",
+    "code": "HE410",
+    "title": "Aging and Health",
+    "credit": "0.5 Credit",
+    "term": "Fall/Winter",
+    "hours": "Hours per week: Lecture/Discussion: 3",
+    "description": "A study of aging and health from a variety of perspectives including; bio-physiological, psycho-social, health-care system, cultural, legal, ethical and political. Topics may include; the aging process, falls, mental health, medication and co-morbidity, death and dying and others. There are several interactive/hands on components in the course .",
+    "requirements": {
+      "Prerequisites": "HE301 , HE302.",
+      "Exclusions": "KP431 , HE440F."
+    },
+    "prereq_links": [
+      "HE301",
+      "KP431"
+    ]
+  },
+  {
+    "file": "c_76617.html",
+    "year": "2025/2026",
+    "code": "HE411",
+    "title": "Critical perspectives in Public Health",
+    "credit": "0.5 Credit",
+    "term": "Fall/Winter",
+    "hours": "Hours per week: Lecture/Discussion: 3",
+    "description": "An examination of the practice of public health in Canada and internationally with emphasis on social and political impacts on the application of knowledge to practice. Models of health promotion, population health, health determinants and health behaviour will form the theoretical basis for exploration of public health research and practice.",
+    "requirements": {
+      "Prerequisites": "HE301 , HE302.",
+      "Exclusions": "HE440E."
+    },
+    "prereq_links": [
+      "HE301"
+    ]
+  },
+  {
+    "file": "c_76618.html",
+    "year": "2025/2026",
+    "code": "HE330",
+    "title": "Human Nutrition and Health",
+    "credit": "0.5 Credit",
+    "term": "Fall/Winter",
+    "hours": "Hours per week: Lecture/Discussion: 3",
+    "description": "An examination of issues and controversies in human nutrition from nutritional science, physiological, metabolic and public health perspectives covering topics including; dietary assessment and planning, micro and macronutrients, antioxidants, phytochemicals, functional foods, food labeling obesity and weight management and dietary practices associated with disease prevention and management.",
+    "requirements": {
+      "Prerequisites": "HE201 and HN220 (or HE211 or BI216 or KP220).",
+      "Exclusions": "HE440D, KP332 ."
+    },
+    "prereq_links": [
+      "HE201",
+      "HN220",
+      "KP332"
+    ]
+  },
+  {
+    "file": "c_76619.html",
+    "year": "2025/2026",
+    "code": "HE431/BI416",
+    "title": "Pathophysiology",
+    "credit": "0.5 Credit",
+    "term": "Fall/Winter",
+    "hours": "Hours per week: Lecture/Discussion: 3",
+    "description": "An examination of functional changes in cells, tissues and organs consequent to disease or injury. Topics may include the mechanisms of inflammation, hypertension, coronary artery disease, concussion, asthma, hepatitis, dysentery as well as other multi-organ conditions from environmental or other types of stress. ( Cross-listed as BI416 .)",
+    "requirements": {
+      "Prerequisites": "HN220 (or HE211 or BI216 or KP220).",
+      "Exclusions": "BI416 , HE440B, BI496R."
+    },
+    "prereq_links": [
+      "HN220",
+      "BI416"
+    ]
+  },
+  {
+    "file": "c_76620.html",
+    "year": "2025/2026",
+    "code": "HE430",
+    "title": "Advanced nutrition and chronic disease",
+    "credit": "0.5 Credit",
+    "term": "Fall/Winter",
+    "hours": "Hours per week: Lecture/Discussion: 3",
+    "description": "This course will examine nutritional aspects of selected chronic diseases affecting the Canadian population. Using a case-based approach, students will explore the role of diet in the etiology, prevention and treatment of nutrition-related conditions across the lifecycle including obesity, dyslipidemia, hypertension, cardiovascular disease, diabetes, anemia, osteoporosis and cancer. Emphasis will be placed on critical appraisal of epidemiological and clinical evidence, underlying physiological mechanisms, nutritional assessment methods and diet interventions.",
+    "requirements": {
+      "Prerequisites": "HE300 / KP434 , HE330 .",
+      "Exclusions": "HE440D."
+    },
+    "prereq_links": [
+      "HE300",
+      "KP434",
+      "HE330"
+    ]
+  },
+  {
+    "file": "c_76621.html",
+    "year": "2025/2026",
+    "code": "HE436",
+    "title": "Health and Human Rights",
+    "credit": "0.5 Credit",
+    "term": "",
+    "hours": "Hours per week: Lecture/Discussion: 3",
+    "description": "Human health and wellbeing are inextricably associated with access to fundamental human rights. When human rights (e.g., access to food and housing, experiencing forms of discrimination), are violated, various pathways to ill-health become evident. This course will cover the links between public health policies, political circumstances, and social and economic conditions on the health of individuals and populations using a human rights framework. Important domains of the health and human rights associations will be used to ensure that students have a broad understanding of key concepts, and are able to apply them in research methods, program development, policy analysis, healthcare delivery, and leadership positions.",
+    "requirements": {
+      "Prerequisites": "Registration Status: Year 3 or 4 Honours BSc Health Sciences",
+      "Exclusions": "HE440I"
+    },
+    "prereq_links": []
+  },
+  {
+    "file": "c_76622.html",
+    "year": "2025/2026",
+    "code": "HE437",
+    "title": "Principles of Population Health",
+    "credit": "0.5 Credit",
+    "term": "",
+    "hours": "Hours per week: Lecture/Discussion: 3",
+    "description": "This course will delve into population health issues that have been briefly highlighted in previous methods courses, and introduce students to the principles of population health, related terminology, structural systems, and population data analytics.",
+    "requirements": {
+      "Prerequisites": "Registration Status: Year 3 or Year 4 Health Sciences",
+      "Exclusions": "HE440R"
+    },
+    "prereq_links": []
+  },
+  {
+    "file": "c_76623.html",
+    "year": "2025/2026",
+    "code": "HE432/BI470",
+    "title": "Biomedical Virology",
+    "credit": "0.5 Credit",
+    "term": "",
+    "hours": "Hours per week: Lecture/Discussion: 3",
+    "description": "An examination of topics related to biomedical virology including but not limited to: virus structure and replication strategies, immune response to virus infections along with the role of vaccines and antiviral drugs in combating virus infections, the beneficial uses of viruses, the emergence, spread and extinction of viruses and current diagnosis and detection methods. ( Cross-listed as BI470 .)",
+    "requirements": {
+      "Prerequisites": "BI236 .",
+      "Exclusions": "BI470 , BI496U, HE432 , HE440C."
+    },
+    "prereq_links": [
+      "BI236",
+      "BI470",
+      "HE432"
+    ]
+  },
+  {
+    "file": "c_76624.html",
+    "year": "2025/2026",
+    "code": "HE350",
+    "title": "Directed Studies",
+    "credit": "0.5 Credit",
+    "term": "",
+    "hours": "",
+    "description": "",
+    "requirements": {
+      "Prerequisites": "Registration status: Year 2 or Year 3 Honours BSc Health Sciences.",
+      "Notes": "Irregular course"
+    },
+    "prereq_links": []
+  },
+  {
+    "file": "c_76625.html",
+    "year": "2025/2026",
+    "code": "HN320",
+    "title": "Human Physiology II: Control and Integration",
+    "credit": "0.5 Credit",
+    "term": "Winter",
+    "hours": "Hours per week: Lecture/Discussion: 3 Tutorial/Seminar: 2",
+    "description": "The mechanisms, control and integration of human physiological processes at the genetic, cellular, tissue, organ and whole body levels of organization will be explored. Emphasis will be placed on understanding how the nervous and endocrine systems coordinate cardiovascular, renal, respiratory and reproductive processes, metabolism and other processes to maintain homeostasis.",
+    "requirements": {
+      "Prerequisites": "HN220 (or KP222 )",
+      "Co-requisites": "CH350 .",
+      "Exclusions": "BI217, HS340 ."
+    },
+    "prereq_links": [
+      "HN220",
+      "KP222",
+      "CH350",
+      "HS340"
+    ]
+  },
+  {
+    "file": "c_76626.html",
+    "year": "2025/2026",
+    "code": "HE435/KP435",
+    "title": "Exercise is Medicine",
+    "credit": "0.5 Credit",
+    "term": "",
+    "hours": "",
+    "description": "( Cross-listed as KP435 .)",
+    "requirements": {},
+    "prereq_links": []
+  },
+  {
+    "file": "c_76627.html",
+    "year": "2025/2026",
+    "code": "HE305/PS389",
+    "title": "Positive Psychology",
+    "credit": "0.5 Credit",
+    "term": "",
+    "hours": "Hours per week: Lecture/Discussion: 3",
+    "description": "An introduction to the science and practice of well-being, including topics such as happiness, optimism, gratitude, mindfulness, positive mental health, character strengths, and positive relationships, with a focus on evidence-based strategies for optimizing individual and community functioning. Students will develop the skills to understand the theoretical and empirical underpinnings of positive psychology.",
+    "requirements": {
+      "Prerequisites": "One of: PS263 , PS264 , PS270 , PS275 , PS276 , PS280 , PS282 , PS283 , PS285"
+    },
+    "prereq_links": [
+      "PS263",
+      "PS264",
+      "PS270",
+      "PS275",
+      "PS276",
+      "PS280",
+      "PS282",
+      "PS283",
+      "PS285"
+    ]
+  },
+  {
+    "file": "c_76628.html",
+    "year": "2025/2026",
+    "code": "HE304",
+    "title": "Introduction to Indigenous Health and Well-Being",
+    "credit": "0.5 Credit",
+    "term": "",
+    "hours": "Hours per week: Lecture/Discussion: 3",
+    "description": "Students will advance and critically examine their knowledge, perspectives, biases, and practices in relation to Indigenous peoples’ health. This introductory course will include lectures, Indigenous guest presenters, activities, and critical self-reflection to facilitate learning about a) Indigenous determinants of health, b) cultural humility, and c) strengths-based and promising approaches to health practices, research, policies, and programming.",
+    "requirements": {
+      "Prerequisites": "Registration Status: Year 3 or 4 of Honours Program",
+      "Exclusions": "HE440L"
+    },
+    "prereq_links": []
+  },
+  {
+    "file": "c_76629.html",
+    "year": "2025/2026",
+    "code": "HE303/BI317",
+    "title": "Introduction to Immunology",
+    "credit": "0.5 Credit",
+    "term": "",
+    "hours": "Hours per week: Lecture/Discussion: 3",
+    "description": "Introduction to Immunology introduces the responses, cells, mediators and structures of the immune system. Innate immunity, including inflammation and adaptive immunity will be discussed, focusing on how both arms of the immune system are activated. The respective effector mechanisms for innate and adaptive immunity will be described. The role of the immune system in health and disease will be introduced, topics covered may include: immunodeficiency, autoimmunity, hypersensitivity, transplantation and tumor immunity.",
+    "requirements": {
+      "Prerequisites": "BI236",
+      "Exclusions": "BI317 , HE434, BI417, HE440G, BI396M"
+    },
+    "prereq_links": [
+      "BI236",
+      "BI317"
+    ]
+  },
+  {
+    "file": "c_76630.html",
+    "year": "2025/2026",
+    "code": "HN204",
+    "title": "Systems Human Anatomy",
+    "credit": "0.5 Credit",
+    "term": "",
+    "hours": "Hours per week: Lecture/Discussion: 3 Lab: 2",
+    "description": "This course takes a systems approach to the anatomical study of the human integumentary, skeletal, muscular, nervous, endocrine, cardiovascular, lymphatic, respiratory, digestive, urinary and reproductive systems. Laboratory activities include active and experiential learning to promote consolidation of lecture material.",
+    "requirements": {
+      "Prerequisites": "BI110 , BI111",
+      "Exclusions": "HS202 , HS204 , KP221 / HN210 , KP223"
+    },
+    "prereq_links": [
+      "BI110",
+      "BI111",
+      "HS202",
+      "HS204",
+      "KP221",
+      "HN210"
+    ]
+  },
+  {
+    "file": "c_76631.html",
+    "year": "2025/2026",
+    "code": "HE368/PS368",
+    "title": "Functional Neuroanatomy",
+    "credit": "0.5 Credit",
+    "term": "",
+    "hours": "Hours per week: Lecture/Discussion: 3 Lab: 3 (biweekly)",
+    "description": "( Cross-listed with PS368 )",
+    "requirements": {
+      "Prerequisites": "One of: HN204 , HN210 , KP221 , PS263 , PS267",
+      "Exclusions": "HE440V, PS368"
+    },
+    "prereq_links": [
+      "HN204",
+      "HN210",
+      "KP221",
+      "PS263",
+      "PS267",
+      "PS368"
+    ]
+  },
+  {
+    "file": "c_77683.html",
+    "year": "2025/2026",
+    "code": "HE438",
+    "title": "Cancer Biology",
+    "credit": "0.5 Credit",
+    "term": "",
+    "hours": "Hours per week: Lecture/Discussion: 3",
+    "description": "Cancer is defined as the uncontrolled growth of cells. The complexity of its causes and the diversity of cell types involved underscore the need for a deeper understanding of cancer’s basic biology. Advances in basic and biomedical research have led to more effective treatments, improved detection methods, and better prevention strategies. This course is organized into two themes: an introduction to fundamental concepts in the cellular and molecular biology of cancer and an introduction to the clinical aspects of oncology. Additionally, the course explores the development and clinical use of therapies based on major discoveries in cancer biology research.",
+    "requirements": {
+      "Prerequisites": "BI236",
+      "Exclusions": "HE440S"
+    },
+    "prereq_links": [
+      "BI236"
+    ]
+  }
+]

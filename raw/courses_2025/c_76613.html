@@ -1,0 +1,256 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html lang="en">
+
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+	<title>Wilfrid Laurier University - Undergraduate Academic Calendar - 2025/2026 - Faculty of Science - Health Sciences - HE301</title>
+	<LINK REL=StyleSheet HREF="css/style_wlu.css?ts=20200602_01" TYPE="text/css" MEDIA="screen,print">
+	<LINK REL=StyleSheet HREF="css/style_wlu_print.css?ts=20200602_01" TYPE="text/css" MEDIA="print">
+	<LINK REL=StyleSheet HREF="css/style_cal.css?ts=20200602_01" TYPE="text/css" MEDIA="screen">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+	<!--[if IE 6]><link rel="stylesheet" href="css/style_wlu_ie6.css" type="text/css" media="screen" /><![endif]-->
+	<!--[if lte IE 9]><link rel="stylesheet" href="css/style_wlu_ie.css" type="text/css" media="screen" /><![endif]-->
+
+	<script type="text/javascript">
+		<!--
+		function findPos(obj) {
+			// gets the 'top' and 'left' positions of the object.
+
+			var curtop = 0;
+			var curleft = 0;
+			if (obj.offsetParent) {
+				while (obj.offsetParent) {
+					curtop += obj.offsetTop;
+					curleft += obj.offsetLeft;
+					obj = obj.offsetParent;
+				}
+			} else {
+				if (obj.y) curtop += obj.y;
+				if (obj.x) curleft += obj.x;
+			}
+			var r = Array();
+			r[0] = curtop;
+			r[1] = curleft;
+			return r;
+		}
+
+		function showGlossaryDef(obj, def) {
+			// will move a special "glossary DIV" to appropriate spot and put term information into it.
+
+			gPos = findPos(obj);
+			if ((gPos[0] > 0) && (gPos[1] > 0)) {
+				gDiv = document.getElementById("glossaryDef");
+				if (gDiv) {
+					gDiv.innerHTML = def.replace(/#QUOTE#/g, '"');
+					gDiv.style.top = (gPos[0] + 15) + "px";
+					gDiv.style.left = gPos[1] + "px";
+					gDiv.style.visibility = "visible";
+					gDiv.style.display = "inline";
+				}
+			}
+		}
+
+		function hideGlossaryDef() {
+			gDiv = document.getElementById("glossaryDef");
+			if (gDiv) {
+				gDiv.style.visibility = "hidden";
+				gDiv.style.display = "none";
+			}
+		}
+
+		function hideSelect() {
+			var DL_bIE = document.all ? true : false; // initialize var to identify IE
+			if (DL_bIE) { // if browser is IE, then...
+				var numforms = document.forms.length;
+				for (f = 1; f < numforms; f++) {
+					var numformelements = document.forms[f].elements.length;
+					for (counter = 0; counter < numformelements; counter++) {
+						var thisselect = document.forms[f].elements[counter];
+						thisselect.style.visibility = "hidden";
+					}
+				}
+			}
+		}
+
+		function showSelect() {
+			var numforms = document.forms.length;
+			for (f = 1; f < numforms; f++) {
+				var numformelements = document.forms[f].elements.length;
+				for (counter = 0; counter < numformelements; counter++) {
+					var thisselect = document.forms[f].elements[counter];
+					thisselect.style.visibility = "visible";
+				}
+			}
+		}
+
+
+		startList = function() {
+			if (document.all && document.getElementById) {
+				navRoot = document.getElementById("nav");
+				for (i = 0; i < navRoot.childNodes.length; i++) {
+					node = navRoot.childNodes[i];
+					if (node.nodeName == "LI") {
+						node.onmouseover = function() {
+							this.className += " over";
+						}
+						node.onmouseout = function() {
+							this.className = this.className.replace(" over", "");
+						}
+					}
+				}
+			}
+		}
+		window.onload = startList;
+		//
+		-->
+	</script>
+</head>
+
+<body>
+
+	<div class="header clearfix" role="banner">
+
+		<a class="skip-to-content-link" href="#main">Skip to content</a>
+		<a class="top-link" name="top"></a>
+
+		<div class="header-logo">
+			<a href="http://www.wlu.ca/">
+				<img src="images/layout/laurier_logo.gif" alt="Wilfrid Laurier University">
+			</a>
+		</div>
+
+		
+		<div class="header-decoration">
+			<img class="book-image" src="images/layout/book_white.gif" alt="Book decoration" role="presentation" aria-hidden="true" />
+			<a href="index.php?cal=1&amp;y=92">
+				<img src="./images/cms/corner/92/ug2025-2026.gif" width="287" height="101" alt="Undergraduate Academic Calendar - 2025/2026" />
+			</a>
+		</div>
+
+		<div class="header-tagline">
+			<img src="images/layout/canadian-excellence.gif" width="267" height="18" alt="Canadian Excellence">
+		</div>
+	</div>
+
+	
+	<div class="wrapper">
+
+		<div id="deptnav" class="sidebar" role="navigation" aria-label="Left side navigation">
+
+			<h2><A href="index_old.php?cal=1&amp;y=92">Undergraduate Academic Calendar 2025/2026</A></h2>
+<ul>
+	<li><a href="section.php?cal=1&amp;s=1159&amp;y=92">Areas of Study/Courses @ Laurier (Direct Links)</a></li>
+	<li><a href="section.php?cal=1&amp;s=1163&amp;y=92">Print Version 2023-24</a></li>
+	<li><a href="section.php?cal=1&amp;s=1167&amp;y=92">Using This Calendar</a></li>
+	<li><a href="section.php?cal=1&amp;s=1160&amp;y=92"> Recruitment and Admissions</a></li>
+	<li><a href="section.php?cal=1&amp;s=1158&amp;y=92">Student Awards and Financial Aid</a></li>
+	<li><a href="section.php?cal=1&amp;s=1157&amp;y=92">Financial Services</a></li>
+	<li><a href="section.php?cal=1&amp;s=1162&amp;y=92">Academic and Related Dates</a></li>
+	<li><a href="section.php?cal=1&amp;s=1156&amp;y=92">University Undergraduate Regulations</a></li>
+	<li><a href="department.php?cal=1&amp;d=3067&amp;s=1150&amp;y=92">Interdisciplinary Course Offerings</a></li>
+	<li><a href="section.php?cal=1&amp;s=1151&amp;y=92">Faculty of Arts</a></li>
+	<li><a href="section.php?cal=1&amp;s=1161&amp;y=92">Faculty of Education</a></li>
+	<li><a href="section.php?cal=1&amp;s=1165&amp;y=92">Faculty of Human and Social Sciences</a></li>
+	<li><a href="section.php?cal=1&amp;s=1153&amp;y=92">Faculty of Liberal Arts</a></li>
+	<li><a href="section.php?cal=1&amp;s=1155&amp;y=92">Faculty of Music</a></li>
+	<li class="current"><a href="section.php?cal=1&amp;s=1152&amp;y=92">Faculty of Science</a></li>
+		<li class="sublist"><a href="section.php?cal=1&amp;s=1152&amp;ss=4561&amp;y=92">BSc and BA Programs and Regulations</a></li>
+		<li class="sublist"><a href="section.php?cal=1&amp;s=1152&amp;ss=4562&amp;y=92">Academic Advising</a></li>
+		<li class="sublist"><a href="section.php?cal=1&amp;s=1152&amp;ss=4563&amp;y=92">Regulations for All Honours Programs</a></li>
+		<li class="sublist"><a href="section.php?cal=1&amp;s=1152&amp;ss=4564&amp;y=92">Regulations Combining Honours with a Secondary Minor/Option</a></li>
+		<li class="sublist"><a href="section.php?cal=1&amp;s=1152&amp;ss=4565&amp;y=92">Co-operative Education</a></li>
+		<li class="sublist"><a href="section.php?cal=1&amp;s=1152&amp;ss=4566&amp;y=92">Faculty of Science Campus Transfer Policy</a></li>
+	<li><a href="section.php?cal=1&amp;s=1154&amp;y=92">Lazaridis School of Business and Economics</a></li>
+	<li><a href="section.php?cal=1&amp;s=1166&amp;y=92">Lyle S Hallman Faculty of Social Work</a></li>
+	<li><a href="section.php?cal=1&amp;s=1164&amp;y=92">Martin Luther University College</a></li>
+</ul>
+<hr/>
+<ul>
+	<li><a href="index_old.php?cal=1&amp;y=92">Search this Calendar</a></li>
+	<li><a href="glossary.php?cal=1&amp;y=92">Glossary</a></li>
+</ul>
+			<div id="deptcontact">
+	<h1>Contact Us:</h1>
+		<strong>Contact Academic Department directly unless Calendar inquiry</strong><br />			email: <a href="mailto:&#0098;&#0118;&#0111;&#0105;&#0115;&#0105;&#0110;&#0101;&#0064;&#0119;&#0108;&#0117;&#0046;&#0099;&#0097;">Bonnie Voisine, Office of the Registrar</a><br />
+					phone: bvoisine@wlu.ca<br />
+					</div>
+
+		</div>
+
+		<div id="main" class="main" role="main">
+
+			<a name="mcontent"></a>
+
+			<div class="breadcrumb">
+<img src="images/layout/redlistarrow.gif" alt="List bullet" role="presentation" aria-hidden="true"> <a href="section.php?cal=1&amp;s=1152&amp;y=92">Faculty of Science</a>&nbsp;<img src="images/layout/redlistsmbullet.gif" alt="list bullet" role="presentation" aria-hidden="true"> <a href="department.php?cal=1&amp;d=3127&amp;s=1152&amp;y=92">Health Sciences</a>&nbsp;<img src="images/layout/redlistsmbullet.gif" alt="list bullet" role="presentation" aria-hidden="true"> <a href="course.php?c=76613&amp;cal=1&amp;s=1152&amp;y=92">HE301</a>&nbsp;</div>
+
+			<div class="content">
+<h1>HE301<br/><SPAN style="font-weight:normal;">Social Determinants of Health</span><br/><span style="font-weight:normal; color:#000000;">0.5 Credit</span></h1>
+<div class="hours"><strong>Hours per week:</strong><ul><li>Lecture/Discussion: 3</li></div><p>Increasingly, there is evidence that societal factors may be the primary determinants of why people stay healthy or become ill. Much of the medical and epidemiological literatures on health ‘disparities' have been descriptive in nature and fail to analytically account for increasing inequities in population health outcomes. This <A href="glossary.php?cal=1&amp;g=1555&amp;y=92" class="glossaryTerm" onMouseOver="showGlossaryDef(this,'<P>A unit of study in a given discipline identified by a unique number and name in a given department. (Refer to <a href=#QUOTE#https://academic-calendar.wlu.ca/section.php?cal=1&amp;s=1167&amp;ss=4631&amp;y=92#QUOTE#><b class=#QUOTE#Bold#QUOTE#>Course Description Definitions</b></a> for information concerning all related definitions.) The weight or value of a course is defined as follows: a 1.0 credit (or full-credit) course normally consists of three contact hours per week taken over an eight-month period (September - April). A half (0.5) credit course is normally conducted over a four-month period. A credit denotes a full-credit course with 1.0 indicated in the course description. A half-credit course is indicated with the 0.5 weight, and a quarter-credit course as 0.25 in the course description.</P>')" onMouseOut="hideGlossaryDef()">course</A> moves beyond traditional ‘lifestyle' explanations of health and wellness and provides <A href="glossary.php?cal=1&amp;g=1580&amp;y=92" class="glossaryTerm" onMouseOver="showGlossaryDef(this,'<P>A student is a person who is registered in a program that leads to a degree, diploma or certificate of the university and includes all students described in the section, <a href=#QUOTE#https://academic-calendar.wlu.ca/section.php?cal=1&amp;s=1167&amp;ss=4630&amp;y=92#QUOTE#><b class=#QUOTE#Bold#QUOTE#>Classification of Students</b></a>, but does not include a visitor.</P>')" onMouseOut="hideGlossaryDef()">students</A> with a solid understanding of how social factors contribute to inequities in health care access and population health outcomes. We will examine how social <A href="glossary.php?cal=1&amp;g=1565&amp;y=92" class="glossaryTerm" onMouseOver="showGlossaryDef(this,'<P><p>  An exclusion is a statement within a course description, indicating that a course or other level of attainment which, if already successfully completed, does not permit credit in another course, and which cannot be taken for credit concurrently with the other course. If an excluded course is completed, the first course is counted as a \'repeat\' and credit in the first attempt is lost. </p>     <p>It may also state that the course  cannot be counted for credit in a program or toward a particular  degree. Similar to the term antirequisite.  </p>    <p>An exclusion does not constitute equivalency toward the requirements for   a&nbsp;program and students should seek academic advising in all cases. <br /></p></P>')" onMouseOut="hideGlossaryDef()">exclusion</A>, income, early life experiences, employment and working conditions, unemployment and employment insecurity, housing, food security, Indigenous status, and social policy determine health. We also explore why the biomedical and lifestyle models of health are the primary ways that Canadians think about health, the policy implications of the current state of knowledge, and what can be done to inform change.</p>
+
+<div class="reqs">
+<div class="heading">Additional Course Information</div>
+<dl><dt><A href="glossary.php?cal=1&amp;g=1577&amp;y=92" class="glossaryTerm" onMouseOver="showGlossaryDef(this,'<P>  <p>A prerequisite for a course states a condition which must be satisfied prior to registration in the course. This condition may consist of a) obtaining credit for another course or other courses, or b) having a particular registration status, such as registration in a program and/or in a specified year, or as a senior student (i.e., a student who has obtained 5.0 or more credits), or c) having a minimum GPA (e.g., thesis courses).</p>        </P>')" onMouseOut="hideGlossaryDef()">Prerequisites</A></dt><dd class="required"><a href="course.php?c=76607&amp;cal=1&amp;d=3127&amp;s=1152&amp;y=92">HE201</a>.</dd><dt><A href="glossary.php?cal=1&amp;g=1565&amp;y=92" class="glossaryTerm" onMouseOver="showGlossaryDef(this,'<P><p>  An exclusion is a statement within a course description, indicating that a course or other level of attainment which, if already successfully completed, does not permit credit in another course, and which cannot be taken for credit concurrently with the other course. If an excluded course is completed, the first course is counted as a \'repeat\' and credit in the first attempt is lost. </p>     <p>It may also state that the course  cannot be counted for credit in a program or toward a particular  degree. Similar to the term antirequisite.  </p>    <p>An exclusion does not constitute equivalency toward the requirements for   a&nbsp;program and students should seek academic advising in all cases. <br /></p></P>')" onMouseOut="hideGlossaryDef()">Exclusions</A></dt><dd class="required"><a href="course.php?c=77533&amp;cal=1&amp;d=3184&amp;s=1165&amp;y=92">HS200</a>.</dd></dl>
+<div class="clear">&nbsp;</div>
+</div>
+			</div> <!-- /.content -->
+
+		</div> <!-- /.main -->
+
+		
+<div id="contentRHS" class="sidebar" role="navigation" aria-label="Right side navigation">
+	<img src="./images/layout/picture_right.gif" alt="Decorative image" role="presentation">
+
+		<div class="calright">
+	<h4>Academic &amp; Related Dates 2025/2026</h4>
+	<ul class="dates">
+	<li><a href="dates.php?cal=1&amp;y=92">All Dates</a></li>
+	</ul>
+
+			<hr class="calrightrule"/>
+	<h4>Other Calendars</h4>
+	<ul class="archivedcal">
+		<li class="ruled"><a href="index_old.php?cal=1&amp;y=93">Undergraduate Academic Calendar (2026/2027)</a></li>
+		<li class="ruled"><a href="index_old.php?cal=1&amp;y=90">Undergraduate Academic Calendar (2024/2025)</a></li>
+		<li class="ruled"><a href="index_old.php?cal=1&amp;y=87">Undergraduate Academic Calendar (2023/2024)</a></li>
+		<li class="ruled"><a href="index_old.php?cal=1&amp;y=85">Undergraduate Academic Calendar (2022/2023)</a></li>
+		<li><a href="/index.php">more...</a></li>
+		</ul>
+		</div>
+</div> <!-- /.sidebar -->
+
+	</div> <!-- /.wrapper -->
+
+	<div class="footer" role="contentinfo">
+
+		<div class="footer-top">
+			<div>
+				<a href="https://www.wlu.ca/about/locations-maps-and-parking/contact-us.html">Contact WLU</a>
+			</div>
+			<div>
+				<span>&copy; 2026 Wilfrid Laurier University</span>
+			</div>
+			<div>
+				<img src="images/layout/footer_red.gif" alt="Ontario, Canada" title="Ontario, Canada">
+			</div>
+		</div> <!-- /.footer-top -->
+
+		<div class="footer-bottom">
+			<div>
+				<span>Wilfrid Laurier University | 75 University Avenue West, Waterloo, Ontario, Canada  N2L 3C5</span>
+			</div>
+			<div>
+				<span>Phone: 519.884.1970 | Fax: 519.886.9351</span>
+			</div>
+			<div>
+				<span class="brantford">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
+			</div>
+		</div> <!-- /.footer-bottom -->
+
+	</div> <!-- /#footer -->
+
+	
+</body>
+</html>
+

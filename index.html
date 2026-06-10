@@ -1,0 +1,613 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>WLU Health Sciences Calendar Review</title>
+<style>
+:root{
+  --bg:#0f1115; --panel:#181b22; --panel2:#1f242d; --line:#2c333f;
+  --ink:#e6e9ef; --mut:#9aa4b2; --accent:#5b8def; --accent2:#7c5cff;
+  --hi:#ff5d6c; --med:#ffb454; --low:#62d0a4; --new:#7c5cff;
+  --l100:#3a7bd5; --l200:#2bb3a3; --l300:#c98a2b; --l400:#c0556a;
+}
+*{box-sizing:border-box}
+body{margin:0;font:15px/1.5 -apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif;
+  background:var(--bg);color:var(--ink)}
+header{position:sticky;top:0;z-index:20;background:linear-gradient(180deg,#12151c,#12151cf2);
+  border-bottom:1px solid var(--line);padding:14px 22px;backdrop-filter:blur(6px)}
+h1{font-size:18px;margin:0 0 2px;font-weight:650}
+.sub{color:var(--mut);font-size:12.5px}
+.row{display:flex;gap:10px;align-items:center;flex-wrap:wrap}
+.spacer{flex:1}
+.tabs{display:flex;gap:4px;margin-top:10px}
+.tab{padding:7px 14px;border-radius:8px 8px 0 0;background:transparent;color:var(--mut);
+  border:1px solid transparent;cursor:pointer;font-size:13.5px}
+.tab.active{background:var(--panel);color:var(--ink);border-color:var(--line);border-bottom-color:var(--panel)}
+.seg{display:inline-flex;background:var(--panel2);border:1px solid var(--line);border-radius:9px;overflow:hidden}
+.seg button{background:transparent;border:0;color:var(--mut);padding:7px 13px;cursor:pointer;font-size:13px}
+.seg button.on{background:var(--accent);color:#fff}
+input.search{background:var(--panel2);border:1px solid var(--line);color:var(--ink);
+  padding:8px 12px;border-radius:9px;min-width:230px;font-size:13.5px}
+.chip{padding:5px 11px;border-radius:20px;border:1px solid var(--line);background:var(--panel2);
+  color:var(--mut);cursor:pointer;font-size:12.5px;user-select:none}
+.chip.on{background:var(--accent);border-color:var(--accent);color:#fff}
+.stats{display:flex;gap:18px;margin-top:9px;font-size:12.5px;color:var(--mut)}
+.stats b{color:var(--ink);font-size:15px}
+main{padding:20px 22px 60px;max-width:1280px;margin:0 auto}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(248px,1fr));gap:14px}
+.card{background:var(--panel);border:1px solid var(--line);border-radius:13px;padding:14px;
+  cursor:pointer;position:relative;transition:.12s;overflow:hidden}
+.card:hover{transform:translateY(-2px);border-color:var(--accent)}
+.card .lvl{position:absolute;left:0;top:0;bottom:0;width:4px}
+.card h3{margin:0 0 3px;font-size:15px;font-weight:650;letter-spacing:.2px}
+.card .ttl{color:var(--mut);font-size:13px;min-height:34px}
+.card .meta{display:flex;gap:8px;margin-top:9px;font-size:11.5px;color:var(--mut);flex-wrap:wrap}
+.pill{background:var(--panel2);border:1px solid var(--line);border-radius:6px;padding:2px 7px}
+.badges{position:absolute;top:10px;right:10px;display:flex;gap:5px}
+.dot{font-size:10.5px;font-weight:700;border-radius:20px;padding:2px 8px;color:#0c0e12}
+.dot.hi{background:var(--hi)} .dot.med{background:var(--med)} .dot.low{background:var(--low)}
+.dot.new{background:var(--new);color:#fff}
+.xlist{font-size:11px;color:var(--accent2);margin-top:6px}
+/* modal */
+.scrim{position:fixed;inset:0;background:#000a;backdrop-filter:blur(3px);display:none;z-index:40}
+.scrim.open{display:block}
+.modal{position:fixed;right:0;top:0;bottom:0;width:min(560px,94vw);background:var(--panel);
+  border-left:1px solid var(--line);z-index:50;transform:translateX(100%);transition:.2s;
+  overflow-y:auto;padding:22px 24px 60px}
+.modal.open{transform:none}
+.modal .x{position:absolute;top:14px;right:16px;background:var(--panel2);border:1px solid var(--line);
+  color:var(--ink);border-radius:8px;padding:5px 11px;cursor:pointer}
+.modal h2{margin:4px 0 2px;font-size:22px}
+.modal .mttl{color:var(--mut);font-size:15px;margin-bottom:12px}
+.kv{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:14px}
+.kv .pill{font-size:12px}
+.sec{margin:16px 0}
+.sec h4{margin:0 0 6px;font-size:12px;text-transform:uppercase;letter-spacing:.7px;color:var(--mut)}
+.sec p{margin:0;color:var(--ink)}
+.req code,.refcode{background:var(--panel2);border:1px solid var(--line);border-radius:5px;padding:1px 5px;font-size:12.5px}
+.dangling{background:#3a1620;border-color:var(--hi);color:#ff9aa6}
+.placeholder{color:#6b7280;font-style:italic}
+.issue{border:1px solid var(--line);border-left-width:4px;border-radius:8px;padding:9px 11px;margin:8px 0;
+  background:var(--panel2);font-size:13.5px}
+.issue.hi{border-left-color:var(--hi)} .issue.med{border-left-color:var(--med)} .issue.low{border-left-color:var(--low)}
+.issue .tag{font-size:10.5px;text-transform:uppercase;letter-spacing:.5px;color:var(--mut);margin-bottom:3px}
+.issue .tag b{color:var(--ink)}
+.sevtag{display:inline-block;font-size:10px;font-weight:700;border-radius:4px;padding:1px 6px;margin-right:6px;color:#0c0e12}
+.sevtag.hi{background:var(--hi)} .sevtag.med{background:var(--med)} .sevtag.low{background:var(--low)}
+.issuesWrap h3{margin:22px 0 6px;font-size:14px}
+.progtext{white-space:pre-wrap;background:var(--panel);border:1px solid var(--line);border-radius:11px;
+  padding:16px;font-size:13.5px;line-height:1.7}
+.note{color:var(--mut);font-size:12.5px;margin:6px 0 16px}
+.hidden{display:none}
+a.codelink{color:var(--accent);text-decoration:none}
+.callink{display:inline-flex;align-items:center;gap:6px;background:var(--accent);color:#fff;
+  text-decoration:none;padding:8px 14px;border-radius:9px;font-size:13px;font-weight:600;margin:4px 0 14px}
+.callink:hover{filter:brightness(1.1)}
+.cardlink{position:absolute;bottom:10px;right:12px;color:var(--mut);text-decoration:none;font-size:11px}
+.cardlink:hover{color:var(--accent)}
+.proglink{display:inline-flex;gap:6px;background:var(--panel2);border:1px solid var(--line);
+  color:var(--accent);text-decoration:none;padding:7px 13px;border-radius:9px;font-size:13px;margin-bottom:6px}
+.proglink:hover{border-color:var(--accent)}
+.grid-cards{display:grid;grid-template-columns:repeat(auto-fill,minmax(248px,1fr));gap:14px}
+/* collapsed columns-by-level view */
+.cols{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:14px;align-items:start}
+.col{background:var(--panel);border:1px solid var(--line);border-radius:13px;padding:12px 12px 14px}
+.col-h{display:flex;align-items:center;gap:8px;font-size:12.5px;color:var(--mut);
+  margin:0 0 10px;padding-bottom:8px;border-bottom:1px solid var(--line)}
+.col-h .swatch{width:10px;height:10px;border-radius:3px}
+.col-h b{color:var(--ink);font-size:13.5px}
+.col-h .ct{margin-left:auto;font-size:11px}
+.boxes{display:flex;flex-wrap:wrap;gap:7px}
+.minibox{position:relative;display:inline-flex;align-items:center;justify-content:center;
+  min-width:62px;padding:8px 9px;border-radius:8px;background:var(--panel2);border:1px solid var(--line);
+  color:var(--ink);font-size:12.5px;font-weight:650;letter-spacing:.2px;cursor:pointer;transition:.1s}
+.minibox:hover{border-color:var(--accent);transform:translateY(-1px)}
+.minibox.flag-hi{border-color:var(--hi)}
+.minibox.flag-med{border-color:var(--med)}
+.minibox .ni{position:absolute;top:-5px;right:-5px;width:8px;height:8px;border-radius:50%;background:var(--new);border:1px solid var(--bg)}
+.col.empty{opacity:.45}
+@media(max-width:780px){.cols{grid-template-columns:repeat(2,1fr)}}
+/* faculty tab */
+.facgrid{display:grid;grid-template-columns:1fr 1fr;gap:18px;margin-top:18px}
+@media(max-width:780px){.facgrid{grid-template-columns:1fr}}
+.fach{font-size:13px;text-transform:uppercase;letter-spacing:.6px;color:var(--mut);margin:0 0 10px}
+.faclist{display:flex;flex-direction:column;gap:8px}
+.facrow{display:flex;align-items:center;gap:10px;background:var(--panel);border:1px solid var(--line);
+  border-radius:10px;padding:10px 12px}
+.facrow.miss{border-left:4px solid var(--med)}
+.facrow.miss.chair{border-left-color:var(--hi)}
+.facrow .nm{font-weight:600}
+.facrow .rl{font-size:11.5px;color:var(--accent2);background:var(--panel2);border:1px solid var(--line);
+  border-radius:6px;padding:1px 7px}
+.facrow .lv{font-size:11px;color:var(--med);margin-left:auto}
+.facrow .nt{font-size:12px;color:var(--mut);width:100%;margin-top:4px}
+.facrow.col{flex-wrap:wrap}
+/* edit mode + instructor + status + diff + map */
+.editbtn{padding:7px 13px;border-radius:9px;border:1px solid var(--line);background:var(--panel2);
+  color:var(--mut);cursor:pointer;font-size:13px}
+.editbtn.on{background:var(--accent2);border-color:var(--accent2);color:#fff}
+.exportbtn{padding:7px 13px;border-radius:9px;border:1px solid var(--accent);background:transparent;
+  color:var(--accent);cursor:pointer;font-size:13px}
+.instr{display:inline-flex;align-items:center;gap:6px}
+.instr input{background:var(--panel2);border:1px solid var(--line);color:var(--ink);border-radius:7px;
+  padding:6px 9px;font-size:13px;min-width:200px}
+.statusSel{background:var(--panel2);border:1px solid var(--line);color:var(--ink);border-radius:6px;
+  padding:3px 6px;font-size:11.5px;margin-left:8px}
+.stbadge{font-size:10px;font-weight:700;border-radius:4px;padding:1px 6px;margin-left:8px;text-transform:uppercase}
+.stbadge.ack{background:#3b4252;color:#cdd6e6}
+.stbadge.fixed{background:var(--low);color:#08120d}
+.stbadge.wontfix{background:#4a3340;color:#ffb9c6}
+.issue.done{opacity:.55}
+/* diff */
+.difftbl{width:100%;border-collapse:collapse;margin-top:10px;font-size:13px}
+.difftbl th,.difftbl td{border:1px solid var(--line);padding:8px 10px;text-align:left;vertical-align:top}
+.difftbl th{background:var(--panel2);color:var(--mut);font-weight:600}
+.diff-add{color:var(--low)} .diff-del{color:var(--hi)} .diff-chg{color:var(--med)}
+.diffsec h3{margin:20px 0 4px;font-size:14px}
+/* prereq map */
+#mapWrap{overflow:auto;border:1px solid var(--line);border-radius:12px;background:var(--panel);margin-top:12px}
+.mapnode rect{fill:var(--panel2);stroke:var(--line)}
+.mapnode:hover rect{stroke:var(--accent)}
+.mapnode text{fill:var(--ink);font:600 11px sans-serif}
+.mapnode.dangling rect{fill:#3a1620;stroke:var(--hi);stroke-dasharray:3 2}
+.mapnode.dangling text{fill:#ff9aa6}
+.mapedge{stroke:#46506180;stroke-width:1.3;fill:none}
+.mapedge.dang{stroke:var(--hi);stroke-dasharray:4 3}
+.maplbl{fill:var(--mut);font:600 12px sans-serif}
+</style>
+</head>
+<body>
+<header>
+  <div class="row">
+    <div>
+      <h1>WLU Health Sciences &mdash; Academic Calendar Review</h1>
+      <div class="sub">Faculty of Science &middot; HE / HN course listings &amp; Honours BSc structure</div>
+    </div>
+    <div class="spacer"></div>
+    <button class="editbtn" id="editBtn" title="Toggle editing of instructors and issue status">&#9998; Edit</button>
+    <button class="exportbtn" id="exportBtn" title="Download overrides.json to commit">&#8681; Export overrides</button>
+    <div class="seg" id="yearSeg">
+      <button data-y="2025/2026">2025/2026</button>
+      <button data-y="2026/2027" class="on">2026/2027</button>
+    </div>
+  </div>
+  <div class="tabs" id="tabs">
+    <div class="tab active" data-t="courses">Courses</div>
+    <div class="tab" data-t="issues">Issues</div>
+    <div class="tab" data-t="map">Prereq map</div>
+    <div class="tab" data-t="diff">Year diff</div>
+    <div class="tab" data-t="program">Program structure</div>
+    <div class="tab" data-t="faculty">Faculty</div>
+  </div>
+</header>
+<main>
+  <!-- COURSES TAB -->
+  <section id="tab-courses">
+    <div class="row" style="margin-bottom:6px">
+      <div class="seg" id="viewSeg">
+        <button data-v="collapsed">Collapsed</button>
+        <button data-v="expanded" class="on">Expanded</button>
+      </div>
+      <input class="search" id="search" placeholder="Search code, title, description...">
+      <span class="chip lvl-chip on" data-lvl="all">All levels</span>
+      <span class="chip lvl-chip" data-lvl="100">100</span>
+      <span class="chip lvl-chip" data-lvl="200">200</span>
+      <span class="chip lvl-chip" data-lvl="300">300</span>
+      <span class="chip lvl-chip" data-lvl="400">400</span>
+      <span class="chip" id="issuesOnly">Issues only</span>
+      <span class="chip" id="newOnly">New in 2026/27</span>
+    </div>
+    <div class="stats" id="stats"></div>
+    <div id="grid" style="margin-top:14px"></div>
+  </section>
+  <!-- ISSUES TAB -->
+  <section id="tab-issues" class="hidden issuesWrap">
+    <div class="note">Findings for the selected calendar year. Severity: <span class="sevtag hi">HIGH</span> blocks correct enrolment or degree audit &middot; <span class="sevtag med">MED</span> content/clarity defect &middot; <span class="sevtag low">LOW</span> style/consistency.</div>
+    <div id="issuesList"></div>
+  </section>
+  <!-- PROGRAM TAB -->
+  <section id="tab-program" class="hidden">
+    <div class="note">Honours BSc Health Sciences degree structure, verbatim from the calendar, plus program-level findings.</div>
+    <div id="programIssues"></div>
+    <h3 style="margin-top:22px">Degree structure (verbatim)</h3>
+    <a class="proglink" id="progLink" href="#" target="_blank" rel="noopener">Open Honours BSc page on WLU calendar &#8599;</a>
+    <div class="progtext" id="progText"></div>
+  </section>
+  <!-- PREREQ MAP TAB -->
+  <section id="tab-map" class="hidden">
+    <div class="note">Internal HE/HN prerequisite flow (left = lower level). Dashed red nodes are referenced prerequisites with no course entry. Click a node to open the course.</div>
+    <div id="mapWrap"></div>
+  </section>
+  <!-- YEAR DIFF TAB -->
+  <section id="tab-diff" class="hidden">
+    <div class="note">What changed from 2025/2026 to 2026/2027.</div>
+    <div id="diffBody"></div>
+  </section>
+  <!-- FACULTY TAB -->
+  <section id="tab-faculty" class="hidden">
+    <div class="note" id="facNote"></div>
+    <div id="facultyIssues"></div>
+    <div class="facgrid">
+      <div><h3 class="fach">Listed in calendar</h3><div id="facListed" class="faclist"></div></div>
+      <div><h3 class="fach">Missing / needs correction</h3><div id="facMissing" class="faclist"></div></div>
+    </div>
+  </section>
+</main>
+
+<div class="scrim" id="scrim"></div>
+<aside class="modal" id="modal"></aside>
+
+<script>
+const DATA = {"2025/2026": [{"file": "c_76603.html", "year": "2025/2026", "code": "HN210/KP221", "title": "Human Anatomy", "credit": "0.5 Credit", "term": "Fall", "hours": "", "description": "( Cross-listed as KP221 .)", "requirements": {"Exclusions": "HN204 , HS202 , HS204 , KP223"}, "prereq_links": ["HN204", "HS202", "HS204"], "primary": "HN210", "level": 200, "issues": [{"sev": "low", "cat": "gap", "msg": "No academic description in the HE calendar - only a cross-list pointer to KP221."}], "url": "https://academic-calendar.wlu.ca/course.php?c=76603&cal=1&d=3127&s=1152&y=92"}, {"file": "c_76604.html", "year": "2025/2026", "code": "HN220/KP222", "title": "Human Physiology", "credit": "0.5 Credit", "term": "", "hours": "", "description": "( Cross-listed as KP222 .)", "requirements": {}, "prereq_links": [], "primary": "HN220", "level": 200, "issues": [{"sev": "low", "cat": "gap", "msg": "No academic description - only a cross-list pointer to KP222."}], "url": "https://academic-calendar.wlu.ca/course.php?c=76604&cal=1&d=3127&s=1152&y=92"}, {"file": "c_76605.html", "year": "2025/2026", "code": "HE100", "title": "Health Issues I", "credit": "0.5 Credit", "term": "Fall", "hours": "Hours per week: Lecture/Discussion: 3", "description": "An introduction to health issues pertinent to the individual and the community. Various health-related topics will be considered, such as defining health, determinants of health, risk factors and behaviour change and epidemiology.", "requirements": {"Prerequisites": "Registration status: Year 1 Honours BSc Health Sciences.", "Exclusions": "KP231 ."}, "prereq_links": ["KP231"], "primary": "HE100", "level": 100, "issues": [], "url": "https://academic-calendar.wlu.ca/course.php?c=76605&cal=1&d=3127&s=1152&y=92"}, {"file": "c_76606.html", "year": "2025/2026", "code": "HE101", "title": "Health Issues II", "credit": "0.5 Credit", "term": "Winter", "hours": "Hours per week: Lecture/Discussion: 3", "description": "A continuation of Health Issues I, possible topics including: risk behaviours and health promotion, chronic and infectious disease, complementary and alternative medicine, global health care systems and health communication.", "requirements": {"Prerequisites": "HE100 , and registration status: Year 1 Honours BSc Health Sciences.", "Exclusions": "KP232."}, "prereq_links": ["HE100"], "primary": "HE101", "level": 100, "issues": [], "url": "https://academic-calendar.wlu.ca/course.php?c=76606&cal=1&d=3127&s=1152&y=92"}, {"file": "c_76607.html", "year": "2025/2026", "code": "HE201", "title": "Research Methods for the Health Sciences", "credit": "0.5 Credit", "term": "Fall", "hours": "Hours per week: Lecture/Discussion: 3", "description": "A thorough understanding of the health research process is required for decision-making in clinical practice and to lead more advanced research. This course will provide students with a comprehensive understanding of the basic principles and methodologies used in health research. Topics covered in this course include the design of research studies (observational and experimental), data collection techniques (including concepts of reliability and validity), ethical considerations unique to health research, and knowledge translation strategies. Through a combination of lectures and practical assignments, students will gain experience in developing research questions and designing study protocols.", "requirements": {"Prerequisites": "HE101 and registration status: Year 2: Honours BSc Health Sciences.", "Exclusions": "KP261, PS291, PS295 ."}, "prereq_links": ["HE101", "PS295"], "primary": "HE201", "level": 200, "issues": [], "url": "https://academic-calendar.wlu.ca/course.php?c=76607&cal=1&d=3127&s=1152&y=92"}, {"file": "c_76608.html", "year": "2025/2026", "code": "HE300/KP434", "title": "Epidemiology", "credit": "0.5 Credit", "term": "Fall", "hours": "Hours per week: Lecture/Discussion: 3", "description": "An introduction to the field of chronic disease epidemiology with a focus on the ways in which epidemiologic methods can enhance our understanding of chronic illnesses such as heart disease, cancer and diabetes. In this course , students will build upon their skills in research design, interpretation of statistical data and critical evaluation of the scientific literature. ( Cross-listed as KP434 .)", "requirements": {"Prerequisites": "( KP231 and KP390 ) OR (both HE201 and MA241 or ST231 ).", "Exclusions": "HE300 , HS320, KP340K, KP434 ."}, "prereq_links": ["KP231", "KP390", "HE201", "ST231", "HE300", "KP434"], "primary": "HE300", "level": 300, "issues": [{"sev": "low", "cat": "prereq", "msg": "Prereq alternative 'MA241' is not hyperlinked (every live course code in the calendar is linked), suggesting MA241 is defunct; the linked alternative is ST231."}, {"sev": "low", "cat": "structure", "msg": "Exclusion list redundantly names the course's own codes (HE300 and KP434) in addition to the cross-list mechanism."}], "url": "https://academic-calendar.wlu.ca/course.php?c=76608&cal=1&d=3127&s=1152&y=92"}, {"file": "c_76609.html", "year": "2025/2026", "code": "HE400", "title": "Multidisciplinary Seminar on Critical Health Issues", "credit": "0.5 Credit", "term": "", "hours": "", "description": "Students will identify, investigate and discuss critical health issues by integrating a range of social and biomedical perspectives and working toward a cell-to-society understanding. Activities in class will include group work to develop colloquia on special topics, critical discussion of readings and films and some traditional lectures to provide core content. The course will culminate in a research project. Course evaluation will be focused on students' ability to think critically about complex health problems and concrete solutions; participation in group work and class discussions; and proficiency in verbal and written communication.", "requirements": {"Prerequisites": "HE300 and HE301 ; registration status: Year 4 Honours BSc Health Sciences."}, "prereq_links": ["HE300", "HE301"], "primary": "HE400", "level": 400, "issues": [], "url": "https://academic-calendar.wlu.ca/course.php?c=76609&cal=1&d=3127&s=1152&y=92"}, {"file": "c_76610.html", "year": "2025/2026", "code": "HE340", "title": "Special Topics", "credit": "0.5 Credit", "term": "", "hours": "", "description": "", "requirements": {"Prerequisites": "Registration status: Year 3 or 4 Honours BSc Health Sciences.", "Notes": "Irregular Course"}, "prereq_links": [], "primary": "HE340", "level": 300, "issues": [], "url": "https://academic-calendar.wlu.ca/course.php?c=76610&cal=1&d=3127&s=1152&y=92"}, {"file": "c_76611.html", "year": "2025/2026", "code": "HE440", "title": "Special Topics", "credit": "0.5 Credit", "term": "", "hours": "", "description": "", "requirements": {"Prerequisites": "Registration status: Year 4 Honours BSc Health Sciences", "Notes": "Irregular Course"}, "prereq_links": [], "primary": "HE440", "level": 400, "issues": [], "url": "https://academic-calendar.wlu.ca/course.php?c=76611&cal=1&d=3127&s=1152&y=92"}, {"file": "c_76612.html", "year": "2025/2026", "code": "HE450", "title": "Directed Studies", "credit": "0.5 Credit", "term": "", "hours": "", "description": "", "requirements": {"Prerequisites": "Registration status: Year 4 Honours BSc Health Sciences", "Notes": "Irregular Course"}, "prereq_links": [], "primary": "HE450", "level": 400, "issues": [], "url": "https://academic-calendar.wlu.ca/course.php?c=76612&cal=1&d=3127&s=1152&y=92"}, {"file": "c_76613.html", "year": "2025/2026", "code": "HE301", "title": "Social Determinants of Health", "credit": "0.5 Credit", "term": "", "hours": "Hours per week: Lecture/Discussion: 3", "description": "Increasingly, there is evidence that societal factors may be the primary determinants of why people stay healthy or become ill. Much of the medical and epidemiological literatures on health ‘disparities' have been descriptive in nature and fail to analytically account for increasing inequities in population health outcomes. This course moves beyond traditional ‘lifestyle' explanations of health and wellness and provides students with a solid understanding of how social factors contribute to inequities in health care access and population health outcomes. We will examine how social exclusion , income, early life experiences, employment and working conditions, unemployment and employment insecurity, housing, food security, Indigenous status, and social policy determine health. We also explore why the biomedical and lifestyle models of health are the primary ways that Canadians think about health, the policy implications of the current state of knowledge, and what can be done to inform change.", "requirements": {"Prerequisites": "HE201 .", "Exclusions": "HS200 ."}, "prereq_links": ["HE201", "HS200"], "primary": "HE301", "level": 300, "issues": [], "url": "https://academic-calendar.wlu.ca/course.php?c=76613&cal=1&d=3127&s=1152&y=92"}, {"file": "c_76614.html", "year": "2025/2026", "code": "HE202", "title": "Foundations of the Canadian Healthcare System", "credit": "0.5 Credit", "term": "", "hours": "Hours per week: Lecture/Discussion: 3", "description": "The course is intended to develop an awareness and understanding of the Canadian healthcare system. Topics may include: the historical foundations of Medicare; responsibilities of the provincial and federal governments with respect to allocation of resources; funding mechanisms; models of healthcare delivery; evolving roles of healthcare professionals, interdisciplinary and multidisciplinary teams; occupational health and safety of healthcare professionals; the Personal Health Protection Act in the role of electronic health records; legislation, including the Ontario Health Care Consent Act, the Ontario Public Hospitals Act, and the Ontario Regulated Health Professionals Act. Prerequisites :", "requirements": {"Prerequisites": "Registration Status: Minimum Year 2 Honours BSc Health Sciences", "Exclusions": "HS201 ."}, "prereq_links": ["HS201"], "primary": "HE202", "level": 200, "issues": [{"sev": "med", "cat": "grammar", "msg": "Description body ends with a stray, dangling label 'Prerequisites :' that was accidentally typed into the description field."}, {"sev": "low", "cat": "style", "msg": "Prereq reads 'Registration Status' (title case) while most HE courses use 'Registration status'."}], "url": "https://academic-calendar.wlu.ca/course.php?c=76614&cal=1&d=3127&s=1152&y=92"}, {"file": "c_76615.html", "year": "2025/2026", "code": "HE490", "title": "Directed Research in Health Sciences", "credit": "1.0 Credit", "term": "", "hours": "", "description": "This two-semester course is an independent thesis in Health Sciences under the direct supervision of a faculty member. The research project will culminate in a formal report and an oral presentation. Students wishing to complete a thesis must apply to the program co-ordinator for admission to HE490* by July 1 of Year 3.", "requirements": {"Prerequisites": "Admission requires a minimum GPA of 8.00 and permission of the program co-ordinator."}, "prereq_links": [], "primary": "HE490", "level": 400, "issues": [], "url": "https://academic-calendar.wlu.ca/course.php?c=76615&cal=1&d=3127&s=1152&y=92"}, {"file": "c_76616.html", "year": "2025/2026", "code": "HE410", "title": "Aging and Health", "credit": "0.5 Credit", "term": "Fall/Winter", "hours": "Hours per week: Lecture/Discussion: 3", "description": "A study of aging and health from a variety of perspectives including; bio-physiological, psycho-social, health-care system, cultural, legal, ethical and political. Topics may include; the aging process, falls, mental health, medication and co-morbidity, death and dying and others. There are several interactive/hands on components in the course .", "requirements": {"Prerequisites": "HE301 , HE302.", "Exclusions": "KP431 , HE440F."}, "prereq_links": ["HE301", "KP431"], "primary": "HE410", "level": 400, "issues": [{"sev": "hi", "cat": "prereq", "msg": "Prereq lists HE302, which has no course entry in either calendar year. Students cannot satisfy a non-existent prerequisite (likely a renamed/dropped course)."}, {"sev": "low", "cat": "grammar", "msg": "'perspectives including;' and 'Topics may include;' use semicolons where colons are required."}, {"sev": "low", "cat": "grammar", "msg": "'interactive/hands on components' should be hyphenated: 'hands-on'."}], "url": "https://academic-calendar.wlu.ca/course.php?c=76616&cal=1&d=3127&s=1152&y=92"}, {"file": "c_76617.html", "year": "2025/2026", "code": "HE411", "title": "Critical perspectives in Public Health", "credit": "0.5 Credit", "term": "Fall/Winter", "hours": "Hours per week: Lecture/Discussion: 3", "description": "An examination of the practice of public health in Canada and internationally with emphasis on social and political impacts on the application of knowledge to practice. Models of health promotion, population health, health determinants and health behaviour will form the theoretical basis for exploration of public health research and practice.", "requirements": {"Prerequisites": "HE301 , HE302.", "Exclusions": "HE440E."}, "prereq_links": ["HE301"], "primary": "HE411", "level": 400, "issues": [{"sev": "hi", "cat": "prereq", "msg": "Prereq lists HE302, which does not exist (same dangling reference as HE410)."}, {"sev": "low", "cat": "style", "msg": "Title 'Critical perspectives in Public Health' uses sentence case; all other course titles use Title Case ('Critical Perspectives in Public Health')."}], "url": "https://academic-calendar.wlu.ca/course.php?c=76617&cal=1&d=3127&s=1152&y=92"}, {"file": "c_76618.html", "year": "2025/2026", "code": "HE330", "title": "Human Nutrition and Health", "credit": "0.5 Credit", "term": "Fall/Winter", "hours": "Hours per week: Lecture/Discussion: 3", "description": "An examination of issues and controversies in human nutrition from nutritional science, physiological, metabolic and public health perspectives covering topics including; dietary assessment and planning, micro and macronutrients, antioxidants, phytochemicals, functional foods, food labeling obesity and weight management and dietary practices associated with disease prevention and management.", "requirements": {"Prerequisites": "HE201 and HN220 (or HE211 or BI216 or KP220).", "Exclusions": "HE440D, KP332 ."}, "prereq_links": ["HE201", "HN220", "KP332"], "primary": "HE330", "level": 300, "issues": [{"sev": "med", "cat": "prereq", "msg": "Prereq alternative 'HE211' has no course entry (defunct code); the live alternatives are BI216/KP220."}, {"sev": "low", "cat": "grammar", "msg": "'food labeling obesity' is missing a comma: should read 'food labeling, obesity'."}, {"sev": "low", "cat": "grammar", "msg": "'covering topics including;' uses a semicolon where a colon is required ('including:')."}, {"sev": "low", "cat": "spelling", "msg": "'food labeling' uses US spelling; Canadian-English house style is 'labelling' (also check 'behaviour' usage elsewhere for consistency)."}], "url": "https://academic-calendar.wlu.ca/course.php?c=76618&cal=1&d=3127&s=1152&y=92"}, {"file": "c_76619.html", "year": "2025/2026", "code": "HE431/BI416", "title": "Pathophysiology", "credit": "0.5 Credit", "term": "Fall/Winter", "hours": "Hours per week: Lecture/Discussion: 3", "description": "An examination of functional changes in cells, tissues and organs consequent to disease or injury. Topics may include the mechanisms of inflammation, hypertension, coronary artery disease, concussion, asthma, hepatitis, dysentery as well as other multi-organ conditions from environmental or other types of stress. ( Cross-listed as BI416 .)", "requirements": {"Prerequisites": "HN220 (or HE211 or BI216 or KP220).", "Exclusions": "BI416 , HE440B, BI496R."}, "prereq_links": ["HN220", "BI416"], "primary": "HE431", "level": 400, "issues": [{"sev": "med", "cat": "prereq", "msg": "Prereq alternative 'HE211' has no course entry (defunct code)."}], "url": "https://academic-calendar.wlu.ca/course.php?c=76619&cal=1&d=3127&s=1152&y=92"}, {"file": "c_76620.html", "year": "2025/2026", "code": "HE430", "title": "Advanced nutrition and chronic disease", "credit": "0.5 Credit", "term": "Fall/Winter", "hours": "Hours per week: Lecture/Discussion: 3", "description": "This course will examine nutritional aspects of selected chronic diseases affecting the Canadian population. Using a case-based approach, students will explore the role of diet in the etiology, prevention and treatment of nutrition-related conditions across the lifecycle including obesity, dyslipidemia, hypertension, cardiovascular disease, diabetes, anemia, osteoporosis and cancer. Emphasis will be placed on critical appraisal of epidemiological and clinical evidence, underlying physiological mechanisms, nutritional assessment methods and diet interventions.", "requirements": {"Prerequisites": "HE300 / KP434 , HE330 .", "Exclusions": "HE440D."}, "prereq_links": ["HE300", "KP434", "HE330"], "primary": "HE430", "level": 400, "issues": [{"sev": "low", "cat": "style", "msg": "Title 'Advanced nutrition and chronic disease' uses sentence case; house style is Title Case."}], "url": "https://academic-calendar.wlu.ca/course.php?c=76620&cal=1&d=3127&s=1152&y=92"}, {"file": "c_76621.html", "year": "2025/2026", "code": "HE436", "title": "Health and Human Rights", "credit": "0.5 Credit", "term": "", "hours": "Hours per week: Lecture/Discussion: 3", "description": "Human health and wellbeing are inextricably associated with access to fundamental human rights. When human rights (e.g., access to food and housing, experiencing forms of discrimination), are violated, various pathways to ill-health become evident. This course will cover the links between public health policies, political circumstances, and social and economic conditions on the health of individuals and populations using a human rights framework. Important domains of the health and human rights associations will be used to ensure that students have a broad understanding of key concepts, and are able to apply them in research methods, program development, policy analysis, healthcare delivery, and leadership positions.", "requirements": {"Prerequisites": "Registration Status: Year 3 or 4 Honours BSc Health Sciences", "Exclusions": "HE440I"}, "prereq_links": [], "primary": "HE436", "level": 400, "issues": [], "url": "https://academic-calendar.wlu.ca/course.php?c=76621&cal=1&d=3127&s=1152&y=92"}, {"file": "c_76622.html", "year": "2025/2026", "code": "HE437", "title": "Principles of Population Health", "credit": "0.5 Credit", "term": "", "hours": "Hours per week: Lecture/Discussion: 3", "description": "This course will delve into population health issues that have been briefly highlighted in previous methods courses, and introduce students to the principles of population health, related terminology, structural systems, and population data analytics.", "requirements": {"Prerequisites": "Registration Status: Year 3 or Year 4 Health Sciences", "Exclusions": "HE440R"}, "prereq_links": [], "primary": "HE437", "level": 400, "issues": [{"sev": "low", "cat": "style", "msg": "Prereq 'Year 3 or Year 4 Health Sciences' omits 'Honours BSc' that other courses include."}], "url": "https://academic-calendar.wlu.ca/course.php?c=76622&cal=1&d=3127&s=1152&y=92"}, {"file": "c_76623.html", "year": "2025/2026", "code": "HE432/BI470", "title": "Biomedical Virology", "credit": "0.5 Credit", "term": "", "hours": "Hours per week: Lecture/Discussion: 3", "description": "An examination of topics related to biomedical virology including but not limited to: virus structure and replication strategies, immune response to virus infections along with the role of vaccines and antiviral drugs in combating virus infections, the beneficial uses of viruses, the emergence, spread and extinction of viruses and current diagnosis and detection methods. ( Cross-listed as BI470 .)", "requirements": {"Prerequisites": "BI236 .", "Exclusions": "BI470 , BI496U, HE432 , HE440C."}, "prereq_links": ["BI236", "BI470", "HE432"], "primary": "HE432", "level": 400, "issues": [], "url": "https://academic-calendar.wlu.ca/course.php?c=76623&cal=1&d=3127&s=1152&y=92"}, {"file": "c_76624.html", "year": "2025/2026", "code": "HE350", "title": "Directed Studies", "credit": "0.5 Credit", "term": "", "hours": "", "description": "", "requirements": {"Prerequisites": "Registration status: Year 2 or Year 3 Honours BSc Health Sciences.", "Notes": "Irregular course"}, "prereq_links": [], "primary": "HE350", "level": 300, "issues": [], "url": "https://academic-calendar.wlu.ca/course.php?c=76624&cal=1&d=3127&s=1152&y=92"}, {"file": "c_76625.html", "year": "2025/2026", "code": "HN320", "title": "Human Physiology II: Control and Integration", "credit": "0.5 Credit", "term": "Winter", "hours": "Hours per week: Lecture/Discussion: 3 Tutorial/Seminar: 2", "description": "The mechanisms, control and integration of human physiological processes at the genetic, cellular, tissue, organ and whole body levels of organization will be explored. Emphasis will be placed on understanding how the nervous and endocrine systems coordinate cardiovascular, renal, respiratory and reproductive processes, metabolism and other processes to maintain homeostasis.", "requirements": {"Prerequisites": "HN220 (or KP222 )", "Co-requisites": "CH350 .", "Exclusions": "BI217, HS340 ."}, "prereq_links": ["HN220", "KP222", "CH350", "HS340"], "primary": "HN320", "level": 300, "issues": [], "url": "https://academic-calendar.wlu.ca/course.php?c=76625&cal=1&d=3127&s=1152&y=92"}, {"file": "c_76626.html", "year": "2025/2026", "code": "HE435/KP435", "title": "Exercise is Medicine", "credit": "0.5 Credit", "term": "", "hours": "", "description": "( Cross-listed as KP435 .)", "requirements": {}, "prereq_links": [], "primary": "HE435", "level": 400, "issues": [{"sev": "med", "cat": "gap", "msg": "Titled course ('Exercise is Medicine') with no academic description - only a cross-list pointer."}], "url": "https://academic-calendar.wlu.ca/course.php?c=76626&cal=1&d=3127&s=1152&y=92"}, {"file": "c_76627.html", "year": "2025/2026", "code": "HE305/PS389", "title": "Positive Psychology", "credit": "0.5 Credit", "term": "", "hours": "Hours per week: Lecture/Discussion: 3", "description": "An introduction to the science and practice of well-being, including topics such as happiness, optimism, gratitude, mindfulness, positive mental health, character strengths, and positive relationships, with a focus on evidence-based strategies for optimizing individual and community functioning. Students will develop the skills to understand the theoretical and empirical underpinnings of positive psychology.", "requirements": {"Prerequisites": "One of: PS263 , PS264 , PS270 , PS275 , PS276 , PS280 , PS282 , PS283 , PS285"}, "prereq_links": ["PS263", "PS264", "PS270", "PS275", "PS276", "PS280", "PS282", "PS283", "PS285"], "primary": "HE305", "level": 300, "issues": [], "url": "https://academic-calendar.wlu.ca/course.php?c=76627&cal=1&d=3127&s=1152&y=92"}, {"file": "c_76628.html", "year": "2025/2026", "code": "HE304", "title": "Introduction to Indigenous Health and Well-Being", "credit": "0.5 Credit", "term": "", "hours": "Hours per week: Lecture/Discussion: 3", "description": "Students will advance and critically examine their knowledge, perspectives, biases, and practices in relation to Indigenous peoples’ health. This introductory course will include lectures, Indigenous guest presenters, activities, and critical self-reflection to facilitate learning about a) Indigenous determinants of health, b) cultural humility, and c) strengths-based and promising approaches to health practices, research, policies, and programming.", "requirements": {"Prerequisites": "Registration Status: Year 3 or 4 of Honours Program", "Exclusions": "HE440L"}, "prereq_links": [], "primary": "HE304", "level": 300, "issues": [{"sev": "low", "cat": "style", "msg": "Prereq 'Year 3 or 4 of Honours Program' is a wording variant of the standard 'Year 3 or 4 Honours BSc Health Sciences'."}], "url": "https://academic-calendar.wlu.ca/course.php?c=76628&cal=1&d=3127&s=1152&y=92"}, {"file": "c_76629.html", "year": "2025/2026", "code": "HE303/BI317", "title": "Introduction to Immunology", "credit": "0.5 Credit", "term": "", "hours": "Hours per week: Lecture/Discussion: 3", "description": "Introduction to Immunology introduces the responses, cells, mediators and structures of the immune system. Innate immunity, including inflammation and adaptive immunity will be discussed, focusing on how both arms of the immune system are activated. The respective effector mechanisms for innate and adaptive immunity will be described. The role of the immune system in health and disease will be introduced, topics covered may include: immunodeficiency, autoimmunity, hypersensitivity, transplantation and tumor immunity.", "requirements": {"Prerequisites": "BI236", "Exclusions": "BI317 , HE434, BI417, HE440G, BI396M"}, "prereq_links": ["BI236", "BI317"], "primary": "HE303", "level": 300, "issues": [{"sev": "hi", "cat": "prereq", "msg": "Exclusion list names HE434, which has no course entry (also cited in the program's Year-4 list). Dangling reference."}], "url": "https://academic-calendar.wlu.ca/course.php?c=76629&cal=1&d=3127&s=1152&y=92"}, {"file": "c_76630.html", "year": "2025/2026", "code": "HN204", "title": "Systems Human Anatomy", "credit": "0.5 Credit", "term": "", "hours": "Hours per week: Lecture/Discussion: 3 Lab: 2", "description": "This course takes a systems approach to the anatomical study of the human integumentary, skeletal, muscular, nervous, endocrine, cardiovascular, lymphatic, respiratory, digestive, urinary and reproductive systems. Laboratory activities include active and experiential learning to promote consolidation of lecture material.", "requirements": {"Prerequisites": "BI110 , BI111", "Exclusions": "HS202 , HS204 , KP221 / HN210 , KP223"}, "prereq_links": ["BI110", "BI111", "HS202", "HS204", "KP221", "HN210"], "primary": "HN204", "level": 200, "issues": [], "url": "https://academic-calendar.wlu.ca/course.php?c=76630&cal=1&d=3127&s=1152&y=92"}, {"file": "c_76631.html", "year": "2025/2026", "code": "HE368/PS368", "title": "Functional Neuroanatomy", "credit": "0.5 Credit", "term": "", "hours": "Hours per week: Lecture/Discussion: 3 Lab: 3 (biweekly)", "description": "( Cross-listed with PS368 )", "requirements": {"Prerequisites": "One of: HN204 , HN210 , KP221 , PS263 , PS267", "Exclusions": "HE440V, PS368"}, "prereq_links": ["HN204", "HN210", "KP221", "PS263", "PS267", "PS368"], "primary": "HE368", "level": 300, "issues": [{"sev": "med", "cat": "gap", "msg": "No academic description - only a cross-list pointer ('Cross-listed with PS368'). Note 'with' here vs 'as' used by other cross-lists."}], "url": "https://academic-calendar.wlu.ca/course.php?c=76631&cal=1&d=3127&s=1152&y=92"}, {"file": "c_77683.html", "year": "2025/2026", "code": "HE438", "title": "Cancer Biology", "credit": "0.5 Credit", "term": "", "hours": "Hours per week: Lecture/Discussion: 3", "description": "Cancer is defined as the uncontrolled growth of cells. The complexity of its causes and the diversity of cell types involved underscore the need for a deeper understanding of cancer’s basic biology. Advances in basic and biomedical research have led to more effective treatments, improved detection methods, and better prevention strategies. This course is organized into two themes: an introduction to fundamental concepts in the cellular and molecular biology of cancer and an introduction to the clinical aspects of oncology. Additionally, the course explores the development and clinical use of therapies based on major discoveries in cancer biology research.", "requirements": {"Prerequisites": "BI236", "Exclusions": "HE440S"}, "prereq_links": ["BI236"], "primary": "HE438", "level": 400, "issues": [], "url": "https://academic-calendar.wlu.ca/course.php?c=77683&cal=1&d=3127&s=1152&y=92"}], "2026/2027": [{"file": "c_79619.html", "year": "2026/2027", "code": "HN210/KP221", "title": "Human Anatomy", "credit": "0.5 Credit", "term": "Fall", "hours": "", "description": "( Cross-listed as KP221 .)", "requirements": {"Exclusions": "HN204 , HS202 , HS204 , KP223"}, "prereq_links": ["HN204", "HS202", "HS204"], "primary": "HN210", "level": 200, "issues": [{"sev": "low", "cat": "gap", "msg": "No academic description in the HE calendar - only a cross-list pointer to KP221."}], "url": "https://academic-calendar.wlu.ca/course.php?c=79619&cal=1&d=3258&s=1170&y=93"}, {"file": "c_79620.html", "year": "2026/2027", "code": "HN220/KP222", "title": "Human Physiology", "credit": "0.5 Credit", "term": "", "hours": "", "description": "( Cross-listed as KP222 .)", "requirements": {}, "prereq_links": [], "primary": "HN220", "level": 200, "issues": [{"sev": "low", "cat": "gap", "msg": "No academic description - only a cross-list pointer to KP222."}], "url": "https://academic-calendar.wlu.ca/course.php?c=79620&cal=1&d=3258&s=1170&y=93"}, {"file": "c_79621.html", "year": "2026/2027", "code": "HE100", "title": "Health Issues I", "credit": "0.5 Credit", "term": "Fall", "hours": "Hours per week: Lecture/Discussion: 3", "description": "An introduction to health issues pertinent to the individual and the community. Various health-related topics will be considered, such as defining health, determinants of health, risk factors and behaviour change and epidemiology.", "requirements": {"Prerequisites": "Registration status: Year 1 Honours BSc Health Sciences.", "Exclusions": "KP231 ."}, "prereq_links": ["KP231"], "primary": "HE100", "level": 100, "issues": [], "url": "https://academic-calendar.wlu.ca/course.php?c=79621&cal=1&d=3258&s=1170&y=93"}, {"file": "c_79622.html", "year": "2026/2027", "code": "HE101", "title": "Health Issues II", "credit": "0.5 Credit", "term": "Winter", "hours": "Hours per week: Lecture/Discussion: 3", "description": "A continuation of Health Issues I, possible topics including: risk behaviours and health promotion, chronic and infectious disease, complementary and alternative medicine, global health care systems and health communication.", "requirements": {"Prerequisites": "HE100 , and registration status: Year 1 Honours BSc Health Sciences.", "Exclusions": "KP232."}, "prereq_links": ["HE100"], "primary": "HE101", "level": 100, "issues": [], "url": "https://academic-calendar.wlu.ca/course.php?c=79622&cal=1&d=3258&s=1170&y=93"}, {"file": "c_79623.html", "year": "2026/2027", "code": "HE201", "title": "Research Methods for the Health Sciences", "credit": "0.5 Credit", "term": "Fall", "hours": "Hours per week: Lecture/Discussion: 3", "description": "A thorough understanding of the health research process is required for decision-making in clinical practice and to lead more advanced research. This course will provide students with a comprehensive understanding of the basic principles and methodologies used in health research. Topics covered in this course include the design of research studies (observational and experimental), data collection techniques (including concepts of reliability and validity), ethical considerations unique to health research, and knowledge translation strategies. Through a combination of lectures and practical assignments, students will gain experience in developing research questions and designing study protocols.", "requirements": {"Prerequisites": "HE101 and registration status: Year 2: Honours BSc Health Sciences.", "Exclusions": "KP261, PS291, PS295 ."}, "prereq_links": ["HE101", "PS295"], "primary": "HE201", "level": 200, "issues": [], "url": "https://academic-calendar.wlu.ca/course.php?c=79623&cal=1&d=3258&s=1170&y=93"}, {"file": "c_79624.html", "year": "2026/2027", "code": "HE300/KP434", "title": "Epidemiology", "credit": "0.5 Credit", "term": "Fall", "hours": "Hours per week: Lecture/Discussion: 3", "description": "An introduction to the field of chronic disease epidemiology with a focus on the ways in which epidemiologic methods can enhance our understanding of chronic illnesses such as heart disease, cancer and diabetes. In this course , students will build upon their skills in research design, interpretation of statistical data and critical evaluation of the scientific literature. ( Cross-listed as KP434 .)", "requirements": {"Prerequisites": "( KP231 and KP390 ) OR (both HE201 and MA241 or ST231 ).", "Exclusions": "HE300 , HS320, KP340K, KP434 ."}, "prereq_links": ["KP231", "KP390", "HE201", "ST231", "HE300", "KP434"], "primary": "HE300", "level": 300, "issues": [{"sev": "low", "cat": "prereq", "msg": "Prereq alternative 'MA241' is not hyperlinked (every live course code in the calendar is linked), suggesting MA241 is defunct; the linked alternative is ST231."}, {"sev": "low", "cat": "structure", "msg": "Exclusion list redundantly names the course's own codes (HE300 and KP434) in addition to the cross-list mechanism."}], "url": "https://academic-calendar.wlu.ca/course.php?c=79624&cal=1&d=3258&s=1170&y=93"}, {"file": "c_79625.html", "year": "2026/2027", "code": "HE400", "title": "Multidisciplinary Seminar on Critical Health Issues", "credit": "0.5 Credit", "term": "", "hours": "", "description": "Students will identify, investigate and discuss critical health issues by integrating a range of social and biomedical perspectives and working toward a cell-to-society understanding. Activities in class will include group work to develop colloquia on special topics, critical discussion of readings and films and some traditional lectures to provide core content. The course will culminate in a research project. Course evaluation will be focused on students' ability to think critically about complex health problems and concrete solutions; participation in group work and class discussions; and proficiency in verbal and written communication.", "requirements": {"Prerequisites": "HE300 and HE301 ; registration status: Year 4 Honours BSc Health Sciences."}, "prereq_links": ["HE300", "HE301"], "primary": "HE400", "level": 400, "issues": [], "url": "https://academic-calendar.wlu.ca/course.php?c=79625&cal=1&d=3258&s=1170&y=93"}, {"file": "c_79626.html", "year": "2026/2027", "code": "HE340", "title": "Special Topics", "credit": "0.5 Credit", "term": "", "hours": "", "description": "", "requirements": {"Prerequisites": "Registration status: Year 3 or 4 Honours BSc Health Sciences.", "Notes": "Irregular Course"}, "prereq_links": [], "primary": "HE340", "level": 300, "issues": [], "url": "https://academic-calendar.wlu.ca/course.php?c=79626&cal=1&d=3258&s=1170&y=93"}, {"file": "c_79627.html", "year": "2026/2027", "code": "HE440", "title": "Special Topics", "credit": "0.5 Credit", "term": "", "hours": "", "description": "", "requirements": {"Prerequisites": "Registration status: Year 4 Honours BSc Health Sciences", "Notes": "Irregular Course"}, "prereq_links": [], "primary": "HE440", "level": 400, "issues": [], "url": "https://academic-calendar.wlu.ca/course.php?c=79627&cal=1&d=3258&s=1170&y=93"}, {"file": "c_79628.html", "year": "2026/2027", "code": "HE450", "title": "Directed Studies", "credit": "0.5 Credit", "term": "", "hours": "", "description": "", "requirements": {"Prerequisites": "Registration status: Year 4 Honours BSc Health Sciences", "Notes": "Irregular Course"}, "prereq_links": [], "primary": "HE450", "level": 400, "issues": [], "url": "https://academic-calendar.wlu.ca/course.php?c=79628&cal=1&d=3258&s=1170&y=93"}, {"file": "c_79629.html", "year": "2026/2027", "code": "HE301", "title": "Social Determinants of Health", "credit": "0.5 Credit", "term": "", "hours": "Hours per week: Lecture/Discussion: 3", "description": "Increasingly, there is evidence that societal factors may be the primary determinants of why people stay healthy or become ill. Much of the medical and epidemiological literatures on health ‘disparities' have been descriptive in nature and fail to analytically account for increasing inequities in population health outcomes. This course moves beyond traditional ‘lifestyle' explanations of health and wellness and provides students with a solid understanding of how social factors contribute to inequities in health care access and population health outcomes. We will examine how social exclusion , income, early life experiences, employment and working conditions, unemployment and employment insecurity, housing, food security, Indigenous status, and social policy determine health. We also explore why the biomedical and lifestyle models of health are the primary ways that Canadians think about health, the policy implications of the current state of knowledge, and what can be done to inform change.", "requirements": {"Prerequisites": "HE201 .", "Exclusions": "HS200 ."}, "prereq_links": ["HE201", "HS200"], "primary": "HE301", "level": 300, "issues": [], "url": "https://academic-calendar.wlu.ca/course.php?c=79629&cal=1&d=3258&s=1170&y=93"}, {"file": "c_79630.html", "year": "2026/2027", "code": "HE202", "title": "Foundations of the Canadian Healthcare System", "credit": "0.5 Credit", "term": "", "hours": "Hours per week: Lecture/Discussion: 3", "description": "The course is intended to develop an awareness and understanding of the Canadian healthcare system. Topics may include: the historical foundations of Medicare; responsibilities of the provincial and federal governments with respect to allocation of resources; funding mechanisms; models of healthcare delivery; evolving roles of healthcare professionals, interdisciplinary and multidisciplinary teams; occupational health and safety of healthcare professionals; the Personal Health Protection Act in the role of electronic health records; legislation, including the Ontario Health Care Consent Act, the Ontario Public Hospitals Act, and the Ontario Regulated Health Professionals Act. Prerequisites :", "requirements": {"Prerequisites": "Registration Status: Minimum Year 2 Honours BSc Health Sciences", "Exclusions": "HS201 ."}, "prereq_links": ["HS201"], "primary": "HE202", "level": 200, "issues": [{"sev": "med", "cat": "grammar", "msg": "Description body ends with a stray, dangling label 'Prerequisites :' that was accidentally typed into the description field."}, {"sev": "low", "cat": "style", "msg": "Prereq reads 'Registration Status' (title case) while most HE courses use 'Registration status'."}], "url": "https://academic-calendar.wlu.ca/course.php?c=79630&cal=1&d=3258&s=1170&y=93"}, {"file": "c_79631.html", "year": "2026/2027", "code": "HE490", "title": "Directed Research in Health Sciences", "credit": "1.0 Credit", "term": "", "hours": "", "description": "This two-semester course is an independent thesis in Health Sciences under the direct supervision of a faculty member. The research project will culminate in a formal report and an oral presentation. Students wishing to complete a thesis must apply to the program co-ordinator for admission to HE490* by July 1 of Year 3.", "requirements": {"Prerequisites": "Admission requires a minimum GPA of 8.00 and permission of the program co-ordinator."}, "prereq_links": [], "primary": "HE490", "level": 400, "issues": [], "url": "https://academic-calendar.wlu.ca/course.php?c=79631&cal=1&d=3258&s=1170&y=93"}, {"file": "c_79632.html", "year": "2026/2027", "code": "HE410", "title": "Aging and Health", "credit": "0.5 Credit", "term": "Fall/Winter", "hours": "Hours per week: Lecture/Discussion: 3", "description": "A study of aging and health from a variety of perspectives including; bio-physiological, psycho-social, health-care system, cultural, legal, ethical and political. Topics may include; the aging process, falls, mental health, medication and co-morbidity, death and dying and others. There are several interactive/hands on components in the course .", "requirements": {"Prerequisites": "HE301 , HE302.", "Exclusions": "KP431 , HE440F."}, "prereq_links": ["HE301", "KP431"], "primary": "HE410", "level": 400, "issues": [{"sev": "hi", "cat": "prereq", "msg": "Prereq lists HE302, which has no course entry in either calendar year. Students cannot satisfy a non-existent prerequisite (likely a renamed/dropped course)."}, {"sev": "low", "cat": "grammar", "msg": "'perspectives including;' and 'Topics may include;' use semicolons where colons are required."}, {"sev": "low", "cat": "grammar", "msg": "'interactive/hands on components' should be hyphenated: 'hands-on'."}], "url": "https://academic-calendar.wlu.ca/course.php?c=79632&cal=1&d=3258&s=1170&y=93"}, {"file": "c_79633.html", "year": "2026/2027", "code": "HE411", "title": "Critical perspectives in Public Health", "credit": "0.5 Credit", "term": "Fall/Winter", "hours": "Hours per week: Lecture/Discussion: 3", "description": "An examination of the practice of public health in Canada and internationally with emphasis on social and political impacts on the application of knowledge to practice. Models of health promotion, population health, health determinants and health behaviour will form the theoretical basis for exploration of public health research and practice.", "requirements": {"Prerequisites": "HE301 , HE302.", "Exclusions": "HE440E."}, "prereq_links": ["HE301"], "primary": "HE411", "level": 400, "issues": [{"sev": "hi", "cat": "prereq", "msg": "Prereq lists HE302, which does not exist (same dangling reference as HE410)."}, {"sev": "low", "cat": "style", "msg": "Title 'Critical perspectives in Public Health' uses sentence case; all other course titles use Title Case ('Critical Perspectives in Public Health')."}], "url": "https://academic-calendar.wlu.ca/course.php?c=79633&cal=1&d=3258&s=1170&y=93"}, {"file": "c_79634.html", "year": "2026/2027", "code": "HE330", "title": "Human Nutrition and Health", "credit": "0.5 Credit", "term": "Fall/Winter", "hours": "Hours per week: Lecture/Discussion: 3", "description": "An examination of issues and controversies in human nutrition from nutritional science, physiological, metabolic and public health perspectives covering topics including; dietary assessment and planning, micro and macronutrients, antioxidants, phytochemicals, functional foods, food labeling obesity and weight management and dietary practices associated with disease prevention and management.", "requirements": {"Prerequisites": "HE201 and HN220 (or HE211 or BI216 or KP220).", "Exclusions": "HE440D, KP332 ."}, "prereq_links": ["HE201", "HN220", "KP332"], "primary": "HE330", "level": 300, "issues": [{"sev": "med", "cat": "prereq", "msg": "Prereq alternative 'HE211' has no course entry (defunct code); the live alternatives are BI216/KP220."}, {"sev": "low", "cat": "grammar", "msg": "'food labeling obesity' is missing a comma: should read 'food labeling, obesity'."}, {"sev": "low", "cat": "grammar", "msg": "'covering topics including;' uses a semicolon where a colon is required ('including:')."}, {"sev": "low", "cat": "spelling", "msg": "'food labeling' uses US spelling; Canadian-English house style is 'labelling' (also check 'behaviour' usage elsewhere for consistency)."}], "url": "https://academic-calendar.wlu.ca/course.php?c=79634&cal=1&d=3258&s=1170&y=93"}, {"file": "c_79635.html", "year": "2026/2027", "code": "HE431/BI416", "title": "Pathophysiology", "credit": "0.5 Credit", "term": "Fall/Winter", "hours": "Hours per week: Lecture/Discussion: 3", "description": "An examination of functional changes in cells, tissues and organs consequent to disease or injury. Topics may include the mechanisms of inflammation, hypertension, coronary artery disease, concussion, asthma, hepatitis, dysentery as well as other multi-organ conditions from environmental or other types of stress. ( Cross-listed as BI416 .)", "requirements": {"Prerequisites": "HN220 (or HE211 or BI216 or KP220).", "Exclusions": "BI416 , HE440B, BI496R."}, "prereq_links": ["HN220", "BI416"], "primary": "HE431", "level": 400, "issues": [{"sev": "med", "cat": "prereq", "msg": "Prereq alternative 'HE211' has no course entry (defunct code)."}], "url": "https://academic-calendar.wlu.ca/course.php?c=79635&cal=1&d=3258&s=1170&y=93"}, {"file": "c_79636.html", "year": "2026/2027", "code": "HE430", "title": "Advanced nutrition and chronic disease", "credit": "0.5 Credit", "term": "Fall/Winter", "hours": "Hours per week: Lecture/Discussion: 3", "description": "This course will examine nutritional aspects of selected chronic diseases affecting the Canadian population. Using a case-based approach, students will explore the role of diet in the etiology, prevention and treatment of nutrition-related conditions across the lifecycle including obesity, dyslipidemia, hypertension, cardiovascular disease, diabetes, anemia, osteoporosis and cancer. Emphasis will be placed on critical appraisal of epidemiological and clinical evidence, underlying physiological mechanisms, nutritional assessment methods and diet interventions.", "requirements": {"Prerequisites": "HE300 / KP434 , HE330 .", "Exclusions": "HE440D."}, "prereq_links": ["HE300", "KP434", "HE330"], "primary": "HE430", "level": 400, "issues": [{"sev": "low", "cat": "style", "msg": "Title 'Advanced nutrition and chronic disease' uses sentence case; house style is Title Case."}], "url": "https://academic-calendar.wlu.ca/course.php?c=79636&cal=1&d=3258&s=1170&y=93"}, {"file": "c_79637.html", "year": "2026/2027", "code": "HE436", "title": "Health and Human Rights", "credit": "0.5 Credit", "term": "", "hours": "Hours per week: Lecture/Discussion: 3", "description": "Human health and wellbeing are inextricably associated with access to fundamental human rights. When human rights (e.g., access to food and housing, experiencing forms of discrimination), are violated, various pathways to ill-health become evident. This course will cover the links between public health policies, political circumstances, and social and economic conditions on the health of individuals and populations using a human rights framework. Important domains of the health and human rights associations will be used to ensure that students have a broad understanding of key concepts, and are able to apply them in research methods, program development, policy analysis, healthcare delivery, and leadership positions.", "requirements": {"Prerequisites": "Registration Status: Year 3 or 4 Honours BSc Health Sciences", "Exclusions": "HE440I"}, "prereq_links": [], "primary": "HE436", "level": 400, "issues": [], "url": "https://academic-calendar.wlu.ca/course.php?c=79637&cal=1&d=3258&s=1170&y=93"}, {"file": "c_79638.html", "year": "2026/2027", "code": "HE437", "title": "Principles of Population Health", "credit": "0.5 Credit", "term": "", "hours": "Hours per week: Lecture/Discussion: 3", "description": "This course will delve into population health issues that have been briefly highlighted in previous methods courses, and introduce students to the principles of population health, related terminology, structural systems, and population data analytics.", "requirements": {"Prerequisites": "Registration Status: Year 3 or Year 4 Health Sciences", "Exclusions": "HE440R"}, "prereq_links": [], "primary": "HE437", "level": 400, "issues": [{"sev": "low", "cat": "style", "msg": "Prereq 'Year 3 or Year 4 Health Sciences' omits 'Honours BSc' that other courses include."}], "url": "https://academic-calendar.wlu.ca/course.php?c=79638&cal=1&d=3258&s=1170&y=93"}, {"file": "c_79639.html", "year": "2026/2027", "code": "HE432/BI470", "title": "Biomedical Virology", "credit": "0.5 Credit", "term": "", "hours": "Hours per week: Lecture/Discussion: 3", "description": "An examination of topics related to biomedical virology including but not limited to: virus structure and replication strategies, immune response to virus infections along with the role of vaccines and antiviral drugs in combating virus infections, the beneficial uses of viruses, the emergence, spread and extinction of viruses and current diagnosis and detection methods. ( Cross-listed as BI470 .)", "requirements": {"Prerequisites": "BI236 .", "Exclusions": "BI470 , BI496U, HE432 , HE440C."}, "prereq_links": ["BI236", "BI470", "HE432"], "primary": "HE432", "level": 400, "issues": [], "url": "https://academic-calendar.wlu.ca/course.php?c=79639&cal=1&d=3258&s=1170&y=93"}, {"file": "c_79640.html", "year": "2026/2027", "code": "HE350", "title": "Directed Studies", "credit": "0.5 Credit", "term": "", "hours": "", "description": "", "requirements": {"Prerequisites": "Registration status: Year 2 or Year 3 Honours BSc Health Sciences.", "Notes": "Irregular course"}, "prereq_links": [], "primary": "HE350", "level": 300, "issues": [], "url": "https://academic-calendar.wlu.ca/course.php?c=79640&cal=1&d=3258&s=1170&y=93"}, {"file": "c_79641.html", "year": "2026/2027", "code": "HN320", "title": "Human Physiology II: Control and Integration", "credit": "0.5 Credit", "term": "Winter", "hours": "Hours per week: Lecture/Discussion: 3 Tutorial/Seminar: 2", "description": "The mechanisms, control and integration of human physiological processes at the genetic, cellular, tissue, organ and whole body levels of organization will be explored. Emphasis will be placed on understanding how the nervous and endocrine systems coordinate cardiovascular, renal, respiratory and reproductive processes, metabolism and other processes to maintain homeostasis.", "requirements": {"Prerequisites": "HN220 (or KP222 )", "Co-requisites": "CH350 .", "Exclusions": "BI217, HS340 ."}, "prereq_links": ["HN220", "KP222", "CH350", "HS340"], "primary": "HN320", "level": 300, "issues": [], "url": "https://academic-calendar.wlu.ca/course.php?c=79641&cal=1&d=3258&s=1170&y=93"}, {"file": "c_79642.html", "year": "2026/2027", "code": "HE435/KP435", "title": "Exercise is Medicine", "credit": "0.5 Credit", "term": "", "hours": "", "description": "( Cross-listed as KP435 .)", "requirements": {}, "prereq_links": [], "primary": "HE435", "level": 400, "issues": [{"sev": "med", "cat": "gap", "msg": "Titled course ('Exercise is Medicine') with no academic description - only a cross-list pointer."}], "url": "https://academic-calendar.wlu.ca/course.php?c=79642&cal=1&d=3258&s=1170&y=93"}, {"file": "c_79643.html", "year": "2026/2027", "code": "HE305/PS389", "title": "Positive Psychology", "credit": "0.5 Credit", "term": "", "hours": "Hours per week: Lecture/Discussion: 3", "description": "An introduction to the science and practice of well-being, including topics such as happiness, optimism, gratitude, mindfulness, positive mental health, character strengths, and positive relationships, with a focus on evidence-based strategies for optimizing individual and community functioning. Students will develop the skills to understand the theoretical and empirical underpinnings of positive psychology.", "requirements": {"Prerequisites": "One of: PS263 , PS264 , PS270 , PS275 , PS276 , PS280 , PS282 , PS283 , PS285"}, "prereq_links": ["PS263", "PS264", "PS270", "PS275", "PS276", "PS280", "PS282", "PS283", "PS285"], "primary": "HE305", "level": 300, "issues": [], "url": "https://academic-calendar.wlu.ca/course.php?c=79643&cal=1&d=3258&s=1170&y=93"}, {"file": "c_79644.html", "year": "2026/2027", "code": "HE304", "title": "Introduction to Indigenous Health and Well-Being", "credit": "0.5 Credit", "term": "", "hours": "Hours per week: Lecture/Discussion: 3", "description": "Students will advance and critically examine their knowledge, perspectives, biases, and practices in relation to Indigenous peoples’ health. This introductory course will include lectures, Indigenous guest presenters, activities, and critical self-reflection to facilitate learning about a) Indigenous determinants of health, b) cultural humility, and c) strengths-based and promising approaches to health practices, research, policies, and programming.", "requirements": {"Prerequisites": "Registration Status: Year 3 or 4 of Honours Program", "Exclusions": "HE440L"}, "prereq_links": [], "primary": "HE304", "level": 300, "issues": [{"sev": "low", "cat": "style", "msg": "Prereq 'Year 3 or 4 of Honours Program' is a wording variant of the standard 'Year 3 or 4 Honours BSc Health Sciences'."}], "url": "https://academic-calendar.wlu.ca/course.php?c=79644&cal=1&d=3258&s=1170&y=93"}, {"file": "c_79645.html", "year": "2026/2027", "code": "HE303/BI317", "title": "Introduction to Immunology", "credit": "0.5 Credit", "term": "", "hours": "Hours per week: Lecture/Discussion: 3", "description": "Introduction to Immunology introduces the responses, cells, mediators and structures of the immune system. Innate immunity, including inflammation and adaptive immunity will be discussed, focusing on how both arms of the immune system are activated. The respective effector mechanisms for innate and adaptive immunity will be described. The role of the immune system in health and disease will be introduced, topics covered may include: immunodeficiency, autoimmunity, hypersensitivity, transplantation and tumor immunity.", "requirements": {"Prerequisites": "BI236", "Exclusions": "BI317 , HE434, BI417, HE440G, BI396M"}, "prereq_links": ["BI236", "BI317"], "primary": "HE303", "level": 300, "issues": [{"sev": "hi", "cat": "prereq", "msg": "Exclusion list names HE434, which has no course entry (also cited in the program's Year-4 list). Dangling reference."}], "url": "https://academic-calendar.wlu.ca/course.php?c=79645&cal=1&d=3258&s=1170&y=93"}, {"file": "c_79646.html", "year": "2026/2027", "code": "HN204", "title": "Systems Human Anatomy", "credit": "0.5 Credit", "term": "", "hours": "Hours per week: Lecture/Discussion: 3 Lab: 2", "description": "This course takes a systems approach to the anatomical study of the human integumentary, skeletal, muscular, nervous, endocrine, cardiovascular, lymphatic, respiratory, digestive, urinary and reproductive systems. Laboratory activities include active and experiential learning to promote consolidation of lecture material.", "requirements": {"Prerequisites": "BI110 , BI111", "Exclusions": "HS202 , HS204 , KP221 / HN210 , KP223"}, "prereq_links": ["BI110", "BI111", "HS202", "HS204", "KP221", "HN210"], "primary": "HN204", "level": 200, "issues": [], "url": "https://academic-calendar.wlu.ca/course.php?c=79646&cal=1&d=3258&s=1170&y=93"}, {"file": "c_79647.html", "year": "2026/2027", "code": "HE368/PS368", "title": "Functional Neuroanatomy", "credit": "0.5 Credit", "term": "", "hours": "Hours per week: Lecture/Discussion: 3 Lab: 3 (biweekly)", "description": "( Cross-listed with PS368 )", "requirements": {"Prerequisites": "One of: HN204 , HN210 , KP221 , PS263 , PS267", "Exclusions": "HE440V, PS368"}, "prereq_links": ["HN204", "HN210", "KP221", "PS263", "PS267", "PS368"], "primary": "HE368", "level": 300, "issues": [{"sev": "med", "cat": "gap", "msg": "No academic description - only a cross-list pointer ('Cross-listed with PS368'). Note 'with' here vs 'as' used by other cross-lists."}], "url": "https://academic-calendar.wlu.ca/course.php?c=79647&cal=1&d=3258&s=1170&y=93"}, {"file": "c_79648.html", "year": "2026/2027", "code": "HE438", "title": "Cancer Biology", "credit": "0.5 Credit", "term": "", "hours": "Hours per week: Lecture/Discussion: 3", "description": "Cancer is defined as the uncontrolled growth of cells. The complexity of its causes and the diversity of cell types involved underscore the need for a deeper understanding of cancer’s basic biology. Advances in basic and biomedical research have led to more effective treatments, improved detection methods, and better prevention strategies. This course is organized into two themes: an introduction to fundamental concepts in the cellular and molecular biology of cancer and an introduction to the clinical aspects of oncology. Additionally, the course explores the development and clinical use of therapies based on major discoveries in cancer biology research.", "requirements": {"Prerequisites": "BI236", "Exclusions": "HE440S"}, "prereq_links": ["BI236"], "primary": "HE438", "level": 400, "issues": [], "url": "https://academic-calendar.wlu.ca/course.php?c=79648&cal=1&d=3258&s=1170&y=93"}, {"file": "c_82049.html", "year": "2026/2027", "code": "HE224/KP224/HS202", "title": "Anatomy and Physiology I", "credit": "0.5 Credit", "term": "", "hours": "Hours per week: Lecture/Discussion: 3 Lab: 1.5", "description": "Anatomy and Physiology I, introduces the structure and function organization of the human body. Attention will be paid to integumentary, muscular, skeletal, nervous, and endocrine systems, and their integration with other organ systems.", "requirements": {"Prerequisites": "HS103 or ( BI110 and BI111 ) or 1.0 KP 100-level courses", "Exclusions": "KP2222, KP224 , HN204 , HN220 , HS202"}, "prereq_links": ["HS103", "BI110", "BI111", "KP224", "HN204", "HN220", "HS202"], "primary": "HE224", "level": 200, "issues": [{"sev": "med", "cat": "spelling", "msg": "Exclusion list contains 'KP2222' (four digits) - a typo for KP222."}, {"sev": "low", "cat": "grammar", "msg": "Description opens 'Anatomy and Physiology I, introduces...' - the comma after the title creates a subject/verb error. Remove the comma or rephrase."}, {"sev": "low", "cat": "grammar", "msg": "'the structure and function organization of the human body' is awkward; intended sense is 'the structural and functional organization'."}], "url": "https://academic-calendar.wlu.ca/course.php?c=82049&cal=1&d=3258&s=1170&y=93"}, {"file": "c_82050.html", "year": "2026/2027", "code": "HE225/KP225/HS204", "title": "Anatomy and Physiology II", "credit": "0.5 Credit", "term": "", "hours": "Hours per week: Lecture/Discussion: 3 Lab: 1.5", "description": "Anatomy and Physiology II, continues the systems-based exploration, focusing on regulation, and homeostasis. Attention will be paid to the cardiovascular, lymphatic, respiratory, digestive, urinary, and reproductive systems, and their integration with other organ systems.", "requirements": {"Prerequisites": "HS202 or KP224 / HE224", "Exclusions": "KP222 , KP225 , HN220 , HN204 , HS204"}, "prereq_links": ["HS202", "KP224", "HE224", "KP222", "KP225", "HN220", "HN204", "HS204"], "primary": "HE225", "level": 200, "issues": [{"sev": "low", "cat": "grammar", "msg": "Description opens 'Anatomy and Physiology II, continues...' - same misplaced comma after the title as HE224."}, {"sev": "low", "cat": "grammar", "msg": "'focusing on regulation, and homeostasis' has a stray comma before 'and'."}], "url": "https://academic-calendar.wlu.ca/course.php?c=82050&cal=1&d=3258&s=1170&y=93"}, {"file": "c_82051.html", "year": "2026/2027", "code": "HE320/KP320", "title": "Integrative Human Physiology", "credit": "0.5 Credit", "term": "", "hours": "Hours per week: Lecture/Discussion: 3", "description": "Cross-listed as KP320", "requirements": {"Prerequisites": "KP225 / HE225 / HS204", "Exclusions": "KP320 , HN320 , HS340"}, "prereq_links": ["KP225", "HE225", "HS204", "KP320", "HN320", "HS340"], "primary": "HE320", "level": 300, "issues": [{"sev": "med", "cat": "gap", "msg": "No academic description - the entry is only a cross-list pointer ('Cross-listed as KP320'). Students see no course content."}, {"sev": "low", "cat": "style", "msg": "Cross-list note 'Cross-listed as KP320' is not parenthesized; house style elsewhere is '( Cross-listed as KP435 .)'."}, {"sev": "med", "cat": "structure", "msg": "New 2026/27 course not slotted into any required sequence in the Honours BSc program structure (orphaned; available only as a free elective)."}], "url": "https://academic-calendar.wlu.ca/course.php?c=82051&cal=1&d=3258&s=1170&y=93"}, {"file": "c_82055.html", "year": "2026/2027", "code": "HE321/KP321", "title": "Regional Human Anatomy", "credit": "0.5 Credit", "term": "", "hours": "Hours per week: Lecture/Discussion: 3 Lab: 1.5", "description": "Cross-listed as KP321", "requirements": {"Prerequisites": "KP225 / HE225 / HS202 or HN204", "Exclusions": "KP221 , HN210 , KP321"}, "prereq_links": ["KP225", "HE225", "HS202", "HN204", "KP221", "HN210", "KP321"], "primary": "HE321", "level": 300, "issues": [{"sev": "med", "cat": "gap", "msg": "No academic description - only a cross-list pointer ('Cross-listed as KP321')."}, {"sev": "low", "cat": "style", "msg": "Cross-list note is not parenthesized, unlike house style."}, {"sev": "low", "cat": "prereq", "msg": "Prereq 'KP225 / HE225 / HS202 or HN204' mixes a slash-list and an 'or' with ambiguous precedence."}, {"sev": "med", "cat": "structure", "msg": "New 2026/27 course not referenced anywhere in the program structure (orphaned)."}], "url": "https://academic-calendar.wlu.ca/course.php?c=82055&cal=1&d=3258&s=1170&y=93"}], "program": {"2025/2026": "[H1] Honours BSc Health Sciences\n[P] The Honours BSc Health Sciences program consists of 20.0 credits, of which at most 7.0 credits may be at the 100 level and no more than 4.5 credits may be from disciplines outside the Faculty of Science. Electives must include at least a 0.5 credit from each of English (EN) and Philosophy (PP). At least 2.0 credits must be from 400-level HE courses. For progression and graduation, a cumulative overall GPA of at least 6.0 is required. Year 1 : (5.0 credits) HE100 , HE101 , BI110 , BI111 , CH110 , CH111 ; PS101 , PS102 ; MA100 ; 0.5 elective credit (EN recommended) (Refer to Notes 1 and 2) Year 2 : (5.0 credits) HE201 , HE202 , HN204 , HN220 / KP222 , CH202 , ST231 , BI236 ; 0.5 senior PS credit (Refer to Note 4) At most 1.0 elective credits (Refer to Notes 2 and 3) Year 3 : (5.0 credits) HE300 / KP434 , HE301 , HE303 , HE304 , HE330 ; 2.5 elective credits (see Note 3) Year 4 : (5.0 credits) HE400 ; 2.0 credits selected from: HE410 , HE411 , HE430 , HE431 , HE432 , HE434, HE435 , HE440 , HE450 , HE490 *; 2.5 elective credits (see Note 5)\n[P] The Honours BSc Health Sciences program consists of 20.0 credits, of which at most 7.0 credits may be at the 100 level and no more than 4.5 credits may be from disciplines outside the Faculty of Science. Electives must include at least a 0.5 credit from each of English (EN) and Philosophy (PP). At least 2.0 credits must be from 400-level HE courses. For progression and graduation, a cumulative overall GPA of at least 6.0 is required.\n[P] Year 1 : (5.0 credits) HE100 , HE101 , BI110 , BI111 , CH110 , CH111 ; PS101 , PS102 ; MA100 ; 0.5 elective credit (EN recommended) (Refer to Notes 1 and 2)\n[P] Year 2 : (5.0 credits) HE201 , HE202 , HN204 , HN220 / KP222 , CH202 , ST231 , BI236 ; 0.5 senior PS credit (Refer to Note 4) At most 1.0 elective credits (Refer to Notes 2 and 3) Year 3 : (5.0 credits) HE300 / KP434 , HE301 , HE303 , HE304 , HE330 ; 2.5 elective credits (see Note 3)\n[P] Year 4 : (5.0 credits) HE400 ; 2.0 credits selected from: HE410 , HE411 , HE430 , HE431 , HE432 , HE434, HE435 , HE440 , HE450 , HE490 *; 2.5 elective credits (see Note 5)\n[LI] Notes\n[P] Students working towards applying to professional programs (e.g., medicine, dental school, pharmacy, etc.)in the future and/or are interested in writing the MCAT, DAT or OAT are highly recommended to take MA101 , MA104 , PC141 (orPC131) and PC142 (or PC132 ) among their electives . Consult the relevant degree program or the HE Undergraduate Academic Advisor for further guidance. 0.5 credit in English and 0.5 credit in Philosophy are required. English is recommended in year 1 and Philosophy in years 2, 3, or 4. For students working towards applying to a professional program (e.g., medicine, dental school, pharmacy, etc.), CH203 and CH250 are highly recommended. Students must select 0.5 credit from one of the following psychology courses to satisfy this requirement ( PS263 , PS268 , PS270 , PS280 , PS282 , PS285 , PS275 , PS276 , PS377 ). Depending on career objectives, students may wish to concentrate their electives in order to qualify for a Minor or Option as part of the Health Sciences BSc. In particular, with one additional senior BI course, students will qualify for a Minor in Biology. Students wishing to obtain a Minor or Option in a discipline other than Biology, particularly if it is offered by a department outside the Faculty of Science, should discuss their plans well in advance with the HE Undergraduate Academic Advisor.\n[LI] Students working towards applying to professional programs (e.g., medicine, dental school, pharmacy, etc.)in the future and/or are interested in writing the MCAT, DAT or OAT are highly recommended to take MA101 , MA104 , PC141 (orPC131) and PC142 (or PC132 ) among their electives . Consult the relevant degree program or the HE Undergraduate Academic Advisor for further guidance.\n[LI] 0.5 credit in English and 0.5 credit in Philosophy are required. English is recommended in year 1 and Philosophy in years 2, 3, or 4.\n[LI] For students working towards applying to a professional program (e.g., medicine, dental school, pharmacy, etc.), CH203 and CH250 are highly recommended.\n[LI] Students must select 0.5 credit from one of the following psychology courses to satisfy this requirement ( PS263 , PS268 , PS270 , PS280 , PS282 , PS285 , PS275 , PS276 , PS377 ).\n[LI] Depending on career objectives, students may wish to concentrate their electives in order to qualify for a Minor or Option as part of the Health Sciences BSc. In particular, with one additional senior BI course, students will qualify for a Minor in Biology. Students wishing to obtain a Minor or Option in a discipline other than Biology, particularly if it is offered by a department outside the Faculty of Science, should discuss their plans well in advance with the HE Undergraduate Academic Advisor.", "2026/2027": "[H1] Honours BSc Health Sciences\n[P] The Honours BSc Health Sciences program consists of 20.0 credits, of which at most 7.0 credits may be at the 100 level and no more than 4.5 credits may be from disciplines outside the Faculty of Science. Electives must include at least a 0.5 credit from each of English (EN) and Philosophy (PP). At least 2.0 credits must be from 400-level HE courses. For progression and graduation, a cumulative overall GPA of at least 6.0 is required. Year 1 : (5.0 credits) HE100 , HE101 , BI110 , BI111 , CH110 , CH111 ; PS101 , PS102 ; MA100 ; 0.5 elective credit (EN recommended) (Refer to Notes 1 and 2) Year 2 : (5.0 credits) HE201 , HE202 , HE224 / KP224 / HS202 , HE225 / KP225 / HS204 , CH202 , ST231 , BI236 ; 0.5 senior PS credit (Refer to Note 4) At most 1.0 elective credits (Refer to Notes 2 and 3) Year 3 : (5.0 credits) HE300 / KP434 , HE301 , HE303 , HE304 , HE330 ; 2.5 elective credits (see Note 3) Year 4 : (5.0 credits) HE400 ; 2.0 credits selected from: HE410 , HE411 , HE430 , HE431 , HE432 , HE434, HE435 , HE440 , HE450 , HE490 *; 2.5 elective credits (see Note 5)\n[P] The Honours BSc Health Sciences program consists of 20.0 credits, of which at most 7.0 credits may be at the 100 level and no more than 4.5 credits may be from disciplines outside the Faculty of Science. Electives must include at least a 0.5 credit from each of English (EN) and Philosophy (PP). At least 2.0 credits must be from 400-level HE courses. For progression and graduation, a cumulative overall GPA of at least 6.0 is required.\n[P] Year 1 : (5.0 credits) HE100 , HE101 , BI110 , BI111 , CH110 , CH111 ; PS101 , PS102 ; MA100 ; 0.5 elective credit (EN recommended) (Refer to Notes 1 and 2)\n[P] Year 2 : (5.0 credits) HE201 , HE202 , HE224 / KP224 / HS202 , HE225 / KP225 / HS204 , CH202 , ST231 , BI236 ; 0.5 senior PS credit (Refer to Note 4) At most 1.0 elective credits (Refer to Notes 2 and 3) Year 3 : (5.0 credits) HE300 / KP434 , HE301 , HE303 , HE304 , HE330 ; 2.5 elective credits (see Note 3)\n[P] Year 4 : (5.0 credits) HE400 ; 2.0 credits selected from: HE410 , HE411 , HE430 , HE431 , HE432 , HE434, HE435 , HE440 , HE450 , HE490 *; 2.5 elective credits (see Note 5)\n[LI] Notes\n[P] Students working towards applying to professional programs (e.g., medicine, dental school, pharmacy, etc.)in the future and/or are interested in writing the MCAT, DAT or OAT are highly recommended to take MA101 , MA104 , PC141 (orPC131) and PC142 (or PC132 ) among their electives . Consult the relevant degree program or the HE Undergraduate Academic Advisor for further guidance. 0.5 credit in English and 0.5 credit in Philosophy are required. English is recommended in year 1 and Philosophy in years 2, 3, or 4. For students working towards applying to a professional program (e.g., medicine, dental school, pharmacy, etc.), CH203 and CH250 are highly recommended. Students must select 0.5 credit from one of the following psychology courses to satisfy this requirement ( PS263 , PS268 , PS270 , PS280 , PS282 , PS285 , PS275 , PS276 , PS377 ). Depending on career objectives, students may wish to concentrate their electives in order to qualify for a Minor or Option as part of the Health Sciences BSc. In particular, with one additional senior BI course, students will qualify for a Minor in Biology. Students wishing to obtain a Minor or Option in a discipline other than Biology, particularly if it is offered by a department outside the Faculty of Science, should discuss their plans well in advance with the HE Undergraduate Academic Advisor.\n[LI] Students working towards applying to professional programs (e.g., medicine, dental school, pharmacy, etc.)in the future and/or are interested in writing the MCAT, DAT or OAT are highly recommended to take MA101 , MA104 , PC141 (orPC131) and PC142 (or PC132 ) among their electives . Consult the relevant degree program or the HE Undergraduate Academic Advisor for further guidance.\n[LI] 0.5 credit in English and 0.5 credit in Philosophy are required. English is recommended in year 1 and Philosophy in years 2, 3, or 4.\n[LI] For students working towards applying to a professional program (e.g., medicine, dental school, pharmacy, etc.), CH203 and CH250 are highly recommended.\n[LI] Students must select 0.5 credit from one of the following psychology courses to satisfy this requirement ( PS263 , PS268 , PS270 , PS280 , PS282 , PS285 , PS275 , PS276 , PS377 ).\n[LI] Depending on career objectives, students may wish to concentrate their electives in order to qualify for a Minor or Option as part of the Health Sciences BSc. In particular, with one additional senior BI course, students will qualify for a Minor in Biology. Students wishing to obtain a Minor or Option in a discipline other than Biology, particularly if it is offered by a department outside the Faculty of Science, should discuss their plans well in advance with the HE Undergraduate Academic Advisor."}, "programUrl": {"2025/2026": "https://academic-calendar.wlu.ca/program.php?cal=1&d=3127&p=7164&s=1152&y=92", "2026/2027": "https://academic-calendar.wlu.ca/program.php?cal=1&d=3258&p=7604&s=1170&y=93"}, "programIssues": [{"sev": "hi", "cat": "structure", "msg": "Year-4 'select 2.0 credits from' list includes HE434, which has no course entry - a dangling requirement reference (present in BOTH calendar years)."}, {"sev": "hi", "cat": "gap", "msg": "Year-4 selection list OMITS three existing 400-level courses: HE436 (Health and Human Rights), HE437 (Principles of Population Health), HE438 (Cancer Biology). The list appears stale - students may be unsure whether these count toward the 2.0-credit Year-4 requirement."}, {"sev": "hi", "cat": "structure", "msg": "Anatomy/Physiology migration is incomplete in 2026/27: the program core swapped HN204 + HN220/KP222 for the new HE224 + HE225, but HN204, HN210/KP221, HN220/KP222 and HN320 remain published as courses, creating a redundant parallel A&P track with overlapping exclusion webs."}, {"sev": "low", "cat": "spelling", "msg": "Note 1: 'pharmacy, etc.)in the future' is missing a space after the closing parenthesis."}, {"sev": "low", "cat": "spelling", "msg": "Note 1: 'PC141 (orPC131)' is missing a space ('or PC131')."}, {"sev": "low", "cat": "style", "msg": "Note 4 psychology list is out of numeric order: PS285 appears before PS275 and PS276."}, {"sev": "low", "cat": "style", "msg": "Year-4 references '(see Note 5)' for electives while Years 2-3 reference Notes 2/3; the English/Philosophy elective rules (Note 2) are not cross-referenced in Year 4."}], "globalIssues": [{"sev": "med", "cat": "structure", "msg": "NONE of the spelling, grammar, or dangling-reference errors found in 2025/26 were corrected in the 2026/27 calendar - every issue persists across both years."}, {"sev": "low", "cat": "encoding", "msg": "Course pages declare charset=ISO-8859-1 but serve Windows-1252 bytes (curly quotes 0x91/0x92). Most browsers tolerate this, but it is non-conformant and can render apostrophes as replacement characters in strict parsers."}, {"sev": "low", "cat": "style", "msg": "'Registration status' vs 'Registration Status' vs 'registration status' capitalization is inconsistent across course prerequisite fields."}], "faculty": {"note": "Full-Time Faculty roster as published. Identical in 2025/2026 and 2026/2027.", "listed": [{"name": "Todd Coleman", "cred": "PhD"}, {"name": "Stephanie DeWitte-Orr", "cred": "PhD"}, {"name": "Diane Gregory", "cred": "PhD"}, {"name": "Renee MacPhee", "cred": "PhD"}, {"name": "Melody Morton Ninomiya", "cred": "PhD"}, {"name": "Nirosha Murugan", "cred": "PhD"}, {"name": "Sarah Poynter", "cred": "PhD"}, {"name": "Nicolas Rouleau", "cred": "PhD", "role": "Undergraduate Advisor"}, {"name": "Ketan Shankardass", "cred": "PhD"}, {"name": "Robb Travers", "cred": "PhD", "role": "Chair (listed)", "flag": "on leave"}], "missing": [{"name": "Kate Rossiter", "role": "Chair (current)", "note": "Current Chair while Robb Travers is on leave; absent from roster."}, {"name": "Stewart J. Russell", "role": "Assistant Professor", "note": "Appointed August 2025; absent from roster in both years."}, {"name": "Anish", "role": "Faculty", "note": "Recently appointed; absent from roster. (Surname to confirm.)"}]}, "facultyIssues": [{"sev": "hi", "cat": "faculty", "msg": "The roster lists Robb Travers as Chair, but he is on leave. The current Chair, Kate Rossiter, does not appear at all - the public calendar names the wrong department head."}, {"sev": "med", "cat": "faculty", "msg": "Full-Time Faculty roster omits Dr. Stewart J. Russell (Assistant Professor, appointed August 2025)."}, {"sev": "med", "cat": "faculty", "msg": "Full-Time Faculty roster omits Anish (recently appointed; surname to confirm)."}, {"sev": "med", "cat": "faculty", "msg": "The faculty roster is byte-identical between 2025/26 and 2026/27, so none of the missing appointments (Russell, Anish) or the Chair change (Rossiter) were added in the new calendar."}]};
+// ---- editable overrides: 3 layers (committed file -> localStorage) ----
+const BASE_OVERRIDES = {"instructors": {}, "status": {}};        // inlined fallback (offline / file://)
+const LS_KEY = "wlu-he-overrides-v1";
+let OV = {instructors:{}, status:{}};        // effective overrides (merged)
+function loadLocal(){ try{return JSON.parse(localStorage.getItem(LS_KEY))||{};}catch(e){return {};} }
+function saveLocal(){ localStorage.setItem(LS_KEY, JSON.stringify({instructors:OV.instructors,status:OV.status})); }
+function mergeOverrides(remote){
+  const local = loadLocal();
+  OV = {
+    instructors: Object.assign({}, BASE_OVERRIDES.instructors||{}, (remote&&remote.instructors)||{}, local.instructors||{}),
+    status:      Object.assign({}, BASE_OVERRIDES.status||{},      (remote&&remote.status)||{},      local.status||{}),
+  };
+}
+const state = {year:"2026/2027", tab:"courses", view:"expanded", lvl:"all", q:"", issuesOnly:false, newOnly:false, edit:false};
+const $ = s=>document.querySelector(s);
+const lvlColor = l=>({100:"var(--l100)",200:"var(--l200)",300:"var(--l300)",400:"var(--l400)"}[l]||"#555");
+const sevRank = {hi:0,med:1,low:2};
+
+function newCodes(){ // primaries present in 26/27 but not 25/26
+  const a=new Set(DATA["2025/2026"].map(c=>c.primary));
+  return new Set(DATA["2026/2027"].filter(c=>!a.has(c.primary)).map(c=>c.primary));
+}
+const NEW = newCodes();
+
+function courses(){return DATA[state.year];}
+function topSev(c){ if(!c.issues.length) return null;
+  return c.issues.slice().sort((x,y)=>sevRank[x.sev]-sevRank[y.sev])[0].sev; }
+
+function renderStats(list){
+  const withIssues=list.filter(c=>c.issues.length).length;
+  const hi=list.reduce((n,c)=>n+c.issues.filter(i=>i.sev=="hi").length,0);
+  const tot=list.reduce((n,c)=>n+c.issues.length,0);
+  $("#stats").innerHTML=
+    `<span><b>${list.length}</b> courses</span>`+
+    `<span><b>${withIssues}</b> with flags</span>`+
+    `<span><b>${tot}</b> course-level findings</span>`+
+    `<span style="color:var(--hi)"><b>${hi}</b> high-severity</span>`;
+}
+
+// ---- instructor + status helpers (persisted via OV) ----
+function esc(s){return (s||"").replace(/&/g,"&amp;").replace(/</g,"&lt;").replace(/>/g,"&quot;").replace(/"/g,"&quot;");}
+function getInstr(code){return OV.instructors[code]||"";}
+function setInstr(code,val){ if(val&&val.trim())OV.instructors[code]=val.trim(); else delete OV.instructors[code]; saveLocal(); }
+function instructorHTML(code){
+  const v=getInstr(code);
+  if(state.edit){
+    return `<div class="instr"><input type="text" placeholder="Type instructor name" value="${esc(v)}"
+      oninput="setInstr('${code}',this.value)"></div>`;
+  }
+  return v? `<p>${esc(v)}</p>` : `<p class="placeholder">Not yet assigned &mdash; turn on Edit to add.</p>`;
+}
+const issueKey=(code,idx)=>code+"|"+idx;
+function getStatus(k){return OV.status[k]||"";}
+function setStatus(k,val){ if(val)OV.status[k]=val; else delete OV.status[k]; saveLocal(); rerender(); }
+function statusControl(k){
+  const cur=getStatus(k);
+  if(state.edit){
+    return `<select class="statusSel" onchange="setStatus('${k}',this.value)">
+      <option value="" ${cur==""?"selected":""}>open</option>
+      <option value="ack" ${cur=="ack"?"selected":""}>acknowledged</option>
+      <option value="fixed" ${cur=="fixed"?"selected":""}>fixed</option>
+      <option value="wontfix" ${cur=="wontfix"?"selected":""}>won't fix</option>
+    </select>`;
+  }
+  return cur? `<span class="stbadge ${cur}">${cur=="wontfix"?"won't fix":cur}</span>` : "";
+}
+
+function cardHTML(c){
+  const sev=topSev(c);
+  const badges=[];
+  if(NEW.has(c.primary)) badges.push(`<span class="dot new">NEW</span>`);
+  if(sev) badges.push(`<span class="dot ${sev}">${c.issues.length}&nbsp;flag${c.issues.length>1?"s":""}</span>`);
+  const xl = c.code.includes("/")?`<div class="xlist">cross-listed: ${c.code}</div>`:"";
+  const instr=getInstr(c.primary);
+  const instrLine = instr?`<div class="xlist" style="color:var(--mut)">&#128100; ${esc(instr)}</div>`:"";
+  return `<div class="card" data-code="${c.code}">
+    <div class="lvl" style="background:${lvlColor(c.level)}"></div>
+    <div class="badges">${badges.join("")}</div>
+    <h3>${c.primary}</h3>
+    <div class="ttl">${c.title||"<span class='placeholder'>(untitled)</span>"}</div>
+    <div class="meta"><span class="pill">${(c.credit||"?").replace(' Credit','&nbsp;cr')}</span>
+      <span class="pill">${c.term||"term n/s"}</span>
+      <span class="pill">${c.level} level</span></div>
+    ${xl}${instrLine}
+    <a class="cardlink" href="${c.url}" target="_blank" rel="noopener" onclick="event.stopPropagation()">calendar &#8599;</a>
+  </div>`;
+}
+
+function miniHTML(c){
+  const sev=topSev(c);
+  const flag = sev=="hi"?" flag-hi":(sev=="med"?" flag-med":"");
+  const ni = NEW.has(c.primary)?`<span class="ni" title="New in 2026/27"></span>`:"";
+  return `<div class="minibox${flag}" data-code="${c.code}" title="${(c.title||'').replace(/"/g,'&quot;')}">${c.primary}${ni}</div>`;
+}
+function colHTML(level,items){
+  const empty = items.length?"":" empty";
+  return `<div class="col${empty}">
+    <div class="col-h"><span class="swatch" style="background:${lvlColor(level)}"></span>
+      <b>${level} level</b><span class="ct">${items.length}</span></div>
+    <div class="boxes">${items.map(miniHTML).join("")||'<span class="placeholder" style="font-size:12px">none</span>'}</div>
+  </div>`;
+}
+function renderGrid(){
+  let list=courses().slice();
+  if(state.lvl!=="all") list=list.filter(c=>c.level==+state.lvl);
+  if(state.issuesOnly) list=list.filter(c=>c.issues.length);
+  if(state.newOnly) list=list.filter(c=>NEW.has(c.primary));
+  if(state.q){const q=state.q.toLowerCase();
+    list=list.filter(c=>(c.code+" "+c.title+" "+c.description).toLowerCase().includes(q));}
+  list.sort((a,b)=>a.level-b.level || a.primary.localeCompare(b.primary));
+  renderStats(courses());
+  if(state.view==="collapsed"){
+    const levels = state.lvl!=="all" ? [+state.lvl] : [100,200,300,400];
+    const cols = levels.map(L=>colHTML(L, list.filter(c=>c.level===L)));
+    $("#grid").innerHTML=`<div class="cols">${cols.join("")}</div>`;
+  } else {
+    $("#grid").innerHTML=`<div class="grid-cards">${list.map(cardHTML).join("")}</div>`
+      || `<div class="note">No courses match.</div>`;
+  }
+  document.querySelectorAll("[data-code]").forEach(el=>el.onclick=()=>openModal(el.dataset.code));
+}
+
+function reqLine(label,val){
+  if(!val) return "";
+  // highlight known dangling internal refs
+  const danglers=["HE302","HE434","HE211","KP2222"];
+  let html=val;
+  danglers.forEach(d=>{html=html.replace(new RegExp("\\b"+d+"\\b","g"),
+    `<span class="refcode dangling" title="No course entry / typo">${d}</span>`);});
+  return `<div class="sec req"><h4>${label}</h4><p>${html}</p></div>`;
+}
+
+function openModal(code){
+  const c=courses().find(x=>x.code===code); if(!c)return;
+  const r=c.requirements||{};
+  const issues=c.issues.map((i,idx)=>({...i,__k:issueKey(c.primary,idx)})).sort((a,b)=>sevRank[a.sev]-sevRank[b.sev]);
+  const issuesHTML=issues.length? issues.map(i=>{
+    const st=getStatus(i.__k);
+    return `<div class="issue ${i.sev}${st&&st!='ack'?' done':''}"><div class="tag"><b>${i.sev.toUpperCase()}</b> &middot; ${i.cat}${statusControl(i.__k)}</div>${i.msg}</div>`;
+  }).join("")
+    : `<p class="placeholder">No issues flagged for this course.</p>`;
+  $("#modal").innerHTML=`
+    <button class="x" onclick="closeModal()">Close &times;</button>
+    <h2>${c.primary} ${NEW.has(c.primary)?'<span class="dot new" style="vertical-align:middle">NEW 26/27</span>':''}</h2>
+    <div class="mttl">${c.title||"(untitled)"}</div>
+    <a class="callink" href="${c.url}" target="_blank" rel="noopener">View on WLU calendar &#8599;</a>
+    <div class="kv">
+      <span class="pill">${c.credit||"credit n/s"}</span>
+      <span class="pill">${c.term||"term not specified"}</span>
+      <span class="pill">${c.level} level</span>
+      ${c.code.includes("/")?`<span class="pill">cross-listed: ${c.code}</span>`:""}
+    </div>
+    <div class="sec"><h4>Description</h4>
+      <p>${c.description? c.description : '<span class="placeholder">No description in the calendar.</span>'}</p></div>
+    ${c.hours?`<div class="sec"><h4>Hours</h4><p>${c.hours}</p></div>`:""}
+    ${reqLine("Prerequisites",r["Prerequisites"])}
+    ${reqLine("Co-requisites",r["Co-requisites"])}
+    ${reqLine("Exclusions",r["Exclusions"])}
+    ${r["Notes"]?`<div class="sec"><h4>Notes</h4><p>${r["Notes"]}</p></div>`:""}
+    <div class="sec"><h4>Instructor</h4>${instructorHTML(c.primary)}</div>
+    <div class="sec"><h4>Syllabus</h4><p class="placeholder">Not yet linked (placeholder).</p></div>
+    <div class="sec"><h4>Review findings (${issues.length})</h4>${issuesHTML}</div>
+  `;
+  $("#modal").classList.add("open"); $("#scrim").classList.add("open");
+}
+function closeModal(){$("#modal").classList.remove("open");$("#scrim").classList.remove("open");}
+$("#scrim").onclick=closeModal;
+
+function allIssueRows(){
+  const rows=[];
+  courses().forEach(c=>c.issues.forEach((i,idx)=>rows.push({code:c.primary,title:c.title,k:issueKey(c.primary,idx),...i})));
+  DATA.programIssues.forEach((i,idx)=>rows.push({code:"PROGRAM",title:"Degree structure",k:issueKey("PROGRAM",idx),...i}));
+  (DATA.facultyIssues||[]).forEach((i,idx)=>rows.push({code:"FACULTY",title:"Faculty roster",k:issueKey("FACULTY",idx),...i}));
+  DATA.globalIssues.forEach((i,idx)=>rows.push({code:"GLOBAL",title:"Both years / site-wide",k:issueKey("GLOBAL",idx),...i}));
+  return rows;
+}
+function renderIssues(){
+  const all=allIssueRows().sort((a,b)=>sevRank[a.sev]-sevRank[b.sev]);
+  const open=all.filter(r=>{const s=getStatus(r.k);return s!=="fixed"&&s!=="wontfix";});
+  const done=all.length-open.length;
+  const groups={hi:[],med:[],low:[]}; all.forEach(r=>groups[r.sev].push(r));
+  const names={hi:"High severity",med:"Medium severity",low:"Low severity / style"};
+  let html=`<div class="note" style="margin-bottom:10px">${all.length} findings &middot; ${done} marked fixed/won't-fix &middot; ${all.length-done} open</div>`;
+  ["hi","med","low"].forEach(s=>{
+    if(!groups[s].length)return;
+    html+=`<h3><span class="sevtag ${s}">${s.toUpperCase()}</span> ${names[s]} (${groups[s].length})</h3>`;
+    groups[s].forEach(r=>{
+      const st=getStatus(r.k);
+      html+=`<div class="issue ${s}${st&&st!='ack'?' done':''}"><div class="tag"><b>${r.code}</b> &middot; ${r.cat}${r.title&&r.code.length<8?" &middot; "+r.title:""}${statusControl(r.k)}</div>${r.msg}</div>`;
+    });
+  });
+  $("#issuesList").innerHTML=html;
+}
+
+function renderProgram(){
+  const pi=DATA.programIssues.slice().sort((a,b)=>sevRank[a.sev]-sevRank[b.sev]);
+  $("#programIssues").innerHTML=pi.map(i=>
+    `<div class="issue ${i.sev}"><div class="tag"><b>${i.sev.toUpperCase()}</b> &middot; ${i.cat}</div>${i.msg}</div>`).join("");
+  $("#progText").textContent=DATA.program[state.year];
+  $("#progLink").href=DATA.programUrl[state.year];
+}
+
+function renderFaculty(){
+  const F=DATA.faculty||{listed:[],missing:[]};
+  $("#facNote").textContent=F.note||"";
+  const fi=(DATA.facultyIssues||[]).slice().sort((a,b)=>sevRank[a.sev]-sevRank[b.sev]);
+  $("#facultyIssues").innerHTML=fi.map(i=>
+    `<div class="issue ${i.sev}"><div class="tag"><b>${i.sev.toUpperCase()}</b> &middot; ${i.cat}</div>${i.msg}</div>`).join("");
+  $("#facListed").innerHTML=F.listed.map(p=>
+    `<div class="facrow col"><span class="nm">${p.name}</span>`+
+    (p.cred?`<span class="rl">${p.cred}</span>`:"")+
+    (p.role?`<span class="rl">${p.role}</span>`:"")+
+    (p.flag?`<span class="lv">${p.flag}</span>`:"")+`</div>`).join("");
+  $("#facMissing").innerHTML=F.missing.map(p=>{
+    const chair=/chair/i.test(p.role||"");
+    return `<div class="facrow miss col${chair?" chair":""}"><span class="nm">${p.name}</span>`+
+    (p.role?`<span class="rl">${p.role}</span>`:"")+
+    (p.note?`<div class="nt">${p.note}</div>`:"")+`</div>`;
+  }).join("");
+}
+
+// ---- Prereq dependency map (SVG) ----
+const INTERNAL=new Set(); // set of HE/HN primaries present this year
+function buildMap(){
+  const cs=courses();
+  INTERNAL.clear(); cs.forEach(c=>INTERNAL.add(c.primary));
+  const danglers={HE302:1,HE434:1,HE211:1};
+  // nodes: internal courses + referenced danglers; edges: prereq internal code -> course
+  const codeRe=/\b(HE|HN)\s?(\d{3})\b/g;
+  const nodes={}; const edges=[];
+  cs.forEach(c=>{ nodes[c.primary]={code:c.primary,level:c.level,title:c.title,real:true,full:c.code}; });
+  cs.forEach(c=>{
+    const pre=(c.requirements&&c.requirements["Prerequisites"])||"";
+    let m; const seen=new Set();
+    while((m=codeRe.exec(pre))){
+      const ref=m[1]+m[2]; if(seen.has(ref))continue; seen.add(ref);
+      if(ref===c.primary)continue;
+      if(!nodes[ref]){
+        if(danglers[ref]) nodes[ref]={code:ref,level:(+ref.match(/\d/) )*100,title:"(no course entry)",real:false};
+        else continue; // skip external/non-mapped
+      }
+      edges.push({from:ref,to:c.primary,dang:!nodes[ref].real});
+    }
+  });
+  return {nodes,edges};
+}
+function renderMap(){
+  const {nodes,edges}=buildMap();
+  const cols={100:[],200:[],300:[],400:[]};
+  Object.values(nodes).forEach(n=>{const L=[100,200,300,400].includes(n.level)?n.level:100;cols[L].push(n);});
+  const colX={100:40,200:260,300:480,400:700}, W=900, NW=150, NH=30, vgap=14, top=54;
+  const pos={};
+  [100,200,300,400].forEach(L=>{
+    cols[L].sort((a,b)=>(a.real-b.real)||a.code.localeCompare(b.code));
+    cols[L].forEach((n,i)=>{pos[n.code]={x:colX[L],y:top+i*(NH+vgap)};});
+  });
+  const maxRows=Math.max(...[100,200,300,400].map(L=>cols[L].length));
+  const H=top+maxRows*(NH+vgap)+20;
+  let svg=`<svg viewBox="0 0 ${W} ${H}" width="${W}" height="${H}" xmlns="http://www.w3.org/2000/svg">`;
+  [100,200,300,400].forEach(L=>{ svg+=`<text class="maplbl" x="${colX[L]}" y="30">${L} level</text>`; });
+  edges.forEach(e=>{
+    const a=pos[e.from],b=pos[e.to]; if(!a||!b)return;
+    const x1=a.x+NW,y1=a.y+NH/2,x2=b.x,y2=b.y+NH/2,mx=(x1+x2)/2;
+    svg+=`<path class="mapedge${e.dang?' dang':''}" d="M${x1},${y1} C${mx},${y1} ${mx},${y2} ${x2},${y2}"/>`;
+  });
+  Object.values(nodes).forEach(n=>{
+    const p=pos[n.code]; if(!p)return;
+    svg+=`<g class="mapnode${n.real?'':' dangling'}" ${n.real?`data-code="${n.full}" style="cursor:pointer"`:''} transform="translate(${p.x},${p.y})">
+      <rect width="${NW}" height="${NH}" rx="6"/><text x="9" y="${NH/2+4}">${n.code}${n.real?'':' &#9888;'}</text></g>`;
+  });
+  svg+=`</svg>`;
+  $("#mapWrap").innerHTML=svg;
+  document.querySelectorAll("#mapWrap .mapnode[data-code]").forEach(el=>el.onclick=()=>openModal(el.dataset.code));
+}
+
+// ---- Year diff 2025/26 -> 2026/27 ----
+function renderDiff(){
+  const A=DATA["2025/2026"], B=DATA["2026/2027"];
+  const byA={},byB={}; A.forEach(c=>byA[c.primary]=c); B.forEach(c=>byB[c.primary]=c);
+  const added=B.filter(c=>!byA[c.primary]);
+  const removed=A.filter(c=>!byB[c.primary]);
+  const fld=c=>({title:c.title,pre:(c.requirements&&c.requirements["Prerequisites"])||"",exc:(c.requirements&&c.requirements["Exclusions"])||""});
+  const changed=[];
+  B.forEach(c=>{ const a=byA[c.primary]; if(!a)return; const x=fld(a),y=fld(c); const ch=[];
+    if(x.title!==y.title)ch.push(["Title",x.title,y.title]);
+    if(x.pre!==y.pre)ch.push(["Prerequisites",x.pre||"—",y.pre||"—"]);
+    if(x.exc!==y.exc)ch.push(["Exclusions",x.exc||"—",y.exc||"—"]);
+    if(ch.length)changed.push({code:c.primary,ch});
+  });
+  let h="";
+  h+=`<div class="diffsec"><h3 class="diff-add">Added in 2026/27 (${added.length})</h3>`;
+  h+= added.length? `<table class="difftbl"><tr><th>Code</th><th>Title</th></tr>`+
+      added.map(c=>`<tr><td>${c.code}</td><td>${c.title||"&mdash;"}</td></tr>`).join("")+`</table>` : `<div class="note">None.</div>`;
+  h+=`</div>`;
+  h+=`<div class="diffsec"><h3 class="diff-del">Removed in 2026/27 (${removed.length})</h3>`;
+  h+= removed.length? `<table class="difftbl"><tr><th>Code</th><th>Title</th></tr>`+
+      removed.map(c=>`<tr><td>${c.code}</td><td>${c.title||"&mdash;"}</td></tr>`).join("")+`</table>` : `<div class="note">None.</div>`;
+  h+=`</div>`;
+  h+=`<div class="diffsec"><h3 class="diff-chg">Field changes (${changed.length} courses)</h3>`;
+  h+= changed.length? `<table class="difftbl"><tr><th>Course</th><th>Field</th><th>2025/26</th><th>2026/27</th></tr>`+
+      changed.map(d=>d.ch.map((row,i)=>`<tr>${i===0?`<td rowspan="${d.ch.length}"><b>${d.code}</b></td>`:""}<td>${row[0]}</td><td>${row[1]}</td><td>${row[2]}</td></tr>`).join("")).join("")+`</table>`
+      : `<div class="note">No title/prereq/exclusion changes among shared courses.</div>`;
+  h+=`</div>`;
+  h+=`<div class="diffsec"><h3>Not fixed</h3><div class="issue med"><div class="tag"><b>GLOBAL</b></div>Every spelling, grammar, and dangling-reference issue from 2025/26 (HE302, HE434, HE211, the Year-4 list, the program-note typos) is reproduced unchanged in 2026/27.</div></div>`;
+  $("#diffBody").innerHTML=h;
+}
+
+function setTab(t){
+  state.tab=t;
+  document.querySelectorAll(".tab").forEach(el=>el.classList.toggle("active",el.dataset.t===t));
+  ["courses","issues","map","diff","program","faculty"].forEach(n=>
+    $("#tab-"+n).classList.toggle("hidden",t!==n));
+  if(t==="issues")renderIssues(); else if(t==="program")renderProgram();
+  else if(t==="faculty")renderFaculty(); else if(t==="map")renderMap(); else if(t==="diff")renderDiff();
+}
+function rerender(){
+  const t=state.tab;
+  if(t==="courses")renderGrid(); else if(t==="issues")renderIssues();
+  else if(t==="faculty")renderFaculty(); else if(t==="map")renderMap();
+  else if(t==="diff")renderDiff(); else renderProgram();
+}
+
+// wire up
+$("#tabs").onclick=e=>{if(e.target.dataset.t)setTab(e.target.dataset.t);};
+$("#yearSeg").onclick=e=>{if(e.target.dataset.y){
+  state.year=e.target.dataset.y;
+  document.querySelectorAll("#yearSeg button").forEach(b=>b.classList.toggle("on",b.dataset.y===state.year));
+  rerender();}};
+function setView(v){
+  state.view=v;
+  document.querySelectorAll("#viewSeg button").forEach(b=>b.classList.toggle("on",b.dataset.v===v));
+  renderGrid();
+}
+$("#viewSeg").onclick=e=>{if(e.target.dataset.v){clearTimeout(autoCollapse);setView(e.target.dataset.v);}};
+document.querySelectorAll(".lvl-chip").forEach(ch=>ch.onclick=()=>{
+  state.lvl=ch.dataset.lvl;
+  document.querySelectorAll(".lvl-chip").forEach(x=>x.classList.toggle("on",x===ch));
+  renderGrid();});
+$("#issuesOnly").onclick=function(){state.issuesOnly=!state.issuesOnly;this.classList.toggle("on",state.issuesOnly);renderGrid();};
+$("#newOnly").onclick=function(){state.newOnly=!state.newOnly;this.classList.toggle("on",state.newOnly);renderGrid();};
+$("#search").oninput=e=>{state.q=e.target.value;renderGrid();};
+$("#editBtn").onclick=function(){
+  state.edit=!state.edit; this.classList.toggle("on",state.edit);
+  this.innerHTML = state.edit? "&#9998; Editing… (click to finish)" : "&#9998; Edit";
+  // if a modal is open, re-render it so instructor field switches mode
+  if($("#modal").classList.contains("open")){const code=$("#modal h2")?.textContent.trim().split(" ")[0];
+    const c=courses().find(x=>x.primary===code); if(c)openModal(c.code);}
+  rerender();
+};
+$("#exportBtn").onclick=function(){
+  const out={_comment:"Committable overrides layer. Replace overrides.json in the repo with this file.",
+    instructors:OV.instructors, status:OV.status};
+  const blob=new Blob([JSON.stringify(out,null,2)],{type:"application/json"});
+  const a=document.createElement("a"); a.href=URL.createObjectURL(blob); a.download="overrides.json"; a.click();
+};
+document.onkeydown=e=>{if(e.key==="Escape")closeModal();};
+
+// ---- init: merge committed overrides (runtime fetch) over inlined fallback, then render ----
+let autoCollapse=null;
+function boot(){
+  renderGrid();
+  autoCollapse=setTimeout(()=>{ if(state.view==="expanded" && state.tab==="courses") setView("collapsed"); },2000);
+}
+mergeOverrides(null); // inlined + localStorage first (works offline / file://)
+boot();                // paint immediately
+fetch("overrides.json",{cache:"no-store"}).then(r=>r.ok?r.json():null).then(remote=>{
+  if(remote){ mergeOverrides(remote); rerender(); }   // upgrade to committed layer when served over http
+}).catch(()=>{});
+</script>
+</body>
+</html>
