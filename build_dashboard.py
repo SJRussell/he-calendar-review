@@ -128,13 +128,13 @@ FACULTY = {
   "missing": [
     {"name":"Kate Rossiter","role":"Chair (current)","note":"Current Chair while Robb Travers is on leave; absent from roster."},
     {"name":"Stewart J. Russell","role":"Assistant Professor","note":"Appointed August 2025; absent from roster in both years."},
-    {"name":"Anish","role":"Faculty","note":"Recently appointed; absent from roster. (Surname to confirm.)"},
+    {"name":"Anish Arora","role":"Faculty","note":"Recently appointed; absent from roster."},
   ],
 }
 FACULTY_ISSUES = [
   {"sev":"hi","cat":"faculty","msg":"The roster lists Robb Travers as Chair, but he is on leave. The current Chair, Kate Rossiter, does not appear at all - the public calendar names the wrong department head."},
   {"sev":"med","cat":"faculty","msg":"Full-Time Faculty roster omits Dr. Stewart J. Russell (Assistant Professor, appointed August 2025)."},
-  {"sev":"med","cat":"faculty","msg":"Full-Time Faculty roster omits Anish (recently appointed; surname to confirm)."},
+  {"sev":"med","cat":"faculty","msg":"Full-Time Faculty roster omits Dr. Anish Arora (recently appointed)."},
   {"sev":"med","cat":"faculty","msg":"The faculty roster is byte-identical between 2025/26 and 2026/27, so none of the missing appointments (Russell, Anish) or the Chair change (Rossiter) were added in the new calendar."},
 ]
 

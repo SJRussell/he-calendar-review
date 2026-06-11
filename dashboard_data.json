@@ -1826,9 +1826,9 @@
         "note": "Appointed August 2025; absent from roster in both years."
       },
       {
-        "name": "Anish",
+        "name": "Anish Arora",
         "role": "Faculty",
-        "note": "Recently appointed; absent from roster. (Surname to confirm.)"
+        "note": "Recently appointed; absent from roster."
       }
     ]
   },
@@ -1846,7 +1846,7 @@
     {
       "sev": "med",
       "cat": "faculty",
-      "msg": "Full-Time Faculty roster omits Anish (recently appointed; surname to confirm)."
+      "msg": "Full-Time Faculty roster omits Dr. Anish Arora (recently appointed)."
     },
     {
       "sev": "med",
