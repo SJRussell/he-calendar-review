@@ -1,0 +1,727 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html lang="en">
+
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+	<title>Wilfrid Laurier University - Undergraduate Academic Calendar - 2026/2027 - Faculty of Science - Mathematics</title>
+	<LINK REL=StyleSheet HREF="css/style_wlu.css?ts=20200602_01" TYPE="text/css" MEDIA="screen,print">
+	<LINK REL=StyleSheet HREF="css/style_wlu_print.css?ts=20200602_01" TYPE="text/css" MEDIA="print">
+	<LINK REL=StyleSheet HREF="css/style_cal.css?ts=20200602_01" TYPE="text/css" MEDIA="screen">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+	<!--[if IE 6]><link rel="stylesheet" href="css/style_wlu_ie6.css" type="text/css" media="screen" /><![endif]-->
+	<!--[if lte IE 9]><link rel="stylesheet" href="css/style_wlu_ie.css" type="text/css" media="screen" /><![endif]-->
+
+	<script type="text/javascript">
+		<!--
+		function findPos(obj) {
+			// gets the 'top' and 'left' positions of the object.
+
+			var curtop = 0;
+			var curleft = 0;
+			if (obj.offsetParent) {
+				while (obj.offsetParent) {
+					curtop += obj.offsetTop;
+					curleft += obj.offsetLeft;
+					obj = obj.offsetParent;
+				}
+			} else {
+				if (obj.y) curtop += obj.y;
+				if (obj.x) curleft += obj.x;
+			}
+			var r = Array();
+			r[0] = curtop;
+			r[1] = curleft;
+			return r;
+		}
+
+		function showGlossaryDef(obj, def) {
+			// will move a special "glossary DIV" to appropriate spot and put term information into it.
+
+			gPos = findPos(obj);
+			if ((gPos[0] > 0) && (gPos[1] > 0)) {
+				gDiv = document.getElementById("glossaryDef");
+				if (gDiv) {
+					gDiv.innerHTML = def.replace(/#QUOTE#/g, '"');
+					gDiv.style.top = (gPos[0] + 15) + "px";
+					gDiv.style.left = gPos[1] + "px";
+					gDiv.style.visibility = "visible";
+					gDiv.style.display = "inline";
+				}
+			}
+		}
+
+		function hideGlossaryDef() {
+			gDiv = document.getElementById("glossaryDef");
+			if (gDiv) {
+				gDiv.style.visibility = "hidden";
+				gDiv.style.display = "none";
+			}
+		}
+
+		function hideSelect() {
+			var DL_bIE = document.all ? true : false; // initialize var to identify IE
+			if (DL_bIE) { // if browser is IE, then...
+				var numforms = document.forms.length;
+				for (f = 1; f < numforms; f++) {
+					var numformelements = document.forms[f].elements.length;
+					for (counter = 0; counter < numformelements; counter++) {
+						var thisselect = document.forms[f].elements[counter];
+						thisselect.style.visibility = "hidden";
+					}
+				}
+			}
+		}
+
+		function showSelect() {
+			var numforms = document.forms.length;
+			for (f = 1; f < numforms; f++) {
+				var numformelements = document.forms[f].elements.length;
+				for (counter = 0; counter < numformelements; counter++) {
+					var thisselect = document.forms[f].elements[counter];
+					thisselect.style.visibility = "visible";
+				}
+			}
+		}
+
+
+		startList = function() {
+			if (document.all && document.getElementById) {
+				navRoot = document.getElementById("nav");
+				for (i = 0; i < navRoot.childNodes.length; i++) {
+					node = navRoot.childNodes[i];
+					if (node.nodeName == "LI") {
+						node.onmouseover = function() {
+							this.className += " over";
+						}
+						node.onmouseout = function() {
+							this.className = this.className.replace(" over", "");
+						}
+					}
+				}
+			}
+		}
+		window.onload = startList;
+		//
+		-->
+	</script>
+</head>
+
+<body>
+
+	<div class="header clearfix" role="banner">
+
+		<a class="skip-to-content-link" href="#main">Skip to content</a>
+		<a class="top-link" name="top"></a>
+
+		<div class="header-logo">
+			<a href="http://www.wlu.ca/">
+				<img src="images/layout/laurier_logo.gif" alt="Wilfrid Laurier University">
+			</a>
+		</div>
+
+		
+		<div class="header-decoration">
+			<img class="book-image" src="images/layout/book_white.gif" alt="Book decoration" role="presentation" aria-hidden="true" />
+			<a href="index.php?cal=1&amp;y=93">
+				<img src="./images/cms/corner/93/ug2026-2027.png" width="287" height="101" alt="Undergraduate Academic Calendar - 2026/2027" />
+			</a>
+		</div>
+
+		<div class="header-tagline">
+			<img src="images/layout/canadian-excellence.gif" width="267" height="18" alt="Canadian Excellence">
+		</div>
+	</div>
+
+	
+	<div class="wrapper">
+
+		<div id="deptnav" class="sidebar" role="navigation" aria-label="Left side navigation">
+
+			<h2><A href="index_old.php?cal=1&amp;y=93">Undergraduate Academic Calendar 2026/2027</A></h2>
+<ul>
+	<li><a href="section.php?cal=1&amp;s=1177&amp;y=93">Areas of Study/Courses @ Laurier (Direct Links)</a></li>
+	<li><a href="section.php?cal=1&amp;s=1181&amp;y=93">Print Version 2023-24</a></li>
+	<li><a href="section.php?cal=1&amp;s=1185&amp;y=93">Using This Calendar</a></li>
+	<li><a href="section.php?cal=1&amp;s=1178&amp;y=93"> Recruitment and Admissions</a></li>
+	<li><a href="section.php?cal=1&amp;s=1176&amp;y=93">Student Awards and Financial Aid</a></li>
+	<li><a href="section.php?cal=1&amp;s=1175&amp;y=93">Financial Services</a></li>
+	<li><a href="section.php?cal=1&amp;s=1180&amp;y=93">Academic and Related Dates</a></li>
+	<li><a href="section.php?cal=1&amp;s=1174&amp;y=93">University Undergraduate Regulations</a></li>
+	<li><a href="department.php?cal=1&amp;d=3201&amp;s=1168&amp;y=93">Interdisciplinary Course Offerings</a></li>
+	<li><a href="section.php?cal=1&amp;s=1169&amp;y=93">Faculty of Arts</a></li>
+	<li><a href="section.php?cal=1&amp;s=1179&amp;y=93">Faculty of Education</a></li>
+	<li><a href="section.php?cal=1&amp;s=1183&amp;y=93">Faculty of Human and Social Sciences</a></li>
+	<li><a href="section.php?cal=1&amp;s=1171&amp;y=93">Faculty of Liberal Arts</a></li>
+	<li><a href="section.php?cal=1&amp;s=1173&amp;y=93">Faculty of Music</a></li>
+	<li class="current"><a href="section.php?cal=1&amp;s=1170&amp;y=93">Faculty of Science</a></li>
+		<li class="sublist"><a href="section.php?cal=1&amp;s=1170&amp;ss=4648&amp;y=93">BSc and BA Programs and Regulations</a></li>
+		<li class="sublist"><a href="section.php?cal=1&amp;s=1170&amp;ss=4649&amp;y=93">Academic Advising</a></li>
+		<li class="sublist"><a href="section.php?cal=1&amp;s=1170&amp;ss=4650&amp;y=93">Regulations for All Honours Programs</a></li>
+		<li class="sublist"><a href="section.php?cal=1&amp;s=1170&amp;ss=4651&amp;y=93">Regulations Combining Honours with a Secondary Minor/Option</a></li>
+		<li class="sublist"><a href="section.php?cal=1&amp;s=1170&amp;ss=4652&amp;y=93">Co-operative Education</a></li>
+		<li class="sublist"><a href="section.php?cal=1&amp;s=1170&amp;ss=4653&amp;y=93">Faculty of Science Campus Transfer Policy</a></li>
+	<li><a href="section.php?cal=1&amp;s=1172&amp;y=93">Lazaridis School of Business and Economics</a></li>
+	<li><a href="section.php?cal=1&amp;s=1184&amp;y=93">Lyle S Hallman Faculty of Social Work</a></li>
+	<li><a href="section.php?cal=1&amp;s=1182&amp;y=93">Martin Luther University College</a></li>
+	<li><a href="section.php?cal=1&amp;s=1202&amp;y=93">School of International Policy and Governance</a></li>
+</ul>
+<hr/>
+<ul>
+	<li><a href="index_old.php?cal=1&amp;y=93">Search this Calendar</a></li>
+	<li><a href="glossary.php?cal=1&amp;y=93">Glossary</a></li>
+</ul>
+			<div id="deptcontact">
+	<h1>Contact Us:</h1>
+		<strong>Contact Academic Department directly unless Calendar inquiry</strong><br />			email: <a href="mailto:&#0098;&#0118;&#0111;&#0105;&#0115;&#0105;&#0110;&#0101;&#0064;&#0119;&#0108;&#0117;&#0046;&#0099;&#0097;">Bonnie Voisine, Office of the Registrar</a><br />
+					phone: bvoisine@wlu.ca<br />
+					</div>
+
+		</div>
+
+		<div id="main" class="main" role="main">
+
+			<a name="mcontent"></a>
+
+			<div class="breadcrumb">
+<img src="images/layout/redlistarrow.gif" alt="List bullet" role="presentation" aria-hidden="true"> <a href="section.php?cal=1&amp;s=1170&amp;y=93">Faculty of Science</a>&nbsp;<img src="images/layout/redlistsmbullet.gif" alt="list bullet" role="presentation" aria-hidden="true"> <a href="department.php?cal=1&amp;d=3251&amp;s=1170&amp;y=93">Mathematics</a>&nbsp;</div>
+
+			<div class="content">
+<h1>Mathematics</h1>
+<p><p>Honours BSc, BA, Combination and Joint <A href="glossary.php?cal=1&amp;g=1667&amp;y=93" class="glossaryTerm" onMouseOver="showGlossaryDef(this,'<P><p>A group of courses, generally a combination of required and elective courses, which leads to a degree.  </p><p><b class=#QUOTE#Bold#QUOTE#>General program:</b> A program consisting of a minimum of 15.0 credits and normally taken over three academic years.  </p><p><b class=#QUOTE#Bold#QUOTE#>Honours program: </b>A program consisting of a minimum of 20.0 credits and normally taken over four academic years with an area of specialization.</p></P>')" onMouseOut="hideGlossaryDef()">programs</A> and Minors:<br /></p> 
+  <p><b>Statistics [ST] Courses below Mathematics [MA] listing:</b><br /></p></p><div class="reqs">
+<div class="greyheading">Department Information on this page</div>
+<ul class="proginfo">
+<li><a href="#Faculty">Faculty</a></li>
+<li><a href="#Programs">Programs</a></li>
+<li><a href="#Statistics_Courses">Statistics Courses</a></li>
+<li><a href="#Course_Offerings">Course Offerings</a></li>
+</ul>
+<div class="clear">&nbsp;</div>
+</div>
+<div class="reqs">
+<div class="heading"><A name="Faculty"></A>Faculty</div>
+<p><div id="stafflist" name="stafflist"><strong>Full-Time Faculty</strong><ul>
+   <li><A href="mailto:&#0100;&#0098;&#0101;&#0099;&#0107;&#0101;&#0114;&#0064;&#0119;&#0108;&#0117;&#0046;&#0099;&#0097;">Devan Becker</A>, <i>PhD</i></li>
+   <li><A href="mailto:&#0107;&#0099;&#0097;&#0109;&#0101;&#0114;&#0111;&#0110;&#0064;&#0119;&#0108;&#0117;&#0046;&#0099;&#0097;">Kathleen Cameron</A>, <i>PhD (Sabbatical for 2024-25 academic year)</i></li>
+   <li><A href="mailto:&#0103;&#0099;&#0097;&#0109;&#0112;&#0111;&#0108;&#0105;&#0064;&#0119;&#0108;&#0117;&#0046;&#0099;&#0097;">Giuseppe (Joe) Campolieti</A>, <i>PhD</i></li>
+   <li><A href="mailto:&#0121;&#0099;&#0104;&#0101;&#0110;&#0064;&#0119;&#0108;&#0117;&#0046;&#0099;&#0097;">Yuming Chen</A>, <i>PhD</i></li>
+   <li><A href="mailto:&#0115;&#0104;&#0117;&#0064;&#0119;&#0108;&#0117;&#0046;&#0099;&#0097;">Shengda Hu</A>, <i>PhD, Chair</i></li>
+   <li><A href="mailto:&#0109;&#0107;&#0105;&#0108;&#0103;&#0111;&#0117;&#0114;&#0064;&#0119;&#0108;&#0117;&#0046;&#0099;&#0097;">D. Marc Kilgour</A>, <i>PhD</i></li>
+   <li><A href="mailto:&#0121;&#0108;&#0097;&#0105;&#0064;&#0119;&#0108;&#0117;&#0046;&#0099;&#0097;">George Lai</A>, <i>PhD</i></li>
+   <li><A href="mailto:&#0114;&#0109;&#0097;&#0107;&#0097;&#0114;&#0111;&#0118;&#0064;&#0119;&#0108;&#0117;&#0046;&#0099;&#0097;">Roman Makarov</A>, <i>PhD</i></li>
+   <li><A href="mailto:&#0099;&#0109;&#0099;&#0099;&#0108;&#0117;&#0115;&#0107;&#0101;&#0121;&#0064;&#0119;&#0108;&#0117;&#0046;&#0099;&#0097;">Connell McCluskey</A>, <i>PhD (Sabbatical January -June 2025)</i></li>
+   <li><A href="mailto:&#0114;&#0109;&#0101;&#0108;&#0110;&#0105;&#0107;&#0064;&#0119;&#0108;&#0117;&#0046;&#0099;&#0097;">Roderick Melnik</A>, <i>PhD</i>, <i>Canada Research Chair in Mathematical Modelling</i></li>
+   <li><A href="mailto:&#0097;&#0109;&#0101;&#0116;&#0122;&#0108;&#0101;&#0114;&#0064;&#0119;&#0108;&#0117;&#0046;&#0099;&#0097;">Adam Metzler</A>, <i>PhD</i>, <i>Undergraduate Advisor</i></li>
+   <li><A href="mailto:&#0109;&#0114;&#0101;&#0101;&#0115;&#0111;&#0114;&#0064;&#0119;&#0108;&#0117;&#0046;&#0099;&#0097;">Mark Reesor</A>, <i>PhD (Sabbatical January-December 2025)</i></li>
+   <li><A href="mailto:&#0109;&#0115;&#0097;&#0110;&#0116;&#0111;&#0112;&#0114;&#0101;&#0116;&#0101;&#0064;&#0119;&#0108;&#0117;&#0046;&#0099;&#0097;">Manuele Santoprete</A>, <i>PhD</i></li>
+   <li><A href="mailto:&#0100;&#0115;&#0111;&#0097;&#0118;&#0101;&#0064;&#0119;&#0108;&#0117;&#0046;&#0099;&#0097;">David Soave</A>, <i>PhD</i>, <i>Graduate Officer</i></li>
+   <li><A href="mailto:&#0099;&#0115;&#0116;&#0111;&#0105;&#0099;&#0097;&#0064;&#0119;&#0108;&#0117;&#0046;&#0099;&#0097;">Cristina Stoica</A>, <i>PhD (Sabbatical January-December 2025)</i></li>
+   <li><A href="mailto:&#0120;&#0119;&#0097;&#0110;&#0103;&#0064;&#0119;&#0108;&#0117;&#0046;&#0099;&#0097;">Xu (Sunny) Wang</A>, <i>PhD</i></li>
+   <li><A href="mailto:&#0122;&#0119;&#0097;&#0110;&#0103;&#0064;&#0119;&#0108;&#0117;&#0046;&#0099;&#0097;">Zilin Wang</A>, <i>PhD</i></li>
+   <li><A href="mailto:&#0099;&#0119;&#0101;&#0097;&#0116;&#0104;&#0101;&#0114;&#0098;&#0121;&#0064;&#0119;&#0108;&#0117;&#0046;&#0099;&#0097;">Chester Weatherby</A>, <i>PhD</i></li>
+   <li><A href="mailto:&#0107;&#0122;&#0104;&#0097;&#0111;&#0064;&#0119;&#0108;&#0117;&#0046;&#0099;&#0097;">Kaiming Zhao</A>, <i>PhD</i></li>
+</ul></div></p>
+<div class="clear">&nbsp;</div>
+<div class="returntotop"><a href="#top">Top</a></div>
+</div>
+<A name="Programs"></A>
+<div class="reqs">
+<div class="heading">Program Information</div>
+<P style="padding-top:0px;"><UL>
+<LI><A href="program.php?cal=1&amp;d=3251&amp;p=7584&amp;s=1170&amp;y=93">Honours BSc Mathematics</A></LI>
+<LI><A href="program.php?cal=1&amp;d=3251&amp;p=7583&amp;s=1170&amp;y=93">Honours BSc Mathematics and Data Analytics</A></LI>
+<LI><A href="program.php?cal=1&amp;d=3251&amp;p=7585&amp;s=1170&amp;y=93">Honours BSc Financial Mathematics and Analytics</A></LI>
+<LI><A href="program.php?cal=1&amp;d=3251&amp;p=7586&amp;s=1170&amp;y=93">Honours BSc Biology and Mathematics</A></LI>
+<LI><A href="program.php?cal=1&amp;d=3251&amp;p=7587&amp;s=1170&amp;y=93">Honours BSc Chemistry and Mathematics</A></LI>
+<LI><A href="program.php?cal=1&amp;d=3251&amp;p=7588&amp;s=1170&amp;y=93">Honours BSc Computer Science and Mathematics</A></LI>
+<LI><A href="program.php?cal=1&amp;d=3251&amp;p=7589&amp;s=1170&amp;y=93">Honours BA Mathematics</A></LI>
+<LI><A href="program.php?cal=1&amp;d=3251&amp;p=7591&amp;s=1170&amp;y=93">Honours BA Financial Mathematics and Analytics</A></LI>
+<LI><A href="program.php?cal=1&amp;d=3251&amp;p=7597&amp;s=1170&amp;y=93">Honours BA Financial Mathematics and Analytics and Honours Bachelor of Business Administration</A></LI>
+<LI><A href="program.php?cal=1&amp;d=3251&amp;p=7592&amp;s=1170&amp;y=93">Honours BA Mathematics with Finance and Accounting Option</A></LI>
+<LI><A href="program.php?cal=1&amp;d=3251&amp;p=7590&amp;s=1170&amp;y=93">Honours BA Mathematics in Combination with another Honours BA Program</A></LI>
+<LI><A href="program.php?cal=1&amp;d=3251&amp;p=7598&amp;s=1170&amp;y=93">Concentration with Honours BSc and BA Mathematics or Financial Mathematics and Analytics </A></LI>
+<LI><A href="program.php?cal=1&amp;d=3251&amp;p=7594&amp;s=1170&amp;y=93">Mathematics Minor</A></LI>
+<LI><A href="program.php?cal=1&amp;d=3251&amp;p=7595&amp;s=1170&amp;y=93">Financial Mathematics Minor</A></LI>
+<LI><A href="program.php?cal=1&amp;d=3251&amp;p=7593&amp;s=1170&amp;y=93">Applied Mathematics Option</A></LI>
+<LI><A href="program.php?cal=1&amp;d=3251&amp;p=7596&amp;s=1170&amp;y=93">Statistics Minor</A></LI>
+<LI><A href="program.php?cal=1&amp;d=3251&amp;p=7599&amp;s=1170&amp;y=93">Certificate in Quantitative Finance</A></LI>
+</UL></P>
+<div class="clear">&nbsp;</div>
+<div class="returntotop"><a href="#top">Top</a></div>
+</div>
+<div class="reqs">
+<div class="heading"><A name="Statistics_Courses"></A>Statistics Courses</div>
+<p>Statistics <A href="glossary.php?cal=1&amp;g=1644&amp;y=93" class="glossaryTerm" onMouseOver="showGlossaryDef(this,'<P>A unit of study in a given discipline identified by a unique number and name in a given department. (Refer to <a href=#QUOTE#https://academic-calendar.wlu.ca/section.php?cal=1&amp;s=1185&amp;ss=4719&amp;y=93#QUOTE#><b class=#QUOTE#Bold#QUOTE#>Course Description Definitions</b></a> for information concerning all related definitions.) The weight or value of a course is defined as follows: a 1.0 credit (or full-credit) course normally consists of three contact hours per week taken over an eight-month period (September - April). A half (0.5) credit course is normally conducted over a four-month period. A credit denotes a full-credit course with 1.0 indicated in the course description. A half-credit course is indicated with the 0.5 weight, and a quarter-credit course as 0.25 in the course description.</P>')" onMouseOut="hideGlossaryDef()">courses</A> have a <A href="glossary.php?cal=1&amp;g=1651&amp;y=93" class="glossaryTerm" onMouseOver="showGlossaryDef(this,'<P>Same as a subject or major (e.g., English, history, physics). Refer to <b class=#QUOTE#Bold#QUOTE#><a href=#QUOTE#/section.php?cal=1&amp;y=93#QUOTE#>Discipline Codes</a></b> in <b class=#QUOTE#Bold#QUOTE#>Using this Calendar</b> section. Also, <a href=#QUOTE#/section.php?cal=1&amp;s=1174&amp;sp=3921&amp;ss=4671&amp;y=93#QUOTE#>Student Code of Conduct or Discipline</a>.<br /></P>')" onMouseOut="hideGlossaryDef()">discipline</A> code of ST and appear below the Mathematics course listing.</p>
+<div class="clear">&nbsp;</div>
+<div class="returntotop"><a href="#top">Top</a></div>
+</div>
+<A name="Course_Offerings"></A>
+<div class="reqs">
+<table>
+<caption>Course Offerings</caption>
+<tr><th>Course #</th><th>Title</th><th>Credits</th></tr>
+<tr class="zebra">
+   <td><a href="course.php?c=79592&amp;cal=1&amp;d=3251&amp;s=1170&amp;y=93">MA100</a></td>
+	<td>Introductory Calculus for the Natural Sciences</td>
+	<td>0.5</td>
+</tr>
+<tr>
+   <td><a href="course.php?c=79593&amp;cal=1&amp;d=3251&amp;s=1170&amp;y=93">MA101</a></td>
+	<td>Calculus I for the Natural Sciences</td>
+	<td>0.5</td>
+</tr>
+<tr class="zebra">
+   <td><a href="course.php?c=79544&amp;cal=1&amp;d=3251&amp;s=1170&amp;y=93">MA102</a></td>
+	<td>Introduction to Functions and Differential Calculus</td>
+	<td>0.5</td>
+</tr>
+<tr>
+   <td><a href="course.php?c=79542&amp;cal=1&amp;d=3251&amp;s=1170&amp;y=93">MA103</a></td>
+	<td>Calculus I</td>
+	<td>0.5</td>
+</tr>
+<tr class="zebra">
+   <td><a href="course.php?c=79543&amp;cal=1&amp;d=3251&amp;s=1170&amp;y=93">MA104</a></td>
+	<td>Calculus II</td>
+	<td>0.5</td>
+</tr>
+<tr>
+   <td><a href="course.php?c=79538&amp;cal=1&amp;d=3251&amp;s=1170&amp;y=93">MA120</a></td>
+	<td>Foundations and Applications of Mathematics</td>
+	<td>0.5</td>
+</tr>
+<tr class="zebra">
+   <td><a href="course.php?c=79545&amp;cal=1&amp;d=3251&amp;s=1170&amp;y=93">MA121</a></td>
+	<td>Introduction to Mathematical Proofs</td>
+	<td>0.5</td>
+</tr>
+<tr>
+   <td><a href="course.php?c=79546&amp;cal=1&amp;d=3251&amp;s=1170&amp;y=93">MA122</a></td>
+	<td>Introductory Linear Algebra</td>
+	<td>0.5</td>
+</tr>
+<tr class="zebra">
+   <td><a href="course.php?c=79615&amp;cal=1&amp;d=3251&amp;s=1170&amp;y=93">MA123</a></td>
+	<td>Introductory Linear Algebra with Applications</td>
+	<td>0.5</td>
+</tr>
+<tr>
+   <td><a href="course.php?c=79598&amp;cal=1&amp;d=3251&amp;s=1170&amp;y=93">MA127</a></td>
+	<td>Mathematics for Business Technology Management</td>
+	<td>0.5</td>
+</tr>
+<tr class="zebra">
+   <td><a href="course.php?c=79589&amp;cal=1&amp;d=3251&amp;s=1170&amp;y=93">MA129</a></td>
+	<td>Introductory Calculus for Business and Social Sciences</td>
+	<td>0.5</td>
+</tr>
+<tr>
+   <td><a href="course.php?c=79547&amp;cal=1&amp;d=3251&amp;s=1170&amp;y=93">MA170</a></td>
+	<td>Introduction to Mathematics for Finance</td>
+	<td>0.5</td>
+</tr>
+<tr class="zebra">
+   <td><a href="course.php?c=79539&amp;cal=1&amp;d=3251&amp;s=1170&amp;y=93">MA200</a></td>
+	<td>Advanced Calculus</td>
+	<td>0.5</td>
+</tr>
+<tr>
+   <td><a href="course.php?c=79548&amp;cal=1&amp;d=3251&amp;s=1170&amp;y=93">MA201</a></td>
+	<td>Multivariable Calculus</td>
+	<td>0.5</td>
+</tr>
+<tr class="zebra">
+   <td><a href="course.php?c=79549&amp;cal=1&amp;d=3251&amp;s=1170&amp;y=93">MA205</a></td>
+	<td>Differential Equations I</td>
+	<td>0.5</td>
+</tr>
+<tr>
+   <td><a href="course.php?c=79610&amp;cal=1&amp;d=3251&amp;s=1170&amp;y=93">MA207</a></td>
+	<td>Introduction to Mathematical Software</td>
+	<td>0.5</td>
+</tr>
+<tr class="zebra">
+   <td><a href="course.php?c=79550&amp;cal=1&amp;d=3251&amp;s=1170&amp;y=93">MA215</a></td>
+	<td>Set Theory</td>
+	<td>0.5</td>
+</tr>
+<tr>
+   <td><a href="course.php?c=79595&amp;cal=1&amp;d=3251&amp;s=1170&amp;y=93">MA218</a></td>
+	<td>Euclidean Geometry</td>
+	<td>0.5</td>
+</tr>
+<tr class="zebra">
+   <td><a href="course.php?c=79611&amp;cal=1&amp;d=3251&amp;s=1170&amp;y=93">MA220</a></td>
+	<td>Mathematics for Data Analysis and Computing</td>
+	<td>0.5</td>
+</tr>
+<tr>
+   <td><a href="course.php?c=79551&amp;cal=1&amp;d=3251&amp;s=1170&amp;y=93">MA222</a></td>
+	<td>Linear Algebra</td>
+	<td>0.5</td>
+</tr>
+<tr class="zebra">
+   <td><a href="course.php?c=79552&amp;cal=1&amp;d=3251&amp;s=1170&amp;y=93">MA233</a></td>
+	<td>Problem Solving in Mathematics</td>
+	<td>0.5</td>
+</tr>
+<tr>
+   <td><a href="course.php?c=79553&amp;cal=1&amp;d=3251&amp;s=1170&amp;y=93">MA235</a></td>
+	<td>Introduction to Game Theory</td>
+	<td>0.5</td>
+</tr>
+<tr class="zebra">
+   <td><a href="course.php?c=79554&amp;cal=1&amp;d=3251&amp;s=1170&amp;y=93">MA238</a></td>
+	<td>Discrete Mathematics</td>
+	<td>0.5</td>
+</tr>
+<tr>
+   <td><a href="course.php?c=79555&amp;cal=1&amp;d=3251&amp;s=1170&amp;y=93">MA250</a></td>
+	<td>Introduction to Analysis</td>
+	<td>0.5</td>
+</tr>
+<tr class="zebra">
+   <td><a href="course.php?c=79557&amp;cal=1&amp;d=3251&amp;s=1170&amp;y=93">MA270</a></td>
+	<td>Financial Mathematics I</td>
+	<td>0.5</td>
+</tr>
+<tr>
+   <td><a href="course.php?c=79590&amp;cal=1&amp;d=3251&amp;s=1170&amp;y=93">MA287</a></td>
+	<td>Mathematical Models for Natural Sciences</td>
+	<td>0.5</td>
+</tr>
+<tr class="zebra">
+   <td><a href="course.php?c=79558&amp;cal=1&amp;d=3251&amp;s=1170&amp;y=93">MA304</a></td>
+	<td>Introduction to Complex Analysis</td>
+	<td>0.5</td>
+</tr>
+<tr>
+   <td><a href="course.php?c=79559&amp;cal=1&amp;d=3251&amp;s=1170&amp;y=93">MA305</a></td>
+	<td>Differential Equations II</td>
+	<td>0.5</td>
+</tr>
+<tr class="zebra">
+   <td><a href="course.php?c=79612&amp;cal=1&amp;d=3251&amp;s=1170&amp;y=93">MA306</a></td>
+	<td>Partial Differential Equations I</td>
+	<td>0.5</td>
+</tr>
+<tr>
+   <td><a href="course.php?c=79560&amp;cal=1&amp;d=3251&amp;s=1170&amp;y=93">MA307</a></td>
+	<td>Numerical Analysis</td>
+	<td>0.5</td>
+</tr>
+<tr class="zebra">
+   <td><a href="course.php?c=79562&amp;cal=1&amp;d=3251&amp;s=1170&amp;y=93">MA317</a></td>
+	<td>Number Theory</td>
+	<td>0.5</td>
+</tr>
+<tr>
+   <td><a href="course.php?c=79563&amp;cal=1&amp;d=3251&amp;s=1170&amp;y=93">MA318</a></td>
+	<td>Geometry</td>
+	<td>0.5</td>
+</tr>
+<tr class="zebra">
+   <td><a href="course.php?c=79564&amp;cal=1&amp;d=3251&amp;s=1170&amp;y=93">MA323</a></td>
+	<td>Introduction to Groups and Rings</td>
+	<td>0.5</td>
+</tr>
+<tr>
+   <td><a href="course.php?c=79565&amp;cal=1&amp;d=3251&amp;s=1170&amp;y=93">MA338</a></td>
+	<td>Graph Theory</td>
+	<td>0.5</td>
+</tr>
+<tr class="zebra">
+   <td><a href="course.php?c=79566&amp;cal=1&amp;d=3251&amp;s=1170&amp;y=93">MA339</a></td>
+	<td>Directed Studies in Mathematics</td>
+	<td>0.5</td>
+</tr>
+<tr>
+   <td><a href="course.php?c=79561&amp;cal=1&amp;d=3251&amp;s=1170&amp;y=93">MA350</a></td>
+	<td>Real Analysis</td>
+	<td>0.5</td>
+</tr>
+<tr class="zebra">
+   <td><a href="course.php?c=79556&amp;cal=1&amp;d=3251&amp;s=1170&amp;y=93">MA355</a></td>
+	<td>Continuous and Discrete Transforms</td>
+	<td>0.5</td>
+</tr>
+<tr>
+   <td><a href="course.php?c=79570&amp;cal=1&amp;d=3251&amp;s=1170&amp;y=93">MA360</a></td>
+	<td>Topics in Applied Mathematics</td>
+	<td>0.5</td>
+</tr>
+<tr class="zebra">
+   <td><a href="course.php?c=79613&amp;cal=1&amp;d=3251&amp;s=1170&amp;y=93">MA361</a></td>
+	<td>Methods in Applied Mathematics</td>
+	<td>0.5</td>
+</tr>
+<tr>
+   <td><a href="course.php?c=79571&amp;cal=1&amp;d=3251&amp;s=1170&amp;y=93">MA370</a></td>
+	<td>Financial Mathematics II</td>
+	<td>0.5</td>
+</tr>
+<tr class="zebra">
+   <td><a href="course.php?c=79572&amp;cal=1&amp;d=3251&amp;s=1170&amp;y=93">MA371</a></td>
+	<td>Computational Methods for Data Analysis</td>
+	<td>0.5</td>
+</tr>
+<tr>
+   <td><a href="course.php?c=79573&amp;cal=1&amp;d=3251&amp;s=1170&amp;y=93">MA372</a></td>
+	<td>Optimization</td>
+	<td>0.5</td>
+</tr>
+<tr class="zebra">
+   <td><a href="course.php?c=79599&amp;cal=1&amp;d=3251&amp;s=1170&amp;y=93">MA373</a></td>
+	<td>Introduction to Actuarial Mathematics</td>
+	<td>0.5</td>
+</tr>
+<tr>
+   <td><a href="course.php?c=79574&amp;cal=1&amp;d=3251&amp;s=1170&amp;y=93">MA395</a></td>
+	<td>Special Topics</td>
+	<td>0.5</td>
+</tr>
+<tr class="zebra">
+   <td><a href="course.php?c=79614&amp;cal=1&amp;d=3251&amp;s=1170&amp;y=93">MA405</a></td>
+	<td>Dynamical Systems</td>
+	<td>0.5</td>
+</tr>
+<tr>
+   <td><a href="course.php?c=79578&amp;cal=1&amp;d=3251&amp;s=1170&amp;y=93">MA406</a></td>
+	<td>Partial Differential Equations II</td>
+	<td>0.5</td>
+</tr>
+<tr class="zebra">
+   <td><a href="course.php?c=79596&amp;cal=1&amp;d=3251&amp;s=1170&amp;y=93">MA418</a></td>
+	<td>Differential Geometry</td>
+	<td>0.5</td>
+</tr>
+<tr>
+   <td><a href="course.php?c=79575&amp;cal=1&amp;d=3251&amp;s=1170&amp;y=93">MA422</a></td>
+	<td>Advanced Linear Algebra</td>
+	<td>0.5</td>
+</tr>
+<tr class="zebra">
+   <td><a href="course.php?c=79576&amp;cal=1&amp;d=3251&amp;s=1170&amp;y=93">MA425</a></td>
+	<td>Group Theory</td>
+	<td>0.5</td>
+</tr>
+<tr>
+   <td><a href="course.php?c=79577&amp;cal=1&amp;d=3251&amp;s=1170&amp;y=93">MA450</a></td>
+	<td>Measure and Integration</td>
+	<td>0.5</td>
+</tr>
+<tr class="zebra">
+   <td><a href="course.php?c=79597&amp;cal=1&amp;d=3251&amp;s=1170&amp;y=93">MA464</a></td>
+	<td>Mathematical Biology</td>
+	<td>0.5</td>
+</tr>
+<tr>
+   <td><a href="course.php?c=79579&amp;cal=1&amp;d=3251&amp;s=1170&amp;y=93">MA465</a></td>
+	<td>General Topology</td>
+	<td>0.5</td>
+</tr>
+<tr class="zebra">
+   <td><a href="course.php?c=79616&amp;cal=1&amp;d=3251&amp;s=1170&amp;y=93">MA469</a></td>
+	<td>Financial Mathematics III: Fixed-Income Modelling</td>
+	<td>0.5</td>
+</tr>
+<tr>
+   <td><a href="course.php?c=79580&amp;cal=1&amp;d=3251&amp;s=1170&amp;y=93">MA470</a></td>
+	<td>Financial Mathematics III: Advanced Financial Modelling</td>
+	<td>0.5</td>
+</tr>
+<tr class="zebra">
+   <td><a href="course.php?c=79594&amp;cal=1&amp;d=3251&amp;s=1170&amp;y=93">MA471</a></td>
+	<td>Computational Methods in Finance</td>
+	<td>0.5</td>
+</tr>
+<tr>
+   <td><a href="course.php?c=79581&amp;cal=1&amp;d=3251&amp;s=1170&amp;y=93">MA475</a></td>
+	<td>Ring and Field Theory</td>
+	<td>0.5</td>
+</tr>
+<tr class="zebra">
+   <td><a href="course.php?c=79541&amp;cal=1&amp;d=3251&amp;s=1170&amp;y=93">MA477</a></td>
+	<td>Quantitative Financial Risk Management</td>
+	<td>0.5</td>
+</tr>
+<tr>
+   <td><a href="course.php?c=79582&amp;cal=1&amp;d=3251&amp;s=1170&amp;y=93">MA480</a></td>
+	<td>Directed Research</td>
+	<td>1.0</td>
+</tr>
+<tr class="zebra">
+   <td><a href="course.php?c=79583&amp;cal=1&amp;d=3251&amp;s=1170&amp;y=93">MA485</a></td>
+	<td>Directed Studies</td>
+	<td>0.5</td>
+</tr>
+<tr>
+   <td><a href="course.php?c=79584&amp;cal=1&amp;d=3251&amp;s=1170&amp;y=93">MA487</a></td>
+	<td>Mathematical Modelling in the Applied Sciences and Finance</td>
+	<td>0.5</td>
+</tr>
+<tr class="zebra">
+   <td><a href="course.php?c=79585&amp;cal=1&amp;d=3251&amp;s=1170&amp;y=93">MA489</a></td>
+	<td>Honours Seminar</td>
+	<td>0.5</td>
+</tr>
+<tr>
+   <td><a href="course.php?c=79588&amp;cal=1&amp;d=3251&amp;s=1170&amp;y=93">MA495</a></td>
+	<td>Special Topics</td>
+	<td>0.5</td>
+</tr>
+<tr class="zebra">
+   <td><a href="course.php?c=79600&amp;cal=1&amp;d=3251&amp;s=1170&amp;y=93">ST230</a></td>
+	<td>Introduction to Probability and Statistics for Science</td>
+	<td>0.5</td>
+</tr>
+<tr>
+   <td><a href="course.php?c=79607&amp;cal=1&amp;d=3251&amp;s=1170&amp;y=93">ST231</a></td>
+	<td>Statistical Methods for Life and Health Sciences</td>
+	<td>0.5</td>
+</tr>
+<tr class="zebra">
+   <td><a href="course.php?c=79601&amp;cal=1&amp;d=3251&amp;s=1170&amp;y=93">ST259</a></td>
+	<td>Probability I</td>
+	<td>0.5</td>
+</tr>
+<tr>
+   <td><a href="course.php?c=79602&amp;cal=1&amp;d=3251&amp;s=1170&amp;y=93">ST260</a></td>
+	<td>Introduction to Statistics</td>
+	<td>0.5</td>
+</tr>
+<tr class="zebra">
+   <td><a href="course.php?c=79567&amp;cal=1&amp;d=3251&amp;s=1170&amp;y=93">ST344</a></td>
+	<td>Introduction to Experimental Design and Survey Sampling</td>
+	<td>0.5</td>
+</tr>
+<tr>
+   <td><a href="course.php?c=79608&amp;cal=1&amp;d=3251&amp;s=1170&amp;y=93">ST358</a></td>
+	<td>Applied Probability</td>
+	<td>0.5</td>
+</tr>
+<tr class="zebra">
+   <td><a href="course.php?c=79603&amp;cal=1&amp;d=3251&amp;s=1170&amp;y=93">ST359</a></td>
+	<td>Probability II</td>
+	<td>0.5</td>
+</tr>
+<tr>
+   <td><a href="course.php?c=79604&amp;cal=1&amp;d=3251&amp;s=1170&amp;y=93">ST361</a></td>
+	<td>Mathematical Statistics</td>
+	<td>0.5</td>
+</tr>
+<tr class="zebra">
+   <td><a href="course.php?c=79605&amp;cal=1&amp;d=3251&amp;s=1170&amp;y=93">ST362</a></td>
+	<td>Regression Analysis</td>
+	<td>0.5</td>
+</tr>
+<tr>
+   <td><a href="course.php?c=79569&amp;cal=1&amp;d=3251&amp;s=1170&amp;y=93">ST451</a></td>
+	<td>Stochastic Calculus and Modelling</td>
+	<td>0.5</td>
+</tr>
+<tr class="zebra">
+   <td><a href="course.php?c=79591&amp;cal=1&amp;d=3251&amp;s=1170&amp;y=93">ST462</a></td>
+	<td>Advanced Regression Analysis</td>
+	<td>0.5</td>
+</tr>
+<tr>
+   <td><a href="course.php?c=79609&amp;cal=1&amp;d=3251&amp;s=1170&amp;y=93">ST463</a></td>
+	<td>Computational Statistics</td>
+	<td>0.5</td>
+</tr>
+<tr class="zebra">
+   <td><a href="course.php?c=79537&amp;cal=1&amp;d=3251&amp;s=1170&amp;y=93">ST473</a></td>
+	<td>Financial Data Analysis</td>
+	<td>0.5</td>
+</tr>
+<tr>
+   <td><a href="course.php?c=79606&amp;cal=1&amp;d=3251&amp;s=1170&amp;y=93">ST474</a></td>
+	<td>Monte Carlo Methods</td>
+	<td>0.5</td>
+</tr>
+<tr class="zebra">
+   <td><a href="course.php?c=79586&amp;cal=1&amp;d=3251&amp;s=1170&amp;y=93">ST490</a></td>
+	<td>Stochastic Processes</td>
+	<td>0.5</td>
+</tr>
+<tr>
+   <td><a href="course.php?c=79568&amp;cal=1&amp;d=3251&amp;s=1170&amp;y=93">ST491</a></td>
+	<td>Survival Analysis</td>
+	<td>0.5</td>
+</tr>
+<tr class="zebra">
+   <td><a href="course.php?c=79587&amp;cal=1&amp;d=3251&amp;s=1170&amp;y=93">ST492</a></td>
+	<td>Time Series Analysis</td>
+	<td>0.5</td>
+</tr>
+<tr>
+   <td><a href="course.php?c=79540&amp;cal=1&amp;d=3251&amp;s=1170&amp;y=93">ST494</a></td>
+	<td>Statistical Learning</td>
+	<td>0.5</td>
+</tr>
+</table>
+<div class="clear">&nbsp;</div>
+<div class="returntotop"><a href="#top">Top</a></div>
+</div>
+			</div> <!-- /.content -->
+
+		</div> <!-- /.main -->
+
+		
+<div id="contentRHS" class="sidebar" role="navigation" aria-label="Right side navigation">
+	<img src="./images/layout/picture_right.gif" alt="Decorative image" role="presentation">
+
+		<div class="calright">
+	<h4>Academic &amp; Related Dates 2026/2027</h4>
+	<ul class="dates">
+	<li><a href="dates.php?cal=1&amp;y=93">All Dates</a></li>
+	</ul>
+
+			<hr class="calrightrule"/>
+	<h4>Other Calendars</h4>
+	<ul class="archivedcal">
+		<li class="ruled"><a href="index_old.php?cal=1&amp;y=92">Undergraduate Academic Calendar (2025/2026)</a></li>
+		<li class="ruled"><a href="index_old.php?cal=1&amp;y=90">Undergraduate Academic Calendar (2024/2025)</a></li>
+		<li class="ruled"><a href="index_old.php?cal=1&amp;y=87">Undergraduate Academic Calendar (2023/2024)</a></li>
+		<li class="ruled"><a href="index_old.php?cal=1&amp;y=85">Undergraduate Academic Calendar (2022/2023)</a></li>
+		<li><a href="/index.php">more...</a></li>
+		</ul>
+		</div>
+</div> <!-- /.sidebar -->
+
+	</div> <!-- /.wrapper -->
+
+	<div class="footer" role="contentinfo">
+
+		<div class="footer-top">
+			<div>
+				<a href="https://www.wlu.ca/about/locations-maps-and-parking/contact-us.html">Contact WLU</a>
+			</div>
+			<div>
+				<span>&copy; 2026 Wilfrid Laurier University</span>
+			</div>
+			<div>
+				<img src="images/layout/footer_red.gif" alt="Ontario, Canada" title="Ontario, Canada">
+			</div>
+		</div> <!-- /.footer-top -->
+
+		<div class="footer-bottom">
+			<div>
+				<span>Wilfrid Laurier University | 75 University Avenue West, Waterloo, Ontario, Canada  N2L 3C5</span>
+			</div>
+			<div>
+				<span>Phone: 519.884.1970 | Fax: 519.886.9351</span>
+			</div>
+			<div>
+				<span class="brantford">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
+			</div>
+		</div> <!-- /.footer-bottom -->
+
+	</div> <!-- /#footer -->
+
+	
+</body>
+</html>
+

@@ -1,0 +1,677 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html lang="en">
+
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+	<title>Wilfrid Laurier University - Undergraduate Academic Calendar - 2026/2027 - Faculty of Science - Psychology</title>
+	<LINK REL=StyleSheet HREF="css/style_wlu.css?ts=20200602_01" TYPE="text/css" MEDIA="screen,print">
+	<LINK REL=StyleSheet HREF="css/style_wlu_print.css?ts=20200602_01" TYPE="text/css" MEDIA="print">
+	<LINK REL=StyleSheet HREF="css/style_cal.css?ts=20200602_01" TYPE="text/css" MEDIA="screen">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+	<!--[if IE 6]><link rel="stylesheet" href="css/style_wlu_ie6.css" type="text/css" media="screen" /><![endif]-->
+	<!--[if lte IE 9]><link rel="stylesheet" href="css/style_wlu_ie.css" type="text/css" media="screen" /><![endif]-->
+
+	<script type="text/javascript">
+		<!--
+		function findPos(obj) {
+			// gets the 'top' and 'left' positions of the object.
+
+			var curtop = 0;
+			var curleft = 0;
+			if (obj.offsetParent) {
+				while (obj.offsetParent) {
+					curtop += obj.offsetTop;
+					curleft += obj.offsetLeft;
+					obj = obj.offsetParent;
+				}
+			} else {
+				if (obj.y) curtop += obj.y;
+				if (obj.x) curleft += obj.x;
+			}
+			var r = Array();
+			r[0] = curtop;
+			r[1] = curleft;
+			return r;
+		}
+
+		function showGlossaryDef(obj, def) {
+			// will move a special "glossary DIV" to appropriate spot and put term information into it.
+
+			gPos = findPos(obj);
+			if ((gPos[0] > 0) && (gPos[1] > 0)) {
+				gDiv = document.getElementById("glossaryDef");
+				if (gDiv) {
+					gDiv.innerHTML = def.replace(/#QUOTE#/g, '"');
+					gDiv.style.top = (gPos[0] + 15) + "px";
+					gDiv.style.left = gPos[1] + "px";
+					gDiv.style.visibility = "visible";
+					gDiv.style.display = "inline";
+				}
+			}
+		}
+
+		function hideGlossaryDef() {
+			gDiv = document.getElementById("glossaryDef");
+			if (gDiv) {
+				gDiv.style.visibility = "hidden";
+				gDiv.style.display = "none";
+			}
+		}
+
+		function hideSelect() {
+			var DL_bIE = document.all ? true : false; // initialize var to identify IE
+			if (DL_bIE) { // if browser is IE, then...
+				var numforms = document.forms.length;
+				for (f = 1; f < numforms; f++) {
+					var numformelements = document.forms[f].elements.length;
+					for (counter = 0; counter < numformelements; counter++) {
+						var thisselect = document.forms[f].elements[counter];
+						thisselect.style.visibility = "hidden";
+					}
+				}
+			}
+		}
+
+		function showSelect() {
+			var numforms = document.forms.length;
+			for (f = 1; f < numforms; f++) {
+				var numformelements = document.forms[f].elements.length;
+				for (counter = 0; counter < numformelements; counter++) {
+					var thisselect = document.forms[f].elements[counter];
+					thisselect.style.visibility = "visible";
+				}
+			}
+		}
+
+
+		startList = function() {
+			if (document.all && document.getElementById) {
+				navRoot = document.getElementById("nav");
+				for (i = 0; i < navRoot.childNodes.length; i++) {
+					node = navRoot.childNodes[i];
+					if (node.nodeName == "LI") {
+						node.onmouseover = function() {
+							this.className += " over";
+						}
+						node.onmouseout = function() {
+							this.className = this.className.replace(" over", "");
+						}
+					}
+				}
+			}
+		}
+		window.onload = startList;
+		//
+		-->
+	</script>
+</head>
+
+<body>
+
+	<div class="header clearfix" role="banner">
+
+		<a class="skip-to-content-link" href="#main">Skip to content</a>
+		<a class="top-link" name="top"></a>
+
+		<div class="header-logo">
+			<a href="http://www.wlu.ca/">
+				<img src="images/layout/laurier_logo.gif" alt="Wilfrid Laurier University">
+			</a>
+		</div>
+
+		
+		<div class="header-decoration">
+			<img class="book-image" src="images/layout/book_white.gif" alt="Book decoration" role="presentation" aria-hidden="true" />
+			<a href="index.php?cal=1&amp;y=93">
+				<img src="./images/cms/corner/93/ug2026-2027.png" width="287" height="101" alt="Undergraduate Academic Calendar - 2026/2027" />
+			</a>
+		</div>
+
+		<div class="header-tagline">
+			<img src="images/layout/canadian-excellence.gif" width="267" height="18" alt="Canadian Excellence">
+		</div>
+	</div>
+
+	
+	<div class="wrapper">
+
+		<div id="deptnav" class="sidebar" role="navigation" aria-label="Left side navigation">
+
+			<h2><A href="index_old.php?cal=1&amp;y=93">Undergraduate Academic Calendar 2026/2027</A></h2>
+<ul>
+	<li><a href="section.php?cal=1&amp;s=1177&amp;y=93">Areas of Study/Courses @ Laurier (Direct Links)</a></li>
+	<li><a href="section.php?cal=1&amp;s=1181&amp;y=93">Print Version 2023-24</a></li>
+	<li><a href="section.php?cal=1&amp;s=1185&amp;y=93">Using This Calendar</a></li>
+	<li><a href="section.php?cal=1&amp;s=1178&amp;y=93"> Recruitment and Admissions</a></li>
+	<li><a href="section.php?cal=1&amp;s=1176&amp;y=93">Student Awards and Financial Aid</a></li>
+	<li><a href="section.php?cal=1&amp;s=1175&amp;y=93">Financial Services</a></li>
+	<li><a href="section.php?cal=1&amp;s=1180&amp;y=93">Academic and Related Dates</a></li>
+	<li><a href="section.php?cal=1&amp;s=1174&amp;y=93">University Undergraduate Regulations</a></li>
+	<li><a href="department.php?cal=1&amp;d=3201&amp;s=1168&amp;y=93">Interdisciplinary Course Offerings</a></li>
+	<li><a href="section.php?cal=1&amp;s=1169&amp;y=93">Faculty of Arts</a></li>
+	<li><a href="section.php?cal=1&amp;s=1179&amp;y=93">Faculty of Education</a></li>
+	<li><a href="section.php?cal=1&amp;s=1183&amp;y=93">Faculty of Human and Social Sciences</a></li>
+	<li><a href="section.php?cal=1&amp;s=1171&amp;y=93">Faculty of Liberal Arts</a></li>
+	<li><a href="section.php?cal=1&amp;s=1173&amp;y=93">Faculty of Music</a></li>
+	<li class="current"><a href="section.php?cal=1&amp;s=1170&amp;y=93">Faculty of Science</a></li>
+		<li class="sublist"><a href="section.php?cal=1&amp;s=1170&amp;ss=4648&amp;y=93">BSc and BA Programs and Regulations</a></li>
+		<li class="sublist"><a href="section.php?cal=1&amp;s=1170&amp;ss=4649&amp;y=93">Academic Advising</a></li>
+		<li class="sublist"><a href="section.php?cal=1&amp;s=1170&amp;ss=4650&amp;y=93">Regulations for All Honours Programs</a></li>
+		<li class="sublist"><a href="section.php?cal=1&amp;s=1170&amp;ss=4651&amp;y=93">Regulations Combining Honours with a Secondary Minor/Option</a></li>
+		<li class="sublist"><a href="section.php?cal=1&amp;s=1170&amp;ss=4652&amp;y=93">Co-operative Education</a></li>
+		<li class="sublist"><a href="section.php?cal=1&amp;s=1170&amp;ss=4653&amp;y=93">Faculty of Science Campus Transfer Policy</a></li>
+	<li><a href="section.php?cal=1&amp;s=1172&amp;y=93">Lazaridis School of Business and Economics</a></li>
+	<li><a href="section.php?cal=1&amp;s=1184&amp;y=93">Lyle S Hallman Faculty of Social Work</a></li>
+	<li><a href="section.php?cal=1&amp;s=1182&amp;y=93">Martin Luther University College</a></li>
+	<li><a href="section.php?cal=1&amp;s=1202&amp;y=93">School of International Policy and Governance</a></li>
+</ul>
+<hr/>
+<ul>
+	<li><a href="index_old.php?cal=1&amp;y=93">Search this Calendar</a></li>
+	<li><a href="glossary.php?cal=1&amp;y=93">Glossary</a></li>
+</ul>
+			<div id="deptcontact">
+	<h1>Contact Us:</h1>
+		<strong>Contact Academic Department directly unless Calendar inquiry</strong><br />			email: <a href="mailto:&#0098;&#0118;&#0111;&#0105;&#0115;&#0105;&#0110;&#0101;&#0064;&#0119;&#0108;&#0117;&#0046;&#0099;&#0097;">Bonnie Voisine, Office of the Registrar</a><br />
+					phone: bvoisine@wlu.ca<br />
+					</div>
+
+		</div>
+
+		<div id="main" class="main" role="main">
+
+			<a name="mcontent"></a>
+
+			<div class="breadcrumb">
+<img src="images/layout/redlistarrow.gif" alt="List bullet" role="presentation" aria-hidden="true"> <a href="section.php?cal=1&amp;s=1170&amp;y=93">Faculty of Science</a>&nbsp;<img src="images/layout/redlistsmbullet.gif" alt="list bullet" role="presentation" aria-hidden="true"> <a href="department.php?cal=1&amp;d=3246&amp;s=1170&amp;y=93">Psychology</a>&nbsp;</div>
+
+			<div class="content">
+<h1>Psychology</h1>
+<p><p>The Psychology <A href="glossary.php?cal=1&amp;g=1650&amp;y=93" class="glossaryTerm" onMouseOver="showGlossaryDef(this,'<P><p> An academic department as duly constituted by the  Senate and Board of Governors (e.g., Department of Anthropology,  Department of Physics &amp; Computer Science, Department of History). Also, a non-academic area of the university.</p></P>')" onMouseOut="hideGlossaryDef()">Department</A> offers four single honours <A href="glossary.php?cal=1&amp;g=1667&amp;y=93" class="glossaryTerm" onMouseOver="showGlossaryDef(this,'<P><p>A group of courses, generally a combination of required and elective courses, which leads to a degree.  </p><p><b class=#QUOTE#Bold#QUOTE#>General program:</b> A program consisting of a minimum of 15.0 credits and normally taken over three academic years.  </p><p><b class=#QUOTE#Bold#QUOTE#>Honours program: </b>A program consisting of a minimum of 20.0 credits and normally taken over four academic years with an area of specialization.</p></P>')" onMouseOut="hideGlossaryDef()">programs</A>:<br />Honours BSc Psychology Program<br />Honours BSc Psychology and Neuroscience Program<br />Honours BA Psychology Program<br />Honours BA Psychology Research Specialist Program </p> 
+  <p>Four joint honours program options are available as well:<br />Honours BSc Biology and Psychology program<br />Honours BSc Computer Science and Psychology<br />Honours BSc Computer Science and Psychology: Computation and Cognitive Neuroscience Stream<br />Honours BA Psychology in Combination with another Honours BA Program. </p> 
+  <p>Programs descriptions are given below and also consult the Psychology Department and the <a href="http://www.wlu.ca/homepage.php?grp_id=44">Psychology website</a> for additional information about each program.</p></p><div class="reqs">
+<div class="greyheading">Department Information on this page</div>
+<ul class="proginfo">
+<li><a href="#Faculty">Faculty</a></li>
+<li><a href="#Programs">Programs</a></li>
+<li><a href="#Course_Offerings">Course Offerings</a></li>
+</ul>
+<div class="clear">&nbsp;</div>
+</div>
+<div class="reqs">
+<div class="heading"><A name="Faculty"></A>Faculty</div>
+<p><div id="stafflist" name="stafflist"><strong>Full-Time Faculty</strong><ul>
+   <li><A href="mailto:&#0109;&#0098;&#0097;&#0114;&#0108;&#0111;&#0119;&#0064;&#0119;&#0108;&#0117;&#0046;&#0099;&#0097;">Meaghan Barlow</A>, <i>PhD</i></li>
+   <li><A href="mailto:&#0097;&#0109;&#0098;&#0101;&#0097;&#0108;&#0115;&#0064;&#0119;&#0108;&#0117;&#0046;&#0099;&#0097;">Ann Marie Beals</A>, <i>PhD</i></li>
+   <li><A href="mailto:&#0114;&#0098;&#0117;&#0101;&#0104;&#0108;&#0101;&#0114;&#0064;&#0119;&#0108;&#0117;&#0046;&#0099;&#0097;">Roger Buehler</A>, <i>PhD</i></li>
+   <li><A href="mailto:&#0097;&#0098;&#0117;&#0101;&#0116;&#0116;&#0103;&#0101;&#0110;&#0064;&#0119;&#0108;&#0117;&#0046;&#0099;&#0097;">Alexis Buettgen</A>, <i>PhD</i></li>
+   <li><A href="mailto:&#0106;&#0099;&#0097;&#0118;&#0097;&#0108;&#0108;&#0111;&#0064;&#0119;&#0108;&#0117;&#0046;&#0099;&#0097;">Justin Cavallo</A>, <i>PhD</i>, <i>Undergraduate advisor (A-L)</i></li>
+   <li><A href="mailto:&#0109;&#0101;&#0121;&#0115;&#0064;&#0119;&#0108;&#0117;&#0046;&#0099;&#0097;">Mark Eys</A>, <i>PhD</i>, <i>Canada Research Chair in Group Dynamics and Physical Activity</i></li>
+   <li><A href="mailto:&#0116;&#0102;&#0101;&#0114;&#0114;&#0101;&#0116;&#0116;&#0064;&#0119;&#0108;&#0117;&#0046;&#0099;&#0097;">Todd Ferretti</A>, <i>PhD</i></li>
+   <li><A href="mailto:&#0109;&#0102;&#0111;&#0115;&#0116;&#0101;&#0114;&#0064;&#0119;&#0108;&#0117;&#0046;&#0099;&#0097;">Mindi Foster</A>, <i>PhD</i></li>
+   <li><A href="mailto:&#0097;&#0103;&#0111;&#0116;&#0116;&#0097;&#0114;&#0100;&#0064;&#0119;&#0108;&#0117;&#0046;&#0099;&#0097;">Alexandra Gottardo</A>, <i>PhD</i></li>
+   <li><A href="mailto:&#0097;&#0104;&#0097;&#0115;&#0104;&#0101;&#0109;&#0105;&#0064;&#0119;&#0108;&#0117;&#0046;&#0099;&#0097;">Ali Hashemi</A>, <i>PhD</i></li>
+   <li><A href="mailto:&#0110;&#0105;&#0110;&#0115;&#0101;&#0108;&#0064;&#0119;&#0108;&#0117;&#0046;&#0099;&#0097;">Nathan Insel</A>, <i>PhD</i></li>
+   <li><A href="mailto:&#0109;&#0106;&#0097;&#0109;&#0098;&#0111;&#0110;&#0064;&#0119;&#0108;&#0117;&#0046;&#0099;&#0097;">Marc Jambon</A>, <i>PhD</i></li>
+   <li><A href="mailto:&#0106;&#0106;&#0111;&#0110;&#0101;&#0115;&#0064;&#0119;&#0108;&#0117;&#0046;&#0099;&#0097;">Jeffery Jones</A>, <i>PhD</i>, <i>Graduate Advisor</i></li>
+   <li><A href="mailto:&#0099;&#0106;&#0111;&#0114;&#0100;&#0097;&#0110;&#0064;&#0119;&#0108;&#0117;&#0046;&#0099;&#0097;">Christian Jordan</A>, <i>PhD</i></li>
+   <li><A href="mailto:&#0102;&#0107;&#0097;&#0099;&#0104;&#0097;&#0110;&#0111;&#0102;&#0102;&#0064;&#0119;&#0108;&#0117;&#0046;&#0099;&#0097;">Frank Kachanoff</A>, <i>PhD</i></li>
+   <li><A href="mailto:&#0109;&#0107;&#0105;&#0114;&#0115;&#0116;&#0064;&#0119;&#0108;&#0117;&#0046;&#0099;&#0097;">Maritt Kirst</A>, <i>PhD</i></li>
+   <li><A href="mailto:&#0110;&#0107;&#0105;&#0118;&#0101;&#0108;&#0108;&#0064;&#0119;&#0108;&#0117;&#0046;&#0099;&#0097;">Natalie Kivell</A>, <i>PhD</i></li>
+   <li><A href="mailto:&#0110;&#0107;&#0111;&#0099;&#0111;&#0118;&#0115;&#0107;&#0105;&#0064;&#0119;&#0108;&#0117;&#0046;&#0099;&#0097;">Nancy Kocovski</A>, <i>PhD</i></li>
+   <li><A href="mailto:&#0116;&#0107;&#0114;&#0101;&#0116;&#0116;&#0101;&#0110;&#0097;&#0117;&#0101;&#0114;&#0064;&#0119;&#0108;&#0117;&#0046;&#0099;&#0097;">Tobias Krettenauer</A>, <i>PhD</i></li>
+   <li><A href="mailto:&#0106;&#0108;&#0101;&#0101;&#0064;&#0119;&#0108;&#0117;&#0046;&#0099;&#0097;">Joanne Lee</A>, <i>PhD</i></li>
+   <li><A href="mailto:&#0099;&#0108;&#0111;&#0111;&#0109;&#0105;&#0115;&#0064;&#0119;&#0108;&#0117;&#0046;&#0099;&#0097;">Colleen Loomis</A>, <i>PhD</i></li>
+   <li><A href="mailto:&#0112;&#0109;&#0097;&#0108;&#0108;&#0101;&#0116;&#0064;&#0119;&#0108;&#0117;&#0046;&#0099;&#0097;">Paul E. Mallet</A>, <i>PhD</i>, <i>Chair</i></li>
+   <li><A href="mailto:&#0100;&#0109;&#0097;&#0114;&#0114;&#0111;&#0110;&#0101;&#0064;&#0119;&#0108;&#0117;&#0046;&#0099;&#0097;">Diano-Fabio Marrone</A>, <i>PhD</i></li>
+   <li><A href="mailto:&#0078;&#0077;&#0105;&#0108;&#0108;&#0101;&#0114;&#0064;&#0119;&#0108;&#0117;&#0046;&#0099;&#0097;">Noam Miller</A>, <i>PhD</i></li>
+   <li><A href="mailto:&#0101;&#0109;&#0105;&#0108;&#0109;&#0097;&#0110;&#0064;&#0119;&#0108;&#0117;&#0046;&#0099;&#0097;">Evgenia Milman</A>, <i>PhD</i></li>
+   <li><A href="mailto:&#0101;&#0111;&#0108;&#0100;&#0115;&#0064;&#0119;&#0108;&#0117;&#0046;&#0099;&#0097;">Elizabeth Olds</A>, <i>PhD</i></li>
+   <li><A href="mailto:&#0109;&#0114;&#0105;&#0101;&#0109;&#0101;&#0114;&#0064;&#0119;&#0108;&#0117;&#0046;&#0099;&#0097;">Manuel Riemer</A>, <i>PhD</i></li>
+   <li><A href="mailto:&#0107;&#0114;&#0111;&#0098;&#0101;&#0114;&#0116;&#0115;&#0064;&#0119;&#0108;&#0117;&#0046;&#0099;&#0097;">Kim Roberts</A>, <i>PhD</i>, <i>Undergraduate advisor (M-Z)</i></li>
+   <li><A href="mailto:&#0110;&#0115;&#0099;&#0104;&#0101;&#0101;&#0114;&#0101;&#0114;&#0064;&#0119;&#0108;&#0117;&#0046;&#0099;&#0097;">Nichole Scheerer</A>, <i>PhD</i></li>
+   <li><A href="mailto:&#0106;&#0115;&#0099;&#0104;&#0119;&#0105;&#0101;&#0116;&#0101;&#0114;&#0064;&#0119;&#0108;&#0117;&#0046;&#0099;&#0097;">John Schwieter</A>, <i>PhD</i></li>
+   <li><A href="mailto:&#0112;&#0115;&#0101;&#0114;&#0118;&#0111;&#0115;&#0064;&#0119;&#0108;&#0117;&#0046;&#0099;&#0097;">Philip Servos</A>, <i>PhD</i></li>
+   <li><A href="mailto:&#0107;&#0115;&#0104;&#0097;&#0110;&#0107;&#0097;&#0114;&#0100;&#0097;&#0115;&#0115;&#0064;&#0119;&#0108;&#0117;&#0046;&#0099;&#0097;">Ketan Shankardass</A>, <i>PhD</i></li>
+   <li><A href="mailto:&#0107;&#0115;&#0104;&#0105;&#0108;&#0108;&#0105;&#0110;&#0103;&#0116;&#0111;&#0110;&#0064;&#0119;&#0108;&#0117;&#0046;&#0099;&#0097;">Katie Shillington</A>, <i>PhD</i></li>
+   <li><A href="mailto:&#0100;&#0119;&#0104;&#0105;&#0116;&#0101;&#0064;&#0119;&#0108;&#0117;&#0046;&#0099;&#0097;">David White</A>, <i>PhD</i></li>
+   <li><A href="mailto:&#0097;&#0119;&#0105;&#0108;&#0115;&#0111;&#0110;&#0064;&#0119;&#0108;&#0117;&#0046;&#0099;&#0097;">Anne Wilson</A>, <i>PhD</i></li>
+   <li><A href="mailto:&#0099;&#0105;&#0119;&#0105;&#0108;&#0115;&#0111;&#0110;&#0064;&#0119;&#0108;&#0117;&#0046;&#0099;&#0097;">Ciann Wilson</A>, <i>PhD</i>, <i>Canada Research Chair in Community-Based Research, Ethics, and Well-Being</i></li>
+   <li><A href="mailto:&#0101;&#0119;&#0111;&#0111;&#0100;&#0064;&#0119;&#0108;&#0117;&#0046;&#0099;&#0097;">Eileen Wood</A>, <i>PhD</i></li>
+</ul></div></p>
+<div class="clear">&nbsp;</div>
+<div class="returntotop"><a href="#top">Top</a></div>
+</div>
+<A name="Programs"></A>
+<div class="reqs">
+<div class="heading">Program Information</div>
+<P style="padding-top:0px;"><UL>
+<LI><A href="program.php?cal=1&amp;d=3246&amp;p=7530&amp;s=1170&amp;y=93">Honours BSc Psychology</A></LI>
+<LI><A href="program.php?cal=1&amp;d=3246&amp;p=7531&amp;s=1170&amp;y=93">Honours BSc Psychology and Biology</A></LI>
+<LI><A href="program.php?cal=1&amp;d=3246&amp;p=7537&amp;s=1170&amp;y=93">Honours BSc Psychology and Computer Science</A></LI>
+<LI><A href="program.php?cal=1&amp;d=3246&amp;p=7538&amp;s=1170&amp;y=93">Honours BSc Psychology and Computer Science: Computation and Cognitive Neuroscience Stream</A></LI>
+<LI><A href="program.php?cal=1&amp;d=3246&amp;p=7535&amp;s=1170&amp;y=93">Honours BSc Psychology and Neuroscience</A></LI>
+<LI><A href="program.php?cal=1&amp;d=3246&amp;p=7532&amp;s=1170&amp;y=93">Honours BA Psychology</A></LI>
+<LI><A href="program.php?cal=1&amp;d=3246&amp;p=7536&amp;s=1170&amp;y=93">Honours BA Psychology: Research Specialist</A></LI>
+<LI><A href="program.php?cal=1&amp;d=3246&amp;p=7533&amp;s=1170&amp;y=93">Honours BA Psychology in Combination with another Honours BA Program</A></LI>
+<LI><A href="program.php?cal=1&amp;d=3246&amp;p=7540&amp;s=1170&amp;y=93">Community Psychology Specialization</A></LI>
+<LI><A href="program.php?cal=1&amp;d=3246&amp;p=7539&amp;s=1170&amp;y=93">Community Psychology and Social Change Minor</A></LI>
+<LI><A href="program.php?cal=1&amp;d=3246&amp;p=7534&amp;s=1170&amp;y=93">Psychology Minor</A></LI>
+<LI><A href="program.php?cal=1&amp;d=3246&amp;p=7541&amp;s=1170&amp;y=93">Applied Developmental Psychology Minor</A></LI>
+<LI><A href="program.php?cal=1&amp;d=3246&amp;p=7542&amp;s=1170&amp;y=93">Applied Developmental Psychology Specialization</A></LI>
+<LI><A href="program.php?cal=1&amp;d=3246&amp;p=7543&amp;s=1170&amp;y=93">Mental Health and Well-Being Minor</A></LI>
+<LI><A href="program.php?cal=1&amp;d=3246&amp;p=7544&amp;s=1170&amp;y=93">Specialization in Mental Health and Well-Being</A></LI>
+</UL></P>
+<div class="clear">&nbsp;</div>
+<div class="returntotop"><a href="#top">Top</a></div>
+</div>
+<A name="Course_Offerings"></A>
+<div class="reqs">
+<table>
+<caption>Course Offerings</caption>
+<tr><th>Course #</th><th>Title</th><th>Credits</th></tr>
+<tr class="zebra">
+   <td><a href="course.php?c=79244&amp;cal=1&amp;d=3246&amp;s=1170&amp;y=93">PS101</a></td>
+	<td>Introduction to Psychology I</td>
+	<td>0.5</td>
+</tr>
+<tr>
+   <td><a href="course.php?c=79294&amp;cal=1&amp;d=3246&amp;s=1170&amp;y=93">PS102</a></td>
+	<td>Introduction to Psychology II</td>
+	<td>0.5</td>
+</tr>
+<tr class="zebra">
+   <td><a href="course.php?c=79246&amp;cal=1&amp;d=3246&amp;s=1170&amp;y=93">PS240-245</a></td>
+	<td>Special Topics</td>
+	<td>0.5</td>
+</tr>
+<tr>
+   <td><a href="course.php?c=79301&amp;cal=1&amp;d=3246&amp;s=1170&amp;y=93">PS250</a></td>
+	<td>Forensic Psychology </td>
+	<td>0.5</td>
+</tr>
+<tr class="zebra">
+   <td><a href="course.php?c=79247&amp;cal=1&amp;d=3246&amp;s=1170&amp;y=93">PS260</a></td>
+	<td>Introduction to Cognitive Psychology</td>
+	<td>0.5</td>
+</tr>
+<tr>
+   <td><a href="course.php?c=79248&amp;cal=1&amp;d=3246&amp;s=1170&amp;y=93">PS261</a></td>
+	<td>Introduction to Learning</td>
+	<td>0.5</td>
+</tr>
+<tr class="zebra">
+   <td><a href="course.php?c=79249&amp;cal=1&amp;d=3246&amp;s=1170&amp;y=93">PS262</a></td>
+	<td>Introduction to Perception</td>
+	<td>0.5</td>
+</tr>
+<tr>
+   <td><a href="course.php?c=79250&amp;cal=1&amp;d=3246&amp;s=1170&amp;y=93">PS263</a></td>
+	<td>Behavioural Neuroscience</td>
+	<td>0.5</td>
+</tr>
+<tr class="zebra">
+   <td><a href="course.php?c=79251&amp;cal=1&amp;d=3246&amp;s=1170&amp;y=93">PS264</a></td>
+	<td>Motivation and Emotion</td>
+	<td>0.5</td>
+</tr>
+<tr>
+   <td><a href="course.php?c=79297&amp;cal=1&amp;d=3246&amp;s=1170&amp;y=93">PS267</a></td>
+	<td>Introduction to Cognitive Neuroscience</td>
+	<td>0.5</td>
+</tr>
+<tr class="zebra">
+   <td><a href="course.php?c=79293&amp;cal=1&amp;d=3246&amp;s=1170&amp;y=93">PS268</a></td>
+	<td>Drugs and Behaviour</td>
+	<td>0.5</td>
+</tr>
+<tr>
+   <td><a href="course.php?c=79311&amp;cal=1&amp;d=3246&amp;s=1170&amp;y=93">PS269</a></td>
+	<td>Sex, Evolution, and Behaviour</td>
+	<td>0.5</td>
+</tr>
+<tr class="zebra">
+   <td><a href="course.php?c=79252&amp;cal=1&amp;d=3246&amp;s=1170&amp;y=93">PS270</a></td>
+	<td>Social Psychology</td>
+	<td>0.5</td>
+</tr>
+<tr>
+   <td><a href="course.php?c=79253&amp;cal=1&amp;d=3246&amp;s=1170&amp;y=93">PS271</a></td>
+	<td>Personality</td>
+	<td>0.5</td>
+</tr>
+<tr class="zebra">
+   <td><a href="course.php?c=79254&amp;cal=1&amp;d=3246&amp;s=1170&amp;y=93">PS272</a></td>
+	<td>Group Processes</td>
+	<td>0.5</td>
+</tr>
+<tr>
+   <td><a href="course.php?c=79255&amp;cal=1&amp;d=3246&amp;s=1170&amp;y=93">PS275</a></td>
+	<td>Introduction to Developmental Psychology: Infancy and Childhood</td>
+	<td>0.5</td>
+</tr>
+<tr class="zebra">
+   <td><a href="course.php?c=79256&amp;cal=1&amp;d=3246&amp;s=1170&amp;y=93">PS276</a></td>
+	<td>Introduction to Developmental Psychology: Adolescence and Young Adulthood</td>
+	<td>0.5</td>
+</tr>
+<tr>
+   <td><a href="course.php?c=79258&amp;cal=1&amp;d=3246&amp;s=1170&amp;y=93">PS280</a></td>
+	<td>Psychopathology</td>
+	<td>0.5</td>
+</tr>
+<tr class="zebra">
+   <td><a href="course.php?c=79259&amp;cal=1&amp;d=3246&amp;s=1170&amp;y=93">PS282</a></td>
+	<td>Community Psychology</td>
+	<td>0.5</td>
+</tr>
+<tr>
+   <td><a href="course.php?c=79260&amp;cal=1&amp;d=3246&amp;s=1170&amp;y=93">PS283</a></td>
+	<td>Educational Psychology</td>
+	<td>0.5</td>
+</tr>
+<tr class="zebra">
+   <td><a href="course.php?c=79261&amp;cal=1&amp;d=3246&amp;s=1170&amp;y=93">PS284</a></td>
+	<td>Organizational Psychology</td>
+	<td>0.5</td>
+</tr>
+<tr>
+   <td><a href="course.php?c=79292&amp;cal=1&amp;d=3246&amp;s=1170&amp;y=93">PS285</a></td>
+	<td>Health Psychology</td>
+	<td>0.5</td>
+</tr>
+<tr class="zebra">
+   <td><a href="course.php?c=79262&amp;cal=1&amp;d=3246&amp;s=1170&amp;y=93">PS286</a></td>
+	<td>Sport Psychology</td>
+	<td>0.5</td>
+</tr>
+<tr>
+   <td><a href="course.php?c=79263&amp;cal=1&amp;d=3246&amp;s=1170&amp;y=93">PS287</a></td>
+	<td>Psychology of Gender</td>
+	<td>0.5</td>
+</tr>
+<tr class="zebra">
+   <td><a href="course.php?c=79245&amp;cal=1&amp;d=3246&amp;s=1170&amp;y=93">PS288</a></td>
+	<td>Applications of Human Behaviour Modification</td>
+	<td>0.5</td>
+</tr>
+<tr>
+   <td><a href="course.php?c=79264&amp;cal=1&amp;d=3246&amp;s=1170&amp;y=93">PS295</a></td>
+	<td>Introduction to Research Methods</td>
+	<td>0.5</td>
+</tr>
+<tr class="zebra">
+   <td><a href="course.php?c=79265&amp;cal=1&amp;d=3246&amp;s=1170&amp;y=93">PS296</a></td>
+	<td>Introduction to Statistics</td>
+	<td>0.5</td>
+</tr>
+<tr>
+   <td><a href="course.php?c=79266&amp;cal=1&amp;d=3246&amp;s=1170&amp;y=93">PS330-345</a></td>
+	<td>Special Topics</td>
+	<td>0.5</td>
+</tr>
+<tr class="zebra">
+   <td><a href="course.php?c=79302&amp;cal=1&amp;d=3246&amp;s=1170&amp;y=93">PS350</a></td>
+	<td>Advanced Topics in Forensic Psychology</td>
+	<td>0.5</td>
+</tr>
+<tr>
+   <td><a href="course.php?c=79267&amp;cal=1&amp;d=3246&amp;s=1170&amp;y=93">PS360</a></td>
+	<td>Research in Cognitive Psychology</td>
+	<td>0.5</td>
+</tr>
+<tr class="zebra">
+   <td><a href="course.php?c=79268&amp;cal=1&amp;d=3246&amp;s=1170&amp;y=93">PS361</a></td>
+	<td>Research in Learning</td>
+	<td>0.5</td>
+</tr>
+<tr>
+   <td><a href="course.php?c=79269&amp;cal=1&amp;d=3246&amp;s=1170&amp;y=93">PS362</a></td>
+	<td>Research in Perception</td>
+	<td>0.5</td>
+</tr>
+<tr class="zebra">
+   <td><a href="course.php?c=79270&amp;cal=1&amp;d=3246&amp;s=1170&amp;y=93">PS363</a></td>
+	<td>Research in Behavioural Neuroscience</td>
+	<td>0.5</td>
+</tr>
+<tr>
+   <td><a href="course.php?c=79300&amp;cal=1&amp;d=3246&amp;s=1170&amp;y=93">PS365</a></td>
+	<td>Introduction to Neuropsychology</td>
+	<td>0.5</td>
+</tr>
+<tr class="zebra">
+   <td><a href="course.php?c=79271&amp;cal=1&amp;d=3246&amp;s=1170&amp;y=93">PS366</a></td>
+	<td>Introduction to Psycholinguistics</td>
+	<td>0.5</td>
+</tr>
+<tr>
+   <td><a href="course.php?c=79298&amp;cal=1&amp;d=3246&amp;s=1170&amp;y=93">PS367</a></td>
+	<td>Research in Cognitive Neuroscience</td>
+	<td>0.5</td>
+</tr>
+<tr class="zebra">
+   <td><a href="course.php?c=79308&amp;cal=1&amp;d=3246&amp;s=1170&amp;y=93">PS368</a></td>
+	<td>Functional Neuroanatomy</td>
+	<td>0.5</td>
+</tr>
+<tr>
+   <td><a href="course.php?c=79272&amp;cal=1&amp;d=3246&amp;s=1170&amp;y=93">PS370</a></td>
+	<td>Research in Social Psychology</td>
+	<td>0.5</td>
+</tr>
+<tr class="zebra">
+   <td><a href="course.php?c=79309&amp;cal=1&amp;d=3246&amp;s=1170&amp;y=93">PS371</a></td>
+	<td>Atypical Development </td>
+	<td>0.5</td>
+</tr>
+<tr>
+   <td><a href="course.php?c=79305&amp;cal=1&amp;d=3246&amp;s=1170&amp;y=93">PS373</a></td>
+	<td>Close Relationships</td>
+	<td>0.5</td>
+</tr>
+<tr class="zebra">
+   <td><a href="course.php?c=79274&amp;cal=1&amp;d=3246&amp;s=1170&amp;y=93">PS375</a></td>
+	<td>Research in Developmental Psychology</td>
+	<td>0.5</td>
+</tr>
+<tr>
+   <td><a href="course.php?c=79257&amp;cal=1&amp;d=3246&amp;s=1170&amp;y=93">PS377</a></td>
+	<td>Developmental Psychology: Adults and Elders</td>
+	<td>0.5</td>
+</tr>
+<tr class="zebra">
+   <td><a href="course.php?c=79295&amp;cal=1&amp;d=3246&amp;s=1170&amp;y=93">PS378</a></td>
+	<td>Language Development</td>
+	<td>0.5</td>
+</tr>
+<tr>
+   <td><a href="course.php?c=79275&amp;cal=1&amp;d=3246&amp;s=1170&amp;y=93">PS379</a></td>
+	<td>Psychology of Exceptional Children, Youth and Adults</td>
+	<td>0.5</td>
+</tr>
+<tr class="zebra">
+   <td><a href="course.php?c=79276&amp;cal=1&amp;d=3246&amp;s=1170&amp;y=93">PS381</a></td>
+	<td>Introduction to Clinical Psychology</td>
+	<td>0.5</td>
+</tr>
+<tr>
+   <td><a href="course.php?c=79296&amp;cal=1&amp;d=3246&amp;s=1170&amp;y=93">PS383</a></td>
+	<td>Environment, Psychology and Action</td>
+	<td>0.5</td>
+</tr>
+<tr class="zebra">
+   <td><a href="course.php?c=79304&amp;cal=1&amp;d=3246&amp;s=1170&amp;y=93">PS389</a></td>
+	<td>Positive Psychology</td>
+	<td>0.5</td>
+</tr>
+<tr>
+   <td><a href="course.php?c=79279&amp;cal=1&amp;d=3246&amp;s=1170&amp;y=93">PS394</a></td>
+	<td>Linear Models</td>
+	<td>0.5</td>
+</tr>
+<tr class="zebra">
+   <td><a href="course.php?c=79278&amp;cal=1&amp;d=3246&amp;s=1170&amp;y=93">PS395</a></td>
+	<td>Analysis of Variance</td>
+	<td>0.5</td>
+</tr>
+<tr>
+   <td><a href="course.php?c=79281&amp;cal=1&amp;d=3246&amp;s=1170&amp;y=93">PS398</a></td>
+	<td>Qualitative Methods in Psychology</td>
+	<td>0.5</td>
+</tr>
+<tr class="zebra">
+   <td><a href="course.php?c=79277&amp;cal=1&amp;d=3246&amp;s=1170&amp;y=93">PS410</a></td>
+	<td>History of Psychology</td>
+	<td>0.5</td>
+</tr>
+<tr>
+   <td><a href="course.php?c=79303&amp;cal=1&amp;d=3246&amp;s=1170&amp;y=93">PS451</a></td>
+	<td>Applied Forensic Psychology</td>
+	<td>0.5</td>
+</tr>
+<tr class="zebra">
+   <td><a href="course.php?c=79282&amp;cal=1&amp;d=3246&amp;s=1170&amp;y=93">PS460</a></td>
+	<td>Seminar in Cognitive Psychology</td>
+	<td>0.5</td>
+</tr>
+<tr>
+   <td><a href="course.php?c=79283&amp;cal=1&amp;d=3246&amp;s=1170&amp;y=93">PS461</a></td>
+	<td>Seminar in Learning</td>
+	<td>0.5</td>
+</tr>
+<tr class="zebra">
+   <td><a href="course.php?c=79284&amp;cal=1&amp;d=3246&amp;s=1170&amp;y=93">PS462</a></td>
+	<td>Seminar in Perception</td>
+	<td>0.5</td>
+</tr>
+<tr>
+   <td><a href="course.php?c=79285&amp;cal=1&amp;d=3246&amp;s=1170&amp;y=93">PS463</a></td>
+	<td>Seminar in Behavioural Neuroscience</td>
+	<td>0.5</td>
+</tr>
+<tr class="zebra">
+   <td><a href="course.php?c=79299&amp;cal=1&amp;d=3246&amp;s=1170&amp;y=93">PS467</a></td>
+	<td>Seminar in Cognitive Neuroscience</td>
+	<td>0.5</td>
+</tr>
+<tr>
+   <td><a href="course.php?c=79286&amp;cal=1&amp;d=3246&amp;s=1170&amp;y=93">PS470</a></td>
+	<td>Seminar in Social Psychology</td>
+	<td>0.5</td>
+</tr>
+<tr class="zebra">
+   <td><a href="course.php?c=79273&amp;cal=1&amp;d=3246&amp;s=1170&amp;y=93">PS472</a></td>
+	<td>Applied Social Psychology</td>
+	<td>0.5</td>
+</tr>
+<tr>
+   <td><a href="course.php?c=79310&amp;cal=1&amp;d=3246&amp;s=1170&amp;y=93">PS474</a></td>
+	<td>Applications in Social Development</td>
+	<td>0.5</td>
+</tr>
+<tr class="zebra">
+   <td><a href="course.php?c=79287&amp;cal=1&amp;d=3246&amp;s=1170&amp;y=93">PS475</a></td>
+	<td>Seminar in Developmental Psychology</td>
+	<td>0.5</td>
+</tr>
+<tr>
+   <td><a href="course.php?c=79307&amp;cal=1&amp;d=3246&amp;s=1170&amp;y=93">PS476</a></td>
+	<td>Applications in Cognitive Development</td>
+	<td>0.5</td>
+</tr>
+<tr class="zebra">
+   <td><a href="course.php?c=79288&amp;cal=1&amp;d=3246&amp;s=1170&amp;y=93">PS480</a></td>
+	<td>Seminar in Personality and Clinical Psychology</td>
+	<td>0.5</td>
+</tr>
+<tr>
+   <td><a href="course.php?c=79289&amp;cal=1&amp;d=3246&amp;s=1170&amp;y=93">PS482</a></td>
+	<td>Seminar in Community Psychology</td>
+	<td>0.5</td>
+</tr>
+<tr class="zebra">
+   <td><a href="course.php?c=79280&amp;cal=1&amp;d=3246&amp;s=1170&amp;y=93">PS487</a></td>
+	<td>Psychological Measurement and Testing</td>
+	<td>0.5</td>
+</tr>
+<tr>
+   <td><a href="course.php?c=79290&amp;cal=1&amp;d=3246&amp;s=1170&amp;y=93">PS490</a></td>
+	<td>Directed Studies</td>
+	<td>0.5</td>
+</tr>
+<tr class="zebra">
+   <td><a href="course.php?c=79306&amp;cal=1&amp;d=3246&amp;s=1170&amp;y=93">PS492</a></td>
+	<td>Applied Community Research</td>
+	<td>1.0</td>
+</tr>
+<tr>
+   <td><a href="course.php?c=79291&amp;cal=1&amp;d=3246&amp;s=1170&amp;y=93">PS499</a></td>
+	<td>Thesis</td>
+	<td>1.0</td>
+</tr>
+</table>
+<div class="clear">&nbsp;</div>
+<div class="returntotop"><a href="#top">Top</a></div>
+</div>
+			</div> <!-- /.content -->
+
+		</div> <!-- /.main -->
+
+		
+<div id="contentRHS" class="sidebar" role="navigation" aria-label="Right side navigation">
+	<img src="./images/layout/picture_right.gif" alt="Decorative image" role="presentation">
+
+		<div class="calright">
+	<h4>Academic &amp; Related Dates 2026/2027</h4>
+	<ul class="dates">
+	<li><a href="dates.php?cal=1&amp;y=93">All Dates</a></li>
+	</ul>
+
+			<hr class="calrightrule"/>
+	<h4>Other Calendars</h4>
+	<ul class="archivedcal">
+		<li class="ruled"><a href="index_old.php?cal=1&amp;y=92">Undergraduate Academic Calendar (2025/2026)</a></li>
+		<li class="ruled"><a href="index_old.php?cal=1&amp;y=90">Undergraduate Academic Calendar (2024/2025)</a></li>
+		<li class="ruled"><a href="index_old.php?cal=1&amp;y=87">Undergraduate Academic Calendar (2023/2024)</a></li>
+		<li class="ruled"><a href="index_old.php?cal=1&amp;y=85">Undergraduate Academic Calendar (2022/2023)</a></li>
+		<li><a href="/index.php">more...</a></li>
+		</ul>
+		</div>
+</div> <!-- /.sidebar -->
+
+	</div> <!-- /.wrapper -->
+
+	<div class="footer" role="contentinfo">
+
+		<div class="footer-top">
+			<div>
+				<a href="https://www.wlu.ca/about/locations-maps-and-parking/contact-us.html">Contact WLU</a>
+			</div>
+			<div>
+				<span>&copy; 2026 Wilfrid Laurier University</span>
+			</div>
+			<div>
+				<img src="images/layout/footer_red.gif" alt="Ontario, Canada" title="Ontario, Canada">
+			</div>
+		</div> <!-- /.footer-top -->
+
+		<div class="footer-bottom">
+			<div>
+				<span>Wilfrid Laurier University | 75 University Avenue West, Waterloo, Ontario, Canada  N2L 3C5</span>
+			</div>
+			<div>
+				<span>Phone: 519.884.1970 | Fax: 519.886.9351</span>
+			</div>
+			<div>
+				<span class="brantford">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
+			</div>
+		</div> <!-- /.footer-bottom -->
+
+	</div> <!-- /#footer -->
+
+	
+</body>
+</html>
+

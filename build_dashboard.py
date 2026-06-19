@@ -232,6 +232,110 @@ def merge_grad(dataset, yr):
 g25 = json.load(open(os.path.join(base,"grad_courses_2025.json"), encoding="utf-8"))
 g26 = json.load(open(os.path.join(base,"grad_courses_2026.json"), encoding="utf-8"))
 
+# ================= COGNATE COURSES + DESTINATION PATHWAYS =================
+cognate = json.load(open(os.path.join(base,"cognate_courses.json"), encoding="utf-8"))
+
+def has_lab_from_hours(h): return bool(h) and "lab" in h.lower()
+
+# combined code -> {title, lab, url, level, dept} index (cognate + HE/HN, all aliases)
+COURSE_INDEX = {}
+for c in cognate:
+    COURSE_INDEX[c["code"]] = {"title":c["title"], "lab":c.get("has_lab",False),
+        "url":c.get("url",""), "level":level(c["code"]), "dept":c.get("dept","")}
+# add HE/HN UG (2026/27) then grad HE6xx; index every alias of a cross-listed code
+for c in merge(d26, "2026/2027"):
+    rec = {"title":c["title"], "lab":has_lab_from_hours(c.get("hours","")),
+           "url":c["url"], "level":c["level"], "dept":"HE"}
+    for alias in c["code"].split("/"):
+        COURSE_INDEX.setdefault(alias.strip(), rec)
+for c in merge_grad(g26, "2026/2027"):
+    rec = {"title":c["title"], "lab":has_lab_from_hours(c.get("hours","")),
+           "url":c["url"], "level":c["level"], "dept":"HE-grad"}
+    for alias in c["code"].split("/"):
+        COURSE_INDEX.setdefault(alias.strip(), rec)
+
+# Destination pathways. Each bucket: name, why, courses (WLU codes), note.
+# arts=True flags a requirement met outside the Faculty of Science (no WLU-Science course to link).
+PATHWAYS = [
+ {"id":"med","label":"Medicine (MD)","group":"Medicine & dentistry","exam":"MCAT + CASPer/Casper",
+  "summary":"Most Canadian medical schools require NO specific prerequisite courses (e.g. McMaster, Queen's, Western, Calgary, Alberta). The binding gates are MCAT content coverage, GPA, and CASPer/interview. A prescriptive minority and new Indigenous Studies requirements are the exceptions, below.",
+  "buckets":[
+    {"name":"Biology / life sciences","courses":["BI110","BI111","BI226","BI236"],"note":"Toronto requires 12 units life science; Ottawa requires 6 units biology."},
+    {"name":"General chemistry","courses":["CH110","CH111"],"note":"McGill requires 2 intro chem WITH labs (100-level)."},
+    {"name":"Organic chemistry","courses":["CH202","CH203"],"note":"McGill requires 1 organic chem with lab; core MCAT content."},
+    {"name":"Biochemistry","courses":["CH250"],"note":"MCAT is biochem-heavy; recommended (not required) at McGill."},
+    {"name":"Physics","courses":["PC141","PC142"],"note":"McGill requires 2 physics WITH labs; MCAT content. Use life-sci PC141/142 (lab) not the lecture-only versions."},
+    {"name":"Statistics / quantitative","courses":["ST231"],"note":"MCAT quantitative reasoning; ST231 is the Health-Sci-aligned option."},
+    {"name":"Psychology & sociology (MCAT Psych/Soc)","courses":["PS101","PS102"],"note":"MCAT Psych/Soc section. Add a sociology course (Faculty of Arts)."},
+    {"name":"English","courses":[],"arts":True,"note":"Required at UBC and Ottawa. Faculty of Arts course, outside Science."},
+    {"name":"Indigenous Studies","courses":[],"arts":True,"note":"Required at Calgary, Manitoba, Saskatchewan; UBC transitioning. Faculty of Arts."},
+  ],
+  "schoolNotes":["No-prereq schools: McMaster, Queen's, Western, Calgary, Alberta, Memorial, Dalhousie, Saskatchewan, TMU, Manitoba.","Prescriptive: McGill (bio/chem/ochem/physics with labs), Ottawa (bio + hum/soc-sci), Toronto (life sci + soc sci), UBC (English to English+Indigenous)."]},
+
+ {"id":"dent","label":"Dentistry (DDS / DMD)","group":"Medicine & dentistry","exam":"DAT (paused at McGill)",
+  "summary":"Unlike medicine, ALL 10 Canadian dental schools have prescriptive prerequisites, and many specify 'with labs'. Biology, general chemistry and organic chemistry are near-universal; biochemistry (7/10) and physiology (5/10) are common.",
+  "buckets":[
+    {"name":"Biology (with lab)","courses":["BI110","BI111","BI226"],"note":"Near-universal. NOTE BI110/111 have no lab line at WLU; confirm whether a target school requires first-year bio lab specifically."},
+    {"name":"General chemistry (with lab)","courses":["CH110","CH111"],"note":"Near-universal; labs required at most schools."},
+    {"name":"Organic chemistry (with lab)","courses":["CH202","CH203"],"note":"Near-universal; labs required."},
+    {"name":"Biochemistry","courses":["CH250"],"note":"Required at 7/10 schools. CH250 carries a lab."},
+    {"name":"Human physiology","courses":["HN220","HE224","HE225"],"note":"Required at ~5/10 (UofT, UAlberta, USask, Dal, Western)."},
+    {"name":"Physics (with lab)","courses":["PC141","PC142"],"note":"Required at several (McGill, Manitoba, Dalhousie, Quebec schools); labs required."},
+    {"name":"Microbiology","courses":["BI374"],"note":"Required at ~3/10 (UAlberta, USask, Dal). BI374 carries a lab."},
+    {"name":"Statistics","courses":["ST231"],"note":"Required at UAlberta specifically."},
+    {"name":"English / writing","courses":[],"arts":True,"note":"Required at several; Faculty of Arts."},
+    {"name":"Humanities / social science","courses":[],"arts":True,"note":"Required at Dalhousie, Manitoba, Saskatchewan; Faculty of Arts."},
+  ],
+  "schoolNotes":["All 10 schools require the DAT (McGill paused 2024-25).","Heaviest lists: Manitoba, Saskatchewan, Dalhousie. Quebec schools (UdeM, Laval) add 1.5 yr physics + math."]},
+
+ {"id":"labmed","label":"Medical Laboratory Science / Clinical Genetics","group":"Other regulated clinical","exam":"CSMLS certification (after accredited program)",
+  "summary":"MLS and clinical-genetics paths value strong wet-lab technique, microbiology, biochemistry, genetics and cell/molecular biology. WLU is not an accredited MLT program, but these courses build the foundation and support bridging/graduate entry.",
+  "buckets":[
+    {"name":"Genetics & molecular biology","courses":["BI226","BI336"],"note":"Core to clinical genetics."},
+    {"name":"Cell biology","courses":["BI236","BI341"],"note":"BI341 carries a lab."},
+    {"name":"Microbiology (with lab)","courses":["BI374","BI376"],"note":"BI374 carries a lab."},
+    {"name":"Biochemistry","courses":["CH250","CH350"],"note":"CH250 carries a lab."},
+    {"name":"Immunology","courses":["HE303"],"note":"HE303/BI317."},
+    {"name":"Pathophysiology","courses":["HE431"],"note":"HE431/BI416."},
+    {"name":"Statistics","courses":["ST231"],"note":"Lab data interpretation."},
+  ],"schoolNotes":["Confirm against the specific bridging/accredited program's admission list."]},
+
+ {"id":"gc","label":"Genetic Counselling (MSc)","group":"Other regulated clinical","exam":"CAGC/ABGC certification (after MSc)",
+  "summary":"Genetic counselling MSc programs look for genetics depth, psychology, statistics, and demonstrated counselling/advocacy exposure plus communication.",
+  "buckets":[
+    {"name":"Genetics","courses":["BI226","BI336"],"note":"Often a specific genetics course is required."},
+    {"name":"Molecular & cell biology","courses":["BI236"],"note":""},
+    {"name":"Biochemistry","courses":["CH250"],"note":""},
+    {"name":"Psychology","courses":["PS101","PS102"],"note":"Developmental/abnormal psych often expected (Arts/PS)."},
+    {"name":"Statistics","courses":["ST231"],"note":"Commonly required."},
+    {"name":"Communication / KT","courses":["HE605"],"note":"MSc-level; counselling/advocacy exposure valued."},
+  ],"schoolNotes":["Canadian programs (e.g. UofT, UBC, McGill) publish specific prereqs and prior-experience expectations: verify per program."]},
+
+ {"id":"research","label":"Research / Graduate Study (thesis MSc, PhD)","group":"Research & graduate","exam":"GPA + research experience + supervisor match",
+  "summary":"Research paths weight experimental design, lab/computational technique, quantitative and bioinformatics skills, primary-literature appraisal, and scientific communication. The thesis MSc (HE699) and HE490 directed research are the capstones.",
+  "buckets":[
+    {"name":"Cell & molecular biology","courses":["BI236","BI336","BI341"],"note":"BI341 carries a lab."},
+    {"name":"Genetics","courses":["BI226"],"note":""},
+    {"name":"Biochemistry","courses":["CH250","CH350"],"note":""},
+    {"name":"Research methods & appraisal","courses":["HE201","HE603"],"note":"HE603 is the grad critical-appraisal course."},
+    {"name":"Statistics & data","courses":["ST231"],"note":"Add upper-year stats / bioinformatics for omics."},
+    {"name":"Directed research / thesis","courses":["HE490","HE699"],"note":"UG thesis (HE490) and MSc thesis (HE699)."},
+    {"name":"Molecular electives","courses":["HE303","HE431","HE432","HE438"],"note":"Immunology, pathophysiology, virology, cancer biology."},
+  ],"schoolNotes":["A documented authentic research experience matters more than any single course."]},
+
+ {"id":"industry","label":"Biotech / Pharma / Regulatory","group":"Industry","exam":"Degree + technical skills (no single exam)",
+  "summary":"Industry roles (QA/QC, clinical research associate, regulatory affairs, R&D technician) weight hands-on lab technique, GLP/regulatory literacy, data handling, and communication. This is where the experiential/lab gap bites hardest.",
+  "buckets":[
+    {"name":"Lab-bearing science","courses":["CH202","CH250","BI341","BI374"],"note":"Pick courses that actually carry labs (badged below)."},
+    {"name":"Microbiology","courses":["BI374","BI376"],"note":"Relevant to QA/QC and biomanufacturing."},
+    {"name":"Biochemistry","courses":["CH250","CH350"],"note":""},
+    {"name":"Virology / disease biology","courses":["HE432","HE438"],"note":"Biomedical virology, cancer biology."},
+    {"name":"Statistics & data","courses":["ST231"],"note":"Plus coding/bioinformatics for data roles."},
+    {"name":"Communication / KT","courses":["HE605"],"note":"Regulatory and scientific writing."},
+  ],"schoolNotes":["GLP/GMP and regulatory literacy are not currently covered by a dedicated course: candidate gap."]},
+]
+PATHWAY_GROUPS = ["Medicine & dentistry","Other regulated clinical","Research & graduate","Industry"]
+
 data = {
   "2025/2026": merge(d25, "2025/2026"),
   "2026/2027": merge(d26, "2026/2027"),
@@ -262,6 +366,9 @@ data = {
   },
   "gradProgramIssues": GRAD_PROGRAM_ISSUES,
   "gradCoordinator": "Ketan Shankardass (kshankardass@wlu.ca)",
+  "courseIndex": COURSE_INDEX,
+  "pathways": PATHWAYS,
+  "pathwayGroups": PATHWAY_GROUPS,
 }
 json.dump(data, open(os.path.join(base,"dashboard_data.json"),"w",encoding="utf-8"), indent=2, ensure_ascii=False)
 n_issues = sum(len(v) for v in ISSUES.values())+len(PROGRAM_ISSUES)+len(GLOBAL_ISSUES)+len(FACULTY_ISSUES)

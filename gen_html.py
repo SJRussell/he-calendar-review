@@ -163,6 +163,29 @@ a.codelink{color:var(--accent);text-decoration:none}
 .maplbl{fill:var(--mut);font:600 12px sans-serif}
 body.gradmode .lvl-chip, body.gradmode #newOnly{display:none}
 #progSeg button.on{background:var(--accent2)}
+/* pathways */
+.pathbtn{padding:9px 14px;border-radius:10px;border:1px solid var(--line);background:var(--panel2);
+  color:var(--ink);cursor:pointer;font-size:13.5px;font-weight:600}
+.pathbtn.on{background:var(--accent);border-color:var(--accent);color:#fff}
+.pathbtn small{display:block;font-weight:400;color:var(--mut);font-size:11px;margin-top:2px}
+.pathbtn.on small{color:#dbe7ff}
+.pathgrp{font-size:11px;text-transform:uppercase;letter-spacing:.6px;color:var(--mut);width:100%;margin:6px 0 2px}
+.pathhead{background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:16px 18px;margin-bottom:14px}
+.pathhead h2{margin:0 0 6px;font-size:20px}
+.pathhead .exam{display:inline-block;background:var(--panel2);border:1px solid var(--line);border-radius:7px;padding:3px 9px;font-size:12px;color:var(--accent2);margin-bottom:8px}
+.pathhead p{margin:0;color:var(--mut);font-size:13.5px}
+.bucket{background:var(--panel);border:1px solid var(--line);border-radius:11px;padding:12px 14px;margin-bottom:10px}
+.bucket h4{margin:0 0 8px;font-size:14px}
+.bucket .why{color:var(--mut);font-size:12.5px;margin:0 0 9px}
+.cchips{display:flex;gap:7px;flex-wrap:wrap}
+.cchip{display:inline-flex;align-items:center;gap:6px;background:var(--panel2);border:1px solid var(--line);
+  border-radius:8px;padding:5px 9px;font-size:12.5px;text-decoration:none;color:var(--ink)}
+.cchip:hover{border-color:var(--accent)}
+.cchip .lab{font-size:9.5px;font-weight:700;background:var(--low);color:#08120d;border-radius:4px;padding:1px 5px}
+.cchip .ttl{color:var(--mut);font-size:11px}
+.cchip.arts{font-style:italic;color:var(--med);border-style:dashed}
+.schoolnotes{background:var(--panel2);border:1px solid var(--line);border-radius:10px;padding:11px 14px;margin-top:6px;font-size:12.5px;color:var(--mut)}
+.schoolnotes b{color:var(--ink)}
 </style>
 </head>
 <body>
@@ -186,6 +209,7 @@ body.gradmode .lvl-chip, body.gradmode #newOnly{display:none}
   </div>
   <div class="tabs" id="tabs">
     <div class="tab active" data-t="courses">Courses</div>
+    <div class="tab" data-t="pathways">Pathways</div>
     <div class="tab" data-t="issues">Issues</div>
     <div class="tab" data-t="map">Prereq map</div>
     <div class="tab" data-t="diff">Year diff</div>
@@ -226,6 +250,12 @@ body.gradmode .lvl-chip, body.gradmode #newOnly{display:none}
     <a class="proglink" id="progLink" href="#" target="_blank" rel="noopener">Open Honours BSc page on WLU calendar &#8599;</a>
     <div class="progtext" id="progText"></div>
   </section>
+  <!-- PATHWAYS TAB -->
+  <section id="tab-pathways" class="hidden">
+    <div class="note">Destination-based elective guidance. Pick a target path to see which WLU courses build toward it, with lab status and links. <b>Prototype</b> &mdash; school-specific prerequisites are pending verification against official admissions pages before this is shared.</div>
+    <div class="row" id="pathSel" style="margin:12px 0;flex-wrap:wrap"></div>
+    <div id="pathBody"></div>
+  </section>
   <!-- PREREQ MAP TAB -->
   <section id="tab-map" class="hidden">
     <div class="note">Internal HE/HN prerequisite flow (left = lower level). Dashed red nodes are referenced prerequisites with no course entry. Click a node to open the course.</div>
@@ -265,7 +295,7 @@ function mergeOverrides(remote){
     status:      Object.assign({}, BASE_OVERRIDES.status||{},      (remote&&remote.status)||{},      local.status||{}),
   };
 }
-const state = {year:"2026/2027", program:"ug", tab:"courses", view:"expanded", lvl:"all", q:"", issuesOnly:false, newOnly:false, edit:false};
+const state = {year:"2026/2027", program:"ug", tab:"courses", view:"expanded", lvl:"all", q:"", issuesOnly:false, newOnly:false, edit:false, path:"med"};
 const $ = s=>document.querySelector(s);
 const lvlColor = l=>({100:"var(--l100)",200:"var(--l200)",300:"var(--l300)",400:"var(--l400)"}[l]||"#555");
 const gradColors={"Core":"#3a7bd5","MMSC electives":"#c0556a","CPPH electives":"#2bb3a3","Shared electives":"#c98a2b","Thesis & directed":"#7c5cff","Other":"#555"};
@@ -588,19 +618,54 @@ function renderDiff(){
   $("#diffBody").innerHTML=h;
 }
 
+// ---- Destination pathways ----
+function courseChip(code){
+  const ci=DATA.courseIndex[code];
+  if(!ci) return `<span class="cchip" title="not found in calendar">${code}</span>`;
+  const lab=ci.lab?`<span class="lab">LAB</span>`:"";
+  const ttl=ci.title?`<span class="ttl">${ci.title}</span>`:"";
+  const open=`onclick="event.preventDefault();window.open('${ci.url}','_blank')"`;
+  return `<a class="cchip" href="${ci.url}" target="_blank" rel="noopener" ${open}><b>${code}</b>${lab}${ttl}</a>`;
+}
+function renderPathways(){
+  // selector grouped by pathwayGroups
+  let sel="";
+  DATA.pathwayGroups.forEach(g=>{
+    sel+=`<div class="pathgrp">${g}</div>`;
+    DATA.pathways.filter(p=>p.group===g).forEach(p=>{
+      sel+=`<button class="pathbtn ${p.id===state.path?"on":""}" data-path="${p.id}">${p.label}<small>${p.exam}</small></button>`;
+    });
+  });
+  $("#pathSel").innerHTML=sel;
+  document.querySelectorAll("#pathSel .pathbtn").forEach(b=>b.onclick=()=>{state.path=b.dataset.path;renderPathways();});
+  const p=DATA.pathways.find(x=>x.id===state.path)||DATA.pathways[0];
+  let h=`<div class="pathhead"><span class="exam">Target: ${p.exam}</span><h2>${p.label}</h2><p>${p.summary}</p></div>`;
+  p.buckets.forEach(b=>{
+    const chips = b.arts
+      ? `<span class="cchip arts" title="Faculty of Arts, outside Science">Faculty of Arts course</span>`
+      : (b.courses.length? b.courses.map(courseChip).join("") : `<span class="cchip arts">no WLU-Science course</span>`);
+    h+=`<div class="bucket"><h4>${b.name}</h4>${b.note?`<p class="why">${b.note}</p>`:""}<div class="cchips">${chips}</div></div>`;
+  });
+  if(p.schoolNotes&&p.schoolNotes.length)
+    h+=`<div class="schoolnotes"><b>School notes:</b><ul style="margin:6px 0 0;padding-left:18px">${p.schoolNotes.map(n=>`<li>${n}</li>`).join("")}</ul></div>`;
+  $("#pathBody").innerHTML=h;
+}
+
 function setTab(t){
   state.tab=t;
   document.querySelectorAll(".tab").forEach(el=>el.classList.toggle("active",el.dataset.t===t));
-  ["courses","issues","map","diff","program","faculty"].forEach(n=>
+  ["courses","pathways","issues","map","diff","program","faculty"].forEach(n=>
     $("#tab-"+n).classList.toggle("hidden",t!==n));
   if(t==="issues")renderIssues(); else if(t==="program")renderProgram();
-  else if(t==="faculty")renderFaculty(); else if(t==="map")renderMap(); else if(t==="diff")renderDiff();
+  else if(t==="faculty")renderFaculty(); else if(t==="map")renderMap();
+  else if(t==="diff")renderDiff(); else if(t==="pathways")renderPathways();
 }
 function rerender(){
   const t=state.tab;
   if(t==="courses")renderGrid(); else if(t==="issues")renderIssues();
   else if(t==="faculty")renderFaculty(); else if(t==="map")renderMap();
-  else if(t==="diff")renderDiff(); else renderProgram();
+  else if(t==="diff")renderDiff(); else if(t==="pathways")renderPathways();
+  else if(t==="program")renderProgram();
 }
 
 // wire up

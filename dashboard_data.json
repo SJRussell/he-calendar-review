@@ -2745,5 +2745,3528 @@
       "msg": "Both the 'optio n' and 'BSC' typos, and the undefined HE699 asterisk, are present unchanged in 2025/26 and 2026/27. The only 2026/27 change was splitting admission requirements into separate thesis-stream and coursework-stream paragraphs."
     }
   ],
-  "gradCoordinator": "Ketan Shankardass (kshankardass@wlu.ca)"
+  "gradCoordinator": "Ketan Shankardass (kshankardass@wlu.ca)",
+  "courseIndex": {
+    "BI110": {
+      "title": "Unifying Life Processes",
+      "lab": false,
+      "url": "https://academic-calendar.wlu.ca/course.php?c=79331&cal=1&d=3247&s=1170&y=93",
+      "level": 100,
+      "dept": "BI"
+    },
+    "BI111": {
+      "title": "Biological Diversity and Evolution",
+      "lab": false,
+      "url": "https://academic-calendar.wlu.ca/course.php?c=79332&cal=1&d=3247&s=1170&y=93",
+      "level": 100,
+      "dept": "BI"
+    },
+    "BI196": {
+      "title": "Practical Skills for Biologists",
+      "lab": false,
+      "url": "https://academic-calendar.wlu.ca/course.php?c=79367&cal=1&d=3247&s=1170&y=93",
+      "level": 100,
+      "dept": "BI"
+    },
+    "BI206": {
+      "title": "Ecology",
+      "lab": false,
+      "url": "https://academic-calendar.wlu.ca/course.php?c=79368&cal=1&d=3247&s=1170&y=93",
+      "level": 200,
+      "dept": "BI"
+    },
+    "BI226": {
+      "title": "Molecular Biology and Genetics",
+      "lab": false,
+      "url": "https://academic-calendar.wlu.ca/course.php?c=79335&cal=1&d=3247&s=1170&y=93",
+      "level": 200,
+      "dept": "BI"
+    },
+    "BI236": {
+      "title": "Cell Biology",
+      "lab": false,
+      "url": "https://academic-calendar.wlu.ca/course.php?c=79336&cal=1&d=3247&s=1170&y=93",
+      "level": 200,
+      "dept": "BI"
+    },
+    "BI256": {
+      "title": "Life on Earth: Animals",
+      "lab": true,
+      "url": "https://academic-calendar.wlu.ca/course.php?c=79337&cal=1&d=3247&s=1170&y=93",
+      "level": 200,
+      "dept": "BI"
+    },
+    "BI266": {
+      "title": "Life on Earth: Plants",
+      "lab": true,
+      "url": "https://academic-calendar.wlu.ca/course.php?c=79338&cal=1&d=3247&s=1170&y=93",
+      "level": 200,
+      "dept": "BI"
+    },
+    "BI276": {
+      "title": "Life on Earth: Microbes",
+      "lab": true,
+      "url": "https://academic-calendar.wlu.ca/course.php?c=79339&cal=1&d=3247&s=1170&y=93",
+      "level": 200,
+      "dept": "BI"
+    },
+    "BI300": {
+      "title": "Environmental Toxicology",
+      "lab": true,
+      "url": "https://academic-calendar.wlu.ca/course.php?c=79312&cal=1&d=3247&s=1170&y=93",
+      "level": 300,
+      "dept": "BI"
+    },
+    "BI302": {
+      "title": "Evolution",
+      "lab": false,
+      "url": "https://academic-calendar.wlu.ca/course.php?c=79314&cal=1&d=3247&s=1170&y=93",
+      "level": 300,
+      "dept": "BI"
+    },
+    "BI303": {
+      "title": "Arctic Ecology",
+      "lab": false,
+      "url": "https://academic-calendar.wlu.ca/course.php?c=81982&cal=1&d=3247&s=1170&y=93",
+      "level": 300,
+      "dept": "BI"
+    },
+    "BI305": {
+      "title": "Origin of Life on Earth and Endosymbiotic Theory",
+      "lab": false,
+      "url": "https://academic-calendar.wlu.ca/course.php?c=79355&cal=1&d=3247&s=1170&y=93",
+      "level": 300,
+      "dept": "BI"
+    },
+    "BI306": {
+      "title": "Global Biogeography and Conservation Biology",
+      "lab": false,
+      "url": "https://academic-calendar.wlu.ca/course.php?c=79313&cal=1&d=3247&s=1170&y=93",
+      "level": 300,
+      "dept": "BI"
+    },
+    "BI307/WASC303": {
+      "title": "Limnology Field Methods",
+      "lab": true,
+      "url": "https://academic-calendar.wlu.ca/course.php?c=79371&cal=1&d=3247&s=1170&y=93",
+      "level": 300,
+      "dept": "BI"
+    },
+    "BI308": {
+      "title": "Behavioural Ecology",
+      "lab": true,
+      "url": "https://academic-calendar.wlu.ca/course.php?c=79315&cal=1&d=3247&s=1170&y=93",
+      "level": 300,
+      "dept": "BI"
+    },
+    "BI309": {
+      "title": "Population Ecology",
+      "lab": true,
+      "url": "https://academic-calendar.wlu.ca/course.php?c=79333&cal=1&d=3247&s=1170&y=93",
+      "level": 300,
+      "dept": "BI"
+    },
+    "BI317/HE303": {
+      "title": "Introduction to Immunology",
+      "lab": false,
+      "url": "https://academic-calendar.wlu.ca/course.php?c=79369&cal=1&d=3247&s=1170&y=93",
+      "level": 300,
+      "dept": "BI"
+    },
+    "BI326/CH454": {
+      "title": "Bioinformatics",
+      "lab": true,
+      "url": "https://academic-calendar.wlu.ca/course.php?c=79327&cal=1&d=3247&s=1170&y=93",
+      "level": 300,
+      "dept": "BI"
+    },
+    "BI330": {
+      "title": "Fundamentals of Histology",
+      "lab": false,
+      "url": "https://academic-calendar.wlu.ca/course.php?c=79357&cal=1&d=3247&s=1170&y=93",
+      "level": 300,
+      "dept": "BI"
+    },
+    "BI336": {
+      "title": "Molecular Cell Biology",
+      "lab": false,
+      "url": "https://academic-calendar.wlu.ca/course.php?c=79343&cal=1&d=3247&s=1170&y=93",
+      "level": 300,
+      "dept": "BI"
+    },
+    "BI341": {
+      "title": "Lab Methods: Cell and Molecular Biology",
+      "lab": true,
+      "url": "https://academic-calendar.wlu.ca/course.php?c=79370&cal=1&d=3247&s=1170&y=93",
+      "level": 300,
+      "dept": "BI"
+    },
+    "BI349": {
+      "title": "Embryology",
+      "lab": true,
+      "url": "https://academic-calendar.wlu.ca/course.php?c=79346&cal=1&d=3247&s=1170&y=93",
+      "level": 300,
+      "dept": "BI"
+    },
+    "BI356": {
+      "title": "Animals in the Anthropocene",
+      "lab": false,
+      "url": "https://academic-calendar.wlu.ca/course.php?c=79372&cal=1&d=3247&s=1170&y=93",
+      "level": 300,
+      "dept": "BI"
+    },
+    "BI358": {
+      "title": "Animals: Form and Function",
+      "lab": false,
+      "url": "https://academic-calendar.wlu.ca/course.php?c=79350&cal=1&d=3247&s=1170&y=93",
+      "level": 300,
+      "dept": "BI"
+    },
+    "BI359": {
+      "title": "Comparative Vertebrate Anatomy",
+      "lab": true,
+      "url": "https://academic-calendar.wlu.ca/course.php?c=79366&cal=1&d=3247&s=1170&y=93",
+      "level": 300,
+      "dept": "BI"
+    },
+    "BI363": {
+      "title": "Plant Ecology",
+      "lab": true,
+      "url": "https://academic-calendar.wlu.ca/course.php?c=79364&cal=1&d=3247&s=1170&y=93",
+      "level": 300,
+      "dept": "BI"
+    },
+    "BI366": {
+      "title": "Molecular Biology of Plant Growth",
+      "lab": false,
+      "url": "https://academic-calendar.wlu.ca/course.php?c=81984&cal=1&d=3247&s=1170&y=93",
+      "level": 300,
+      "dept": "BI"
+    },
+    "BI367": {
+      "title": "Field Botany - Flora of Ontario",
+      "lab": false,
+      "url": "https://academic-calendar.wlu.ca/course.php?c=79329&cal=1&d=3247&s=1170&y=93",
+      "level": 300,
+      "dept": "BI"
+    },
+    "BI368": {
+      "title": "Plants: Form and Function",
+      "lab": true,
+      "url": "https://academic-calendar.wlu.ca/course.php?c=79342&cal=1&d=3247&s=1170&y=93",
+      "level": 300,
+      "dept": "BI"
+    },
+    "BI369": {
+      "title": "Plant Physiology",
+      "lab": true,
+      "url": "https://academic-calendar.wlu.ca/course.php?c=79361&cal=1&d=3247&s=1170&y=93",
+      "level": 300,
+      "dept": "BI"
+    },
+    "BI374": {
+      "title": "Physiological Applications of Microbiology",
+      "lab": true,
+      "url": "https://academic-calendar.wlu.ca/course.php?c=79330&cal=1&d=3247&s=1170&y=93",
+      "level": 300,
+      "dept": "BI"
+    },
+    "BI376": {
+      "title": "Microbial Physiology",
+      "lab": false,
+      "url": "https://academic-calendar.wlu.ca/course.php?c=79363&cal=1&d=3247&s=1170&y=93",
+      "level": 300,
+      "dept": "BI"
+    },
+    "BI390": {
+      "title": "Field Studies I – OUPFB",
+      "lab": false,
+      "url": "https://academic-calendar.wlu.ca/course.php?c=79328&cal=1&d=3247&s=1170&y=93",
+      "level": 300,
+      "dept": "BI"
+    },
+    "BI391": {
+      "title": "Field Ecology of Southern Ontario",
+      "lab": false,
+      "url": "https://academic-calendar.wlu.ca/course.php?c=79323&cal=1&d=3247&s=1170&y=93",
+      "level": 300,
+      "dept": "BI"
+    },
+    "BI392": {
+      "title": "Field Studies II – OUPFB",
+      "lab": false,
+      "url": "https://academic-calendar.wlu.ca/course.php?c=79334&cal=1&d=3247&s=1170&y=93",
+      "level": 300,
+      "dept": "BI"
+    },
+    "BI393": {
+      "title": "Biostatistics",
+      "lab": false,
+      "url": "https://academic-calendar.wlu.ca/course.php?c=79356&cal=1&d=3247&s=1170&y=93",
+      "level": 300,
+      "dept": "BI"
+    },
+    "BI394": {
+      "title": "The Changing North: Subarctic Ecosystems in the Face of Climate Warming",
+      "lab": false,
+      "url": "https://academic-calendar.wlu.ca/course.php?c=79359&cal=1&d=3247&s=1170&y=93",
+      "level": 300,
+      "dept": "BI"
+    },
+    "BI396": {
+      "title": "Special Topics in Biology",
+      "lab": false,
+      "url": "https://academic-calendar.wlu.ca/course.php?c=79316&cal=1&d=3247&s=1170&y=93",
+      "level": 300,
+      "dept": "BI"
+    },
+    "BI400": {
+      "title": "Ecological Risk Assessment and Sustainability",
+      "lab": false,
+      "url": "https://academic-calendar.wlu.ca/course.php?c=79317&cal=1&d=3247&s=1170&y=93",
+      "level": 400,
+      "dept": "BI"
+    },
+    "BI405": {
+      "title": "Community Ecology",
+      "lab": true,
+      "url": "https://academic-calendar.wlu.ca/course.php?c=79318&cal=1&d=3247&s=1170&y=93",
+      "level": 400,
+      "dept": "BI"
+    },
+    "BI407": {
+      "title": "Animal Communication",
+      "lab": false,
+      "url": "https://academic-calendar.wlu.ca/course.php?c=79344&cal=1&d=3247&s=1170&y=93",
+      "level": 400,
+      "dept": "BI"
+    },
+    "BI416/HE431": {
+      "title": "Pathophysiology",
+      "lab": false,
+      "url": "https://academic-calendar.wlu.ca/course.php?c=79360&cal=1&d=3247&s=1170&y=93",
+      "level": 400,
+      "dept": "BI"
+    },
+    "BI426": {
+      "title": "Genome Dynamics",
+      "lab": false,
+      "url": "https://academic-calendar.wlu.ca/course.php?c=79319&cal=1&d=3247&s=1170&y=93",
+      "level": 400,
+      "dept": "BI"
+    },
+    "BI431": {
+      "title": "Microtechniques",
+      "lab": true,
+      "url": "https://academic-calendar.wlu.ca/course.php?c=79320&cal=1&d=3247&s=1170&y=93",
+      "level": 400,
+      "dept": "BI"
+    },
+    "BI439": {
+      "title": "Vertebrate Microscopic Anatomy",
+      "lab": true,
+      "url": "https://academic-calendar.wlu.ca/course.php?c=79345&cal=1&d=3247&s=1170&y=93",
+      "level": 400,
+      "dept": "BI"
+    },
+    "BI441": {
+      "title": "Advanced Molecular Biotechnology",
+      "lab": true,
+      "url": "https://academic-calendar.wlu.ca/course.php?c=79349&cal=1&d=3247&s=1170&y=93",
+      "level": 400,
+      "dept": "BI"
+    },
+    "BI449": {
+      "title": "Developmental Biology",
+      "lab": true,
+      "url": "https://academic-calendar.wlu.ca/course.php?c=79347&cal=1&d=3247&s=1170&y=93",
+      "level": 400,
+      "dept": "BI"
+    },
+    "BI451": {
+      "title": "Fish Physiological Adaptations",
+      "lab": false,
+      "url": "https://academic-calendar.wlu.ca/course.php?c=79365&cal=1&d=3247&s=1170&y=93",
+      "level": 400,
+      "dept": "BI"
+    },
+    "BI456": {
+      "title": "Environmental Physiology of Animals",
+      "lab": true,
+      "url": "https://academic-calendar.wlu.ca/course.php?c=79351&cal=1&d=3247&s=1170&y=93",
+      "level": 400,
+      "dept": "BI"
+    },
+    "BI458": {
+      "title": "Vertebrate Biodiversity and Conservation",
+      "lab": false,
+      "url": "https://academic-calendar.wlu.ca/course.php?c=79348&cal=1&d=3247&s=1170&y=93",
+      "level": 400,
+      "dept": "BI"
+    },
+    "BI459": {
+      "title": "Endocrinology",
+      "lab": false,
+      "url": "https://academic-calendar.wlu.ca/course.php?c=79353&cal=1&d=3247&s=1170&y=93",
+      "level": 400,
+      "dept": "BI"
+    },
+    "BI463": {
+      "title": "Environmental Stress Biology of Plants",
+      "lab": false,
+      "url": "https://academic-calendar.wlu.ca/course.php?c=79354&cal=1&d=3247&s=1170&y=93",
+      "level": 400,
+      "dept": "BI"
+    },
+    "BI464": {
+      "title": "Plants and People",
+      "lab": false,
+      "url": "https://academic-calendar.wlu.ca/course.php?c=79340&cal=1&d=3247&s=1170&y=93",
+      "level": 400,
+      "dept": "BI"
+    },
+    "BI468": {
+      "title": "Plant Biodiversity and Conservation",
+      "lab": false,
+      "url": "https://academic-calendar.wlu.ca/course.php?c=79341&cal=1&d=3247&s=1170&y=93",
+      "level": 400,
+      "dept": "BI"
+    },
+    "BI470/HE432": {
+      "title": "Biomedical Virology",
+      "lab": false,
+      "url": "https://academic-calendar.wlu.ca/course.php?c=79362&cal=1&d=3247&s=1170&y=93",
+      "level": 400,
+      "dept": "BI"
+    },
+    "BI475": {
+      "title": "Environmental Microbiology",
+      "lab": true,
+      "url": "https://academic-calendar.wlu.ca/course.php?c=79321&cal=1&d=3247&s=1170&y=93",
+      "level": 400,
+      "dept": "BI"
+    },
+    "BI476": {
+      "title": "Microbial Disease",
+      "lab": true,
+      "url": "https://academic-calendar.wlu.ca/course.php?c=79322&cal=1&d=3247&s=1170&y=93",
+      "level": 400,
+      "dept": "BI"
+    },
+    "BI484": {
+      "title": "Fundamentals of Parasitology",
+      "lab": true,
+      "url": "https://academic-calendar.wlu.ca/course.php?c=79358&cal=1&d=3247&s=1170&y=93",
+      "level": 400,
+      "dept": "BI"
+    },
+    "BI488": {
+      "title": "Invertebrate Biodiversity and Conservation",
+      "lab": true,
+      "url": "https://academic-calendar.wlu.ca/course.php?c=79352&cal=1&d=3247&s=1170&y=93",
+      "level": 400,
+      "dept": "BI"
+    },
+    "BI491": {
+      "title": "Science Communication",
+      "lab": false,
+      "url": "https://academic-calendar.wlu.ca/course.php?c=79373&cal=1&d=3247&s=1170&y=93",
+      "level": 400,
+      "dept": "BI"
+    },
+    "BI495": {
+      "title": "Directed Studies",
+      "lab": false,
+      "url": "https://academic-calendar.wlu.ca/course.php?c=79324&cal=1&d=3247&s=1170&y=93",
+      "level": 400,
+      "dept": "BI"
+    },
+    "BI496": {
+      "title": "Special Topics in Advanced Biology",
+      "lab": false,
+      "url": "https://academic-calendar.wlu.ca/course.php?c=79325&cal=1&d=3247&s=1170&y=93",
+      "level": 400,
+      "dept": "BI"
+    },
+    "BI499": {
+      "title": "Thesis",
+      "lab": true,
+      "url": "https://academic-calendar.wlu.ca/course.php?c=79326&cal=1&d=3247&s=1170&y=93",
+      "level": 400,
+      "dept": "BI"
+    },
+    "CH110": {
+      "title": "Fundamentals of Chemistry I",
+      "lab": true,
+      "url": "https://academic-calendar.wlu.ca/course.php?c=79374&cal=1&d=3248&s=1170&y=93",
+      "level": 100,
+      "dept": "CH"
+    },
+    "CH111": {
+      "title": "Fundamentals of Chemistry II",
+      "lab": true,
+      "url": "https://academic-calendar.wlu.ca/course.php?c=79375&cal=1&d=3248&s=1170&y=93",
+      "level": 100,
+      "dept": "CH"
+    },
+    "CH130": {
+      "title": "General Chemistry I",
+      "lab": true,
+      "url": "https://academic-calendar.wlu.ca/course.php?c=79406&cal=1&d=3248&s=1170&y=93",
+      "level": 100,
+      "dept": "CH"
+    },
+    "CH131": {
+      "title": "General Chemistry II",
+      "lab": true,
+      "url": "https://academic-calendar.wlu.ca/course.php?c=79423&cal=1&d=3248&s=1170&y=93",
+      "level": 100,
+      "dept": "CH"
+    },
+    "CH202": {
+      "title": "Organic Chemistry I: Fundamentals",
+      "lab": true,
+      "url": "https://academic-calendar.wlu.ca/course.php?c=79376&cal=1&d=3248&s=1170&y=93",
+      "level": 200,
+      "dept": "CH"
+    },
+    "CH203": {
+      "title": "Organic Chemistry II: Structure and Functional Group Chemistry",
+      "lab": true,
+      "url": "https://academic-calendar.wlu.ca/course.php?c=79377&cal=1&d=3248&s=1170&y=93",
+      "level": 200,
+      "dept": "CH"
+    },
+    "CH205": {
+      "title": "Introductory Organic Chemistry II",
+      "lab": false,
+      "url": "https://academic-calendar.wlu.ca/course.php?c=79378&cal=1&d=3248&s=1170&y=93",
+      "level": 200,
+      "dept": "CH"
+    },
+    "CH206": {
+      "title": "Organic Chemistry I: Fundamentals for Chemists",
+      "lab": true,
+      "url": "https://academic-calendar.wlu.ca/course.php?c=79424&cal=1&d=3248&s=1170&y=93",
+      "level": 200,
+      "dept": "CH"
+    },
+    "CH207": {
+      "title": "Organic Chemistry II: Structure and Functional Group Chemistry for Chemists",
+      "lab": true,
+      "url": "https://academic-calendar.wlu.ca/course.php?c=79425&cal=1&d=3248&s=1170&y=93",
+      "level": 200,
+      "dept": "CH"
+    },
+    "CH212": {
+      "title": "Physical Chemistry 1A",
+      "lab": false,
+      "url": "https://academic-calendar.wlu.ca/course.php?c=79379&cal=1&d=3248&s=1170&y=93",
+      "level": 200,
+      "dept": "CH"
+    },
+    "CH225": {
+      "title": "Inorganic Chemistry I",
+      "lab": false,
+      "url": "https://academic-calendar.wlu.ca/course.php?c=79382&cal=1&d=3248&s=1170&y=93",
+      "level": 200,
+      "dept": "CH"
+    },
+    "CH226": {
+      "title": "Inorganic Chemistry II",
+      "lab": true,
+      "url": "https://academic-calendar.wlu.ca/course.php?c=79383&cal=1&d=3248&s=1170&y=93",
+      "level": 200,
+      "dept": "CH"
+    },
+    "CH233": {
+      "title": "Environmental Atmospheric Chemistry",
+      "lab": false,
+      "url": "https://academic-calendar.wlu.ca/course.php?c=79384&cal=1&d=3248&s=1170&y=93",
+      "level": 200,
+      "dept": "CH"
+    },
+    "CH234": {
+      "title": "Environmental Aquatic Chemistry",
+      "lab": false,
+      "url": "https://academic-calendar.wlu.ca/course.php?c=79385&cal=1&d=3248&s=1170&y=93",
+      "level": 200,
+      "dept": "CH"
+    },
+    "CH250": {
+      "title": "Introductory Biochemistry",
+      "lab": true,
+      "url": "https://academic-calendar.wlu.ca/course.php?c=79387&cal=1&d=3248&s=1170&y=93",
+      "level": 200,
+      "dept": "CH"
+    },
+    "CH261": {
+      "title": "Analytical Chemistry I",
+      "lab": true,
+      "url": "https://academic-calendar.wlu.ca/course.php?c=79418&cal=1&d=3248&s=1170&y=93",
+      "level": 200,
+      "dept": "CH"
+    },
+    "CH262": {
+      "title": "Analytical Chemistry II – Instrumental Analysis",
+      "lab": true,
+      "url": "https://academic-calendar.wlu.ca/course.php?c=79419&cal=1&d=3248&s=1170&y=93",
+      "level": 200,
+      "dept": "CH"
+    },
+    "CH271": {
+      "title": "Chemistry and Sustainability",
+      "lab": true,
+      "url": "https://academic-calendar.wlu.ca/course.php?c=82015&cal=1&d=3248&s=1170&y=93",
+      "level": 200,
+      "dept": "CH"
+    },
+    "CH301": {
+      "title": "Organic Chemistry III: Synthetic Methods",
+      "lab": true,
+      "url": "https://academic-calendar.wlu.ca/course.php?c=79388&cal=1&d=3248&s=1170&y=93",
+      "level": 300,
+      "dept": "CH"
+    },
+    "CH302": {
+      "title": "Intermediate Organic Chemistry",
+      "lab": false,
+      "url": "https://academic-calendar.wlu.ca/course.php?c=79422&cal=1&d=3248&s=1170&y=93",
+      "level": 300,
+      "dept": "CH"
+    },
+    "CH303": {
+      "title": "Spectroscopic Methods in Organic Structure Elucidation",
+      "lab": false,
+      "url": "https://academic-calendar.wlu.ca/course.php?c=79389&cal=1&d=3248&s=1170&y=93",
+      "level": 300,
+      "dept": "CH"
+    },
+    "CH306": {
+      "title": "Modern Physical Organic Chemistry",
+      "lab": false,
+      "url": "https://academic-calendar.wlu.ca/course.php?c=79390&cal=1&d=3248&s=1170&y=93",
+      "level": 300,
+      "dept": "CH"
+    },
+    "CH311": {
+      "title": "Physical Chemistry 2B",
+      "lab": false,
+      "url": "https://academic-calendar.wlu.ca/course.php?c=79381&cal=1&d=3248&s=1170&y=93",
+      "level": 300,
+      "dept": "CH"
+    },
+    "CH312": {
+      "title": "Physical Chemistry 2A",
+      "lab": true,
+      "url": "https://academic-calendar.wlu.ca/course.php?c=79380&cal=1&d=3248&s=1170&y=93",
+      "level": 300,
+      "dept": "CH"
+    },
+    "CH313": {
+      "title": "Quantum Chemistry",
+      "lab": true,
+      "url": "https://academic-calendar.wlu.ca/course.php?c=79391&cal=1&d=3248&s=1170&y=93",
+      "level": 300,
+      "dept": "CH"
+    },
+    "CH327": {
+      "title": "Bioinorganic Chemistry",
+      "lab": false,
+      "url": "https://academic-calendar.wlu.ca/course.php?c=79392&cal=1&d=3248&s=1170&y=93",
+      "level": 300,
+      "dept": "CH"
+    },
+    "CH328": {
+      "title": "Organometallic Chemistry",
+      "lab": false,
+      "url": "https://academic-calendar.wlu.ca/course.php?c=79393&cal=1&d=3248&s=1170&y=93",
+      "level": 300,
+      "dept": "CH"
+    },
+    "CH332": {
+      "title": "Biophysical Chemistry",
+      "lab": false,
+      "url": "https://academic-calendar.wlu.ca/course.php?c=79421&cal=1&d=3248&s=1170&y=93",
+      "level": 300,
+      "dept": "CH"
+    },
+    "CH340": {
+      "title": "Polymers and Soft Matter",
+      "lab": false,
+      "url": "https://academic-calendar.wlu.ca/course.php?c=79394&cal=1&d=3248&s=1170&y=93",
+      "level": 300,
+      "dept": "CH"
+    },
+    "CH341": {
+      "title": "Lab Methods: Cell and Molecular Biology",
+      "lab": true,
+      "url": "https://academic-calendar.wlu.ca/course.php?c=79426&cal=1&d=3248&s=1170&y=93",
+      "level": 300,
+      "dept": "CH"
+    },
+    "CH345": {
+      "title": "Introduction to Modern Materials",
+      "lab": false,
+      "url": "https://academic-calendar.wlu.ca/course.php?c=79386&cal=1&d=3248&s=1170&y=93",
+      "level": 300,
+      "dept": "CH"
+    },
+    "CH350": {
+      "title": "Biochemistry I: Bioenergetics and Catabolic Pathways",
+      "lab": false,
+      "url": "https://academic-calendar.wlu.ca/course.php?c=79395&cal=1&d=3248&s=1170&y=93",
+      "level": 300,
+      "dept": "CH"
+    },
+    "CH354": {
+      "title": "Biochemistry II: Structure and Analysis of Proteins and Nucleic Acids",
+      "lab": false,
+      "url": "https://academic-calendar.wlu.ca/course.php?c=79398&cal=1&d=3248&s=1170&y=93",
+      "level": 300,
+      "dept": "CH"
+    },
+    "CH355": {
+      "title": "Bioanalytical Chemistry",
+      "lab": false,
+      "url": "https://academic-calendar.wlu.ca/course.php?c=79399&cal=1&d=3248&s=1170&y=93",
+      "level": 300,
+      "dept": "CH"
+    },
+    "CH356": {
+      "title": "Biotechnology",
+      "lab": false,
+      "url": "https://academic-calendar.wlu.ca/course.php?c=79400&cal=1&d=3248&s=1170&y=93",
+      "level": 300,
+      "dept": "CH"
+    },
+    "CH357": {
+      "title": "Laboratory Techniques in Biochemistry",
+      "lab": true,
+      "url": "https://academic-calendar.wlu.ca/course.php?c=79396&cal=1&d=3248&s=1170&y=93",
+      "level": 300,
+      "dept": "CH"
+    },
+    "CH358": {
+      "title": "Visualization and Analysis of Biomolecules",
+      "lab": true,
+      "url": "https://academic-calendar.wlu.ca/course.php?c=79410&cal=1&d=3248&s=1170&y=93",
+      "level": 300,
+      "dept": "CH"
+    },
+    "CH360": {
+      "title": "Advanced Instrumental Analysis",
+      "lab": false,
+      "url": "https://academic-calendar.wlu.ca/course.php?c=79417&cal=1&d=3248&s=1170&y=93",
+      "level": 300,
+      "dept": "CH"
+    },
+    "CH390": {
+      "title": "Chemical Literature and Scientific Communication",
+      "lab": false,
+      "url": "https://academic-calendar.wlu.ca/course.php?c=79416&cal=1&d=3248&s=1170&y=93",
+      "level": 300,
+      "dept": "CH"
+    },
+    "CH404": {
+      "title": "Organic Chemistry IV: Advanced Organic Synthesis",
+      "lab": false,
+      "url": "https://academic-calendar.wlu.ca/course.php?c=79401&cal=1&d=3248&s=1170&y=93",
+      "level": 400,
+      "dept": "CH"
+    },
+    "CH419": {
+      "title": "Principles of Biochemical Toxicology",
+      "lab": false,
+      "url": "https://academic-calendar.wlu.ca/course.php?c=79402&cal=1&d=3248&s=1170&y=93",
+      "level": 400,
+      "dept": "CH"
+    },
+    "CH432": {
+      "title": "Dynamic Chemistry of Life",
+      "lab": false,
+      "url": "https://academic-calendar.wlu.ca/course.php?c=79403&cal=1&d=3248&s=1170&y=93",
+      "level": 400,
+      "dept": "CH"
+    },
+    "CH440": {
+      "title": "Introduction to Nanomaterials",
+      "lab": false,
+      "url": "https://academic-calendar.wlu.ca/course.php?c=79404&cal=1&d=3248&s=1170&y=93",
+      "level": 400,
+      "dept": "CH"
+    },
+    "CH450": {
+      "title": "Enzymology",
+      "lab": false,
+      "url": "https://academic-calendar.wlu.ca/course.php?c=79405&cal=1&d=3248&s=1170&y=93",
+      "level": 400,
+      "dept": "CH"
+    },
+    "CH452": {
+      "title": "Capstone Biochemistry Laboratory",
+      "lab": true,
+      "url": "https://academic-calendar.wlu.ca/course.php?c=79407&cal=1&d=3248&s=1170&y=93",
+      "level": 400,
+      "dept": "CH"
+    },
+    "CH453": {
+      "title": "Molecular Principles of Drug Design",
+      "lab": false,
+      "url": "https://academic-calendar.wlu.ca/course.php?c=79408&cal=1&d=3248&s=1170&y=93",
+      "level": 400,
+      "dept": "CH"
+    },
+    "CH454/BI326": {
+      "title": "Bioinformatics: Genomics and Proteomics",
+      "lab": false,
+      "url": "https://academic-calendar.wlu.ca/course.php?c=79409&cal=1&d=3248&s=1170&y=93",
+      "level": 400,
+      "dept": "CH"
+    },
+    "CH456": {
+      "title": "Medicinal Chemistry",
+      "lab": false,
+      "url": "https://academic-calendar.wlu.ca/course.php?c=79411&cal=1&d=3248&s=1170&y=93",
+      "level": 400,
+      "dept": "CH"
+    },
+    "CH458": {
+      "title": "Molecular Approaches to Diagnostics and Therapy",
+      "lab": false,
+      "url": "https://academic-calendar.wlu.ca/course.php?c=79412&cal=1&d=3248&s=1170&y=93",
+      "level": 400,
+      "dept": "CH"
+    },
+    "CH459": {
+      "title": "Biochemistry III: Membrane Transport, Signal Transduction and Anabolic Pathways",
+      "lab": false,
+      "url": "https://academic-calendar.wlu.ca/course.php?c=79397&cal=1&d=3248&s=1170&y=93",
+      "level": 400,
+      "dept": "CH"
+    },
+    "CH480": {
+      "title": "Special Topics in Chemistry",
+      "lab": false,
+      "url": "https://academic-calendar.wlu.ca/course.php?c=79413&cal=1&d=3248&s=1170&y=93",
+      "level": 400,
+      "dept": "CH"
+    },
+    "CH490": {
+      "title": "Honours Thesis Research in Chemistry and Biochemistry",
+      "lab": false,
+      "url": "https://academic-calendar.wlu.ca/course.php?c=79414&cal=1&d=3248&s=1170&y=93",
+      "level": 400,
+      "dept": "CH"
+    },
+    "CH495": {
+      "title": "Directed Studies",
+      "lab": false,
+      "url": "https://academic-calendar.wlu.ca/course.php?c=79415&cal=1&d=3248&s=1170&y=93",
+      "level": 400,
+      "dept": "CH"
+    },
+    "KP100": {
+      "title": "Foundations of Physical Literacy",
+      "lab": true,
+      "url": "https://academic-calendar.wlu.ca/course.php?c=79508&cal=1&d=3250&s=1170&y=93",
+      "level": 100,
+      "dept": "KP"
+    },
+    "KP131": {
+      "title": "Fundamentals of a Physically Active and Healthy Lifestyle",
+      "lab": false,
+      "url": "https://academic-calendar.wlu.ca/course.php?c=81965&cal=1&d=3250&s=1170&y=93",
+      "level": 100,
+      "dept": "KP"
+    },
+    "KP161": {
+      "title": "Fundamentals of Motor Learning and Control",
+      "lab": false,
+      "url": "https://academic-calendar.wlu.ca/course.php?c=79505&cal=1&d=3250&s=1170&y=93",
+      "level": 100,
+      "dept": "KP"
+    },
+    "KP181": {
+      "title": "Fundamentals of Sport and Exercise Psychology",
+      "lab": false,
+      "url": "https://academic-calendar.wlu.ca/course.php?c=79507&cal=1&d=3250&s=1170&y=93",
+      "level": 100,
+      "dept": "KP"
+    },
+    "KP200": {
+      "title": "Applied Movement and Skills Development",
+      "lab": false,
+      "url": "https://academic-calendar.wlu.ca/course.php?c=79502&cal=1&d=3250&s=1170&y=93",
+      "level": 200,
+      "dept": "KP"
+    },
+    "KP211/SY211": {
+      "title": "Sociology of Physical Activity",
+      "lab": false,
+      "url": "https://academic-calendar.wlu.ca/course.php?c=79484&cal=1&d=3250&s=1170&y=93",
+      "level": 200,
+      "dept": "KP"
+    },
+    "KP221/HN210": {
+      "title": "Functional Human Anatomy",
+      "lab": true,
+      "url": "https://academic-calendar.wlu.ca/course.php?c=79486&cal=1&d=3250&s=1170&y=93",
+      "level": 200,
+      "dept": "KP"
+    },
+    "KP222/HN220": {
+      "title": "Human Physiology",
+      "lab": true,
+      "url": "https://academic-calendar.wlu.ca/course.php?c=79485&cal=1&d=3250&s=1170&y=93",
+      "level": 200,
+      "dept": "KP"
+    },
+    "KP224/HE224/HS202": {
+      "title": "Anatomy and Physiology I",
+      "lab": true,
+      "url": "https://academic-calendar.wlu.ca/course.php?c=82056&cal=1&d=3250&s=1170&y=93",
+      "level": 200,
+      "dept": "KP"
+    },
+    "KP225/HE225;HS204": {
+      "title": "Anatomy and Physiology II",
+      "lab": true,
+      "url": "https://academic-calendar.wlu.ca/course.php?c=82058&cal=1&d=3250&s=1170&y=93",
+      "level": 200,
+      "dept": "KP"
+    },
+    "KP226": {
+      "title": "Fundamentals of Exercise Prescription",
+      "lab": true,
+      "url": "https://academic-calendar.wlu.ca/course.php?c=81966&cal=1&d=3250&s=1170&y=93",
+      "level": 200,
+      "dept": "KP"
+    },
+    "KP231": {
+      "title": "Fundamentals of Health",
+      "lab": false,
+      "url": "https://academic-calendar.wlu.ca/course.php?c=79487&cal=1&d=3250&s=1170&y=93",
+      "level": 200,
+      "dept": "KP"
+    },
+    "KP241": {
+      "title": "Humanities of Sport and Athletic Bodies",
+      "lab": false,
+      "url": "https://academic-calendar.wlu.ca/course.php?c=79506&cal=1&d=3250&s=1170&y=93",
+      "level": 200,
+      "dept": "KP"
+    },
+    "KP251": {
+      "title": "Fundamentals of Biomechanics",
+      "lab": false,
+      "url": "https://academic-calendar.wlu.ca/course.php?c=79516&cal=1&d=3250&s=1170&y=93",
+      "level": 200,
+      "dept": "KP"
+    },
+    "KP290": {
+      "title": "Research Methods",
+      "lab": false,
+      "url": "https://academic-calendar.wlu.ca/course.php?c=79520&cal=1&d=3250&s=1170&y=93",
+      "level": 200,
+      "dept": "KP"
+    },
+    "KP300": {
+      "title": "Teaching and Coaching Physical Activity and Sport",
+      "lab": false,
+      "url": "https://academic-calendar.wlu.ca/course.php?c=79504&cal=1&d=3250&s=1170&y=93",
+      "level": 300,
+      "dept": "KP"
+    },
+    "KP311": {
+      "title": "Gender and Media in Sport",
+      "lab": false,
+      "url": "https://academic-calendar.wlu.ca/course.php?c=79482&cal=1&d=3250&s=1170&y=93",
+      "level": 300,
+      "dept": "KP"
+    },
+    "KP320/HE320": {
+      "title": "Integrative Human Physiology",
+      "lab": false,
+      "url": "https://academic-calendar.wlu.ca/course.php?c=82053&cal=1&d=3250&s=1170&y=93",
+      "level": 300,
+      "dept": "KP"
+    },
+    "KP321/HE321": {
+      "title": "Regional Human Anatomy",
+      "lab": true,
+      "url": "https://academic-calendar.wlu.ca/course.php?c=82054&cal=1&d=3250&s=1170&y=93",
+      "level": 300,
+      "dept": "KP"
+    },
+    "KP322": {
+      "title": "Exercise Physiology",
+      "lab": true,
+      "url": "https://academic-calendar.wlu.ca/course.php?c=79491&cal=1&d=3250&s=1170&y=93",
+      "level": 300,
+      "dept": "KP"
+    },
+    "KP327": {
+      "title": "Fundamentals of Human Nutrition and Health",
+      "lab": false,
+      "url": "https://academic-calendar.wlu.ca/course.php?c=81968&cal=1&d=3250&s=1170&y=93",
+      "level": 300,
+      "dept": "KP"
+    },
+    "KP331": {
+      "title": "Health and Illness Across the Lifespan",
+      "lab": false,
+      "url": "https://academic-calendar.wlu.ca/course.php?c=79519&cal=1&d=3250&s=1170&y=93",
+      "level": 300,
+      "dept": "KP"
+    },
+    "KP332": {
+      "title": "Exercise Nutrition",
+      "lab": false,
+      "url": "https://academic-calendar.wlu.ca/course.php?c=79493&cal=1&d=3250&s=1170&y=93",
+      "level": 300,
+      "dept": "KP"
+    },
+    "KP340": {
+      "title": "Special Topics",
+      "lab": false,
+      "url": "https://academic-calendar.wlu.ca/course.php?c=79494&cal=1&d=3250&s=1170&y=93",
+      "level": 300,
+      "dept": "KP"
+    },
+    "KP341": {
+      "title": "History of Physical Activity and Sport in Canada",
+      "lab": false,
+      "url": "https://academic-calendar.wlu.ca/course.php?c=79495&cal=1&d=3250&s=1170&y=93",
+      "level": 300,
+      "dept": "KP"
+    },
+    "KP342": {
+      "title": "Directed Studies",
+      "lab": false,
+      "url": "https://academic-calendar.wlu.ca/course.php?c=79496&cal=1&d=3250&s=1170&y=93",
+      "level": 300,
+      "dept": "KP"
+    },
+    "KP343/GS343": {
+      "title": "Sport Development, Governance, and Globalization",
+      "lab": false,
+      "url": "https://academic-calendar.wlu.ca/course.php?c=79483&cal=1&d=3250&s=1170&y=93",
+      "level": 300,
+      "dept": "KP"
+    },
+    "KP344": {
+      "title": "Organization and Administration in Physical Activity and Sport",
+      "lab": false,
+      "url": "https://academic-calendar.wlu.ca/course.php?c=79488&cal=1&d=3250&s=1170&y=93",
+      "level": 300,
+      "dept": "KP"
+    },
+    "KP345": {
+      "title": "Sport Personalities, Celebrities, and Rivalries",
+      "lab": false,
+      "url": "https://academic-calendar.wlu.ca/course.php?c=79536&cal=1&d=3250&s=1170&y=93",
+      "level": 300,
+      "dept": "KP"
+    },
+    "KP351": {
+      "title": "Biomechanics of Human Movement",
+      "lab": true,
+      "url": "https://academic-calendar.wlu.ca/course.php?c=79497&cal=1&d=3250&s=1170&y=93",
+      "level": 300,
+      "dept": "KP"
+    },
+    "KP361": {
+      "title": "Sensorimotor Control and Learning Across the Lifespan",
+      "lab": false,
+      "url": "https://academic-calendar.wlu.ca/course.php?c=79498&cal=1&d=3250&s=1170&y=93",
+      "level": 300,
+      "dept": "KP"
+    },
+    "KP362": {
+      "title": "Motor Development Across the Lifespan",
+      "lab": false,
+      "url": "https://academic-calendar.wlu.ca/course.php?c=81967&cal=1&d=3250&s=1170&y=93",
+      "level": 300,
+      "dept": "KP"
+    },
+    "KP371": {
+      "title": "Disability, Developmental Delays and Physical Activity",
+      "lab": false,
+      "url": "https://academic-calendar.wlu.ca/course.php?c=79499&cal=1&d=3250&s=1170&y=93",
+      "level": 300,
+      "dept": "KP"
+    },
+    "KP381": {
+      "title": "Advanced Psychology of Sport and Exercise",
+      "lab": false,
+      "url": "https://academic-calendar.wlu.ca/course.php?c=79517&cal=1&d=3250&s=1170&y=93",
+      "level": 300,
+      "dept": "KP"
+    },
+    "KP390": {
+      "title": "Data Analysis and Statistics",
+      "lab": true,
+      "url": "https://academic-calendar.wlu.ca/course.php?c=79489&cal=1&d=3250&s=1170&y=93",
+      "level": 300,
+      "dept": "KP"
+    },
+    "KP400": {
+      "title": "Movement Programming Across the Lifespan",
+      "lab": false,
+      "url": "https://academic-calendar.wlu.ca/course.php?c=81969&cal=1&d=3250&s=1170&y=93",
+      "level": 400,
+      "dept": "KP"
+    },
+    "KP422": {
+      "title": "Advanced Exercise Physiology",
+      "lab": false,
+      "url": "https://academic-calendar.wlu.ca/course.php?c=79500&cal=1&d=3250&s=1170&y=93",
+      "level": 400,
+      "dept": "KP"
+    },
+    "KP425": {
+      "title": "Neuromuscular Function in Exercise",
+      "lab": false,
+      "url": "https://academic-calendar.wlu.ca/course.php?c=79514&cal=1&d=3250&s=1170&y=93",
+      "level": 400,
+      "dept": "KP"
+    },
+    "KP426": {
+      "title": "Fitness Assessment and Exercise Prescription",
+      "lab": true,
+      "url": "https://academic-calendar.wlu.ca/course.php?c=79492&cal=1&d=3250&s=1170&y=93",
+      "level": 400,
+      "dept": "KP"
+    },
+    "KP431": {
+      "title": "Aging, Physical Activity and Health",
+      "lab": false,
+      "url": "https://academic-calendar.wlu.ca/course.php?c=79515&cal=1&d=3250&s=1170&y=93",
+      "level": 400,
+      "dept": "KP"
+    },
+    "KP434/HE300": {
+      "title": "Epidemiology",
+      "lab": false,
+      "url": "https://academic-calendar.wlu.ca/course.php?c=79527&cal=1&d=3250&s=1170&y=93",
+      "level": 400,
+      "dept": "KP"
+    },
+    "KP435/HE435": {
+      "title": "Exercise is Medicine",
+      "lab": false,
+      "url": "https://academic-calendar.wlu.ca/course.php?c=79528&cal=1&d=3250&s=1170&y=93",
+      "level": 400,
+      "dept": "KP"
+    },
+    "KP441": {
+      "title": "The Modern Olympic Games",
+      "lab": false,
+      "url": "https://academic-calendar.wlu.ca/course.php?c=79521&cal=1&d=3250&s=1170&y=93",
+      "level": 400,
+      "dept": "KP"
+    },
+    "KP442": {
+      "title": "Marketing in Sport and Physical Activity",
+      "lab": false,
+      "url": "https://academic-calendar.wlu.ca/course.php?c=79522&cal=1&d=3250&s=1170&y=93",
+      "level": 400,
+      "dept": "KP"
+    },
+    "KP443": {
+      "title": "Ethics in Sport and Athletic Bodies",
+      "lab": false,
+      "url": "https://academic-calendar.wlu.ca/course.php?c=79529&cal=1&d=3250&s=1170&y=93",
+      "level": 400,
+      "dept": "KP"
+    },
+    "KP451": {
+      "title": "Advanced Biomechanics",
+      "lab": true,
+      "url": "https://academic-calendar.wlu.ca/course.php?c=79530&cal=1&d=3250&s=1170&y=93",
+      "level": 400,
+      "dept": "KP"
+    },
+    "KP452": {
+      "title": "Occupational Biomechanics and Ergonomics",
+      "lab": false,
+      "url": "https://academic-calendar.wlu.ca/course.php?c=79531&cal=1&d=3250&s=1170&y=93",
+      "level": 400,
+      "dept": "KP"
+    },
+    "KP460": {
+      "title": "Children in Physical Activity",
+      "lab": false,
+      "url": "https://academic-calendar.wlu.ca/course.php?c=79523&cal=1&d=3250&s=1170&y=93",
+      "level": 400,
+      "dept": "KP"
+    },
+    "KP465": {
+      "title": "Clinical Disorders of Balance, Posture, and Gait",
+      "lab": false,
+      "url": "https://academic-calendar.wlu.ca/course.php?c=79533&cal=1&d=3250&s=1170&y=93",
+      "level": 400,
+      "dept": "KP"
+    },
+    "KP466": {
+      "title": "Neurocognitive Control of Movement",
+      "lab": false,
+      "url": "https://academic-calendar.wlu.ca/course.php?c=79525&cal=1&d=3250&s=1170&y=93",
+      "level": 400,
+      "dept": "KP"
+    },
+    "KP471": {
+      "title": "Adapted Physical Activity for Individuals with Disabilities",
+      "lab": false,
+      "url": "https://academic-calendar.wlu.ca/course.php?c=79534&cal=1&d=3250&s=1170&y=93",
+      "level": 400,
+      "dept": "KP"
+    },
+    "KP472": {
+      "title": "Athletic Injuries",
+      "lab": false,
+      "url": "https://academic-calendar.wlu.ca/course.php?c=79490&cal=1&d=3250&s=1170&y=93",
+      "level": 400,
+      "dept": "KP"
+    },
+    "KP481": {
+      "title": "Applied Psychology of Human Performance",
+      "lab": false,
+      "url": "https://academic-calendar.wlu.ca/course.php?c=79518&cal=1&d=3250&s=1170&y=93",
+      "level": 400,
+      "dept": "KP"
+    },
+    "KP482": {
+      "title": "Behaviour Change and Physical Activity",
+      "lab": false,
+      "url": "https://academic-calendar.wlu.ca/course.php?c=79526&cal=1&d=3250&s=1170&y=93",
+      "level": 400,
+      "dept": "KP"
+    },
+    "KP483": {
+      "title": "Psychology of Injury Rehabilitation in Sport and Physical Activity",
+      "lab": false,
+      "url": "https://academic-calendar.wlu.ca/course.php?c=79535&cal=1&d=3250&s=1170&y=93",
+      "level": 400,
+      "dept": "KP"
+    },
+    "KP484": {
+      "title": "Group Dynamics in Team Performance Environments",
+      "lab": false,
+      "url": "https://academic-calendar.wlu.ca/course.php?c=79524&cal=1&d=3250&s=1170&y=93",
+      "level": 400,
+      "dept": "KP"
+    },
+    "KP490": {
+      "title": "Undergraduate Thesis Research Proposal",
+      "lab": false,
+      "url": "https://academic-calendar.wlu.ca/course.php?c=79501&cal=1&d=3250&s=1170&y=93",
+      "level": 400,
+      "dept": "KP"
+    },
+    "KP491": {
+      "title": "Undergraduate Thesis Research Project",
+      "lab": false,
+      "url": "https://academic-calendar.wlu.ca/course.php?c=79513&cal=1&d=3250&s=1170&y=93",
+      "level": 400,
+      "dept": "KP"
+    },
+    "KP492": {
+      "title": "Qualitative Research Design and Analysis",
+      "lab": false,
+      "url": "https://academic-calendar.wlu.ca/course.php?c=79532&cal=1&d=3250&s=1170&y=93",
+      "level": 400,
+      "dept": "KP"
+    },
+    "KP494": {
+      "title": "Athletic Therapy Practicum",
+      "lab": false,
+      "url": "https://academic-calendar.wlu.ca/course.php?c=82026&cal=1&d=3250&s=1170&y=93",
+      "level": 400,
+      "dept": "KP"
+    },
+    "KP495": {
+      "title": "Strength and Conditioning Practicum",
+      "lab": false,
+      "url": "https://academic-calendar.wlu.ca/course.php?c=82027&cal=1&d=3250&s=1170&y=93",
+      "level": 400,
+      "dept": "KP"
+    },
+    "KP496": {
+      "title": "Sun Life Centre for Healthy Communities – Practicum",
+      "lab": false,
+      "url": "https://academic-calendar.wlu.ca/course.php?c=82028&cal=1&d=3250&s=1170&y=93",
+      "level": 400,
+      "dept": "KP"
+    },
+    "MA100": {
+      "title": "Introductory Calculus for the Natural Sciences",
+      "lab": true,
+      "url": "https://academic-calendar.wlu.ca/course.php?c=79592&cal=1&d=3251&s=1170&y=93",
+      "level": 100,
+      "dept": "MA"
+    },
+    "MA101": {
+      "title": "Calculus I for the Natural Sciences",
+      "lab": true,
+      "url": "https://academic-calendar.wlu.ca/course.php?c=79593&cal=1&d=3251&s=1170&y=93",
+      "level": 100,
+      "dept": "MA"
+    },
+    "MA102": {
+      "title": "Introduction to Functions and Differential Calculus",
+      "lab": true,
+      "url": "https://academic-calendar.wlu.ca/course.php?c=79544&cal=1&d=3251&s=1170&y=93",
+      "level": 100,
+      "dept": "MA"
+    },
+    "MA103": {
+      "title": "Calculus I",
+      "lab": true,
+      "url": "https://academic-calendar.wlu.ca/course.php?c=79542&cal=1&d=3251&s=1170&y=93",
+      "level": 100,
+      "dept": "MA"
+    },
+    "MA104": {
+      "title": "Calculus II",
+      "lab": true,
+      "url": "https://academic-calendar.wlu.ca/course.php?c=79543&cal=1&d=3251&s=1170&y=93",
+      "level": 100,
+      "dept": "MA"
+    },
+    "MA120": {
+      "title": "Foundations and Applications of Mathematics",
+      "lab": true,
+      "url": "https://academic-calendar.wlu.ca/course.php?c=79538&cal=1&d=3251&s=1170&y=93",
+      "level": 100,
+      "dept": "MA"
+    },
+    "MA121": {
+      "title": "Introduction to Mathematical Proofs",
+      "lab": true,
+      "url": "https://academic-calendar.wlu.ca/course.php?c=79545&cal=1&d=3251&s=1170&y=93",
+      "level": 100,
+      "dept": "MA"
+    },
+    "MA122": {
+      "title": "Introductory Linear Algebra",
+      "lab": true,
+      "url": "https://academic-calendar.wlu.ca/course.php?c=79546&cal=1&d=3251&s=1170&y=93",
+      "level": 100,
+      "dept": "MA"
+    },
+    "MA123": {
+      "title": "Introductory Linear Algebra with Applications",
+      "lab": true,
+      "url": "https://academic-calendar.wlu.ca/course.php?c=79615&cal=1&d=3251&s=1170&y=93",
+      "level": 100,
+      "dept": "MA"
+    },
+    "MA127": {
+      "title": "Mathematics for Business Technology Management",
+      "lab": false,
+      "url": "https://academic-calendar.wlu.ca/course.php?c=79598&cal=1&d=3251&s=1170&y=93",
+      "level": 100,
+      "dept": "MA"
+    },
+    "MA129": {
+      "title": "Introductory Calculus for Business and Social Sciences",
+      "lab": true,
+      "url": "https://academic-calendar.wlu.ca/course.php?c=79589&cal=1&d=3251&s=1170&y=93",
+      "level": 100,
+      "dept": "MA"
+    },
+    "MA170": {
+      "title": "Introduction to Mathematics for Finance",
+      "lab": true,
+      "url": "https://academic-calendar.wlu.ca/course.php?c=79547&cal=1&d=3251&s=1170&y=93",
+      "level": 100,
+      "dept": "MA"
+    },
+    "MA200": {
+      "title": "Advanced Calculus",
+      "lab": true,
+      "url": "https://academic-calendar.wlu.ca/course.php?c=79539&cal=1&d=3251&s=1170&y=93",
+      "level": 200,
+      "dept": "MA"
+    },
+    "MA201": {
+      "title": "Multivariable Calculus",
+      "lab": true,
+      "url": "https://academic-calendar.wlu.ca/course.php?c=79548&cal=1&d=3251&s=1170&y=93",
+      "level": 200,
+      "dept": "MA"
+    },
+    "MA205": {
+      "title": "Differential Equations I",
+      "lab": true,
+      "url": "https://academic-calendar.wlu.ca/course.php?c=79549&cal=1&d=3251&s=1170&y=93",
+      "level": 200,
+      "dept": "MA"
+    },
+    "MA207": {
+      "title": "Introduction to Mathematical Software",
+      "lab": true,
+      "url": "https://academic-calendar.wlu.ca/course.php?c=79610&cal=1&d=3251&s=1170&y=93",
+      "level": 200,
+      "dept": "MA"
+    },
+    "MA215": {
+      "title": "Set Theory",
+      "lab": false,
+      "url": "https://academic-calendar.wlu.ca/course.php?c=79550&cal=1&d=3251&s=1170&y=93",
+      "level": 200,
+      "dept": "MA"
+    },
+    "MA218": {
+      "title": "Euclidean Geometry",
+      "lab": false,
+      "url": "https://academic-calendar.wlu.ca/course.php?c=79595&cal=1&d=3251&s=1170&y=93",
+      "level": 200,
+      "dept": "MA"
+    },
+    "MA220": {
+      "title": "Mathematics for Data Analysis and Computing",
+      "lab": true,
+      "url": "https://academic-calendar.wlu.ca/course.php?c=79611&cal=1&d=3251&s=1170&y=93",
+      "level": 200,
+      "dept": "MA"
+    },
+    "MA222": {
+      "title": "Linear Algebra",
+      "lab": true,
+      "url": "https://academic-calendar.wlu.ca/course.php?c=79551&cal=1&d=3251&s=1170&y=93",
+      "level": 200,
+      "dept": "MA"
+    },
+    "MA233": {
+      "title": "Problem Solving in Mathematics",
+      "lab": false,
+      "url": "https://academic-calendar.wlu.ca/course.php?c=79552&cal=1&d=3251&s=1170&y=93",
+      "level": 200,
+      "dept": "MA"
+    },
+    "MA235": {
+      "title": "Introduction to Game Theory",
+      "lab": false,
+      "url": "https://academic-calendar.wlu.ca/course.php?c=79553&cal=1&d=3251&s=1170&y=93",
+      "level": 200,
+      "dept": "MA"
+    },
+    "MA238": {
+      "title": "Discrete Mathematics",
+      "lab": false,
+      "url": "https://academic-calendar.wlu.ca/course.php?c=79554&cal=1&d=3251&s=1170&y=93",
+      "level": 200,
+      "dept": "MA"
+    },
+    "MA250": {
+      "title": "Introduction to Analysis",
+      "lab": true,
+      "url": "https://academic-calendar.wlu.ca/course.php?c=79555&cal=1&d=3251&s=1170&y=93",
+      "level": 200,
+      "dept": "MA"
+    },
+    "MA270": {
+      "title": "Financial Mathematics I",
+      "lab": true,
+      "url": "https://academic-calendar.wlu.ca/course.php?c=79557&cal=1&d=3251&s=1170&y=93",
+      "level": 200,
+      "dept": "MA"
+    },
+    "MA287": {
+      "title": "Mathematical Models for Natural Sciences",
+      "lab": true,
+      "url": "https://academic-calendar.wlu.ca/course.php?c=79590&cal=1&d=3251&s=1170&y=93",
+      "level": 200,
+      "dept": "MA"
+    },
+    "MA304": {
+      "title": "Introduction to Complex Analysis",
+      "lab": false,
+      "url": "https://academic-calendar.wlu.ca/course.php?c=79558&cal=1&d=3251&s=1170&y=93",
+      "level": 300,
+      "dept": "MA"
+    },
+    "MA305": {
+      "title": "Differential Equations II",
+      "lab": false,
+      "url": "https://academic-calendar.wlu.ca/course.php?c=79559&cal=1&d=3251&s=1170&y=93",
+      "level": 300,
+      "dept": "MA"
+    },
+    "MA306": {
+      "title": "Partial Differential Equations I",
+      "lab": false,
+      "url": "https://academic-calendar.wlu.ca/course.php?c=79612&cal=1&d=3251&s=1170&y=93",
+      "level": 300,
+      "dept": "MA"
+    },
+    "MA307": {
+      "title": "Numerical Analysis",
+      "lab": true,
+      "url": "https://academic-calendar.wlu.ca/course.php?c=79560&cal=1&d=3251&s=1170&y=93",
+      "level": 300,
+      "dept": "MA"
+    },
+    "MA317": {
+      "title": "Number Theory",
+      "lab": false,
+      "url": "https://academic-calendar.wlu.ca/course.php?c=79562&cal=1&d=3251&s=1170&y=93",
+      "level": 300,
+      "dept": "MA"
+    },
+    "MA318": {
+      "title": "Geometry",
+      "lab": false,
+      "url": "https://academic-calendar.wlu.ca/course.php?c=79563&cal=1&d=3251&s=1170&y=93",
+      "level": 300,
+      "dept": "MA"
+    },
+    "MA323": {
+      "title": "Introduction to Groups and Rings",
+      "lab": false,
+      "url": "https://academic-calendar.wlu.ca/course.php?c=79564&cal=1&d=3251&s=1170&y=93",
+      "level": 300,
+      "dept": "MA"
+    },
+    "MA338": {
+      "title": "Graph Theory",
+      "lab": false,
+      "url": "https://academic-calendar.wlu.ca/course.php?c=79565&cal=1&d=3251&s=1170&y=93",
+      "level": 300,
+      "dept": "MA"
+    },
+    "MA339": {
+      "title": "Directed Studies in Mathematics",
+      "lab": false,
+      "url": "https://academic-calendar.wlu.ca/course.php?c=79566&cal=1&d=3251&s=1170&y=93",
+      "level": 300,
+      "dept": "MA"
+    },
+    "MA350": {
+      "title": "Real Analysis",
+      "lab": false,
+      "url": "https://academic-calendar.wlu.ca/course.php?c=79561&cal=1&d=3251&s=1170&y=93",
+      "level": 300,
+      "dept": "MA"
+    },
+    "MA355": {
+      "title": "Continuous and Discrete Transforms",
+      "lab": true,
+      "url": "https://academic-calendar.wlu.ca/course.php?c=79556&cal=1&d=3251&s=1170&y=93",
+      "level": 300,
+      "dept": "MA"
+    },
+    "MA360": {
+      "title": "Topics in Applied Mathematics",
+      "lab": false,
+      "url": "https://academic-calendar.wlu.ca/course.php?c=79570&cal=1&d=3251&s=1170&y=93",
+      "level": 300,
+      "dept": "MA"
+    },
+    "MA361": {
+      "title": "Methods in Applied Mathematics",
+      "lab": false,
+      "url": "https://academic-calendar.wlu.ca/course.php?c=79613&cal=1&d=3251&s=1170&y=93",
+      "level": 300,
+      "dept": "MA"
+    },
+    "MA370": {
+      "title": "Financial Mathematics II",
+      "lab": false,
+      "url": "https://academic-calendar.wlu.ca/course.php?c=79571&cal=1&d=3251&s=1170&y=93",
+      "level": 300,
+      "dept": "MA"
+    },
+    "MA371": {
+      "title": "Computational Methods for Data Analysis",
+      "lab": true,
+      "url": "https://academic-calendar.wlu.ca/course.php?c=79572&cal=1&d=3251&s=1170&y=93",
+      "level": 300,
+      "dept": "MA"
+    },
+    "MA372": {
+      "title": "Optimization",
+      "lab": false,
+      "url": "https://academic-calendar.wlu.ca/course.php?c=79573&cal=1&d=3251&s=1170&y=93",
+      "level": 300,
+      "dept": "MA"
+    },
+    "MA373": {
+      "title": "Introduction to Actuarial Mathematics",
+      "lab": false,
+      "url": "https://academic-calendar.wlu.ca/course.php?c=79599&cal=1&d=3251&s=1170&y=93",
+      "level": 300,
+      "dept": "MA"
+    },
+    "MA395": {
+      "title": "Special Topics",
+      "lab": false,
+      "url": "https://academic-calendar.wlu.ca/course.php?c=79574&cal=1&d=3251&s=1170&y=93",
+      "level": 300,
+      "dept": "MA"
+    },
+    "MA405": {
+      "title": "Dynamical Systems",
+      "lab": false,
+      "url": "https://academic-calendar.wlu.ca/course.php?c=79614&cal=1&d=3251&s=1170&y=93",
+      "level": 400,
+      "dept": "MA"
+    },
+    "MA406": {
+      "title": "Partial Differential Equations II",
+      "lab": false,
+      "url": "https://academic-calendar.wlu.ca/course.php?c=79578&cal=1&d=3251&s=1170&y=93",
+      "level": 400,
+      "dept": "MA"
+    },
+    "MA418": {
+      "title": "Differential Geometry",
+      "lab": false,
+      "url": "https://academic-calendar.wlu.ca/course.php?c=79596&cal=1&d=3251&s=1170&y=93",
+      "level": 400,
+      "dept": "MA"
+    },
+    "MA422": {
+      "title": "Advanced Linear Algebra",
+      "lab": false,
+      "url": "https://academic-calendar.wlu.ca/course.php?c=79575&cal=1&d=3251&s=1170&y=93",
+      "level": 400,
+      "dept": "MA"
+    },
+    "MA425": {
+      "title": "Group Theory",
+      "lab": false,
+      "url": "https://academic-calendar.wlu.ca/course.php?c=79576&cal=1&d=3251&s=1170&y=93",
+      "level": 400,
+      "dept": "MA"
+    },
+    "MA450": {
+      "title": "Measure and Integration",
+      "lab": false,
+      "url": "https://academic-calendar.wlu.ca/course.php?c=79577&cal=1&d=3251&s=1170&y=93",
+      "level": 400,
+      "dept": "MA"
+    },
+    "MA464": {
+      "title": "Mathematical Biology",
+      "lab": false,
+      "url": "https://academic-calendar.wlu.ca/course.php?c=79597&cal=1&d=3251&s=1170&y=93",
+      "level": 400,
+      "dept": "MA"
+    },
+    "MA465": {
+      "title": "General Topology",
+      "lab": false,
+      "url": "https://academic-calendar.wlu.ca/course.php?c=79579&cal=1&d=3251&s=1170&y=93",
+      "level": 400,
+      "dept": "MA"
+    },
+    "MA469": {
+      "title": "Financial Mathematics III: Fixed-Income Modelling",
+      "lab": false,
+      "url": "https://academic-calendar.wlu.ca/course.php?c=79616&cal=1&d=3251&s=1170&y=93",
+      "level": 400,
+      "dept": "MA"
+    },
+    "MA470": {
+      "title": "Financial Mathematics III: Advanced Financial Modelling",
+      "lab": false,
+      "url": "https://academic-calendar.wlu.ca/course.php?c=79580&cal=1&d=3251&s=1170&y=93",
+      "level": 400,
+      "dept": "MA"
+    },
+    "MA471": {
+      "title": "Computational Methods in Finance",
+      "lab": true,
+      "url": "https://academic-calendar.wlu.ca/course.php?c=79594&cal=1&d=3251&s=1170&y=93",
+      "level": 400,
+      "dept": "MA"
+    },
+    "MA475": {
+      "title": "Ring and Field Theory",
+      "lab": false,
+      "url": "https://academic-calendar.wlu.ca/course.php?c=79581&cal=1&d=3251&s=1170&y=93",
+      "level": 400,
+      "dept": "MA"
+    },
+    "MA477": {
+      "title": "Quantitative Financial Risk Management",
+      "lab": false,
+      "url": "https://academic-calendar.wlu.ca/course.php?c=79541&cal=1&d=3251&s=1170&y=93",
+      "level": 400,
+      "dept": "MA"
+    },
+    "MA480": {
+      "title": "Directed Research",
+      "lab": false,
+      "url": "https://academic-calendar.wlu.ca/course.php?c=79582&cal=1&d=3251&s=1170&y=93",
+      "level": 400,
+      "dept": "MA"
+    },
+    "MA485": {
+      "title": "Directed Studies",
+      "lab": false,
+      "url": "https://academic-calendar.wlu.ca/course.php?c=79583&cal=1&d=3251&s=1170&y=93",
+      "level": 400,
+      "dept": "MA"
+    },
+    "MA487": {
+      "title": "Mathematical Modelling in the Applied Sciences and Finance",
+      "lab": false,
+      "url": "https://academic-calendar.wlu.ca/course.php?c=79584&cal=1&d=3251&s=1170&y=93",
+      "level": 400,
+      "dept": "MA"
+    },
+    "MA489": {
+      "title": "Honours Seminar",
+      "lab": false,
+      "url": "https://academic-calendar.wlu.ca/course.php?c=79585&cal=1&d=3251&s=1170&y=93",
+      "level": 400,
+      "dept": "MA"
+    },
+    "MA495": {
+      "title": "Special Topics",
+      "lab": false,
+      "url": "https://academic-calendar.wlu.ca/course.php?c=79588&cal=1&d=3251&s=1170&y=93",
+      "level": 400,
+      "dept": "MA"
+    },
+    "PARA200": {
+      "title": "Evolution of the Field of Paramedicine",
+      "lab": false,
+      "url": "https://academic-calendar.wlu.ca/course.php?c=79666&cal=1&d=3267&s=1170&y=93",
+      "level": 200,
+      "dept": "PARA"
+    },
+    "PARA201": {
+      "title": "Paramedicine in Canada and Around the World",
+      "lab": false,
+      "url": "https://academic-calendar.wlu.ca/course.php?c=79667&cal=1&d=3267&s=1170&y=93",
+      "level": 200,
+      "dept": "PARA"
+    },
+    "PARA300": {
+      "title": "Emerging Issues & Critical Topics in Paramedicine",
+      "lab": false,
+      "url": "https://academic-calendar.wlu.ca/course.php?c=79668&cal=1&d=3267&s=1170&y=93",
+      "level": 300,
+      "dept": "PARA"
+    },
+    "PARA301": {
+      "title": "The Health & Wellbeing of Paramedics",
+      "lab": false,
+      "url": "https://academic-calendar.wlu.ca/course.php?c=79669&cal=1&d=3267&s=1170&y=93",
+      "level": 300,
+      "dept": "PARA"
+    },
+    "PARA302": {
+      "title": "Understanding and Caring for Diverse Populations",
+      "lab": false,
+      "url": "https://academic-calendar.wlu.ca/course.php?c=79670&cal=1&d=3267&s=1170&y=93",
+      "level": 300,
+      "dept": "PARA"
+    },
+    "PARA303": {
+      "title": "The Paramedic Identity: Who are we?",
+      "lab": false,
+      "url": "https://academic-calendar.wlu.ca/course.php?c=79671&cal=1&d=3267&s=1170&y=93",
+      "level": 300,
+      "dept": "PARA"
+    },
+    "PARA400": {
+      "title": "Ethical and Legal Considerations in Paramedicine",
+      "lab": false,
+      "url": "https://academic-calendar.wlu.ca/course.php?c=79672&cal=1&d=3267&s=1170&y=93",
+      "level": 400,
+      "dept": "PARA"
+    },
+    "PARA401": {
+      "title": "The Business of Paramedicine",
+      "lab": false,
+      "url": "https://academic-calendar.wlu.ca/course.php?c=79673&cal=1&d=3267&s=1170&y=93",
+      "level": 400,
+      "dept": "PARA"
+    },
+    "PARA402": {
+      "title": "Paramedics as Leaders",
+      "lab": false,
+      "url": "https://academic-calendar.wlu.ca/course.php?c=79674&cal=1&d=3267&s=1170&y=93",
+      "level": 400,
+      "dept": "PARA"
+    },
+    "PC122": {
+      "title": "Thermodynamics of Planetary Health",
+      "lab": true,
+      "url": "https://academic-calendar.wlu.ca/course.php?c=82030&cal=1&d=3245&s=1170&y=93",
+      "level": 100,
+      "dept": "PC"
+    },
+    "PC131": {
+      "title": "Mechanics",
+      "lab": true,
+      "url": "https://academic-calendar.wlu.ca/course.php?c=79208&cal=1&d=3245&s=1170&y=93",
+      "level": 100,
+      "dept": "PC"
+    },
+    "PC132": {
+      "title": "Thermodynamics and Waves",
+      "lab": true,
+      "url": "https://academic-calendar.wlu.ca/course.php?c=79209&cal=1&d=3245&s=1170&y=93",
+      "level": 100,
+      "dept": "PC"
+    },
+    "PC141": {
+      "title": "Mechanics for the Life Sciences",
+      "lab": true,
+      "url": "https://academic-calendar.wlu.ca/course.php?c=79211&cal=1&d=3245&s=1170&y=93",
+      "level": 100,
+      "dept": "PC"
+    },
+    "PC142": {
+      "title": "Thermodynamics and Waves for the Life Sciences",
+      "lab": true,
+      "url": "https://academic-calendar.wlu.ca/course.php?c=79212&cal=1&d=3245&s=1170&y=93",
+      "level": 100,
+      "dept": "PC"
+    },
+    "PC151": {
+      "title": "Introduction to Mechanics",
+      "lab": false,
+      "url": "https://academic-calendar.wlu.ca/course.php?c=79236&cal=1&d=3245&s=1170&y=93",
+      "level": 100,
+      "dept": "PC"
+    },
+    "PC152": {
+      "title": "Introduction to Thermodynamics and Waves",
+      "lab": false,
+      "url": "https://academic-calendar.wlu.ca/course.php?c=79237&cal=1&d=3245&s=1170&y=93",
+      "level": 100,
+      "dept": "PC"
+    },
+    "PC161": {
+      "title": "Introduction to Mechanics for Life Sciences",
+      "lab": false,
+      "url": "https://academic-calendar.wlu.ca/course.php?c=79238&cal=1&d=3245&s=1170&y=93",
+      "level": 100,
+      "dept": "PC"
+    },
+    "PC162": {
+      "title": "Introduction to Thermodynamics and Waves for Life Sciences",
+      "lab": false,
+      "url": "https://academic-calendar.wlu.ca/course.php?c=79239&cal=1&d=3245&s=1170&y=93",
+      "level": 100,
+      "dept": "PC"
+    },
+    "PC212": {
+      "title": "Electricity and Magnetism",
+      "lab": false,
+      "url": "https://academic-calendar.wlu.ca/course.php?c=79213&cal=1&d=3245&s=1170&y=93",
+      "level": 200,
+      "dept": "PC"
+    },
+    "PC220/CP220": {
+      "title": "Digital Electronics",
+      "lab": false,
+      "url": "https://academic-calendar.wlu.ca/course.php?c=79207&cal=1&d=3245&s=1170&y=93",
+      "level": 200,
+      "dept": "PC"
+    },
+    "PC221/CP221": {
+      "title": "Analog Electronics I",
+      "lab": true,
+      "url": "https://academic-calendar.wlu.ca/course.php?c=79214&cal=1&d=3245&s=1170&y=93",
+      "level": 200,
+      "dept": "PC"
+    },
+    "PC234": {
+      "title": "Planetary and Space Science",
+      "lab": false,
+      "url": "https://academic-calendar.wlu.ca/course.php?c=79206&cal=1&d=3245&s=1170&y=93",
+      "level": 200,
+      "dept": "PC"
+    },
+    "PC235": {
+      "title": "Classical Mechanics",
+      "lab": false,
+      "url": "https://academic-calendar.wlu.ca/course.php?c=79231&cal=1&d=3245&s=1170&y=93",
+      "level": 200,
+      "dept": "PC"
+    },
+    "PC236": {
+      "title": "Fundamentals of Photonics",
+      "lab": false,
+      "url": "https://academic-calendar.wlu.ca/course.php?c=79210&cal=1&d=3245&s=1170&y=93",
+      "level": 200,
+      "dept": "PC"
+    },
+    "PC237": {
+      "title": "Optics",
+      "lab": true,
+      "url": "https://academic-calendar.wlu.ca/course.php?c=79215&cal=1&d=3245&s=1170&y=93",
+      "level": 200,
+      "dept": "PC"
+    },
+    "PC242": {
+      "title": "Modern Physics",
+      "lab": false,
+      "url": "https://academic-calendar.wlu.ca/course.php?c=79216&cal=1&d=3245&s=1170&y=93",
+      "level": 200,
+      "dept": "PC"
+    },
+    "PC305/CP305": {
+      "title": "Quantum Software Development",
+      "lab": false,
+      "url": "https://academic-calendar.wlu.ca/course.php?c=79243&cal=1&d=3245&s=1170&y=93",
+      "level": 300,
+      "dept": "PC"
+    },
+    "PC310": {
+      "title": "Special Topics",
+      "lab": false,
+      "url": "https://academic-calendar.wlu.ca/course.php?c=79234&cal=1&d=3245&s=1170&y=93",
+      "level": 300,
+      "dept": "PC"
+    },
+    "PC315/CP315": {
+      "title": "Introduction to Scientific Computation",
+      "lab": false,
+      "url": "https://academic-calendar.wlu.ca/course.php?c=79217&cal=1&d=3245&s=1170&y=93",
+      "level": 300,
+      "dept": "PC"
+    },
+    "PC319/CP319": {
+      "title": "Digital System Design",
+      "lab": false,
+      "url": "https://academic-calendar.wlu.ca/course.php?c=79218&cal=1&d=3245&s=1170&y=93",
+      "level": 300,
+      "dept": "PC"
+    },
+    "PC320/CP320": {
+      "title": "Physical Computing: Digital Interaction with the Analog World",
+      "lab": true,
+      "url": "https://academic-calendar.wlu.ca/course.php?c=79240&cal=1&d=3245&s=1170&y=93",
+      "level": 300,
+      "dept": "PC"
+    },
+    "PC321": {
+      "title": "Quantum Mechanics I",
+      "lab": false,
+      "url": "https://academic-calendar.wlu.ca/course.php?c=79219&cal=1&d=3245&s=1170&y=93",
+      "level": 300,
+      "dept": "PC"
+    },
+    "PC322": {
+      "title": "Solid State Device Physics",
+      "lab": false,
+      "url": "https://academic-calendar.wlu.ca/course.php?c=79220&cal=1&d=3245&s=1170&y=93",
+      "level": 300,
+      "dept": "PC"
+    },
+    "PC331": {
+      "title": "Quantum Mechanics II",
+      "lab": false,
+      "url": "https://academic-calendar.wlu.ca/course.php?c=79221&cal=1&d=3245&s=1170&y=93",
+      "level": 300,
+      "dept": "PC"
+    },
+    "PC344": {
+      "title": "Thermodynamics and Statistical Physics",
+      "lab": false,
+      "url": "https://academic-calendar.wlu.ca/course.php?c=79222&cal=1&d=3245&s=1170&y=93",
+      "level": 300,
+      "dept": "PC"
+    },
+    "PC351/CP351": {
+      "title": "Quantum Computing",
+      "lab": false,
+      "url": "https://academic-calendar.wlu.ca/course.php?c=79241&cal=1&d=3245&s=1170&y=93",
+      "level": 300,
+      "dept": "PC"
+    },
+    "PC360": {
+      "title": "Electromagnetic Theory",
+      "lab": false,
+      "url": "https://academic-calendar.wlu.ca/course.php?c=79223&cal=1&d=3245&s=1170&y=93",
+      "level": 300,
+      "dept": "PC"
+    },
+    "PC364/CP364": {
+      "title": "Data Communication and Networks",
+      "lab": true,
+      "url": "https://academic-calendar.wlu.ca/course.php?c=79224&cal=1&d=3245&s=1170&y=93",
+      "level": 300,
+      "dept": "PC"
+    },
+    "PC395": {
+      "title": "Directed Studies",
+      "lab": false,
+      "url": "https://academic-calendar.wlu.ca/course.php?c=79235&cal=1&d=3245&s=1170&y=93",
+      "level": 300,
+      "dept": "PC"
+    },
+    "PC400": {
+      "title": "Special Topics",
+      "lab": false,
+      "url": "https://academic-calendar.wlu.ca/course.php?c=79233&cal=1&d=3245&s=1170&y=93",
+      "level": 400,
+      "dept": "PC"
+    },
+    "PC413": {
+      "title": "Quantum-Nano Science and Quantum Devices",
+      "lab": false,
+      "url": "https://academic-calendar.wlu.ca/course.php?c=79242&cal=1&d=3245&s=1170&y=93",
+      "level": 400,
+      "dept": "PC"
+    },
+    "PC454": {
+      "title": "Solid State Physics",
+      "lab": false,
+      "url": "https://academic-calendar.wlu.ca/course.php?c=79232&cal=1&d=3245&s=1170&y=93",
+      "level": 400,
+      "dept": "PC"
+    },
+    "PC474": {
+      "title": "Optical Networks",
+      "lab": true,
+      "url": "https://academic-calendar.wlu.ca/course.php?c=79225&cal=1&d=3245&s=1170&y=93",
+      "level": 400,
+      "dept": "PC"
+    },
+    "PC475": {
+      "title": "Design of Control Systems",
+      "lab": false,
+      "url": "https://academic-calendar.wlu.ca/course.php?c=79226&cal=1&d=3245&s=1170&y=93",
+      "level": 400,
+      "dept": "PC"
+    },
+    "PC481": {
+      "title": "Fibre Optics",
+      "lab": true,
+      "url": "https://academic-calendar.wlu.ca/course.php?c=79227&cal=1&d=3245&s=1170&y=93",
+      "level": 400,
+      "dept": "PC"
+    },
+    "PC491": {
+      "title": "Directed Research Project I",
+      "lab": false,
+      "url": "https://academic-calendar.wlu.ca/course.php?c=79228&cal=1&d=3245&s=1170&y=93",
+      "level": 400,
+      "dept": "PC"
+    },
+    "PC492": {
+      "title": "Directed Research Project II",
+      "lab": false,
+      "url": "https://academic-calendar.wlu.ca/course.php?c=79229&cal=1&d=3245&s=1170&y=93",
+      "level": 400,
+      "dept": "PC"
+    },
+    "PC495": {
+      "title": "Directed Studies",
+      "lab": false,
+      "url": "https://academic-calendar.wlu.ca/course.php?c=79230&cal=1&d=3245&s=1170&y=93",
+      "level": 400,
+      "dept": "PC"
+    },
+    "PS101": {
+      "title": "Introduction to Psychology I",
+      "lab": false,
+      "url": "https://academic-calendar.wlu.ca/course.php?c=79244&cal=1&d=3246&s=1170&y=93",
+      "level": 100,
+      "dept": "PS"
+    },
+    "PS102": {
+      "title": "Introduction to Psychology II",
+      "lab": false,
+      "url": "https://academic-calendar.wlu.ca/course.php?c=79294&cal=1&d=3246&s=1170&y=93",
+      "level": 100,
+      "dept": "PS"
+    },
+    "PS240-245": {
+      "title": "Special Topics",
+      "lab": false,
+      "url": "https://academic-calendar.wlu.ca/course.php?c=79246&cal=1&d=3246&s=1170&y=93",
+      "level": 200,
+      "dept": "PS"
+    },
+    "PS250": {
+      "title": "Forensic Psychology",
+      "lab": false,
+      "url": "https://academic-calendar.wlu.ca/course.php?c=79301&cal=1&d=3246&s=1170&y=93",
+      "level": 200,
+      "dept": "PS"
+    },
+    "PS260": {
+      "title": "Introduction to Cognitive Psychology",
+      "lab": false,
+      "url": "https://academic-calendar.wlu.ca/course.php?c=79247&cal=1&d=3246&s=1170&y=93",
+      "level": 200,
+      "dept": "PS"
+    },
+    "PS261": {
+      "title": "Introduction to Learning",
+      "lab": false,
+      "url": "https://academic-calendar.wlu.ca/course.php?c=79248&cal=1&d=3246&s=1170&y=93",
+      "level": 200,
+      "dept": "PS"
+    },
+    "PS262": {
+      "title": "Introduction to Perception",
+      "lab": false,
+      "url": "https://academic-calendar.wlu.ca/course.php?c=79249&cal=1&d=3246&s=1170&y=93",
+      "level": 200,
+      "dept": "PS"
+    },
+    "PS263": {
+      "title": "Behavioural Neuroscience",
+      "lab": false,
+      "url": "https://academic-calendar.wlu.ca/course.php?c=79250&cal=1&d=3246&s=1170&y=93",
+      "level": 200,
+      "dept": "PS"
+    },
+    "PS264": {
+      "title": "Motivation and Emotion",
+      "lab": false,
+      "url": "https://academic-calendar.wlu.ca/course.php?c=79251&cal=1&d=3246&s=1170&y=93",
+      "level": 200,
+      "dept": "PS"
+    },
+    "PS267": {
+      "title": "Introduction to Cognitive Neuroscience",
+      "lab": false,
+      "url": "https://academic-calendar.wlu.ca/course.php?c=79297&cal=1&d=3246&s=1170&y=93",
+      "level": 200,
+      "dept": "PS"
+    },
+    "PS268": {
+      "title": "Drugs and Behaviour",
+      "lab": false,
+      "url": "https://academic-calendar.wlu.ca/course.php?c=79293&cal=1&d=3246&s=1170&y=93",
+      "level": 200,
+      "dept": "PS"
+    },
+    "PS269": {
+      "title": "Sex, Evolution, and Behaviour",
+      "lab": false,
+      "url": "https://academic-calendar.wlu.ca/course.php?c=79311&cal=1&d=3246&s=1170&y=93",
+      "level": 200,
+      "dept": "PS"
+    },
+    "PS270": {
+      "title": "Social Psychology",
+      "lab": false,
+      "url": "https://academic-calendar.wlu.ca/course.php?c=79252&cal=1&d=3246&s=1170&y=93",
+      "level": 200,
+      "dept": "PS"
+    },
+    "PS271": {
+      "title": "Personality",
+      "lab": false,
+      "url": "https://academic-calendar.wlu.ca/course.php?c=79253&cal=1&d=3246&s=1170&y=93",
+      "level": 200,
+      "dept": "PS"
+    },
+    "PS272": {
+      "title": "Group Processes",
+      "lab": false,
+      "url": "https://academic-calendar.wlu.ca/course.php?c=79254&cal=1&d=3246&s=1170&y=93",
+      "level": 200,
+      "dept": "PS"
+    },
+    "PS275": {
+      "title": "Introduction to Developmental Psychology: Infancy and Childhood",
+      "lab": false,
+      "url": "https://academic-calendar.wlu.ca/course.php?c=79255&cal=1&d=3246&s=1170&y=93",
+      "level": 200,
+      "dept": "PS"
+    },
+    "PS276": {
+      "title": "Introduction to Developmental Psychology: Adolescence and Young Adulthood",
+      "lab": false,
+      "url": "https://academic-calendar.wlu.ca/course.php?c=79256&cal=1&d=3246&s=1170&y=93",
+      "level": 200,
+      "dept": "PS"
+    },
+    "PS280": {
+      "title": "Psychopathology",
+      "lab": false,
+      "url": "https://academic-calendar.wlu.ca/course.php?c=79258&cal=1&d=3246&s=1170&y=93",
+      "level": 200,
+      "dept": "PS"
+    },
+    "PS282": {
+      "title": "Community Psychology",
+      "lab": false,
+      "url": "https://academic-calendar.wlu.ca/course.php?c=79259&cal=1&d=3246&s=1170&y=93",
+      "level": 200,
+      "dept": "PS"
+    },
+    "PS283": {
+      "title": "Educational Psychology",
+      "lab": false,
+      "url": "https://academic-calendar.wlu.ca/course.php?c=79260&cal=1&d=3246&s=1170&y=93",
+      "level": 200,
+      "dept": "PS"
+    },
+    "PS284": {
+      "title": "Organizational Psychology",
+      "lab": false,
+      "url": "https://academic-calendar.wlu.ca/course.php?c=79261&cal=1&d=3246&s=1170&y=93",
+      "level": 200,
+      "dept": "PS"
+    },
+    "PS285": {
+      "title": "Health Psychology",
+      "lab": false,
+      "url": "https://academic-calendar.wlu.ca/course.php?c=79292&cal=1&d=3246&s=1170&y=93",
+      "level": 200,
+      "dept": "PS"
+    },
+    "PS286": {
+      "title": "Sport Psychology",
+      "lab": false,
+      "url": "https://academic-calendar.wlu.ca/course.php?c=79262&cal=1&d=3246&s=1170&y=93",
+      "level": 200,
+      "dept": "PS"
+    },
+    "PS287": {
+      "title": "Psychology of Gender",
+      "lab": false,
+      "url": "https://academic-calendar.wlu.ca/course.php?c=79263&cal=1&d=3246&s=1170&y=93",
+      "level": 200,
+      "dept": "PS"
+    },
+    "PS288": {
+      "title": "Applications of Human Behaviour Modification",
+      "lab": false,
+      "url": "https://academic-calendar.wlu.ca/course.php?c=79245&cal=1&d=3246&s=1170&y=93",
+      "level": 200,
+      "dept": "PS"
+    },
+    "PS295": {
+      "title": "Introduction to Research Methods",
+      "lab": true,
+      "url": "https://academic-calendar.wlu.ca/course.php?c=79264&cal=1&d=3246&s=1170&y=93",
+      "level": 200,
+      "dept": "PS"
+    },
+    "PS296": {
+      "title": "Introduction to Statistics",
+      "lab": true,
+      "url": "https://academic-calendar.wlu.ca/course.php?c=79265&cal=1&d=3246&s=1170&y=93",
+      "level": 200,
+      "dept": "PS"
+    },
+    "PS330-345": {
+      "title": "Special Topics",
+      "lab": false,
+      "url": "https://academic-calendar.wlu.ca/course.php?c=79266&cal=1&d=3246&s=1170&y=93",
+      "level": 300,
+      "dept": "PS"
+    },
+    "PS350": {
+      "title": "Advanced Topics in Forensic Psychology",
+      "lab": false,
+      "url": "https://academic-calendar.wlu.ca/course.php?c=79302&cal=1&d=3246&s=1170&y=93",
+      "level": 300,
+      "dept": "PS"
+    },
+    "PS360": {
+      "title": "Research in Cognitive Psychology",
+      "lab": true,
+      "url": "https://academic-calendar.wlu.ca/course.php?c=79267&cal=1&d=3246&s=1170&y=93",
+      "level": 300,
+      "dept": "PS"
+    },
+    "PS361": {
+      "title": "Research in Learning",
+      "lab": true,
+      "url": "https://academic-calendar.wlu.ca/course.php?c=79268&cal=1&d=3246&s=1170&y=93",
+      "level": 300,
+      "dept": "PS"
+    },
+    "PS362": {
+      "title": "Research in Perception",
+      "lab": true,
+      "url": "https://academic-calendar.wlu.ca/course.php?c=79269&cal=1&d=3246&s=1170&y=93",
+      "level": 300,
+      "dept": "PS"
+    },
+    "PS363": {
+      "title": "Research in Behavioural Neuroscience",
+      "lab": true,
+      "url": "https://academic-calendar.wlu.ca/course.php?c=79270&cal=1&d=3246&s=1170&y=93",
+      "level": 300,
+      "dept": "PS"
+    },
+    "PS365": {
+      "title": "Introduction to Neuropsychology",
+      "lab": false,
+      "url": "https://academic-calendar.wlu.ca/course.php?c=79300&cal=1&d=3246&s=1170&y=93",
+      "level": 300,
+      "dept": "PS"
+    },
+    "PS366": {
+      "title": "Introduction to Psycholinguistics",
+      "lab": false,
+      "url": "https://academic-calendar.wlu.ca/course.php?c=79271&cal=1&d=3246&s=1170&y=93",
+      "level": 300,
+      "dept": "PS"
+    },
+    "PS367": {
+      "title": "Research in Cognitive Neuroscience",
+      "lab": true,
+      "url": "https://academic-calendar.wlu.ca/course.php?c=79298&cal=1&d=3246&s=1170&y=93",
+      "level": 300,
+      "dept": "PS"
+    },
+    "PS368/HE368": {
+      "title": "Functional Neuroanatomy",
+      "lab": true,
+      "url": "https://academic-calendar.wlu.ca/course.php?c=79308&cal=1&d=3246&s=1170&y=93",
+      "level": 300,
+      "dept": "PS"
+    },
+    "PS370": {
+      "title": "Research in Social Psychology",
+      "lab": true,
+      "url": "https://academic-calendar.wlu.ca/course.php?c=79272&cal=1&d=3246&s=1170&y=93",
+      "level": 300,
+      "dept": "PS"
+    },
+    "PS371": {
+      "title": "Atypical Development",
+      "lab": false,
+      "url": "https://academic-calendar.wlu.ca/course.php?c=79309&cal=1&d=3246&s=1170&y=93",
+      "level": 300,
+      "dept": "PS"
+    },
+    "PS373": {
+      "title": "Close Relationships",
+      "lab": false,
+      "url": "https://academic-calendar.wlu.ca/course.php?c=79305&cal=1&d=3246&s=1170&y=93",
+      "level": 300,
+      "dept": "PS"
+    },
+    "PS375": {
+      "title": "Research in Developmental Psychology",
+      "lab": false,
+      "url": "https://academic-calendar.wlu.ca/course.php?c=79274&cal=1&d=3246&s=1170&y=93",
+      "level": 300,
+      "dept": "PS"
+    },
+    "PS377": {
+      "title": "Developmental Psychology: Adults and Elders",
+      "lab": false,
+      "url": "https://academic-calendar.wlu.ca/course.php?c=79257&cal=1&d=3246&s=1170&y=93",
+      "level": 300,
+      "dept": "PS"
+    },
+    "PS378": {
+      "title": "Language Development",
+      "lab": false,
+      "url": "https://academic-calendar.wlu.ca/course.php?c=79295&cal=1&d=3246&s=1170&y=93",
+      "level": 300,
+      "dept": "PS"
+    },
+    "PS379": {
+      "title": "Psychology of Exceptional Children, Youth and Adults",
+      "lab": false,
+      "url": "https://academic-calendar.wlu.ca/course.php?c=79275&cal=1&d=3246&s=1170&y=93",
+      "level": 300,
+      "dept": "PS"
+    },
+    "PS381": {
+      "title": "Introduction to Clinical Psychology",
+      "lab": false,
+      "url": "https://academic-calendar.wlu.ca/course.php?c=79276&cal=1&d=3246&s=1170&y=93",
+      "level": 300,
+      "dept": "PS"
+    },
+    "PS383": {
+      "title": "Environment, Psychology and Action",
+      "lab": false,
+      "url": "https://academic-calendar.wlu.ca/course.php?c=79296&cal=1&d=3246&s=1170&y=93",
+      "level": 300,
+      "dept": "PS"
+    },
+    "PS389/HE305": {
+      "title": "Positive Psychology",
+      "lab": false,
+      "url": "https://academic-calendar.wlu.ca/course.php?c=79304&cal=1&d=3246&s=1170&y=93",
+      "level": 300,
+      "dept": "PS"
+    },
+    "PS394": {
+      "title": "Linear Models",
+      "lab": true,
+      "url": "https://academic-calendar.wlu.ca/course.php?c=79279&cal=1&d=3246&s=1170&y=93",
+      "level": 300,
+      "dept": "PS"
+    },
+    "PS395": {
+      "title": "Analysis of Variance",
+      "lab": true,
+      "url": "https://academic-calendar.wlu.ca/course.php?c=79278&cal=1&d=3246&s=1170&y=93",
+      "level": 300,
+      "dept": "PS"
+    },
+    "PS398": {
+      "title": "Qualitative Methods in Psychology",
+      "lab": false,
+      "url": "https://academic-calendar.wlu.ca/course.php?c=79281&cal=1&d=3246&s=1170&y=93",
+      "level": 300,
+      "dept": "PS"
+    },
+    "PS410": {
+      "title": "History of Psychology",
+      "lab": false,
+      "url": "https://academic-calendar.wlu.ca/course.php?c=79277&cal=1&d=3246&s=1170&y=93",
+      "level": 400,
+      "dept": "PS"
+    },
+    "PS451": {
+      "title": "Applied Forensic Psychology",
+      "lab": false,
+      "url": "https://academic-calendar.wlu.ca/course.php?c=79303&cal=1&d=3246&s=1170&y=93",
+      "level": 400,
+      "dept": "PS"
+    },
+    "PS460": {
+      "title": "Seminar in Cognitive Psychology",
+      "lab": false,
+      "url": "https://academic-calendar.wlu.ca/course.php?c=79282&cal=1&d=3246&s=1170&y=93",
+      "level": 400,
+      "dept": "PS"
+    },
+    "PS461": {
+      "title": "Seminar in Learning",
+      "lab": false,
+      "url": "https://academic-calendar.wlu.ca/course.php?c=79283&cal=1&d=3246&s=1170&y=93",
+      "level": 400,
+      "dept": "PS"
+    },
+    "PS462": {
+      "title": "Seminar in Perception",
+      "lab": false,
+      "url": "https://academic-calendar.wlu.ca/course.php?c=79284&cal=1&d=3246&s=1170&y=93",
+      "level": 400,
+      "dept": "PS"
+    },
+    "PS463": {
+      "title": "Seminar in Behavioural Neuroscience",
+      "lab": false,
+      "url": "https://academic-calendar.wlu.ca/course.php?c=79285&cal=1&d=3246&s=1170&y=93",
+      "level": 400,
+      "dept": "PS"
+    },
+    "PS467": {
+      "title": "Seminar in Cognitive Neuroscience",
+      "lab": false,
+      "url": "https://academic-calendar.wlu.ca/course.php?c=79299&cal=1&d=3246&s=1170&y=93",
+      "level": 400,
+      "dept": "PS"
+    },
+    "PS470": {
+      "title": "Seminar in Social Psychology",
+      "lab": false,
+      "url": "https://academic-calendar.wlu.ca/course.php?c=79286&cal=1&d=3246&s=1170&y=93",
+      "level": 400,
+      "dept": "PS"
+    },
+    "PS472": {
+      "title": "Applied Social Psychology",
+      "lab": false,
+      "url": "https://academic-calendar.wlu.ca/course.php?c=79273&cal=1&d=3246&s=1170&y=93",
+      "level": 400,
+      "dept": "PS"
+    },
+    "PS474": {
+      "title": "Applications in Social Development",
+      "lab": false,
+      "url": "https://academic-calendar.wlu.ca/course.php?c=79310&cal=1&d=3246&s=1170&y=93",
+      "level": 400,
+      "dept": "PS"
+    },
+    "PS475": {
+      "title": "Seminar in Developmental Psychology",
+      "lab": false,
+      "url": "https://academic-calendar.wlu.ca/course.php?c=79287&cal=1&d=3246&s=1170&y=93",
+      "level": 400,
+      "dept": "PS"
+    },
+    "PS476": {
+      "title": "Applications in Cognitive Development",
+      "lab": false,
+      "url": "https://academic-calendar.wlu.ca/course.php?c=79307&cal=1&d=3246&s=1170&y=93",
+      "level": 400,
+      "dept": "PS"
+    },
+    "PS480": {
+      "title": "Seminar in Personality and Clinical Psychology",
+      "lab": false,
+      "url": "https://academic-calendar.wlu.ca/course.php?c=79288&cal=1&d=3246&s=1170&y=93",
+      "level": 400,
+      "dept": "PS"
+    },
+    "PS482": {
+      "title": "Seminar in Community Psychology",
+      "lab": false,
+      "url": "https://academic-calendar.wlu.ca/course.php?c=79289&cal=1&d=3246&s=1170&y=93",
+      "level": 400,
+      "dept": "PS"
+    },
+    "PS487": {
+      "title": "Psychological Measurement and Testing",
+      "lab": false,
+      "url": "https://academic-calendar.wlu.ca/course.php?c=79280&cal=1&d=3246&s=1170&y=93",
+      "level": 400,
+      "dept": "PS"
+    },
+    "PS490": {
+      "title": "Directed Studies",
+      "lab": false,
+      "url": "https://academic-calendar.wlu.ca/course.php?c=79290&cal=1&d=3246&s=1170&y=93",
+      "level": 400,
+      "dept": "PS"
+    },
+    "PS492": {
+      "title": "Applied Community Research",
+      "lab": false,
+      "url": "https://academic-calendar.wlu.ca/course.php?c=79306&cal=1&d=3246&s=1170&y=93",
+      "level": 400,
+      "dept": "PS"
+    },
+    "PS499": {
+      "title": "Thesis",
+      "lab": false,
+      "url": "https://academic-calendar.wlu.ca/course.php?c=79291&cal=1&d=3246&s=1170&y=93",
+      "level": 400,
+      "dept": "PS"
+    },
+    "ST230": {
+      "title": "Introduction to Probability and Statistics for Science",
+      "lab": true,
+      "url": "https://academic-calendar.wlu.ca/course.php?c=79600&cal=1&d=3251&s=1170&y=93",
+      "level": 200,
+      "dept": "ST"
+    },
+    "ST231": {
+      "title": "Statistical Methods for Life and Health Sciences",
+      "lab": true,
+      "url": "https://academic-calendar.wlu.ca/course.php?c=79607&cal=1&d=3251&s=1170&y=93",
+      "level": 200,
+      "dept": "ST"
+    },
+    "ST259": {
+      "title": "Probability I",
+      "lab": true,
+      "url": "https://academic-calendar.wlu.ca/course.php?c=79601&cal=1&d=3251&s=1170&y=93",
+      "level": 200,
+      "dept": "ST"
+    },
+    "ST260": {
+      "title": "Introduction to Statistics",
+      "lab": true,
+      "url": "https://academic-calendar.wlu.ca/course.php?c=79602&cal=1&d=3251&s=1170&y=93",
+      "level": 200,
+      "dept": "ST"
+    },
+    "ST344": {
+      "title": "Introduction to Experimental Design and Survey Sampling",
+      "lab": false,
+      "url": "https://academic-calendar.wlu.ca/course.php?c=79567&cal=1&d=3251&s=1170&y=93",
+      "level": 300,
+      "dept": "ST"
+    },
+    "ST358": {
+      "title": "Applied Probability",
+      "lab": false,
+      "url": "https://academic-calendar.wlu.ca/course.php?c=79608&cal=1&d=3251&s=1170&y=93",
+      "level": 300,
+      "dept": "ST"
+    },
+    "ST359": {
+      "title": "Probability II",
+      "lab": false,
+      "url": "https://academic-calendar.wlu.ca/course.php?c=79603&cal=1&d=3251&s=1170&y=93",
+      "level": 300,
+      "dept": "ST"
+    },
+    "ST361": {
+      "title": "Mathematical Statistics",
+      "lab": false,
+      "url": "https://academic-calendar.wlu.ca/course.php?c=79604&cal=1&d=3251&s=1170&y=93",
+      "level": 300,
+      "dept": "ST"
+    },
+    "ST362": {
+      "title": "Regression Analysis",
+      "lab": true,
+      "url": "https://academic-calendar.wlu.ca/course.php?c=79605&cal=1&d=3251&s=1170&y=93",
+      "level": 300,
+      "dept": "ST"
+    },
+    "ST451": {
+      "title": "Stochastic Calculus and Modelling",
+      "lab": false,
+      "url": "https://academic-calendar.wlu.ca/course.php?c=79569&cal=1&d=3251&s=1170&y=93",
+      "level": 400,
+      "dept": "ST"
+    },
+    "ST462": {
+      "title": "Advanced Regression Analysis",
+      "lab": true,
+      "url": "https://academic-calendar.wlu.ca/course.php?c=79591&cal=1&d=3251&s=1170&y=93",
+      "level": 400,
+      "dept": "ST"
+    },
+    "ST463": {
+      "title": "Computational Statistics",
+      "lab": true,
+      "url": "https://academic-calendar.wlu.ca/course.php?c=79609&cal=1&d=3251&s=1170&y=93",
+      "level": 400,
+      "dept": "ST"
+    },
+    "ST473": {
+      "title": "Financial Data Analysis",
+      "lab": false,
+      "url": "https://academic-calendar.wlu.ca/course.php?c=79537&cal=1&d=3251&s=1170&y=93",
+      "level": 400,
+      "dept": "ST"
+    },
+    "ST474": {
+      "title": "Monte Carlo Methods",
+      "lab": true,
+      "url": "https://academic-calendar.wlu.ca/course.php?c=79606&cal=1&d=3251&s=1170&y=93",
+      "level": 400,
+      "dept": "ST"
+    },
+    "ST490": {
+      "title": "Stochastic Processes",
+      "lab": false,
+      "url": "https://academic-calendar.wlu.ca/course.php?c=79586&cal=1&d=3251&s=1170&y=93",
+      "level": 400,
+      "dept": "ST"
+    },
+    "ST491": {
+      "title": "Survival Analysis",
+      "lab": true,
+      "url": "https://academic-calendar.wlu.ca/course.php?c=79568&cal=1&d=3251&s=1170&y=93",
+      "level": 400,
+      "dept": "ST"
+    },
+    "ST492/EC455": {
+      "title": "Time Series Analysis",
+      "lab": false,
+      "url": "https://academic-calendar.wlu.ca/course.php?c=79587&cal=1&d=3251&s=1170&y=93",
+      "level": 400,
+      "dept": "ST"
+    },
+    "ST494": {
+      "title": "Statistical Learning",
+      "lab": true,
+      "url": "https://academic-calendar.wlu.ca/course.php?c=79540&cal=1&d=3251&s=1170&y=93",
+      "level": 400,
+      "dept": "ST"
+    },
+    "HN210": {
+      "title": "Human Anatomy",
+      "lab": false,
+      "url": "https://academic-calendar.wlu.ca/course.php?c=79619&cal=1&d=3258&s=1170&y=93",
+      "level": 200,
+      "dept": "HE"
+    },
+    "KP221": {
+      "title": "Human Anatomy",
+      "lab": false,
+      "url": "https://academic-calendar.wlu.ca/course.php?c=79619&cal=1&d=3258&s=1170&y=93",
+      "level": 200,
+      "dept": "HE"
+    },
+    "HN220": {
+      "title": "Human Physiology",
+      "lab": false,
+      "url": "https://academic-calendar.wlu.ca/course.php?c=79620&cal=1&d=3258&s=1170&y=93",
+      "level": 200,
+      "dept": "HE"
+    },
+    "KP222": {
+      "title": "Human Physiology",
+      "lab": false,
+      "url": "https://academic-calendar.wlu.ca/course.php?c=79620&cal=1&d=3258&s=1170&y=93",
+      "level": 200,
+      "dept": "HE"
+    },
+    "HE100": {
+      "title": "Health Issues I",
+      "lab": false,
+      "url": "https://academic-calendar.wlu.ca/course.php?c=79621&cal=1&d=3258&s=1170&y=93",
+      "level": 100,
+      "dept": "HE"
+    },
+    "HE101": {
+      "title": "Health Issues II",
+      "lab": false,
+      "url": "https://academic-calendar.wlu.ca/course.php?c=79622&cal=1&d=3258&s=1170&y=93",
+      "level": 100,
+      "dept": "HE"
+    },
+    "HE201": {
+      "title": "Research Methods for the Health Sciences",
+      "lab": false,
+      "url": "https://academic-calendar.wlu.ca/course.php?c=79623&cal=1&d=3258&s=1170&y=93",
+      "level": 200,
+      "dept": "HE"
+    },
+    "HE300": {
+      "title": "Epidemiology",
+      "lab": false,
+      "url": "https://academic-calendar.wlu.ca/course.php?c=79624&cal=1&d=3258&s=1170&y=93",
+      "level": 300,
+      "dept": "HE"
+    },
+    "KP434": {
+      "title": "Epidemiology",
+      "lab": false,
+      "url": "https://academic-calendar.wlu.ca/course.php?c=79624&cal=1&d=3258&s=1170&y=93",
+      "level": 300,
+      "dept": "HE"
+    },
+    "HE400": {
+      "title": "Multidisciplinary Seminar on Critical Health Issues",
+      "lab": false,
+      "url": "https://academic-calendar.wlu.ca/course.php?c=79625&cal=1&d=3258&s=1170&y=93",
+      "level": 400,
+      "dept": "HE"
+    },
+    "HE340": {
+      "title": "Special Topics",
+      "lab": false,
+      "url": "https://academic-calendar.wlu.ca/course.php?c=79626&cal=1&d=3258&s=1170&y=93",
+      "level": 300,
+      "dept": "HE"
+    },
+    "HE440": {
+      "title": "Special Topics",
+      "lab": false,
+      "url": "https://academic-calendar.wlu.ca/course.php?c=79627&cal=1&d=3258&s=1170&y=93",
+      "level": 400,
+      "dept": "HE"
+    },
+    "HE450": {
+      "title": "Directed Studies",
+      "lab": false,
+      "url": "https://academic-calendar.wlu.ca/course.php?c=79628&cal=1&d=3258&s=1170&y=93",
+      "level": 400,
+      "dept": "HE"
+    },
+    "HE301": {
+      "title": "Social Determinants of Health",
+      "lab": false,
+      "url": "https://academic-calendar.wlu.ca/course.php?c=79629&cal=1&d=3258&s=1170&y=93",
+      "level": 300,
+      "dept": "HE"
+    },
+    "HE202": {
+      "title": "Foundations of the Canadian Healthcare System",
+      "lab": false,
+      "url": "https://academic-calendar.wlu.ca/course.php?c=79630&cal=1&d=3258&s=1170&y=93",
+      "level": 200,
+      "dept": "HE"
+    },
+    "HE490": {
+      "title": "Directed Research in Health Sciences",
+      "lab": false,
+      "url": "https://academic-calendar.wlu.ca/course.php?c=79631&cal=1&d=3258&s=1170&y=93",
+      "level": 400,
+      "dept": "HE"
+    },
+    "HE410": {
+      "title": "Aging and Health",
+      "lab": false,
+      "url": "https://academic-calendar.wlu.ca/course.php?c=79632&cal=1&d=3258&s=1170&y=93",
+      "level": 400,
+      "dept": "HE"
+    },
+    "HE411": {
+      "title": "Critical perspectives in Public Health",
+      "lab": false,
+      "url": "https://academic-calendar.wlu.ca/course.php?c=79633&cal=1&d=3258&s=1170&y=93",
+      "level": 400,
+      "dept": "HE"
+    },
+    "HE330": {
+      "title": "Human Nutrition and Health",
+      "lab": false,
+      "url": "https://academic-calendar.wlu.ca/course.php?c=79634&cal=1&d=3258&s=1170&y=93",
+      "level": 300,
+      "dept": "HE"
+    },
+    "HE431": {
+      "title": "Pathophysiology",
+      "lab": false,
+      "url": "https://academic-calendar.wlu.ca/course.php?c=79635&cal=1&d=3258&s=1170&y=93",
+      "level": 400,
+      "dept": "HE"
+    },
+    "BI416": {
+      "title": "Pathophysiology",
+      "lab": false,
+      "url": "https://academic-calendar.wlu.ca/course.php?c=79635&cal=1&d=3258&s=1170&y=93",
+      "level": 400,
+      "dept": "HE"
+    },
+    "HE430": {
+      "title": "Advanced nutrition and chronic disease",
+      "lab": false,
+      "url": "https://academic-calendar.wlu.ca/course.php?c=79636&cal=1&d=3258&s=1170&y=93",
+      "level": 400,
+      "dept": "HE"
+    },
+    "HE436": {
+      "title": "Health and Human Rights",
+      "lab": false,
+      "url": "https://academic-calendar.wlu.ca/course.php?c=79637&cal=1&d=3258&s=1170&y=93",
+      "level": 400,
+      "dept": "HE"
+    },
+    "HE437": {
+      "title": "Principles of Population Health",
+      "lab": false,
+      "url": "https://academic-calendar.wlu.ca/course.php?c=79638&cal=1&d=3258&s=1170&y=93",
+      "level": 400,
+      "dept": "HE"
+    },
+    "HE432": {
+      "title": "Biomedical Virology",
+      "lab": false,
+      "url": "https://academic-calendar.wlu.ca/course.php?c=79639&cal=1&d=3258&s=1170&y=93",
+      "level": 400,
+      "dept": "HE"
+    },
+    "BI470": {
+      "title": "Biomedical Virology",
+      "lab": false,
+      "url": "https://academic-calendar.wlu.ca/course.php?c=79639&cal=1&d=3258&s=1170&y=93",
+      "level": 400,
+      "dept": "HE"
+    },
+    "HE350": {
+      "title": "Directed Studies",
+      "lab": false,
+      "url": "https://academic-calendar.wlu.ca/course.php?c=79640&cal=1&d=3258&s=1170&y=93",
+      "level": 300,
+      "dept": "HE"
+    },
+    "HN320": {
+      "title": "Human Physiology II: Control and Integration",
+      "lab": false,
+      "url": "https://academic-calendar.wlu.ca/course.php?c=79641&cal=1&d=3258&s=1170&y=93",
+      "level": 300,
+      "dept": "HE"
+    },
+    "HE435": {
+      "title": "Exercise is Medicine",
+      "lab": false,
+      "url": "https://academic-calendar.wlu.ca/course.php?c=79642&cal=1&d=3258&s=1170&y=93",
+      "level": 400,
+      "dept": "HE"
+    },
+    "KP435": {
+      "title": "Exercise is Medicine",
+      "lab": false,
+      "url": "https://academic-calendar.wlu.ca/course.php?c=79642&cal=1&d=3258&s=1170&y=93",
+      "level": 400,
+      "dept": "HE"
+    },
+    "HE305": {
+      "title": "Positive Psychology",
+      "lab": false,
+      "url": "https://academic-calendar.wlu.ca/course.php?c=79643&cal=1&d=3258&s=1170&y=93",
+      "level": 300,
+      "dept": "HE"
+    },
+    "PS389": {
+      "title": "Positive Psychology",
+      "lab": false,
+      "url": "https://academic-calendar.wlu.ca/course.php?c=79643&cal=1&d=3258&s=1170&y=93",
+      "level": 300,
+      "dept": "HE"
+    },
+    "HE304": {
+      "title": "Introduction to Indigenous Health and Well-Being",
+      "lab": false,
+      "url": "https://academic-calendar.wlu.ca/course.php?c=79644&cal=1&d=3258&s=1170&y=93",
+      "level": 300,
+      "dept": "HE"
+    },
+    "HE303": {
+      "title": "Introduction to Immunology",
+      "lab": false,
+      "url": "https://academic-calendar.wlu.ca/course.php?c=79645&cal=1&d=3258&s=1170&y=93",
+      "level": 300,
+      "dept": "HE"
+    },
+    "BI317": {
+      "title": "Introduction to Immunology",
+      "lab": false,
+      "url": "https://academic-calendar.wlu.ca/course.php?c=79645&cal=1&d=3258&s=1170&y=93",
+      "level": 300,
+      "dept": "HE"
+    },
+    "HN204": {
+      "title": "Systems Human Anatomy",
+      "lab": true,
+      "url": "https://academic-calendar.wlu.ca/course.php?c=79646&cal=1&d=3258&s=1170&y=93",
+      "level": 200,
+      "dept": "HE"
+    },
+    "HE368": {
+      "title": "Functional Neuroanatomy",
+      "lab": true,
+      "url": "https://academic-calendar.wlu.ca/course.php?c=79647&cal=1&d=3258&s=1170&y=93",
+      "level": 300,
+      "dept": "HE"
+    },
+    "PS368": {
+      "title": "Functional Neuroanatomy",
+      "lab": true,
+      "url": "https://academic-calendar.wlu.ca/course.php?c=79647&cal=1&d=3258&s=1170&y=93",
+      "level": 300,
+      "dept": "HE"
+    },
+    "HE438": {
+      "title": "Cancer Biology",
+      "lab": false,
+      "url": "https://academic-calendar.wlu.ca/course.php?c=79648&cal=1&d=3258&s=1170&y=93",
+      "level": 400,
+      "dept": "HE"
+    },
+    "HE224": {
+      "title": "Anatomy and Physiology I",
+      "lab": true,
+      "url": "https://academic-calendar.wlu.ca/course.php?c=82049&cal=1&d=3258&s=1170&y=93",
+      "level": 200,
+      "dept": "HE"
+    },
+    "KP224": {
+      "title": "Anatomy and Physiology I",
+      "lab": true,
+      "url": "https://academic-calendar.wlu.ca/course.php?c=82049&cal=1&d=3258&s=1170&y=93",
+      "level": 200,
+      "dept": "HE"
+    },
+    "HS202": {
+      "title": "Anatomy and Physiology I",
+      "lab": true,
+      "url": "https://academic-calendar.wlu.ca/course.php?c=82049&cal=1&d=3258&s=1170&y=93",
+      "level": 200,
+      "dept": "HE"
+    },
+    "HE225": {
+      "title": "Anatomy and Physiology II",
+      "lab": true,
+      "url": "https://academic-calendar.wlu.ca/course.php?c=82050&cal=1&d=3258&s=1170&y=93",
+      "level": 200,
+      "dept": "HE"
+    },
+    "KP225": {
+      "title": "Anatomy and Physiology II",
+      "lab": true,
+      "url": "https://academic-calendar.wlu.ca/course.php?c=82050&cal=1&d=3258&s=1170&y=93",
+      "level": 200,
+      "dept": "HE"
+    },
+    "HS204": {
+      "title": "Anatomy and Physiology II",
+      "lab": true,
+      "url": "https://academic-calendar.wlu.ca/course.php?c=82050&cal=1&d=3258&s=1170&y=93",
+      "level": 200,
+      "dept": "HE"
+    },
+    "HE320": {
+      "title": "Integrative Human Physiology",
+      "lab": false,
+      "url": "https://academic-calendar.wlu.ca/course.php?c=82051&cal=1&d=3258&s=1170&y=93",
+      "level": 300,
+      "dept": "HE"
+    },
+    "KP320": {
+      "title": "Integrative Human Physiology",
+      "lab": false,
+      "url": "https://academic-calendar.wlu.ca/course.php?c=82051&cal=1&d=3258&s=1170&y=93",
+      "level": 300,
+      "dept": "HE"
+    },
+    "HE321": {
+      "title": "Regional Human Anatomy",
+      "lab": true,
+      "url": "https://academic-calendar.wlu.ca/course.php?c=82055&cal=1&d=3258&s=1170&y=93",
+      "level": 300,
+      "dept": "HE"
+    },
+    "KP321": {
+      "title": "Regional Human Anatomy",
+      "lab": true,
+      "url": "https://academic-calendar.wlu.ca/course.php?c=82055&cal=1&d=3258&s=1170&y=93",
+      "level": 300,
+      "dept": "HE"
+    },
+    "HE601": {
+      "title": "Interdisciplinary Approaches to Health Sciences",
+      "lab": false,
+      "url": "https://academic-calendar.wlu.ca/course.php?c=81073&cal=3&d=3329&s=1186&y=94",
+      "level": 600,
+      "dept": "HE-grad"
+    },
+    "HE602": {
+      "title": "Cell-to-Society Perspectives in Health Sciences",
+      "lab": false,
+      "url": "https://academic-calendar.wlu.ca/course.php?c=81074&cal=3&d=3329&s=1186&y=94",
+      "level": 600,
+      "dept": "HE-grad"
+    },
+    "HE699": {
+      "title": "Master's Thesis",
+      "lab": false,
+      "url": "https://academic-calendar.wlu.ca/course.php?c=81075&cal=3&d=3329&s=1186&y=94",
+      "level": 600,
+      "dept": "HE-grad"
+    },
+    "HE650": {
+      "title": "Directed Studies",
+      "lab": false,
+      "url": "https://academic-calendar.wlu.ca/course.php?c=81076&cal=3&d=3329&s=1186&y=94",
+      "level": 600,
+      "dept": "HE-grad"
+    },
+    "HE603": {
+      "title": "Critical Appraisal of Health Research",
+      "lab": false,
+      "url": "https://academic-calendar.wlu.ca/course.php?c=81077&cal=3&d=3329&s=1186&y=94",
+      "level": 600,
+      "dept": "HE-grad"
+    },
+    "HE604A": {
+      "title": "Applied Methods in Community, Public and Population Health",
+      "lab": false,
+      "url": "https://academic-calendar.wlu.ca/course.php?c=81078&cal=3&d=3329&s=1186&y=94",
+      "level": 600,
+      "dept": "HE-grad"
+    },
+    "HE606": {
+      "title": "Health Equity in Health Sciences",
+      "lab": false,
+      "url": "https://academic-calendar.wlu.ca/course.php?c=81079&cal=3&d=3329&s=1186&y=94",
+      "level": 600,
+      "dept": "HE-grad"
+    },
+    "HE604B": {
+      "title": "Applied Methods in Molecular and Medical Sciences",
+      "lab": false,
+      "url": "https://academic-calendar.wlu.ca/course.php?c=81080&cal=3&d=3329&s=1186&y=94",
+      "level": 600,
+      "dept": "HE-grad"
+    },
+    "HE605": {
+      "title": "Health Sciences Knowledge Mobilization",
+      "lab": false,
+      "url": "https://academic-calendar.wlu.ca/course.php?c=81081&cal=3&d=3329&s=1186&y=94",
+      "level": 600,
+      "dept": "HE-grad"
+    },
+    "HE638": {
+      "title": "Cancer Biology",
+      "lab": false,
+      "url": "https://academic-calendar.wlu.ca/course.php?c=81082&cal=3&d=3329&s=1186&y=94",
+      "level": 600,
+      "dept": "HE-grad"
+    },
+    "HE600": {
+      "title": "Multidisciplinary Seminar in Critical Health Issues",
+      "lab": false,
+      "url": "https://academic-calendar.wlu.ca/course.php?c=81083&cal=3&d=3329&s=1186&y=94",
+      "level": 600,
+      "dept": "HE-grad"
+    },
+    "HE610": {
+      "title": "Aging and Health",
+      "lab": false,
+      "url": "https://academic-calendar.wlu.ca/course.php?c=81084&cal=3&d=3329&s=1186&y=94",
+      "level": 600,
+      "dept": "HE-grad"
+    },
+    "HE611": {
+      "title": "Critical Perspectives in Public Health",
+      "lab": false,
+      "url": "https://academic-calendar.wlu.ca/course.php?c=81085&cal=3&d=3329&s=1186&y=94",
+      "level": 600,
+      "dept": "HE-grad"
+    },
+    "HE631": {
+      "title": "Pathophysiology",
+      "lab": false,
+      "url": "https://academic-calendar.wlu.ca/course.php?c=81086&cal=3&d=3329&s=1186&y=94",
+      "level": 600,
+      "dept": "HE-grad"
+    },
+    "HE632": {
+      "title": "Biomedical Virology",
+      "lab": false,
+      "url": "https://academic-calendar.wlu.ca/course.php?c=81087&cal=3&d=3329&s=1186&y=94",
+      "level": 600,
+      "dept": "HE-grad"
+    },
+    "HE640": {
+      "title": "Special Topics",
+      "lab": false,
+      "url": "https://academic-calendar.wlu.ca/course.php?c=81088&cal=3&d=3329&s=1186&y=94",
+      "level": 600,
+      "dept": "HE-grad"
+    },
+    "HE636": {
+      "title": "Health and Human Rights",
+      "lab": false,
+      "url": "https://academic-calendar.wlu.ca/course.php?c=81089&cal=3&d=3329&s=1186&y=94",
+      "level": 600,
+      "dept": "HE-grad"
+    },
+    "HE637": {
+      "title": "Principles of Population Health",
+      "lab": false,
+      "url": "https://academic-calendar.wlu.ca/course.php?c=81090&cal=3&d=3329&s=1186&y=94",
+      "level": 600,
+      "dept": "HE-grad"
+    }
+  },
+  "pathways": [
+    {
+      "id": "med",
+      "label": "Medicine (MD)",
+      "group": "Medicine & dentistry",
+      "exam": "MCAT + CASPer/Casper",
+      "summary": "Most Canadian medical schools require NO specific prerequisite courses (e.g. McMaster, Queen's, Western, Calgary, Alberta). The binding gates are MCAT content coverage, GPA, and CASPer/interview. A prescriptive minority and new Indigenous Studies requirements are the exceptions, below.",
+      "buckets": [
+        {
+          "name": "Biology / life sciences",
+          "courses": [
+            "BI110",
+            "BI111",
+            "BI226",
+            "BI236"
+          ],
+          "note": "Toronto requires 12 units life science; Ottawa requires 6 units biology."
+        },
+        {
+          "name": "General chemistry",
+          "courses": [
+            "CH110",
+            "CH111"
+          ],
+          "note": "McGill requires 2 intro chem WITH labs (100-level)."
+        },
+        {
+          "name": "Organic chemistry",
+          "courses": [
+            "CH202",
+            "CH203"
+          ],
+          "note": "McGill requires 1 organic chem with lab; core MCAT content."
+        },
+        {
+          "name": "Biochemistry",
+          "courses": [
+            "CH250"
+          ],
+          "note": "MCAT is biochem-heavy; recommended (not required) at McGill."
+        },
+        {
+          "name": "Physics",
+          "courses": [
+            "PC141",
+            "PC142"
+          ],
+          "note": "McGill requires 2 physics WITH labs; MCAT content. Use life-sci PC141/142 (lab) not the lecture-only versions."
+        },
+        {
+          "name": "Statistics / quantitative",
+          "courses": [
+            "ST231"
+          ],
+          "note": "MCAT quantitative reasoning; ST231 is the Health-Sci-aligned option."
+        },
+        {
+          "name": "Psychology & sociology (MCAT Psych/Soc)",
+          "courses": [
+            "PS101",
+            "PS102"
+          ],
+          "note": "MCAT Psych/Soc section. Add a sociology course (Faculty of Arts)."
+        },
+        {
+          "name": "English",
+          "courses": [],
+          "arts": true,
+          "note": "Required at UBC and Ottawa. Faculty of Arts course, outside Science."
+        },
+        {
+          "name": "Indigenous Studies",
+          "courses": [],
+          "arts": true,
+          "note": "Required at Calgary, Manitoba, Saskatchewan; UBC transitioning. Faculty of Arts."
+        }
+      ],
+      "schoolNotes": [
+        "No-prereq schools: McMaster, Queen's, Western, Calgary, Alberta, Memorial, Dalhousie, Saskatchewan, TMU, Manitoba.",
+        "Prescriptive: McGill (bio/chem/ochem/physics with labs), Ottawa (bio + hum/soc-sci), Toronto (life sci + soc sci), UBC (English to English+Indigenous)."
+      ]
+    },
+    {
+      "id": "dent",
+      "label": "Dentistry (DDS / DMD)",
+      "group": "Medicine & dentistry",
+      "exam": "DAT (paused at McGill)",
+      "summary": "Unlike medicine, ALL 10 Canadian dental schools have prescriptive prerequisites, and many specify 'with labs'. Biology, general chemistry and organic chemistry are near-universal; biochemistry (7/10) and physiology (5/10) are common.",
+      "buckets": [
+        {
+          "name": "Biology (with lab)",
+          "courses": [
+            "BI110",
+            "BI111",
+            "BI226"
+          ],
+          "note": "Near-universal. NOTE BI110/111 have no lab line at WLU; confirm whether a target school requires first-year bio lab specifically."
+        },
+        {
+          "name": "General chemistry (with lab)",
+          "courses": [
+            "CH110",
+            "CH111"
+          ],
+          "note": "Near-universal; labs required at most schools."
+        },
+        {
+          "name": "Organic chemistry (with lab)",
+          "courses": [
+            "CH202",
+            "CH203"
+          ],
+          "note": "Near-universal; labs required."
+        },
+        {
+          "name": "Biochemistry",
+          "courses": [
+            "CH250"
+          ],
+          "note": "Required at 7/10 schools. CH250 carries a lab."
+        },
+        {
+          "name": "Human physiology",
+          "courses": [
+            "HN220",
+            "HE224",
+            "HE225"
+          ],
+          "note": "Required at ~5/10 (UofT, UAlberta, USask, Dal, Western)."
+        },
+        {
+          "name": "Physics (with lab)",
+          "courses": [
+            "PC141",
+            "PC142"
+          ],
+          "note": "Required at several (McGill, Manitoba, Dalhousie, Quebec schools); labs required."
+        },
+        {
+          "name": "Microbiology",
+          "courses": [
+            "BI374"
+          ],
+          "note": "Required at ~3/10 (UAlberta, USask, Dal). BI374 carries a lab."
+        },
+        {
+          "name": "Statistics",
+          "courses": [
+            "ST231"
+          ],
+          "note": "Required at UAlberta specifically."
+        },
+        {
+          "name": "English / writing",
+          "courses": [],
+          "arts": true,
+          "note": "Required at several; Faculty of Arts."
+        },
+        {
+          "name": "Humanities / social science",
+          "courses": [],
+          "arts": true,
+          "note": "Required at Dalhousie, Manitoba, Saskatchewan; Faculty of Arts."
+        }
+      ],
+      "schoolNotes": [
+        "All 10 schools require the DAT (McGill paused 2024-25).",
+        "Heaviest lists: Manitoba, Saskatchewan, Dalhousie. Quebec schools (UdeM, Laval) add 1.5 yr physics + math."
+      ]
+    },
+    {
+      "id": "labmed",
+      "label": "Medical Laboratory Science / Clinical Genetics",
+      "group": "Other regulated clinical",
+      "exam": "CSMLS certification (after accredited program)",
+      "summary": "MLS and clinical-genetics paths value strong wet-lab technique, microbiology, biochemistry, genetics and cell/molecular biology. WLU is not an accredited MLT program, but these courses build the foundation and support bridging/graduate entry.",
+      "buckets": [
+        {
+          "name": "Genetics & molecular biology",
+          "courses": [
+            "BI226",
+            "BI336"
+          ],
+          "note": "Core to clinical genetics."
+        },
+        {
+          "name": "Cell biology",
+          "courses": [
+            "BI236",
+            "BI341"
+          ],
+          "note": "BI341 carries a lab."
+        },
+        {
+          "name": "Microbiology (with lab)",
+          "courses": [
+            "BI374",
+            "BI376"
+          ],
+          "note": "BI374 carries a lab."
+        },
+        {
+          "name": "Biochemistry",
+          "courses": [
+            "CH250",
+            "CH350"
+          ],
+          "note": "CH250 carries a lab."
+        },
+        {
+          "name": "Immunology",
+          "courses": [
+            "HE303"
+          ],
+          "note": "HE303/BI317."
+        },
+        {
+          "name": "Pathophysiology",
+          "courses": [
+            "HE431"
+          ],
+          "note": "HE431/BI416."
+        },
+        {
+          "name": "Statistics",
+          "courses": [
+            "ST231"
+          ],
+          "note": "Lab data interpretation."
+        }
+      ],
+      "schoolNotes": [
+        "Confirm against the specific bridging/accredited program's admission list."
+      ]
+    },
+    {
+      "id": "gc",
+      "label": "Genetic Counselling (MSc)",
+      "group": "Other regulated clinical",
+      "exam": "CAGC/ABGC certification (after MSc)",
+      "summary": "Genetic counselling MSc programs look for genetics depth, psychology, statistics, and demonstrated counselling/advocacy exposure plus communication.",
+      "buckets": [
+        {
+          "name": "Genetics",
+          "courses": [
+            "BI226",
+            "BI336"
+          ],
+          "note": "Often a specific genetics course is required."
+        },
+        {
+          "name": "Molecular & cell biology",
+          "courses": [
+            "BI236"
+          ],
+          "note": ""
+        },
+        {
+          "name": "Biochemistry",
+          "courses": [
+            "CH250"
+          ],
+          "note": ""
+        },
+        {
+          "name": "Psychology",
+          "courses": [
+            "PS101",
+            "PS102"
+          ],
+          "note": "Developmental/abnormal psych often expected (Arts/PS)."
+        },
+        {
+          "name": "Statistics",
+          "courses": [
+            "ST231"
+          ],
+          "note": "Commonly required."
+        },
+        {
+          "name": "Communication / KT",
+          "courses": [
+            "HE605"
+          ],
+          "note": "MSc-level; counselling/advocacy exposure valued."
+        }
+      ],
+      "schoolNotes": [
+        "Canadian programs (e.g. UofT, UBC, McGill) publish specific prereqs and prior-experience expectations: verify per program."
+      ]
+    },
+    {
+      "id": "research",
+      "label": "Research / Graduate Study (thesis MSc, PhD)",
+      "group": "Research & graduate",
+      "exam": "GPA + research experience + supervisor match",
+      "summary": "Research paths weight experimental design, lab/computational technique, quantitative and bioinformatics skills, primary-literature appraisal, and scientific communication. The thesis MSc (HE699) and HE490 directed research are the capstones.",
+      "buckets": [
+        {
+          "name": "Cell & molecular biology",
+          "courses": [
+            "BI236",
+            "BI336",
+            "BI341"
+          ],
+          "note": "BI341 carries a lab."
+        },
+        {
+          "name": "Genetics",
+          "courses": [
+            "BI226"
+          ],
+          "note": ""
+        },
+        {
+          "name": "Biochemistry",
+          "courses": [
+            "CH250",
+            "CH350"
+          ],
+          "note": ""
+        },
+        {
+          "name": "Research methods & appraisal",
+          "courses": [
+            "HE201",
+            "HE603"
+          ],
+          "note": "HE603 is the grad critical-appraisal course."
+        },
+        {
+          "name": "Statistics & data",
+          "courses": [
+            "ST231"
+          ],
+          "note": "Add upper-year stats / bioinformatics for omics."
+        },
+        {
+          "name": "Directed research / thesis",
+          "courses": [
+            "HE490",
+            "HE699"
+          ],
+          "note": "UG thesis (HE490) and MSc thesis (HE699)."
+        },
+        {
+          "name": "Molecular electives",
+          "courses": [
+            "HE303",
+            "HE431",
+            "HE432",
+            "HE438"
+          ],
+          "note": "Immunology, pathophysiology, virology, cancer biology."
+        }
+      ],
+      "schoolNotes": [
+        "A documented authentic research experience matters more than any single course."
+      ]
+    },
+    {
+      "id": "industry",
+      "label": "Biotech / Pharma / Regulatory",
+      "group": "Industry",
+      "exam": "Degree + technical skills (no single exam)",
+      "summary": "Industry roles (QA/QC, clinical research associate, regulatory affairs, R&D technician) weight hands-on lab technique, GLP/regulatory literacy, data handling, and communication. This is where the experiential/lab gap bites hardest.",
+      "buckets": [
+        {
+          "name": "Lab-bearing science",
+          "courses": [
+            "CH202",
+            "CH250",
+            "BI341",
+            "BI374"
+          ],
+          "note": "Pick courses that actually carry labs (badged below)."
+        },
+        {
+          "name": "Microbiology",
+          "courses": [
+            "BI374",
+            "BI376"
+          ],
+          "note": "Relevant to QA/QC and biomanufacturing."
+        },
+        {
+          "name": "Biochemistry",
+          "courses": [
+            "CH250",
+            "CH350"
+          ],
+          "note": ""
+        },
+        {
+          "name": "Virology / disease biology",
+          "courses": [
+            "HE432",
+            "HE438"
+          ],
+          "note": "Biomedical virology, cancer biology."
+        },
+        {
+          "name": "Statistics & data",
+          "courses": [
+            "ST231"
+          ],
+          "note": "Plus coding/bioinformatics for data roles."
+        },
+        {
+          "name": "Communication / KT",
+          "courses": [
+            "HE605"
+          ],
+          "note": "Regulatory and scientific writing."
+        }
+      ],
+      "schoolNotes": [
+        "GLP/GMP and regulatory literacy are not currently covered by a dedicated course: candidate gap."
+      ]
+    }
+  ],
+  "pathwayGroups": [
+    "Medicine & dentistry",
+    "Other regulated clinical",
+    "Research & graduate",
+    "Industry"
+  ]
 }

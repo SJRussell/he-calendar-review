@@ -1,0 +1,679 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html lang="en">
+
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+	<title>Wilfrid Laurier University - Undergraduate Academic Calendar - 2026/2027 - Faculty of Science - Biology</title>
+	<LINK REL=StyleSheet HREF="css/style_wlu.css?ts=20200602_01" TYPE="text/css" MEDIA="screen,print">
+	<LINK REL=StyleSheet HREF="css/style_wlu_print.css?ts=20200602_01" TYPE="text/css" MEDIA="print">
+	<LINK REL=StyleSheet HREF="css/style_cal.css?ts=20200602_01" TYPE="text/css" MEDIA="screen">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+	<!--[if IE 6]><link rel="stylesheet" href="css/style_wlu_ie6.css" type="text/css" media="screen" /><![endif]-->
+	<!--[if lte IE 9]><link rel="stylesheet" href="css/style_wlu_ie.css" type="text/css" media="screen" /><![endif]-->
+
+	<script type="text/javascript">
+		<!--
+		function findPos(obj) {
+			// gets the 'top' and 'left' positions of the object.
+
+			var curtop = 0;
+			var curleft = 0;
+			if (obj.offsetParent) {
+				while (obj.offsetParent) {
+					curtop += obj.offsetTop;
+					curleft += obj.offsetLeft;
+					obj = obj.offsetParent;
+				}
+			} else {
+				if (obj.y) curtop += obj.y;
+				if (obj.x) curleft += obj.x;
+			}
+			var r = Array();
+			r[0] = curtop;
+			r[1] = curleft;
+			return r;
+		}
+
+		function showGlossaryDef(obj, def) {
+			// will move a special "glossary DIV" to appropriate spot and put term information into it.
+
+			gPos = findPos(obj);
+			if ((gPos[0] > 0) && (gPos[1] > 0)) {
+				gDiv = document.getElementById("glossaryDef");
+				if (gDiv) {
+					gDiv.innerHTML = def.replace(/#QUOTE#/g, '"');
+					gDiv.style.top = (gPos[0] + 15) + "px";
+					gDiv.style.left = gPos[1] + "px";
+					gDiv.style.visibility = "visible";
+					gDiv.style.display = "inline";
+				}
+			}
+		}
+
+		function hideGlossaryDef() {
+			gDiv = document.getElementById("glossaryDef");
+			if (gDiv) {
+				gDiv.style.visibility = "hidden";
+				gDiv.style.display = "none";
+			}
+		}
+
+		function hideSelect() {
+			var DL_bIE = document.all ? true : false; // initialize var to identify IE
+			if (DL_bIE) { // if browser is IE, then...
+				var numforms = document.forms.length;
+				for (f = 1; f < numforms; f++) {
+					var numformelements = document.forms[f].elements.length;
+					for (counter = 0; counter < numformelements; counter++) {
+						var thisselect = document.forms[f].elements[counter];
+						thisselect.style.visibility = "hidden";
+					}
+				}
+			}
+		}
+
+		function showSelect() {
+			var numforms = document.forms.length;
+			for (f = 1; f < numforms; f++) {
+				var numformelements = document.forms[f].elements.length;
+				for (counter = 0; counter < numformelements; counter++) {
+					var thisselect = document.forms[f].elements[counter];
+					thisselect.style.visibility = "visible";
+				}
+			}
+		}
+
+
+		startList = function() {
+			if (document.all && document.getElementById) {
+				navRoot = document.getElementById("nav");
+				for (i = 0; i < navRoot.childNodes.length; i++) {
+					node = navRoot.childNodes[i];
+					if (node.nodeName == "LI") {
+						node.onmouseover = function() {
+							this.className += " over";
+						}
+						node.onmouseout = function() {
+							this.className = this.className.replace(" over", "");
+						}
+					}
+				}
+			}
+		}
+		window.onload = startList;
+		//
+		-->
+	</script>
+</head>
+
+<body>
+
+	<div class="header clearfix" role="banner">
+
+		<a class="skip-to-content-link" href="#main">Skip to content</a>
+		<a class="top-link" name="top"></a>
+
+		<div class="header-logo">
+			<a href="http://www.wlu.ca/">
+				<img src="images/layout/laurier_logo.gif" alt="Wilfrid Laurier University">
+			</a>
+		</div>
+
+		
+		<div class="header-decoration">
+			<img class="book-image" src="images/layout/book_white.gif" alt="Book decoration" role="presentation" aria-hidden="true" />
+			<a href="index.php?cal=1&amp;y=93">
+				<img src="./images/cms/corner/93/ug2026-2027.png" width="287" height="101" alt="Undergraduate Academic Calendar - 2026/2027" />
+			</a>
+		</div>
+
+		<div class="header-tagline">
+			<img src="images/layout/canadian-excellence.gif" width="267" height="18" alt="Canadian Excellence">
+		</div>
+	</div>
+
+	
+	<div class="wrapper">
+
+		<div id="deptnav" class="sidebar" role="navigation" aria-label="Left side navigation">
+
+			<h2><A href="index_old.php?cal=1&amp;y=93">Undergraduate Academic Calendar 2026/2027</A></h2>
+<ul>
+	<li><a href="section.php?cal=1&amp;s=1177&amp;y=93">Areas of Study/Courses @ Laurier (Direct Links)</a></li>
+	<li><a href="section.php?cal=1&amp;s=1181&amp;y=93">Print Version 2023-24</a></li>
+	<li><a href="section.php?cal=1&amp;s=1185&amp;y=93">Using This Calendar</a></li>
+	<li><a href="section.php?cal=1&amp;s=1178&amp;y=93"> Recruitment and Admissions</a></li>
+	<li><a href="section.php?cal=1&amp;s=1176&amp;y=93">Student Awards and Financial Aid</a></li>
+	<li><a href="section.php?cal=1&amp;s=1175&amp;y=93">Financial Services</a></li>
+	<li><a href="section.php?cal=1&amp;s=1180&amp;y=93">Academic and Related Dates</a></li>
+	<li><a href="section.php?cal=1&amp;s=1174&amp;y=93">University Undergraduate Regulations</a></li>
+	<li><a href="department.php?cal=1&amp;d=3201&amp;s=1168&amp;y=93">Interdisciplinary Course Offerings</a></li>
+	<li><a href="section.php?cal=1&amp;s=1169&amp;y=93">Faculty of Arts</a></li>
+	<li><a href="section.php?cal=1&amp;s=1179&amp;y=93">Faculty of Education</a></li>
+	<li><a href="section.php?cal=1&amp;s=1183&amp;y=93">Faculty of Human and Social Sciences</a></li>
+	<li><a href="section.php?cal=1&amp;s=1171&amp;y=93">Faculty of Liberal Arts</a></li>
+	<li><a href="section.php?cal=1&amp;s=1173&amp;y=93">Faculty of Music</a></li>
+	<li class="current"><a href="section.php?cal=1&amp;s=1170&amp;y=93">Faculty of Science</a></li>
+		<li class="sublist"><a href="section.php?cal=1&amp;s=1170&amp;ss=4648&amp;y=93">BSc and BA Programs and Regulations</a></li>
+		<li class="sublist"><a href="section.php?cal=1&amp;s=1170&amp;ss=4649&amp;y=93">Academic Advising</a></li>
+		<li class="sublist"><a href="section.php?cal=1&amp;s=1170&amp;ss=4650&amp;y=93">Regulations for All Honours Programs</a></li>
+		<li class="sublist"><a href="section.php?cal=1&amp;s=1170&amp;ss=4651&amp;y=93">Regulations Combining Honours with a Secondary Minor/Option</a></li>
+		<li class="sublist"><a href="section.php?cal=1&amp;s=1170&amp;ss=4652&amp;y=93">Co-operative Education</a></li>
+		<li class="sublist"><a href="section.php?cal=1&amp;s=1170&amp;ss=4653&amp;y=93">Faculty of Science Campus Transfer Policy</a></li>
+	<li><a href="section.php?cal=1&amp;s=1172&amp;y=93">Lazaridis School of Business and Economics</a></li>
+	<li><a href="section.php?cal=1&amp;s=1184&amp;y=93">Lyle S Hallman Faculty of Social Work</a></li>
+	<li><a href="section.php?cal=1&amp;s=1182&amp;y=93">Martin Luther University College</a></li>
+	<li><a href="section.php?cal=1&amp;s=1202&amp;y=93">School of International Policy and Governance</a></li>
+</ul>
+<hr/>
+<ul>
+	<li><a href="index_old.php?cal=1&amp;y=93">Search this Calendar</a></li>
+	<li><a href="glossary.php?cal=1&amp;y=93">Glossary</a></li>
+</ul>
+			<div id="deptcontact">
+	<h1>Contact Us:</h1>
+		<strong>Contact Academic Department directly unless Calendar inquiry</strong><br />			email: <a href="mailto:&#0098;&#0118;&#0111;&#0105;&#0115;&#0105;&#0110;&#0101;&#0064;&#0119;&#0108;&#0117;&#0046;&#0099;&#0097;">Bonnie Voisine, Office of the Registrar</a><br />
+					phone: bvoisine@wlu.ca<br />
+					</div>
+
+		</div>
+
+		<div id="main" class="main" role="main">
+
+			<a name="mcontent"></a>
+
+			<div class="breadcrumb">
+<img src="images/layout/redlistarrow.gif" alt="List bullet" role="presentation" aria-hidden="true"> <a href="section.php?cal=1&amp;s=1170&amp;y=93">Faculty of Science</a>&nbsp;<img src="images/layout/redlistsmbullet.gif" alt="list bullet" role="presentation" aria-hidden="true"> <a href="department.php?cal=1&amp;d=3247&amp;s=1170&amp;y=93">Biology</a>&nbsp;</div>
+
+			<div class="content">
+<h1>Biology</h1>
+<p>
+
+   
+   
+    <p>Honours BSc, BA, Combination and Joint <A href="glossary.php?cal=1&amp;g=1667&amp;y=93" class="glossaryTerm" onMouseOver="showGlossaryDef(this,'<P><p>A group of courses, generally a combination of required and elective courses, which leads to a degree.  </p><p><b class=#QUOTE#Bold#QUOTE#>General program:</b> A program consisting of a minimum of 15.0 credits and normally taken over three academic years.  </p><p><b class=#QUOTE#Bold#QUOTE#>Honours program: </b>A program consisting of a minimum of 20.0 credits and normally taken over four academic years with an area of specialization.</p></P>')" onMouseOut="hideGlossaryDef()">programs</A> and Minor:</p> 
+  
+</p><div class="reqs">
+<div class="greyheading">Department Information on this page</div>
+<ul class="proginfo">
+<li><a href="#Faculty">Faculty</a></li>
+<li><a href="#Programs">Programs</a></li>
+<li><a href="#BI_Course_Notes">BI Course Notes</a></li>
+<li><a href="#Biology_courses_with_Lab_Component">Biology courses with Lab Component</a></li>
+<li><a href="#Course_Offerings">Course Offerings</a></li>
+</ul>
+<div class="clear">&nbsp;</div>
+</div>
+<div class="reqs">
+<div class="heading"><A name="Faculty"></A>Faculty</div>
+<p><div id="stafflist" name="stafflist"><strong>Adjunct Faculty</strong><ul>
+   <li><A href="mailto:&#0099;&#0103;&#0104;&#0101;&#0111;&#0114;&#0103;&#0104;&#0105;&#0117;&#0064;&#0119;&#0108;&#0117;&#0046;&#0099;&#0097;">Cristina Gheorghiu</A>, <i>PhD</i></li>
+   <li><A href="mailto:&#0107;&#0109;&#0117;&#0110;&#0107;&#0105;&#0116;&#0116;&#0114;&#0105;&#0099;&#0107;&#0064;&#0119;&#0108;&#0117;&#0046;&#0099;&#0097;">Kelly Munkittrick</A>, <i>PhD</i></li>
+   <li>John Smith, <i>PhD</i></li>
+</ul>
+<strong>Full-Time Faculty</strong><ul>
+   <li><A href="mailto:&#0106;&#0098;&#0097;&#0108;&#0116;&#0122;&#0101;&#0114;&#0064;&#0119;&#0108;&#0117;&#0046;&#0099;&#0097;">Jennifer Baltzer</A>, <i>PhD</i>, <i>CRC in Forests and Global Change</i></li>
+   <li><A href="mailto:&#0100;&#0099;&#0097;&#0115;&#0116;&#0114;&#0111;&#0118;&#0101;&#0114;&#0100;&#0101;&#0064;&#0119;&#0108;&#0117;&#0046;&#0099;&#0097;">Danve Castroverde</A>, <i>PhD</i></li>
+   <li><A href="mailto:&#0109;&#0099;&#0111;&#0115;&#0116;&#0101;&#0097;&#0064;&#0119;&#0108;&#0117;&#0046;&#0099;&#0097;">Mihai Costea</A>, <i>PhD</i></li>
+   <li><A href="mailto:&#0106;&#0099;&#0117;&#0108;&#0112;&#0064;&#0119;&#0108;&#0117;&#0046;&#0099;&#0097;">Joseph Culp</A>, <i>PhD</i>, <i>Environment and Climate Change Canada Research Scientist in Residence</i></li>
+   <li><A href="mailto:&#0100;&#0100;&#0101;&#0117;&#0116;&#0115;&#0099;&#0104;&#0109;&#0097;&#0110;&#0064;&#0119;&#0108;&#0117;&#0046;&#0099;&#0097;">Douglas Deutschman</A>, <i>PhD</i></li>
+   <li><A href="mailto:&#0115;&#0100;&#0101;&#0119;&#0105;&#0116;&#0116;&#0101;&#0111;&#0114;&#0114;&#0064;&#0119;&#0108;&#0117;&#0046;&#0099;&#0097;">Stephanie DeWitte-Orr</A>, <i>PhD</i>, <i>Associate Dean, Faculty of Science</i></li>
+   <li><A href="mailto:&#0100;&#0103;&#0114;&#0097;&#0121;&#0064;&#0119;&#0108;&#0117;&#0046;&#0099;&#0097;">Derek Gray</A>, <i>PhD</i></li>
+   <li><A href="mailto:&#0102;&#0103;&#0117;&#0105;&#0110;&#0101;&#0108;&#0064;&#0119;&#0108;&#0117;&#0046;&#0099;&#0097;">Frédérique Guinel</A>, <i>PhD</i>, <i>Professor Emeritus</i></li>
+   <li>Erin Leonard, <i>PhD</i></li>
+   <li><A href="mailto:&#0116;&#0108;&#0111;&#0110;&#0103;&#0064;&#0119;&#0108;&#0117;&#0046;&#0099;&#0097;">Tristan Long</A>, <i>PhD</i></li>
+   <li><A href="mailto:&#0100;&#0109;&#0097;&#0099;&#0108;&#0097;&#0116;&#0099;&#0104;&#0121;&#0064;&#0119;&#0108;&#0117;&#0046;&#0099;&#0097;">Deborah MacLatchy</A>, <i>PhD</i>, <i>President and Vice-Chancellor, Wilfrid Laurier University</i></li>
+   <li><A href="mailto:&#0097;&#0109;&#0099;&#0100;&#0111;&#0110;&#0097;&#0108;&#0100;&#0064;&#0119;&#0108;&#0117;&#0046;&#0099;&#0097;">Allison Mcdonald</A>, <i>PhD</i></li>
+   <li><A href="mailto:&#0106;&#0109;&#0099;&#0103;&#0101;&#0101;&#0114;&#0064;&#0119;&#0108;&#0117;&#0046;&#0099;&#0097;">James McGeer</A>, <i>PhD</i>, <i>Undergraduate Advisor; Co-chair, Laurier Institute for Water Sciences</i></li>
+   <li><A href="mailto:&#0114;&#0109;&#0111;&#0110;&#0097;&#0103;&#0104;&#0097;&#0110;&#0064;&#0119;&#0108;&#0117;&#0046;&#0099;&#0097;">Richelle Monaghan</A>, <i>PhD, EdD,</i>, <i>Vice Dean, Faculty of Science</i></li>
+   <li><A href="mailto:&#0103;&#0109;&#0111;&#0114;&#0101;&#0110;&#0111;&#0064;&#0119;&#0108;&#0117;&#0046;&#0099;&#0097;">Gabriel Moreno-Hagelsieb</A>, <i>PhD</i></li>
+   <li><A href="mailto:&#0106;&#0111;&#0110;&#0097;&#0116;&#0104;&#0097;&#0110;&#0110;&#0101;&#0119;&#0109;&#0097;&#0110;&#0064;&#0119;&#0108;&#0117;&#0046;&#0099;&#0097;">Jonathan Newman</A>, <i>PhD</i>, <i>Vice-President: Research</i></li>
+   <li><A href="mailto:&#0115;&#0114;&#0097;&#0109;&#0115;&#0097;&#0121;&#0064;&#0119;&#0108;&#0117;&#0046;&#0099;&#0097;">Scott Ramsay</A>, <i>PhD</i></li>
+   <li><A href="mailto:&#0114;&#0115;&#0108;&#0097;&#0119;&#0115;&#0111;&#0110;&#0064;&#0119;&#0108;&#0117;&#0046;&#0099;&#0097;">Robin Slawson</A>, <i>PhD</i></li>
+   <li><A href="mailto:&#0109;&#0115;&#0109;&#0105;&#0116;&#0104;&#0064;&#0119;&#0108;&#0117;&#0046;&#0099;&#0097;">Matthew Smith</A>, <i>PhD</i>, <i>Chair</i></li>
+   <li><A href="mailto:&#0107;&#0101;&#0115;&#0116;&#0101;&#0118;&#0101;&#0110;&#0115;&#0064;&#0119;&#0108;&#0117;&#0046;&#0099;&#0097;">Kevin Stevens</A>, <i>PhD</i>, <i>Co-chair, Laurier Institute of Water Sciences</i></li>
+   <li><A href="mailto:&#0102;&#0115;&#0116;&#0101;&#0119;&#0097;&#0114;&#0116;&#0064;&#0119;&#0108;&#0117;&#0046;&#0099;&#0097;">Frances Stewart</A>, <i>PhD, CRC in Northern Wildlife Biology</i></li>
+   <li><A href="mailto:&#0104;&#0115;&#0119;&#0097;&#0110;&#0115;&#0111;&#0110;&#0064;&#0119;&#0108;&#0117;&#0046;&#0099;&#0097;">Heidi Swanson</A>, <i>PhD, Jarislowsky Chair in Sustainable Water Futures</i></li>
+   <li><A href="mailto:&#0106;&#0119;&#0101;&#0097;&#0100;&#0103;&#0101;&#0064;&#0119;&#0108;&#0117;&#0046;&#0099;&#0097;">Joel Weadge</A>, <i>PhD</i></li>
+   <li><A href="mailto:&#0109;&#0119;&#0105;&#0108;&#0107;&#0105;&#0101;&#0064;&#0119;&#0108;&#0117;&#0046;&#0099;&#0097;">Michael Wilkie</A>, <i>PhD</i></li>
+   <li><A href="mailto:&#0106;&#0109;&#0119;&#0105;&#0108;&#0115;&#0111;&#0110;&#0064;&#0119;&#0108;&#0117;&#0046;&#0099;&#0097;">Jonathan Mark Wilson</A>, <i>PhD</i>, <i>Graduate Officer</i></li>
+</ul></div></p>
+<div class="clear">&nbsp;</div>
+<div class="returntotop"><a href="#top">Top</a></div>
+</div>
+<A name="Programs"></A>
+<div class="reqs">
+<div class="heading">Program Information</div>
+<P style="padding-top:0px;"><UL>
+<LI><A href="program.php?cal=1&amp;d=3247&amp;p=7545&amp;s=1170&amp;y=93">Honours BSc Biology</A></LI>
+<LI><A href="program.php?cal=1&amp;d=3247&amp;p=7546&amp;s=1170&amp;y=93">Honours BSc Biology and Chemistry</A></LI>
+<LI><A href="program.php?cal=1&amp;d=3247&amp;p=7547&amp;s=1170&amp;y=93">Honours BSc Biology and Mathematics</A></LI>
+<LI><A href="program.php?cal=1&amp;d=3247&amp;p=7548&amp;s=1170&amp;y=93">Honours BSc Biology and Psychology</A></LI>
+<LI><A href="program.php?cal=1&amp;d=3247&amp;p=7552&amp;s=1170&amp;y=93">Honours BSc Environmental Science</A></LI>
+<LI><A href="program.php?cal=1&amp;d=3247&amp;p=7549&amp;s=1170&amp;y=93">Honours BA Biology</A></LI>
+<LI><A href="program.php?cal=1&amp;d=3247&amp;p=7550&amp;s=1170&amp;y=93">Honours BA Biology in Combination with another Honours BA Program</A></LI>
+<LI><A href="program.php?cal=1&amp;d=3247&amp;p=7554&amp;s=1170&amp;y=93">Research Specialization</A></LI>
+<LI><A href="program.php?cal=1&amp;d=3247&amp;p=7553&amp;s=1170&amp;y=93">BSc and BA Biology with Concentrations</A></LI>
+<LI><A href="program.php?cal=1&amp;d=3247&amp;p=7551&amp;s=1170&amp;y=93">Biology Minor</A></LI>
+<LI><A href="program.php?cal=1&amp;d=3247&amp;p=7555&amp;s=1170&amp;y=93">General BSc Biology</A></LI>
+</UL></P>
+<div class="clear">&nbsp;</div>
+<div class="returntotop"><a href="#top">Top</a></div>
+</div>
+<div class="reqs">
+<div class="heading"><A name="BI_Course_Notes"></A>BI Course Notes</div>
+<p>A <A href="glossary.php?cal=1&amp;g=1669&amp;y=93" class="glossaryTerm" onMouseOver="showGlossaryDef(this,'<P>A student is a person who is registered in a program that leads to a degree, diploma or certificate of the university and includes all students described in the section, <a href=#QUOTE#https://academic-calendar.wlu.ca/section.php?cal=1&amp;s=1185&amp;ss=4718&amp;y=93#QUOTE#><b class=#QUOTE#Bold#QUOTE#>Classification of Students</b></a>, but does not include a visitor.</P>')" onMouseOut="hideGlossaryDef()">student</A> may
+cross-register at the University of Waterloo for a maximum of 1.0
+credit in each of Year 3 and Year 4. Timetable conflicts will not be
+accepted as a valid reason for taking an equivalent course at the
+University of Waterloo.
+</p>
+<div class="clear">&nbsp;</div>
+<div class="returntotop"><a href="#top">Top</a></div>
+</div>
+<div class="reqs">
+<div class="heading"><A name="Biology_courses_with_Lab_Component"></A>Biology courses with Lab Component</div>
+<p>
+
+   
+  <a href="course.php?c=79337&amp;cal=1&amp;d=3247&amp;s=1170&amp;y=93">BI256</a>, <a href="course.php?c=79338&amp;cal=1&amp;d=3247&amp;s=1170&amp;y=93">BI266</a>, <a href="course.php?c=79339&amp;cal=1&amp;d=3247&amp;s=1170&amp;y=93">BI276</a>, <a href="course.php?c=79312&amp;cal=1&amp;d=3247&amp;s=1170&amp;y=93">BI300</a>, <a href="course.php?c=79371&amp;cal=1&amp;d=3247&amp;s=1170&amp;y=93">BI307</a>, <a href="course.php?c=79315&amp;cal=1&amp;d=3247&amp;s=1170&amp;y=93">BI308</a>, <a href="course.php?c=79333&amp;cal=1&amp;d=3247&amp;s=1170&amp;y=93">BI309</a>, <a href="course.php?c=79327&amp;cal=1&amp;d=3247&amp;s=1170&amp;y=93">BI326</a>/<a href="course.php?c=79409&amp;cal=1&amp;d=3248&amp;s=1170&amp;y=93">CH454</a>, <a href="course.php?c=79370&amp;cal=1&amp;d=3247&amp;s=1170&amp;y=93">BI341</a>/<a href="course.php?c=79426&amp;cal=1&amp;d=3248&amp;s=1170&amp;y=93">CH341</a>, <a href="course.php?c=79346&amp;cal=1&amp;d=3247&amp;s=1170&amp;y=93">BI349</a>, <span style="font-size: 11px;"><a href="course.php?c=79366&amp;cal=1&amp;d=3247&amp;s=1170&amp;y=93">BI359</a>,</span> <a href="course.php?c=79364&amp;cal=1&amp;d=3247&amp;s=1170&amp;y=93">BI363</a>, <a href="course.php?c=79329&amp;cal=1&amp;d=3247&amp;s=1170&amp;y=93">BI367</a>, <a href="course.php?c=79342&amp;cal=1&amp;d=3247&amp;s=1170&amp;y=93">BI368</a>, <a href="course.php?c=79361&amp;cal=1&amp;d=3247&amp;s=1170&amp;y=93">BI369</a>, <a href="course.php?c=79330&amp;cal=1&amp;d=3247&amp;s=1170&amp;y=93">BI374</a>, <a href="course.php?c=79328&amp;cal=1&amp;d=3247&amp;s=1170&amp;y=93">BI390</a>, <a href="course.php?c=79323&amp;cal=1&amp;d=3247&amp;s=1170&amp;y=93">BI391</a>, <a href="course.php?c=79334&amp;cal=1&amp;d=3247&amp;s=1170&amp;y=93">BI392</a>, <a href="course.php?c=79359&amp;cal=1&amp;d=3247&amp;s=1170&amp;y=93">BI394</a>, <a href="course.php?c=79318&amp;cal=1&amp;d=3247&amp;s=1170&amp;y=93">BI405</a>, <a href="course.php?c=79320&amp;cal=1&amp;d=3247&amp;s=1170&amp;y=93">BI431</a>, <a href="course.php?c=79345&amp;cal=1&amp;d=3247&amp;s=1170&amp;y=93">BI439</a>, <a href="course.php?c=79349&amp;cal=1&amp;d=3247&amp;s=1170&amp;y=93">BI441</a>, <a href="course.php?c=79347&amp;cal=1&amp;d=3247&amp;s=1170&amp;y=93">BI449</a>, <a href="course.php?c=79351&amp;cal=1&amp;d=3247&amp;s=1170&amp;y=93">BI456</a>, <a href="course.php?c=79321&amp;cal=1&amp;d=3247&amp;s=1170&amp;y=93">BI475</a>, <a href="course.php?c=79322&amp;cal=1&amp;d=3247&amp;s=1170&amp;y=93">BI476</a>, <a href="course.php?c=79358&amp;cal=1&amp;d=3247&amp;s=1170&amp;y=93">BI484</a>, <a href="course.php?c=79352&amp;cal=1&amp;d=3247&amp;s=1170&amp;y=93">BI488</a>.
+
+</p>
+<div class="clear">&nbsp;</div>
+<div class="returntotop"><a href="#top">Top</a></div>
+</div>
+<A name="Course_Offerings"></A>
+<div class="reqs">
+<table>
+<caption>Course Offerings</caption>
+<tr><th>Course #</th><th>Title</th><th>Credits</th></tr>
+<tr class="zebra">
+   <td><a href="course.php?c=79331&amp;cal=1&amp;d=3247&amp;s=1170&amp;y=93">BI110</a></td>
+	<td>Unifying Life Processes</td>
+	<td>0.5</td>
+</tr>
+<tr>
+   <td><a href="course.php?c=79332&amp;cal=1&amp;d=3247&amp;s=1170&amp;y=93">BI111</a></td>
+	<td>Biological Diversity and Evolution</td>
+	<td>0.5</td>
+</tr>
+<tr class="zebra">
+   <td><a href="course.php?c=79367&amp;cal=1&amp;d=3247&amp;s=1170&amp;y=93">BI196</a></td>
+	<td>Practical Skills for Biologists</td>
+	<td>0.5</td>
+</tr>
+<tr>
+   <td><a href="course.php?c=79368&amp;cal=1&amp;d=3247&amp;s=1170&amp;y=93">BI206</a></td>
+	<td>Ecology</td>
+	<td>0.5</td>
+</tr>
+<tr class="zebra">
+   <td><a href="course.php?c=79335&amp;cal=1&amp;d=3247&amp;s=1170&amp;y=93">BI226</a></td>
+	<td>Molecular Biology and Genetics</td>
+	<td>0.5</td>
+</tr>
+<tr>
+   <td><a href="course.php?c=79336&amp;cal=1&amp;d=3247&amp;s=1170&amp;y=93">BI236</a></td>
+	<td>Cell Biology</td>
+	<td>0.5</td>
+</tr>
+<tr class="zebra">
+   <td><a href="course.php?c=79337&amp;cal=1&amp;d=3247&amp;s=1170&amp;y=93">BI256</a></td>
+	<td>Life on Earth: Animals</td>
+	<td>0.5</td>
+</tr>
+<tr>
+   <td><a href="course.php?c=79338&amp;cal=1&amp;d=3247&amp;s=1170&amp;y=93">BI266</a></td>
+	<td>Life on Earth: Plants</td>
+	<td>0.5</td>
+</tr>
+<tr class="zebra">
+   <td><a href="course.php?c=79339&amp;cal=1&amp;d=3247&amp;s=1170&amp;y=93">BI276</a></td>
+	<td>Life on Earth: Microbes</td>
+	<td>0.5</td>
+</tr>
+<tr>
+   <td><a href="course.php?c=79312&amp;cal=1&amp;d=3247&amp;s=1170&amp;y=93">BI300</a></td>
+	<td>Environmental Toxicology</td>
+	<td>0.5</td>
+</tr>
+<tr class="zebra">
+   <td><a href="course.php?c=79314&amp;cal=1&amp;d=3247&amp;s=1170&amp;y=93">BI302</a></td>
+	<td>Evolution</td>
+	<td>0.5</td>
+</tr>
+<tr>
+   <td><a href="course.php?c=81982&amp;cal=1&amp;d=3247&amp;s=1170&amp;y=93">BI303</a></td>
+	<td>Arctic Ecology</td>
+	<td>0.5</td>
+</tr>
+<tr class="zebra">
+   <td><a href="course.php?c=81983&amp;cal=1&amp;d=3247&amp;s=1170&amp;y=93">BI303</a></td>
+	<td>Arctic Ecology</td>
+	<td>0.5</td>
+</tr>
+<tr>
+   <td><a href="course.php?c=79355&amp;cal=1&amp;d=3247&amp;s=1170&amp;y=93">BI305</a></td>
+	<td>Origin of Life on Earth and Endosymbiotic Theory</td>
+	<td>0.5</td>
+</tr>
+<tr class="zebra">
+   <td><a href="course.php?c=79313&amp;cal=1&amp;d=3247&amp;s=1170&amp;y=93">BI306</a></td>
+	<td>Global Biogeography and Conservation Biology</td>
+	<td>0.5</td>
+</tr>
+<tr>
+   <td><a href="course.php?c=79371&amp;cal=1&amp;d=3247&amp;s=1170&amp;y=93">BI307</a></td>
+	<td>Limnology Field Methods</td>
+	<td>0.5</td>
+</tr>
+<tr class="zebra">
+   <td><a href="course.php?c=79315&amp;cal=1&amp;d=3247&amp;s=1170&amp;y=93">BI308</a></td>
+	<td>Behavioural Ecology</td>
+	<td>0.5</td>
+</tr>
+<tr>
+   <td><a href="course.php?c=79333&amp;cal=1&amp;d=3247&amp;s=1170&amp;y=93">BI309</a></td>
+	<td>Population Ecology</td>
+	<td>0.5</td>
+</tr>
+<tr class="zebra">
+   <td><a href="course.php?c=79369&amp;cal=1&amp;d=3247&amp;s=1170&amp;y=93">BI317</a></td>
+	<td>Introduction to Immunology</td>
+	<td>0.5</td>
+</tr>
+<tr>
+   <td><a href="course.php?c=79327&amp;cal=1&amp;d=3247&amp;s=1170&amp;y=93">BI326</a></td>
+	<td>Bioinformatics</td>
+	<td>0.5</td>
+</tr>
+<tr class="zebra">
+   <td><a href="course.php?c=79357&amp;cal=1&amp;d=3247&amp;s=1170&amp;y=93">BI330</a></td>
+	<td>Fundamentals of Histology</td>
+	<td>0.5</td>
+</tr>
+<tr>
+   <td><a href="course.php?c=79343&amp;cal=1&amp;d=3247&amp;s=1170&amp;y=93">BI336</a></td>
+	<td>Molecular Cell Biology</td>
+	<td>0.5</td>
+</tr>
+<tr class="zebra">
+   <td><a href="course.php?c=79370&amp;cal=1&amp;d=3247&amp;s=1170&amp;y=93">BI341</a></td>
+	<td>Lab Methods: Cell and Molecular Biology</td>
+	<td>0.5</td>
+</tr>
+<tr>
+   <td><a href="course.php?c=79346&amp;cal=1&amp;d=3247&amp;s=1170&amp;y=93">BI349</a></td>
+	<td>Embryology</td>
+	<td>0.5</td>
+</tr>
+<tr class="zebra">
+   <td><a href="course.php?c=79372&amp;cal=1&amp;d=3247&amp;s=1170&amp;y=93">BI356</a></td>
+	<td>Animals in the Anthropocene</td>
+	<td>0.5</td>
+</tr>
+<tr>
+   <td><a href="course.php?c=79350&amp;cal=1&amp;d=3247&amp;s=1170&amp;y=93">BI358</a></td>
+	<td>Animals: Form and Function</td>
+	<td>0.5</td>
+</tr>
+<tr class="zebra">
+   <td><a href="course.php?c=79366&amp;cal=1&amp;d=3247&amp;s=1170&amp;y=93">BI359</a></td>
+	<td>Comparative Vertebrate Anatomy</td>
+	<td>0.5</td>
+</tr>
+<tr>
+   <td><a href="course.php?c=79364&amp;cal=1&amp;d=3247&amp;s=1170&amp;y=93">BI363</a></td>
+	<td>Plant Ecology</td>
+	<td>0.5</td>
+</tr>
+<tr class="zebra">
+   <td><a href="course.php?c=81984&amp;cal=1&amp;d=3247&amp;s=1170&amp;y=93">BI366</a></td>
+	<td>Molecular Biology of Plant Growth</td>
+	<td>0.5</td>
+</tr>
+<tr>
+   <td><a href="course.php?c=79329&amp;cal=1&amp;d=3247&amp;s=1170&amp;y=93">BI367</a></td>
+	<td>Field Botany - Flora of Ontario</td>
+	<td>0.5</td>
+</tr>
+<tr class="zebra">
+   <td><a href="course.php?c=79342&amp;cal=1&amp;d=3247&amp;s=1170&amp;y=93">BI368</a></td>
+	<td>Plants: Form and Function</td>
+	<td>0.5</td>
+</tr>
+<tr>
+   <td><a href="course.php?c=79361&amp;cal=1&amp;d=3247&amp;s=1170&amp;y=93">BI369</a></td>
+	<td>Plant Physiology</td>
+	<td>0.5</td>
+</tr>
+<tr class="zebra">
+   <td><a href="course.php?c=79330&amp;cal=1&amp;d=3247&amp;s=1170&amp;y=93">BI374</a></td>
+	<td>Physiological Applications of Microbiology</td>
+	<td>0.5</td>
+</tr>
+<tr>
+   <td><a href="course.php?c=79363&amp;cal=1&amp;d=3247&amp;s=1170&amp;y=93">BI376</a></td>
+	<td>Microbial Physiology</td>
+	<td>0.5</td>
+</tr>
+<tr class="zebra">
+   <td><a href="course.php?c=79328&amp;cal=1&amp;d=3247&amp;s=1170&amp;y=93">BI390</a></td>
+	<td>Field Studies I – OUPFB</td>
+	<td>0.5</td>
+</tr>
+<tr>
+   <td><a href="course.php?c=79323&amp;cal=1&amp;d=3247&amp;s=1170&amp;y=93">BI391</a></td>
+	<td>Field Ecology of Southern Ontario</td>
+	<td>0.5</td>
+</tr>
+<tr class="zebra">
+   <td><a href="course.php?c=79334&amp;cal=1&amp;d=3247&amp;s=1170&amp;y=93">BI392</a></td>
+	<td>Field Studies II – OUPFB</td>
+	<td>0.5</td>
+</tr>
+<tr>
+   <td><a href="course.php?c=79356&amp;cal=1&amp;d=3247&amp;s=1170&amp;y=93">BI393</a></td>
+	<td>Biostatistics</td>
+	<td>0.5</td>
+</tr>
+<tr class="zebra">
+   <td><a href="course.php?c=79359&amp;cal=1&amp;d=3247&amp;s=1170&amp;y=93">BI394</a></td>
+	<td>The Changing North: Subarctic Ecosystems in the Face of Climate Warming</td>
+	<td>0.5</td>
+</tr>
+<tr>
+   <td><a href="course.php?c=79316&amp;cal=1&amp;d=3247&amp;s=1170&amp;y=93">BI396</a></td>
+	<td>Special Topics in Biology</td>
+	<td>0.5</td>
+</tr>
+<tr class="zebra">
+   <td><a href="course.php?c=79317&amp;cal=1&amp;d=3247&amp;s=1170&amp;y=93">BI400</a></td>
+	<td>Ecological Risk Assessment and Sustainability</td>
+	<td>0.5</td>
+</tr>
+<tr>
+   <td><a href="course.php?c=79318&amp;cal=1&amp;d=3247&amp;s=1170&amp;y=93">BI405</a></td>
+	<td>Community Ecology</td>
+	<td>0.5</td>
+</tr>
+<tr class="zebra">
+   <td><a href="course.php?c=79344&amp;cal=1&amp;d=3247&amp;s=1170&amp;y=93">BI407</a></td>
+	<td>Animal Communication</td>
+	<td>0.5</td>
+</tr>
+<tr>
+   <td><a href="course.php?c=79360&amp;cal=1&amp;d=3247&amp;s=1170&amp;y=93">BI416</a></td>
+	<td>Pathophysiology</td>
+	<td>0.5</td>
+</tr>
+<tr class="zebra">
+   <td><a href="course.php?c=79319&amp;cal=1&amp;d=3247&amp;s=1170&amp;y=93">BI426</a></td>
+	<td>Genome Dynamics</td>
+	<td>0.5</td>
+</tr>
+<tr>
+   <td><a href="course.php?c=79320&amp;cal=1&amp;d=3247&amp;s=1170&amp;y=93">BI431</a></td>
+	<td>Microtechniques</td>
+	<td>0.5</td>
+</tr>
+<tr class="zebra">
+   <td><a href="course.php?c=79345&amp;cal=1&amp;d=3247&amp;s=1170&amp;y=93">BI439</a></td>
+	<td>Vertebrate Microscopic Anatomy</td>
+	<td>0.5</td>
+</tr>
+<tr>
+   <td><a href="course.php?c=79349&amp;cal=1&amp;d=3247&amp;s=1170&amp;y=93">BI441</a></td>
+	<td>Advanced Molecular Biotechnology</td>
+	<td>0.5</td>
+</tr>
+<tr class="zebra">
+   <td><a href="course.php?c=79347&amp;cal=1&amp;d=3247&amp;s=1170&amp;y=93">BI449</a></td>
+	<td>Developmental Biology</td>
+	<td>0.5</td>
+</tr>
+<tr>
+   <td><a href="course.php?c=79365&amp;cal=1&amp;d=3247&amp;s=1170&amp;y=93">BI451</a></td>
+	<td>Fish Physiological Adaptations</td>
+	<td>0.5</td>
+</tr>
+<tr class="zebra">
+   <td><a href="course.php?c=79351&amp;cal=1&amp;d=3247&amp;s=1170&amp;y=93">BI456</a></td>
+	<td>Environmental Physiology of Animals</td>
+	<td>0.5</td>
+</tr>
+<tr>
+   <td><a href="course.php?c=79348&amp;cal=1&amp;d=3247&amp;s=1170&amp;y=93">BI458</a></td>
+	<td>Vertebrate Biodiversity and Conservation</td>
+	<td>0.5</td>
+</tr>
+<tr class="zebra">
+   <td><a href="course.php?c=79353&amp;cal=1&amp;d=3247&amp;s=1170&amp;y=93">BI459</a></td>
+	<td>Endocrinology</td>
+	<td>0.5</td>
+</tr>
+<tr>
+   <td><a href="course.php?c=79354&amp;cal=1&amp;d=3247&amp;s=1170&amp;y=93">BI463</a></td>
+	<td>Environmental Stress Biology of Plants</td>
+	<td>0.5</td>
+</tr>
+<tr class="zebra">
+   <td><a href="course.php?c=79340&amp;cal=1&amp;d=3247&amp;s=1170&amp;y=93">BI464</a></td>
+	<td>Plants and People</td>
+	<td>0.5</td>
+</tr>
+<tr>
+   <td><a href="course.php?c=79341&amp;cal=1&amp;d=3247&amp;s=1170&amp;y=93">BI468</a></td>
+	<td>Plant Biodiversity and Conservation</td>
+	<td>0.5</td>
+</tr>
+<tr class="zebra">
+   <td><a href="course.php?c=79362&amp;cal=1&amp;d=3247&amp;s=1170&amp;y=93">BI470</a></td>
+	<td>Biomedical Virology</td>
+	<td>0.5</td>
+</tr>
+<tr>
+   <td><a href="course.php?c=79321&amp;cal=1&amp;d=3247&amp;s=1170&amp;y=93">BI475</a></td>
+	<td>Environmental Microbiology</td>
+	<td>0.5</td>
+</tr>
+<tr class="zebra">
+   <td><a href="course.php?c=79322&amp;cal=1&amp;d=3247&amp;s=1170&amp;y=93">BI476</a></td>
+	<td>Microbial Disease</td>
+	<td>0.5</td>
+</tr>
+<tr>
+   <td><a href="course.php?c=79358&amp;cal=1&amp;d=3247&amp;s=1170&amp;y=93">BI484</a></td>
+	<td>Fundamentals of Parasitology</td>
+	<td>0.5</td>
+</tr>
+<tr class="zebra">
+   <td><a href="course.php?c=79352&amp;cal=1&amp;d=3247&amp;s=1170&amp;y=93">BI488</a></td>
+	<td>Invertebrate Biodiversity and Conservation</td>
+	<td>0.5</td>
+</tr>
+<tr>
+   <td><a href="course.php?c=79373&amp;cal=1&amp;d=3247&amp;s=1170&amp;y=93">BI491</a></td>
+	<td>Science Communication</td>
+	<td>0.5</td>
+</tr>
+<tr class="zebra">
+   <td><a href="course.php?c=79324&amp;cal=1&amp;d=3247&amp;s=1170&amp;y=93">BI495</a></td>
+	<td>Directed Studies</td>
+	<td>0.5</td>
+</tr>
+<tr>
+   <td><a href="course.php?c=79325&amp;cal=1&amp;d=3247&amp;s=1170&amp;y=93">BI496</a></td>
+	<td>Special Topics in Advanced Biology</td>
+	<td>0.5</td>
+</tr>
+<tr class="zebra">
+   <td><a href="course.php?c=79326&amp;cal=1&amp;d=3247&amp;s=1170&amp;y=93">BI499</a></td>
+	<td>Thesis</td>
+	<td>1.5</td>
+</tr>
+</table>
+<div class="clear">&nbsp;</div>
+<div class="returntotop"><a href="#top">Top</a></div>
+</div>
+			</div> <!-- /.content -->
+
+		</div> <!-- /.main -->
+
+		
+<div id="contentRHS" class="sidebar" role="navigation" aria-label="Right side navigation">
+	<img src="./images/layout/picture_right.gif" alt="Decorative image" role="presentation">
+
+		<div class="calright">
+	<h4>Academic &amp; Related Dates 2026/2027</h4>
+	<ul class="dates">
+	<li><a href="dates.php?cal=1&amp;y=93">All Dates</a></li>
+	</ul>
+
+			<hr class="calrightrule"/>
+	<h4>Other Calendars</h4>
+	<ul class="archivedcal">
+		<li class="ruled"><a href="index_old.php?cal=1&amp;y=92">Undergraduate Academic Calendar (2025/2026)</a></li>
+		<li class="ruled"><a href="index_old.php?cal=1&amp;y=90">Undergraduate Academic Calendar (2024/2025)</a></li>
+		<li class="ruled"><a href="index_old.php?cal=1&amp;y=87">Undergraduate Academic Calendar (2023/2024)</a></li>
+		<li class="ruled"><a href="index_old.php?cal=1&amp;y=85">Undergraduate Academic Calendar (2022/2023)</a></li>
+		<li><a href="/index.php">more...</a></li>
+		</ul>
+		</div>
+</div> <!-- /.sidebar -->
+
+	</div> <!-- /.wrapper -->
+
+	<div class="footer" role="contentinfo">
+
+		<div class="footer-top">
+			<div>
+				<a href="https://www.wlu.ca/about/locations-maps-and-parking/contact-us.html">Contact WLU</a>
+			</div>
+			<div>
+				<span>&copy; 2026 Wilfrid Laurier University</span>
+			</div>
+			<div>
+				<img src="images/layout/footer_red.gif" alt="Ontario, Canada" title="Ontario, Canada">
+			</div>
+		</div> <!-- /.footer-top -->
+
+		<div class="footer-bottom">
+			<div>
+				<span>Wilfrid Laurier University | 75 University Avenue West, Waterloo, Ontario, Canada  N2L 3C5</span>
+			</div>
+			<div>
+				<span>Phone: 519.884.1970 | Fax: 519.886.9351</span>
+			</div>
+			<div>
+				<span class="brantford">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
+			</div>
+		</div> <!-- /.footer-bottom -->
+
+	</div> <!-- /#footer -->
+
+	
+</body>
+</html>
+

@@ -1,0 +1,32 @@
+{
+  "per_dept_counts": {
+    "biology": 67,
+    "chem_biochem": 53,
+    "physics": 39,
+    "mathematics": 80,
+    "psychology": 68,
+    "kinesiology": 62,
+    "medical_foundations": 16,
+    "paramedicine": 9
+  },
+  "problems": [],
+  "total": 375,
+  "medical_foundations_listed_codes": [
+    "BI110",
+    "BI111",
+    "CH110",
+    "CH111",
+    "CH130",
+    "CH131",
+    "CH202",
+    "CH203",
+    "CH206",
+    "CH207",
+    "CH250",
+    "MA100",
+    "MA101",
+    "MA102",
+    "MA103",
+    "PC131"
+  ]
+}
