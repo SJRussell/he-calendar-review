@@ -6045,7 +6045,7 @@
         {
           "label": "First-year biology lab",
           "gap": true,
-          "note": "BI110/111 carry no lab; schools requiring a first-year bio lab may need a lab-bearing substitute. Flagged for the dept to resolve."
+          "note": "BI110/111 carry no lab; schools requiring a first-year bio lab may need a lab-bearing substitute."
         }
       ],
       "schoolNotes": [
@@ -6200,7 +6200,7 @@
         {
           "label": "Counselling / advocacy experience",
           "gap": true,
-          "note": "GC programs expect demonstrated counselling, crisis-line, or advocacy experience. Not a course; flag for advising."
+          "note": "GC programs expect demonstrated counselling, crisis-line, or advocacy experience."
         }
       ],
       "schoolNotes": [
@@ -6375,7 +6375,7 @@
         }
       ],
       "schoolNotes": [
-        "GLP/GMP and regulatory literacy are not currently covered by a dedicated course: candidate gap."
+        "GLP/GMP and regulatory literacy are not currently covered by a dedicated course."
       ]
     }
   ],

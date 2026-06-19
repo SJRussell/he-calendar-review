@@ -292,7 +292,7 @@ PATHWAYS = [
   "suggested":[
     {"label":"HE science electives","courses":["HE303","HE431","HE438"],"note":"Reinforce the dental science base (immunology, pathophysiology, cancer biology)."},
     {"label":"Pick biochem + physiology early","courses":["CH250","HN220"],"note":"Both are common dental prerequisites; choosing them early avoids a Year-4 scramble (advising, not a new course)."},
-    {"label":"First-year biology lab","gap":True,"note":"BI110/111 carry no lab; schools requiring a first-year bio lab may need a lab-bearing substitute. Flagged for the dept to resolve."}],
+    {"label":"First-year biology lab","gap":True,"note":"BI110/111 carry no lab; schools requiring a first-year bio lab may need a lab-bearing substitute."}],
   "schoolNotes":["All 10 schools require the DAT (McGill paused 2024-25).","Heaviest lists: Manitoba, Saskatchewan, Dalhousie. Quebec schools (UdeM, Laval) add 1.5 yr physics + math."]},
 
  {"id":"labmed","label":"Medical Laboratory Science / Clinical Genetics","group":"Other regulated clinical","exam":"CSMLS certification (after accredited program)",
@@ -323,7 +323,7 @@ PATHWAYS = [
   ],
   "suggested":[
     {"label":"Genetics depth + psychology","courses":["BI336","PS101","PS102"],"note":"Genetics depth plus developmental/abnormal psychology (PS/Arts) is commonly expected."},
-    {"label":"Counselling / advocacy experience","gap":True,"note":"GC programs expect demonstrated counselling, crisis-line, or advocacy experience. Not a course; flag for advising."}],
+    {"label":"Counselling / advocacy experience","gap":True,"note":"GC programs expect demonstrated counselling, crisis-line, or advocacy experience."}],
   "schoolNotes":["Canadian programs (e.g. UofT, UBC, McGill) publish specific prereqs and prior-experience expectations: verify per program."]},
 
  {"id":"research","label":"Research / Graduate Study (thesis MSc, PhD)","group":"Research & graduate","exam":"GPA + research experience + supervisor match",
@@ -357,7 +357,7 @@ PATHWAYS = [
     {"label":"Disease-biology & lab electives","courses":["HE432","HE438","BI341","BI374"],"note":"Relevant to biomanufacturing, QA/QC, and R&D roles."},
     {"label":"GLP/GMP & regulatory literacy, QA/QC","gap":True,"note":"Not currently offered. Proposed as a module or micro-credential rather than a full course."},
     {"label":"Scientific & regulatory writing","gap":True,"note":"Covered at the MSc level (HE605) but thin in the UG cluster; proposed as an embedded component."}],
-  "schoolNotes":["GLP/GMP and regulatory literacy are not currently covered by a dedicated course: candidate gap."]},
+  "schoolNotes":["GLP/GMP and regulatory literacy are not currently covered by a dedicated course."]},
 ]
 PATHWAY_GROUPS = ["Medicine & dentistry","Other regulated clinical","Research & graduate","Industry"]
 
