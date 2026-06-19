@@ -186,6 +186,12 @@ body.gradmode .lvl-chip, body.gradmode #newOnly{display:none}
 .cchip.arts{font-style:italic;color:var(--med);border-style:dashed}
 .schoolnotes{background:var(--panel2);border:1px solid var(--line);border-radius:10px;padding:11px 14px;margin-top:6px;font-size:12.5px;color:var(--mut)}
 .schoolnotes b{color:var(--ink)}
+.pathcols{display:grid;grid-template-columns:1.55fr 1fr;gap:16px}
+@media(max-width:820px){.pathcols{grid-template-columns:1fr}}
+.colhead{font-size:11px;text-transform:uppercase;letter-spacing:.6px;color:var(--mut);margin:0 0 8px;padding-bottom:6px;border-bottom:1px solid var(--line)}
+.bucket.sugg{border-left:4px solid var(--accent2)}
+.bucket.gap{border-left:4px solid var(--med);background:linear-gradient(180deg,var(--panel),#241d12)}
+.gaptag{font-size:9.5px;font-weight:700;text-transform:uppercase;letter-spacing:.4px;background:var(--med);color:#1a1206;border-radius:4px;padding:1px 6px;vertical-align:middle}
 </style>
 </head>
 <body>
@@ -640,12 +646,21 @@ function renderPathways(){
   document.querySelectorAll("#pathSel .pathbtn").forEach(b=>b.onclick=()=>{state.path=b.dataset.path;renderPathways();});
   const p=DATA.pathways.find(x=>x.id===state.path)||DATA.pathways[0];
   let h=`<div class="pathhead"><span class="exam">Target: ${p.exam}</span><h2>${p.label}</h2><p>${p.summary}</p></div>`;
+  // left: required / counts-toward buckets
+  let left=`<div class="colhead">Required &middot; counts toward prerequisites</div>`;
   p.buckets.forEach(b=>{
     const chips = b.arts
       ? `<span class="cchip arts" title="Faculty of Arts, outside Science">Faculty of Arts course</span>`
       : (b.courses.length? b.courses.map(courseChip).join("") : `<span class="cchip arts">no WLU-Science course</span>`);
-    h+=`<div class="bucket"><h4>${b.name}</h4>${b.note?`<p class="why">${b.note}</p>`:""}<div class="cchips">${chips}</div></div>`;
+    left+=`<div class="bucket"><h4>${b.name}</h4>${b.note?`<p class="why">${b.note}</p>`:""}<div class="cchips">${chips}</div></div>`;
   });
+  // right: suggested electives + proposed additions (gaps)
+  let right=`<div class="colhead">Suggested electives &amp; proposed additions</div>`;
+  (p.suggested||[]).forEach(s=>{
+    const chips = (s.courses&&s.courses.length)? `<div class="cchips" style="margin-top:7px">${s.courses.map(courseChip).join("")}</div>` : "";
+    right+=`<div class="bucket ${s.gap?'gap':'sugg'}"><h4>${s.gap?'&#9650; ':''}${s.label}${s.gap?' <span class="gaptag">proposed / not offered</span>':''}</h4>${s.note?`<p class="why">${s.note}</p>`:""}${chips}</div>`;
+  });
+  h+=`<div class="pathcols"><div>${left}</div><div>${right}</div></div>`;
   if(p.schoolNotes&&p.schoolNotes.length)
     h+=`<div class="schoolnotes"><b>School notes:</b><ul style="margin:6px 0 0;padding-left:18px">${p.schoolNotes.map(n=>`<li>${n}</li>`).join("")}</ul></div>`;
   $("#pathBody").innerHTML=h;

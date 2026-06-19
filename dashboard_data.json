@@ -5919,6 +5919,23 @@
           "note": "Required at Calgary, Manitoba, Saskatchewan; UBC transitioning. Faculty of Arts."
         }
       ],
+      "suggested": [
+        {
+          "label": "Science-depth HE electives",
+          "courses": [
+            "HE303",
+            "HE438",
+            "HE330",
+            "HE368"
+          ],
+          "note": "Reinforce MCAT biology/biochemistry content and a competitive transcript."
+        },
+        {
+          "label": "Professional & interview readiness",
+          "gap": true,
+          "note": "CASPer/MMI and ethics preparation is a competency, not a course. Proposed: embed in an HE seminar rather than add a course."
+        }
+      ],
       "schoolNotes": [
         "No-prereq schools: McMaster, Queen's, Western, Calgary, Alberta, Memorial, Dalhousie, Saskatchewan, TMU, Manitoba.",
         "Prescriptive: McGill (bio/chem/ochem/physics with labs), Ottawa (bio + hum/soc-sci), Toronto (life sci + soc sci), UBC (English to English+Indigenous)."
@@ -6007,6 +6024,30 @@
           "note": "Required at Dalhousie, Manitoba, Saskatchewan; Faculty of Arts."
         }
       ],
+      "suggested": [
+        {
+          "label": "HE science electives",
+          "courses": [
+            "HE303",
+            "HE431",
+            "HE438"
+          ],
+          "note": "Reinforce the dental science base (immunology, pathophysiology, cancer biology)."
+        },
+        {
+          "label": "Pick biochem + physiology early",
+          "courses": [
+            "CH250",
+            "HN220"
+          ],
+          "note": "Both are common dental prerequisites; choosing them early avoids a Year-4 scramble (advising, not a new course)."
+        },
+        {
+          "label": "First-year biology lab",
+          "gap": true,
+          "note": "BI110/111 carry no lab; schools requiring a first-year bio lab may need a lab-bearing substitute. Flagged for the dept to resolve."
+        }
+      ],
       "schoolNotes": [
         "All 10 schools require the DAT (McGill paused 2024-25).",
         "Heaviest lists: Manitoba, Saskatchewan, Dalhousie. Quebec schools (UdeM, Laval) add 1.5 yr physics + math."
@@ -6073,6 +6114,23 @@
           "note": "Lab data interpretation."
         }
       ],
+      "suggested": [
+        {
+          "label": "Lab-bearing & disease-biology electives",
+          "courses": [
+            "BI341",
+            "BI374",
+            "HE431",
+            "HE432"
+          ],
+          "note": "Build hands-on technique and clinical relevance."
+        },
+        {
+          "label": "Accredited MLT training is external",
+          "gap": true,
+          "note": "WLU is not a CSMLS-accredited MLT program; these courses build the foundation and support bridging/graduate entry only."
+        }
+      ],
       "schoolNotes": [
         "Confirm against the specific bridging/accredited program's admission list."
       ]
@@ -6127,6 +6185,22 @@
             "HE605"
           ],
           "note": "MSc-level; counselling/advocacy exposure valued."
+        }
+      ],
+      "suggested": [
+        {
+          "label": "Genetics depth + psychology",
+          "courses": [
+            "BI336",
+            "PS101",
+            "PS102"
+          ],
+          "note": "Genetics depth plus developmental/abnormal psychology (PS/Arts) is commonly expected."
+        },
+        {
+          "label": "Counselling / advocacy experience",
+          "gap": true,
+          "note": "GC programs expect demonstrated counselling, crisis-line, or advocacy experience. Not a course; flag for advising."
         }
       ],
       "schoolNotes": [
@@ -6198,6 +6272,26 @@
           "note": "Immunology, pathophysiology, virology, cancer biology."
         }
       ],
+      "suggested": [
+        {
+          "label": "Capstone research",
+          "courses": [
+            "HE490",
+            "HE699"
+          ],
+          "note": "UG thesis and MSc thesis are the differentiators for grad applications."
+        },
+        {
+          "label": "Redesigned experiential research",
+          "gap": true,
+          "note": "Proposed: a term-long research thread or a computational/dry CURE leveraging our bioinformatics strength, replacing the retired touch-everything-once lab."
+        },
+        {
+          "label": "Bioinformatics / coding for omics",
+          "gap": true,
+          "note": "Proposed elective or module; increasingly expected for modern molecular research."
+        }
+      ],
       "schoolNotes": [
         "A documented authentic research experience matters more than any single course."
       ]
@@ -6207,7 +6301,7 @@
       "label": "Biotech / Pharma / Regulatory",
       "group": "Industry",
       "exam": "Degree + technical skills (no single exam)",
-      "summary": "Industry roles (QA/QC, clinical research associate, regulatory affairs, R&D technician) weight hands-on lab technique, GLP/regulatory literacy, data handling, and communication. This is where the experiential/lab gap bites hardest.",
+      "summary": "Industry roles (QA/QC, clinical research associate, regulatory affairs, R&D technician) weight hands-on lab technique, GLP/regulatory literacy, data handling, and communication.",
       "buckets": [
         {
           "name": "Lab-bearing science",
@@ -6256,6 +6350,28 @@
             "HE605"
           ],
           "note": "Regulatory and scientific writing."
+        }
+      ],
+      "suggested": [
+        {
+          "label": "Disease-biology & lab electives",
+          "courses": [
+            "HE432",
+            "HE438",
+            "BI341",
+            "BI374"
+          ],
+          "note": "Relevant to biomanufacturing, QA/QC, and R&D roles."
+        },
+        {
+          "label": "GLP/GMP & regulatory literacy, QA/QC",
+          "gap": true,
+          "note": "Not currently offered. Proposed as a module or micro-credential rather than a full course."
+        },
+        {
+          "label": "Scientific & regulatory writing",
+          "gap": true,
+          "note": "Covered at the MSc level (HE605) but thin in the UG cluster; proposed as an embedded component."
         }
       ],
       "schoolNotes": [

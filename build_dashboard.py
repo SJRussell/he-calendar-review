@@ -270,6 +270,9 @@ PATHWAYS = [
     {"name":"English","courses":[],"arts":True,"note":"Required at UBC and Ottawa. Faculty of Arts course, outside Science."},
     {"name":"Indigenous Studies","courses":[],"arts":True,"note":"Required at Calgary, Manitoba, Saskatchewan; UBC transitioning. Faculty of Arts."},
   ],
+  "suggested":[
+    {"label":"Science-depth HE electives","courses":["HE303","HE438","HE330","HE368"],"note":"Reinforce MCAT biology/biochemistry content and a competitive transcript."},
+    {"label":"Professional & interview readiness","gap":True,"note":"CASPer/MMI and ethics preparation is a competency, not a course. Proposed: embed in an HE seminar rather than add a course."}],
   "schoolNotes":["No-prereq schools: McMaster, Queen's, Western, Calgary, Alberta, Memorial, Dalhousie, Saskatchewan, TMU, Manitoba.","Prescriptive: McGill (bio/chem/ochem/physics with labs), Ottawa (bio + hum/soc-sci), Toronto (life sci + soc sci), UBC (English to English+Indigenous)."]},
 
  {"id":"dent","label":"Dentistry (DDS / DMD)","group":"Medicine & dentistry","exam":"DAT (paused at McGill)",
@@ -286,6 +289,10 @@ PATHWAYS = [
     {"name":"English / writing","courses":[],"arts":True,"note":"Required at several; Faculty of Arts."},
     {"name":"Humanities / social science","courses":[],"arts":True,"note":"Required at Dalhousie, Manitoba, Saskatchewan; Faculty of Arts."},
   ],
+  "suggested":[
+    {"label":"HE science electives","courses":["HE303","HE431","HE438"],"note":"Reinforce the dental science base (immunology, pathophysiology, cancer biology)."},
+    {"label":"Pick biochem + physiology early","courses":["CH250","HN220"],"note":"Both are common dental prerequisites; choosing them early avoids a Year-4 scramble (advising, not a new course)."},
+    {"label":"First-year biology lab","gap":True,"note":"BI110/111 carry no lab; schools requiring a first-year bio lab may need a lab-bearing substitute. Flagged for the dept to resolve."}],
   "schoolNotes":["All 10 schools require the DAT (McGill paused 2024-25).","Heaviest lists: Manitoba, Saskatchewan, Dalhousie. Quebec schools (UdeM, Laval) add 1.5 yr physics + math."]},
 
  {"id":"labmed","label":"Medical Laboratory Science / Clinical Genetics","group":"Other regulated clinical","exam":"CSMLS certification (after accredited program)",
@@ -298,7 +305,11 @@ PATHWAYS = [
     {"name":"Immunology","courses":["HE303"],"note":"HE303/BI317."},
     {"name":"Pathophysiology","courses":["HE431"],"note":"HE431/BI416."},
     {"name":"Statistics","courses":["ST231"],"note":"Lab data interpretation."},
-  ],"schoolNotes":["Confirm against the specific bridging/accredited program's admission list."]},
+  ],
+  "suggested":[
+    {"label":"Lab-bearing & disease-biology electives","courses":["BI341","BI374","HE431","HE432"],"note":"Build hands-on technique and clinical relevance."},
+    {"label":"Accredited MLT training is external","gap":True,"note":"WLU is not a CSMLS-accredited MLT program; these courses build the foundation and support bridging/graduate entry only."}],
+  "schoolNotes":["Confirm against the specific bridging/accredited program's admission list."]},
 
  {"id":"gc","label":"Genetic Counselling (MSc)","group":"Other regulated clinical","exam":"CAGC/ABGC certification (after MSc)",
   "summary":"Genetic counselling MSc programs look for genetics depth, psychology, statistics, and demonstrated counselling/advocacy exposure plus communication.",
@@ -309,7 +320,11 @@ PATHWAYS = [
     {"name":"Psychology","courses":["PS101","PS102"],"note":"Developmental/abnormal psych often expected (Arts/PS)."},
     {"name":"Statistics","courses":["ST231"],"note":"Commonly required."},
     {"name":"Communication / KT","courses":["HE605"],"note":"MSc-level; counselling/advocacy exposure valued."},
-  ],"schoolNotes":["Canadian programs (e.g. UofT, UBC, McGill) publish specific prereqs and prior-experience expectations: verify per program."]},
+  ],
+  "suggested":[
+    {"label":"Genetics depth + psychology","courses":["BI336","PS101","PS102"],"note":"Genetics depth plus developmental/abnormal psychology (PS/Arts) is commonly expected."},
+    {"label":"Counselling / advocacy experience","gap":True,"note":"GC programs expect demonstrated counselling, crisis-line, or advocacy experience. Not a course; flag for advising."}],
+  "schoolNotes":["Canadian programs (e.g. UofT, UBC, McGill) publish specific prereqs and prior-experience expectations: verify per program."]},
 
  {"id":"research","label":"Research / Graduate Study (thesis MSc, PhD)","group":"Research & graduate","exam":"GPA + research experience + supervisor match",
   "summary":"Research paths weight experimental design, lab/computational technique, quantitative and bioinformatics skills, primary-literature appraisal, and scientific communication. The thesis MSc (HE699) and HE490 directed research are the capstones.",
@@ -321,10 +336,15 @@ PATHWAYS = [
     {"name":"Statistics & data","courses":["ST231"],"note":"Add upper-year stats / bioinformatics for omics."},
     {"name":"Directed research / thesis","courses":["HE490","HE699"],"note":"UG thesis (HE490) and MSc thesis (HE699)."},
     {"name":"Molecular electives","courses":["HE303","HE431","HE432","HE438"],"note":"Immunology, pathophysiology, virology, cancer biology."},
-  ],"schoolNotes":["A documented authentic research experience matters more than any single course."]},
+  ],
+  "suggested":[
+    {"label":"Capstone research","courses":["HE490","HE699"],"note":"UG thesis and MSc thesis are the differentiators for grad applications."},
+    {"label":"Redesigned experiential research","gap":True,"note":"Proposed: a term-long research thread or a computational/dry CURE leveraging our bioinformatics strength, replacing the retired touch-everything-once lab."},
+    {"label":"Bioinformatics / coding for omics","gap":True,"note":"Proposed elective or module; increasingly expected for modern molecular research."}],
+  "schoolNotes":["A documented authentic research experience matters more than any single course."]},
 
  {"id":"industry","label":"Biotech / Pharma / Regulatory","group":"Industry","exam":"Degree + technical skills (no single exam)",
-  "summary":"Industry roles (QA/QC, clinical research associate, regulatory affairs, R&D technician) weight hands-on lab technique, GLP/regulatory literacy, data handling, and communication. This is where the experiential/lab gap bites hardest.",
+  "summary":"Industry roles (QA/QC, clinical research associate, regulatory affairs, R&D technician) weight hands-on lab technique, GLP/regulatory literacy, data handling, and communication.",
   "buckets":[
     {"name":"Lab-bearing science","courses":["CH202","CH250","BI341","BI374"],"note":"Pick courses that actually carry labs (badged below)."},
     {"name":"Microbiology","courses":["BI374","BI376"],"note":"Relevant to QA/QC and biomanufacturing."},
@@ -332,7 +352,12 @@ PATHWAYS = [
     {"name":"Virology / disease biology","courses":["HE432","HE438"],"note":"Biomedical virology, cancer biology."},
     {"name":"Statistics & data","courses":["ST231"],"note":"Plus coding/bioinformatics for data roles."},
     {"name":"Communication / KT","courses":["HE605"],"note":"Regulatory and scientific writing."},
-  ],"schoolNotes":["GLP/GMP and regulatory literacy are not currently covered by a dedicated course: candidate gap."]},
+  ],
+  "suggested":[
+    {"label":"Disease-biology & lab electives","courses":["HE432","HE438","BI341","BI374"],"note":"Relevant to biomanufacturing, QA/QC, and R&D roles."},
+    {"label":"GLP/GMP & regulatory literacy, QA/QC","gap":True,"note":"Not currently offered. Proposed as a module or micro-credential rather than a full course."},
+    {"label":"Scientific & regulatory writing","gap":True,"note":"Covered at the MSc level (HE605) but thin in the UG cluster; proposed as an embedded component."}],
+  "schoolNotes":["GLP/GMP and regulatory literacy are not currently covered by a dedicated course: candidate gap."]},
 ]
 PATHWAY_GROUPS = ["Medicine & dentistry","Other regulated clinical","Research & graduate","Industry"]
 
