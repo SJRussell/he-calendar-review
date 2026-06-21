@@ -240,8 +240,10 @@ def has_lab_from_hours(h): return bool(h) and "lab" in h.lower()
 # combined code -> {title, lab, url, level, dept} index (cognate + HE/HN, all aliases)
 COURSE_INDEX = {}
 for c in cognate:
-    COURSE_INDEX[c["code"]] = {"title":c["title"], "lab":c.get("has_lab",False),
+    rec = {"title":c["title"], "lab":c.get("has_lab",False),
         "url":c.get("url",""), "level":level(c["code"]), "dept":c.get("dept","")}
+    for alias in c["code"].split("/"):   # index each side of a cross-listed code (e.g. BI326/CH454)
+        COURSE_INDEX.setdefault(alias.strip(), rec)
 # add HE/HN UG (2026/27) then grad HE6xx; index every alias of a cross-listed code
 for c in merge(d26, "2026/2027"):
     rec = {"title":c["title"], "lab":has_lab_from_hours(c.get("hours","")),
@@ -257,25 +259,25 @@ for c in merge_grad(g26, "2026/2027"):
 # Destination pathways. Each bucket: name, why, courses (WLU codes), note.
 # arts=True flags a requirement met outside the Faculty of Science (no WLU-Science course to link).
 PATHWAYS = [
- {"id":"med","label":"Medicine (MD)","group":"Medicine & dentistry","exam":"MCAT + CASPer/Casper",
+ {"id":"med","label":"Medicine (MD)","group":"Medicine & dentistry","exam":"MCAT, GPA, CASPer",
   "summary":"Most Canadian medical schools require NO specific prerequisite courses (e.g. McMaster, Queen's, Western, Calgary, Alberta). The binding gates are MCAT content coverage, GPA, and CASPer/interview. A prescriptive minority and new Indigenous Studies requirements are the exceptions, below.",
   "buckets":[
-    {"name":"Biology / life sciences","courses":["BI110","BI111","BI226","BI236"],"note":"Toronto requires 12 units life science; Ottawa requires 6 units biology."},
+    {"name":"Biology/life sciences","courses":["BI110","BI111","BI226","BI236"],"note":"Toronto requires 12 units life science; Ottawa requires 6 units biology."},
     {"name":"General chemistry","courses":["CH110","CH111"],"note":"McGill requires 2 intro chem WITH labs (100-level)."},
     {"name":"Organic chemistry","courses":["CH202","CH203"],"note":"McGill requires 1 organic chem with lab; core MCAT content."},
     {"name":"Biochemistry","courses":["CH250"],"note":"MCAT is biochem-heavy; recommended (not required) at McGill."},
     {"name":"Physics","courses":["PC141","PC142"],"note":"McGill requires 2 physics WITH labs; MCAT content. Use life-sci PC141/142 (lab) not the lecture-only versions."},
-    {"name":"Statistics / quantitative","courses":["ST231"],"note":"MCAT quantitative reasoning; ST231 is the Health-Sci-aligned option."},
+    {"name":"Statistics/quantitative","courses":["ST231"],"note":"MCAT quantitative reasoning; ST231 is the Health-Sci-aligned option."},
     {"name":"Psychology & sociology (MCAT Psych/Soc)","courses":["PS101","PS102"],"note":"MCAT Psych/Soc section. Add a sociology course (Faculty of Arts)."},
     {"name":"English","courses":[],"arts":True,"note":"Required at UBC and Ottawa. Faculty of Arts course, outside Science."},
     {"name":"Indigenous Studies","courses":[],"arts":True,"note":"Required at Calgary, Manitoba, Saskatchewan; UBC transitioning. Faculty of Arts."},
   ],
   "suggested":[
-    {"label":"Science-depth HE electives","courses":["HE303","HE438","HE330","HE368"],"note":"Reinforce MCAT biology/biochemistry content and a competitive transcript."},
-    {"label":"Professional & interview readiness","gap":True,"note":"CASPer/MMI and ethics preparation is a competency, not a course. Proposed: embed in an HE seminar rather than add a course."}],
+    {"kind":"existing","label":"Science-depth HE electives","courses":["HE303","HE438","HE330","HE368"],"note":"Existing electives that reinforce MCAT biology/biochemistry content and a competitive transcript."},
+    {"kind":"module","label":"CASPer/MMI & ethics prep","note":"The only addition. Could be embedded in an existing seminar, or may already be covered by the premed society. Not a new course."}],
   "schoolNotes":["No-prereq schools: McMaster, Queen's, Western, Calgary, Alberta, Memorial, Dalhousie, Saskatchewan, TMU, Manitoba.","Prescriptive: McGill (bio/chem/ochem/physics with labs), Ottawa (bio + hum/soc-sci), Toronto (life sci + soc sci), UBC (English to English+Indigenous)."]},
 
- {"id":"dent","label":"Dentistry (DDS / DMD)","group":"Medicine & dentistry","exam":"DAT (paused at McGill)",
+ {"id":"dent","label":"Dentistry (DDS/DMD)","group":"Medicine & dentistry","exam":"DAT (paused at McGill)",
   "summary":"Unlike medicine, ALL 10 Canadian dental schools have prescriptive prerequisites, and many specify 'with labs'. Biology, general chemistry and organic chemistry are near-universal; biochemistry (7/10) and physiology (5/10) are common.",
   "buckets":[
     {"name":"Biology (with lab)","courses":["BI110","BI111","BI226"],"note":"Near-universal. NOTE BI110/111 have no lab line at WLU; confirm whether a target school requires first-year bio lab specifically."},
@@ -286,16 +288,16 @@ PATHWAYS = [
     {"name":"Physics (with lab)","courses":["PC141","PC142"],"note":"Required at several (McGill, Manitoba, Dalhousie, Quebec schools); labs required."},
     {"name":"Microbiology","courses":["BI374"],"note":"Required at ~3/10 (UAlberta, USask, Dal). BI374 carries a lab."},
     {"name":"Statistics","courses":["ST231"],"note":"Required at UAlberta specifically."},
-    {"name":"English / writing","courses":[],"arts":True,"note":"Required at several; Faculty of Arts."},
-    {"name":"Humanities / social science","courses":[],"arts":True,"note":"Required at Dalhousie, Manitoba, Saskatchewan; Faculty of Arts."},
+    {"name":"English/writing","courses":[],"arts":True,"note":"Required at several; Faculty of Arts."},
+    {"name":"Humanities/social science","courses":[],"arts":True,"note":"Required at Dalhousie, Manitoba, Saskatchewan; Faculty of Arts."},
   ],
   "suggested":[
-    {"label":"HE science electives","courses":["HE303","HE431","HE438"],"note":"Reinforce the dental science base (immunology, pathophysiology, cancer biology)."},
-    {"label":"Pick biochem + physiology early","courses":["CH250","HN220"],"note":"Both are common dental prerequisites; choosing them early avoids a Year-4 scramble (advising, not a new course)."},
-    {"label":"First-year biology lab","gap":True,"note":"BI110/111 carry no lab; schools requiring a first-year bio lab may need a lab-bearing substitute."}],
+    {"kind":"advising","label":"Take CH250 and HN220 early","courses":["CH250","HN220"],"note":"Biochemistry and physiology are common dental prerequisites; choosing them early avoids a Year-4 scramble. Advising, not a new course."},
+    {"kind":"substitution","label":"First-year biology lab","note":"BI110/BI111 carry no lab; for schools that require a first-year biology lab, pick a lab-bearing substitute."},
+    {"kind":"existing","label":"HE science electives","courses":["HE303","HE431","HE438"],"note":"Reinforce the dental science base (immunology, pathophysiology, cancer biology)."}],
   "schoolNotes":["All 10 schools require the DAT (McGill paused 2024-25).","Heaviest lists: Manitoba, Saskatchewan, Dalhousie. Quebec schools (UdeM, Laval) add 1.5 yr physics + math."]},
 
- {"id":"labmed","label":"Medical Laboratory Science / Clinical Genetics","group":"Other regulated clinical","exam":"CSMLS certification (after accredited program)",
+ {"id":"labmed","label":"Medical Laboratory Science/Clinical Genetics","group":"Other regulated clinical","exam":"CSMLS certification (after accredited program)",
   "summary":"MLS and clinical-genetics paths value strong wet-lab technique, microbiology, biochemistry, genetics and cell/molecular biology. WLU is not an accredited MLT program, but these courses build the foundation and support bridging/graduate entry.",
   "buckets":[
     {"name":"Genetics & molecular biology","courses":["BI226","BI336"],"note":"Core to clinical genetics."},
@@ -307,8 +309,8 @@ PATHWAYS = [
     {"name":"Statistics","courses":["ST231"],"note":"Lab data interpretation."},
   ],
   "suggested":[
-    {"label":"Lab-bearing & disease-biology electives","courses":["BI341","BI374","HE431","HE432"],"note":"Build hands-on technique and clinical relevance."},
-    {"label":"Accredited MLT training is external","gap":True,"note":"WLU is not a CSMLS-accredited MLT program; these courses build the foundation and support bridging/graduate entry only."}],
+    {"kind":"existing","label":"Lab-bearing & disease-biology electives","courses":["BI341","BI374","HE431","HE432"],"note":"Hands-on technique and clinical relevance, all existing."},
+    {"kind":"external","label":"Accredited MLT training is external","note":"WLU is not a CSMLS-accredited MLT program; these courses build the foundation and support bridging or graduate entry only."}],
   "schoolNotes":["Confirm against the specific bridging/accredited program's admission list."]},
 
  {"id":"gc","label":"Genetic Counselling (MSc)","group":"Other regulated clinical","exam":"CAGC/ABGC certification (after MSc)",
@@ -319,44 +321,44 @@ PATHWAYS = [
     {"name":"Biochemistry","courses":["CH250"],"note":""},
     {"name":"Psychology","courses":["PS101","PS102"],"note":"Developmental/abnormal psych often expected (Arts/PS)."},
     {"name":"Statistics","courses":["ST231"],"note":"Commonly required."},
-    {"name":"Communication / KT","courses":["HE605"],"note":"MSc-level; counselling/advocacy exposure valued."},
+    {"name":"Communication/KT","courses":["HE605"],"note":"MSc-level; counselling/advocacy exposure valued."},
   ],
   "suggested":[
-    {"label":"Genetics depth + psychology","courses":["BI336","PS101","PS102"],"note":"Genetics depth plus developmental/abnormal psychology (PS/Arts) is commonly expected."},
-    {"label":"Counselling / advocacy experience","gap":True,"note":"GC programs expect demonstrated counselling, crisis-line, or advocacy experience."}],
+    {"kind":"existing","label":"Genetics depth + psychology","courses":["BI336","PS101","PS102"],"note":"Genetics depth plus introductory (ideally developmental/abnormal) psychology, all existing."},
+    {"kind":"advising","label":"Counselling or advocacy experience","note":"Demonstrated counselling or advocacy experience, such as a crisis-line or peer-support placement. Advising, not a course."}],
   "schoolNotes":["Canadian programs (e.g. UofT, UBC, McGill) publish specific prereqs and prior-experience expectations: verify per program."]},
 
- {"id":"research","label":"Research / Graduate Study (thesis MSc, PhD)","group":"Research & graduate","exam":"GPA + research experience + supervisor match",
+ {"id":"research","label":"Research/Graduate Study (thesis MSc, PhD)","group":"Research & graduate","exam":"GPA + research experience + supervisor match",
   "summary":"Research paths weight experimental design, lab/computational technique, quantitative and bioinformatics skills, primary-literature appraisal, and scientific communication. The thesis MSc (HE699) and HE490 directed research are the capstones.",
   "buckets":[
     {"name":"Cell & molecular biology","courses":["BI236","BI336","BI341"],"note":"BI341 carries a lab."},
     {"name":"Genetics","courses":["BI226"],"note":""},
     {"name":"Biochemistry","courses":["CH250","CH350"],"note":""},
     {"name":"Research methods & appraisal","courses":["HE201","HE603"],"note":"HE603 is the grad critical-appraisal course."},
-    {"name":"Statistics & data","courses":["ST231"],"note":"Add upper-year stats / bioinformatics for omics."},
-    {"name":"Directed research / thesis","courses":["HE490","HE699"],"note":"UG thesis (HE490) and MSc thesis (HE699)."},
+    {"name":"Statistics & data","courses":["ST231"],"note":"Add upper-year stats/bioinformatics for omics."},
+    {"name":"Directed research/thesis","courses":["HE490","HE699"],"note":"UG thesis (HE490) and MSc thesis (HE699)."},
     {"name":"Molecular electives","courses":["HE303","HE431","HE432","HE438"],"note":"Immunology, pathophysiology, virology, cancer biology."},
   ],
   "suggested":[
-    {"label":"Capstone research","courses":["HE490","HE699"],"note":"UG thesis and MSc thesis are the differentiators for grad applications."},
-    {"label":"Redesigned experiential research","gap":True,"note":"Proposed: a term-long research thread or a computational/dry CURE leveraging our bioinformatics strength, replacing the retired touch-everything-once lab."},
-    {"label":"Bioinformatics / coding for omics","gap":True,"note":"Proposed elective or module; increasingly expected for modern molecular research."}],
+    {"kind":"existing","label":"Capstone research","courses":["HE490","HE699"],"note":"UG thesis and MSc thesis are the differentiators for graduate applications."},
+    {"kind":"substitution","label":"Redesigned experiential lab","note":"Redesign the existing experiential lab into one research thread or computational Course-Based Research Experience (CURE) that students own end to end."},
+    {"kind":"addition","label":"Bioinformatics/coding for omics","courses":["BI326"],"note":"Maybe a new elective, or route students to the existing BI326 Bioinformatics (cross-listed BI326/CH454)."}],
   "schoolNotes":["A documented authentic research experience matters more than any single course."]},
 
- {"id":"industry","label":"Biotech / Pharma / Regulatory","group":"Industry","exam":"Degree + technical skills (no single exam)",
+ {"id":"industry","label":"Biotech/Pharma/Regulatory","group":"Industry","exam":"Degree + technical skills (no single exam)",
   "summary":"Industry roles (QA/QC, clinical research associate, regulatory affairs, R&D technician) weight hands-on lab technique, GLP/regulatory literacy, data handling, and communication.",
   "buckets":[
     {"name":"Lab-bearing science","courses":["CH202","CH250","BI341","BI374"],"note":"Pick courses that actually carry labs (badged below)."},
     {"name":"Microbiology","courses":["BI374","BI376"],"note":"Relevant to QA/QC and biomanufacturing."},
     {"name":"Biochemistry","courses":["CH250","CH350"],"note":""},
-    {"name":"Virology / disease biology","courses":["HE432","HE438"],"note":"Biomedical virology, cancer biology."},
+    {"name":"Virology/disease biology","courses":["HE432","HE438"],"note":"Biomedical virology, cancer biology."},
     {"name":"Statistics & data","courses":["ST231"],"note":"Plus coding/bioinformatics for data roles."},
-    {"name":"Communication / KT","courses":["HE605"],"note":"Regulatory and scientific writing."},
+    {"name":"Communication/KT","courses":["HE605"],"note":"Regulatory and scientific writing."},
   ],
   "suggested":[
-    {"label":"Disease-biology & lab electives","courses":["HE432","HE438","BI341","BI374"],"note":"Relevant to biomanufacturing, QA/QC, and R&D roles."},
-    {"label":"GLP/GMP & regulatory literacy, QA/QC","gap":True,"note":"Not currently offered. Proposed as a module or micro-credential rather than a full course."},
-    {"label":"Scientific & regulatory writing","gap":True,"note":"Covered at the MSc level (HE605) but thin in the UG cluster; proposed as an embedded component."}],
+    {"kind":"existing","label":"Disease-biology & lab electives","courses":["HE432","HE438","BI341","BI374"],"note":"Relevant to biomanufacturing, QA/QC, and R&D roles, all existing."},
+    {"kind":"module","label":"GLP/regulatory & QA/QC literacy","note":"Not currently offered. Proposed as a module or micro-credential, not a full course."},
+    {"kind":"module","label":"Scientific/regulatory writing","note":"Covered a bit at the MSc level (HE605); proposed as an embedded component in the UG cluster."}],
   "schoolNotes":["GLP/GMP and regulatory literacy are not currently covered by a dedicated course."]},
 ]
 PATHWAY_GROUPS = ["Medicine & dentistry","Other regulated clinical","Research & graduate","Industry"]

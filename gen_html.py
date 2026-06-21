@@ -192,6 +192,7 @@ body.gradmode .lvl-chip, body.gradmode #newOnly{display:none}
 .bucket.sugg{border-left:4px solid var(--accent2)}
 .bucket.gap{border-left:4px solid var(--med);background:linear-gradient(180deg,var(--panel),#241d12)}
 .gaptag{font-size:9.5px;font-weight:700;text-transform:uppercase;letter-spacing:.4px;background:var(--med);color:#1a1206;border-radius:4px;padding:1px 6px;vertical-align:middle}
+.kindtag{font-size:9px;font-weight:700;text-transform:uppercase;letter-spacing:.4px;color:#fff;border-radius:4px;padding:1px 6px;margin-right:7px;vertical-align:middle}
 </style>
 </head>
 <body>
@@ -199,7 +200,7 @@ body.gradmode .lvl-chip, body.gradmode #newOnly{display:none}
   <div class="row">
     <div>
       <h1>WLU Health Sciences &mdash; Academic Calendar Review</h1>
-      <div class="sub">Faculty of Science &middot; HE / HN course listings &amp; Honours BSc structure</div>
+      <div class="sub">Faculty of Science &middot; HE/HN course listings &amp; Honours BSc structure</div>
     </div>
     <div class="spacer"></div>
     <button class="editbtn" id="editBtn" title="Toggle editing of instructors and issue status">&#9998; Edit</button>
@@ -278,7 +279,7 @@ body.gradmode .lvl-chip, body.gradmode #newOnly{display:none}
     <div id="facultyIssues"></div>
     <div class="facgrid">
       <div><h3 class="fach">Listed in calendar</h3><div id="facListed" class="faclist"></div></div>
-      <div><h3 class="fach">Missing / needs correction</h3><div id="facMissing" class="faclist"></div></div>
+      <div><h3 class="fach">Missing/needs correction</h3><div id="facMissing" class="faclist"></div></div>
     </div>
   </section>
 </main>
@@ -428,7 +429,7 @@ function reqLine(label,val){
   const danglers=["HE302","HE434","HE211","KP2222"];
   let html=val;
   danglers.forEach(d=>{html=html.replace(new RegExp("\\b"+d+"\\b","g"),
-    `<span class="refcode dangling" title="No course entry / typo">${d}</span>`);});
+    `<span class="refcode dangling" title="No course entry/typo">${d}</span>`);});
   return `<div class="sec req"><h4>${label}</h4><p>${html}</p></div>`;
 }
 
@@ -476,7 +477,7 @@ function allIssueRows(){
     DATA.gradProgramIssues.forEach((i,idx)=>rows.push({code:"MSc PROGRAM",title:"MSc structure",k:issueKey("GPROGRAM",idx),...i}));
   } else {
     DATA.programIssues.forEach((i,idx)=>rows.push({code:"PROGRAM",title:"Degree structure",k:issueKey("PROGRAM",idx),...i}));
-    DATA.globalIssues.forEach((i,idx)=>rows.push({code:"GLOBAL",title:"Both years / site-wide",k:issueKey("GLOBAL",idx),...i}));
+    DATA.globalIssues.forEach((i,idx)=>rows.push({code:"GLOBAL",title:"Both years/site-wide",k:issueKey("GLOBAL",idx),...i}));
   }
   (DATA.facultyIssues||[]).forEach((i,idx)=>rows.push({code:"FACULTY",title:"Faculty roster",k:issueKey("FACULTY",idx),...i}));
   return rows;
@@ -486,7 +487,7 @@ function renderIssues(){
   const open=all.filter(r=>{const s=getStatus(r.k);return s!=="fixed"&&s!=="wontfix";});
   const done=all.length-open.length;
   const groups={hi:[],med:[],low:[]}; all.forEach(r=>groups[r.sev].push(r));
-  const names={hi:"High severity",med:"Medium severity",low:"Low severity / style"};
+  const names={hi:"High severity",med:"Medium severity",low:"Low severity/style"};
   let html=`<div class="note" style="margin-bottom:10px">${all.length} findings &middot; ${done} marked fixed/won't-fix &middot; ${all.length-done} open</div>`;
   ["hi","med","low"].forEach(s=>{
     if(!groups[s].length)return;
@@ -620,7 +621,7 @@ function renderDiff(){
   const notFixed = isGrad()
     ? `The 2026/27 change was splitting admission requirements into separate thesis-stream and coursework-stream paragraphs. The 'optio n' and 'BSC' typos and the undefined HE699 asterisk persist unchanged in both years.`
     : `Every spelling, grammar, and dangling-reference issue from 2025/26 (HE302, HE434, HE211, the Year-4 list, the program-note typos) is reproduced unchanged in 2026/27.`;
-  h+=`<div class="diffsec"><h3>Notable change / not fixed</h3><div class="issue med"><div class="tag"><b>${isGrad()?"MSc":"BSc"}</b></div>${notFixed}</div></div>`;
+  h+=`<div class="diffsec"><h3>Notable change/not fixed</h3><div class="issue med"><div class="tag"><b>${isGrad()?"MSc":"BSc"}</b></div>${notFixed}</div></div>`;
   $("#diffBody").innerHTML=h;
 }
 
@@ -633,6 +634,14 @@ function courseChip(code){
   const open=`onclick="event.preventDefault();window.open('${ci.url}','_blank')"`;
   return `<a class="cchip" href="${ci.url}" target="_blank" rel="noopener" ${open}><b>${code}</b>${lab}${ttl}</a>`;
 }
+const KINDMETA={
+  existing:{t:"existing",c:"#6b7280"},
+  addition:{t:"new elective",c:"#3a7bd5"},
+  module:{t:"module",c:"#7c5cff"},
+  substitution:{t:"substitution",c:"#c98a2b"},
+  advising:{t:"advising",c:"#2bb3a3"},
+  external:{t:"external",c:"#6b7280"},
+};
 function renderPathways(){
   // selector grouped by pathwayGroups
   let sel="";
@@ -654,11 +663,13 @@ function renderPathways(){
       : (b.courses.length? b.courses.map(courseChip).join("") : `<span class="cchip arts">no WLU-Science course</span>`);
     left+=`<div class="bucket"><h4>${b.name}</h4>${b.note?`<p class="why">${b.note}</p>`:""}<div class="cchips">${chips}</div></div>`;
   });
-  // right: suggested electives + proposed additions (gaps)
+  // right: suggested electives + proposed additions, tagged by kind
   let right=`<div class="colhead">Suggested electives &amp; proposed additions</div>`;
   (p.suggested||[]).forEach(s=>{
+    const m=KINDMETA[s.kind]||KINDMETA.existing;
+    const proposed=(s.kind==="addition"||s.kind==="module"||s.kind==="substitution");
     const chips = (s.courses&&s.courses.length)? `<div class="cchips" style="margin-top:7px">${s.courses.map(courseChip).join("")}</div>` : "";
-    right+=`<div class="bucket ${s.gap?'gap':'sugg'}"><h4>${s.gap?'&#9650; ':''}${s.label}${s.gap?' <span class="gaptag">proposed / not offered</span>':''}</h4>${s.note?`<p class="why">${s.note}</p>`:""}${chips}</div>`;
+    right+=`<div class="bucket ${proposed?'gap':'sugg'}"><h4><span class="kindtag" style="background:${m.c}">${m.t}</span> ${s.label}</h4>${s.note?`<p class="why">${s.note}</p>`:""}${chips}</div>`;
   });
   h+=`<div class="pathcols"><div>${left}</div><div>${right}</div></div>`;
   if(p.schoolNotes&&p.schoolNotes.length)

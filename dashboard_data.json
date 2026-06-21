@@ -2845,7 +2845,14 @@
       "level": 300,
       "dept": "BI"
     },
-    "BI307/WASC303": {
+    "BI307": {
+      "title": "Limnology Field Methods",
+      "lab": true,
+      "url": "https://academic-calendar.wlu.ca/course.php?c=79371&cal=1&d=3247&s=1170&y=93",
+      "level": 300,
+      "dept": "BI"
+    },
+    "WASC303": {
       "title": "Limnology Field Methods",
       "lab": true,
       "url": "https://academic-calendar.wlu.ca/course.php?c=79371&cal=1&d=3247&s=1170&y=93",
@@ -2866,14 +2873,28 @@
       "level": 300,
       "dept": "BI"
     },
-    "BI317/HE303": {
+    "BI317": {
       "title": "Introduction to Immunology",
       "lab": false,
       "url": "https://academic-calendar.wlu.ca/course.php?c=79369&cal=1&d=3247&s=1170&y=93",
       "level": 300,
       "dept": "BI"
     },
-    "BI326/CH454": {
+    "HE303": {
+      "title": "Introduction to Immunology",
+      "lab": false,
+      "url": "https://academic-calendar.wlu.ca/course.php?c=79369&cal=1&d=3247&s=1170&y=93",
+      "level": 300,
+      "dept": "BI"
+    },
+    "BI326": {
+      "title": "Bioinformatics",
+      "lab": true,
+      "url": "https://academic-calendar.wlu.ca/course.php?c=79327&cal=1&d=3247&s=1170&y=93",
+      "level": 300,
+      "dept": "BI"
+    },
+    "CH454": {
       "title": "Bioinformatics",
       "lab": true,
       "url": "https://academic-calendar.wlu.ca/course.php?c=79327&cal=1&d=3247&s=1170&y=93",
@@ -3041,7 +3062,14 @@
       "level": 400,
       "dept": "BI"
     },
-    "BI416/HE431": {
+    "BI416": {
+      "title": "Pathophysiology",
+      "lab": false,
+      "url": "https://academic-calendar.wlu.ca/course.php?c=79360&cal=1&d=3247&s=1170&y=93",
+      "level": 400,
+      "dept": "BI"
+    },
+    "HE431": {
       "title": "Pathophysiology",
       "lab": false,
       "url": "https://academic-calendar.wlu.ca/course.php?c=79360&cal=1&d=3247&s=1170&y=93",
@@ -3132,7 +3160,14 @@
       "level": 400,
       "dept": "BI"
     },
-    "BI470/HE432": {
+    "BI470": {
+      "title": "Biomedical Virology",
+      "lab": false,
+      "url": "https://academic-calendar.wlu.ca/course.php?c=79362&cal=1&d=3247&s=1170&y=93",
+      "level": 400,
+      "dept": "BI"
+    },
+    "HE432": {
       "title": "Biomedical Virology",
       "lab": false,
       "url": "https://academic-calendar.wlu.ca/course.php?c=79362&cal=1&d=3247&s=1170&y=93",
@@ -3517,13 +3552,6 @@
       "level": 400,
       "dept": "CH"
     },
-    "CH454/BI326": {
-      "title": "Bioinformatics: Genomics and Proteomics",
-      "lab": false,
-      "url": "https://academic-calendar.wlu.ca/course.php?c=79409&cal=1&d=3248&s=1170&y=93",
-      "level": 400,
-      "dept": "CH"
-    },
     "CH456": {
       "title": "Medicinal Chemistry",
       "lab": false,
@@ -3601,35 +3629,77 @@
       "level": 200,
       "dept": "KP"
     },
-    "KP211/SY211": {
+    "KP211": {
       "title": "Sociology of Physical Activity",
       "lab": false,
       "url": "https://academic-calendar.wlu.ca/course.php?c=79484&cal=1&d=3250&s=1170&y=93",
       "level": 200,
       "dept": "KP"
     },
-    "KP221/HN210": {
+    "SY211": {
+      "title": "Sociology of Physical Activity",
+      "lab": false,
+      "url": "https://academic-calendar.wlu.ca/course.php?c=79484&cal=1&d=3250&s=1170&y=93",
+      "level": 200,
+      "dept": "KP"
+    },
+    "KP221": {
       "title": "Functional Human Anatomy",
       "lab": true,
       "url": "https://academic-calendar.wlu.ca/course.php?c=79486&cal=1&d=3250&s=1170&y=93",
       "level": 200,
       "dept": "KP"
     },
-    "KP222/HN220": {
+    "HN210": {
+      "title": "Functional Human Anatomy",
+      "lab": true,
+      "url": "https://academic-calendar.wlu.ca/course.php?c=79486&cal=1&d=3250&s=1170&y=93",
+      "level": 200,
+      "dept": "KP"
+    },
+    "KP222": {
       "title": "Human Physiology",
       "lab": true,
       "url": "https://academic-calendar.wlu.ca/course.php?c=79485&cal=1&d=3250&s=1170&y=93",
       "level": 200,
       "dept": "KP"
     },
-    "KP224/HE224/HS202": {
+    "HN220": {
+      "title": "Human Physiology",
+      "lab": true,
+      "url": "https://academic-calendar.wlu.ca/course.php?c=79485&cal=1&d=3250&s=1170&y=93",
+      "level": 200,
+      "dept": "KP"
+    },
+    "KP224": {
       "title": "Anatomy and Physiology I",
       "lab": true,
       "url": "https://academic-calendar.wlu.ca/course.php?c=82056&cal=1&d=3250&s=1170&y=93",
       "level": 200,
       "dept": "KP"
     },
-    "KP225/HE225;HS204": {
+    "HE224": {
+      "title": "Anatomy and Physiology I",
+      "lab": true,
+      "url": "https://academic-calendar.wlu.ca/course.php?c=82056&cal=1&d=3250&s=1170&y=93",
+      "level": 200,
+      "dept": "KP"
+    },
+    "HS202": {
+      "title": "Anatomy and Physiology I",
+      "lab": true,
+      "url": "https://academic-calendar.wlu.ca/course.php?c=82056&cal=1&d=3250&s=1170&y=93",
+      "level": 200,
+      "dept": "KP"
+    },
+    "KP225": {
+      "title": "Anatomy and Physiology II",
+      "lab": true,
+      "url": "https://academic-calendar.wlu.ca/course.php?c=82058&cal=1&d=3250&s=1170&y=93",
+      "level": 200,
+      "dept": "KP"
+    },
+    "HE225;HS204": {
       "title": "Anatomy and Physiology II",
       "lab": true,
       "url": "https://academic-calendar.wlu.ca/course.php?c=82058&cal=1&d=3250&s=1170&y=93",
@@ -3685,14 +3755,28 @@
       "level": 300,
       "dept": "KP"
     },
-    "KP320/HE320": {
+    "KP320": {
       "title": "Integrative Human Physiology",
       "lab": false,
       "url": "https://academic-calendar.wlu.ca/course.php?c=82053&cal=1&d=3250&s=1170&y=93",
       "level": 300,
       "dept": "KP"
     },
-    "KP321/HE321": {
+    "HE320": {
+      "title": "Integrative Human Physiology",
+      "lab": false,
+      "url": "https://academic-calendar.wlu.ca/course.php?c=82053&cal=1&d=3250&s=1170&y=93",
+      "level": 300,
+      "dept": "KP"
+    },
+    "KP321": {
+      "title": "Regional Human Anatomy",
+      "lab": true,
+      "url": "https://academic-calendar.wlu.ca/course.php?c=82054&cal=1&d=3250&s=1170&y=93",
+      "level": 300,
+      "dept": "KP"
+    },
+    "HE321": {
       "title": "Regional Human Anatomy",
       "lab": true,
       "url": "https://academic-calendar.wlu.ca/course.php?c=82054&cal=1&d=3250&s=1170&y=93",
@@ -3748,7 +3832,14 @@
       "level": 300,
       "dept": "KP"
     },
-    "KP343/GS343": {
+    "KP343": {
+      "title": "Sport Development, Governance, and Globalization",
+      "lab": false,
+      "url": "https://academic-calendar.wlu.ca/course.php?c=79483&cal=1&d=3250&s=1170&y=93",
+      "level": 300,
+      "dept": "KP"
+    },
+    "GS343": {
       "title": "Sport Development, Governance, and Globalization",
       "lab": false,
       "url": "https://academic-calendar.wlu.ca/course.php?c=79483&cal=1&d=3250&s=1170&y=93",
@@ -3846,14 +3937,28 @@
       "level": 400,
       "dept": "KP"
     },
-    "KP434/HE300": {
+    "KP434": {
       "title": "Epidemiology",
       "lab": false,
       "url": "https://academic-calendar.wlu.ca/course.php?c=79527&cal=1&d=3250&s=1170&y=93",
       "level": 400,
       "dept": "KP"
     },
-    "KP435/HE435": {
+    "HE300": {
+      "title": "Epidemiology",
+      "lab": false,
+      "url": "https://academic-calendar.wlu.ca/course.php?c=79527&cal=1&d=3250&s=1170&y=93",
+      "level": 400,
+      "dept": "KP"
+    },
+    "KP435": {
+      "title": "Exercise is Medicine",
+      "lab": false,
+      "url": "https://academic-calendar.wlu.ca/course.php?c=79528&cal=1&d=3250&s=1170&y=93",
+      "level": 400,
+      "dept": "KP"
+    },
+    "HE435": {
       "title": "Exercise is Medicine",
       "lab": false,
       "url": "https://academic-calendar.wlu.ca/course.php?c=79528&cal=1&d=3250&s=1170&y=93",
@@ -4567,14 +4672,28 @@
       "level": 200,
       "dept": "PC"
     },
-    "PC220/CP220": {
+    "PC220": {
       "title": "Digital Electronics",
       "lab": false,
       "url": "https://academic-calendar.wlu.ca/course.php?c=79207&cal=1&d=3245&s=1170&y=93",
       "level": 200,
       "dept": "PC"
     },
-    "PC221/CP221": {
+    "CP220": {
+      "title": "Digital Electronics",
+      "lab": false,
+      "url": "https://academic-calendar.wlu.ca/course.php?c=79207&cal=1&d=3245&s=1170&y=93",
+      "level": 200,
+      "dept": "PC"
+    },
+    "PC221": {
+      "title": "Analog Electronics I",
+      "lab": true,
+      "url": "https://academic-calendar.wlu.ca/course.php?c=79214&cal=1&d=3245&s=1170&y=93",
+      "level": 200,
+      "dept": "PC"
+    },
+    "CP221": {
       "title": "Analog Electronics I",
       "lab": true,
       "url": "https://academic-calendar.wlu.ca/course.php?c=79214&cal=1&d=3245&s=1170&y=93",
@@ -4616,7 +4735,14 @@
       "level": 200,
       "dept": "PC"
     },
-    "PC305/CP305": {
+    "PC305": {
+      "title": "Quantum Software Development",
+      "lab": false,
+      "url": "https://academic-calendar.wlu.ca/course.php?c=79243&cal=1&d=3245&s=1170&y=93",
+      "level": 300,
+      "dept": "PC"
+    },
+    "CP305": {
       "title": "Quantum Software Development",
       "lab": false,
       "url": "https://academic-calendar.wlu.ca/course.php?c=79243&cal=1&d=3245&s=1170&y=93",
@@ -4630,21 +4756,42 @@
       "level": 300,
       "dept": "PC"
     },
-    "PC315/CP315": {
+    "PC315": {
       "title": "Introduction to Scientific Computation",
       "lab": false,
       "url": "https://academic-calendar.wlu.ca/course.php?c=79217&cal=1&d=3245&s=1170&y=93",
       "level": 300,
       "dept": "PC"
     },
-    "PC319/CP319": {
+    "CP315": {
+      "title": "Introduction to Scientific Computation",
+      "lab": false,
+      "url": "https://academic-calendar.wlu.ca/course.php?c=79217&cal=1&d=3245&s=1170&y=93",
+      "level": 300,
+      "dept": "PC"
+    },
+    "PC319": {
       "title": "Digital System Design",
       "lab": false,
       "url": "https://academic-calendar.wlu.ca/course.php?c=79218&cal=1&d=3245&s=1170&y=93",
       "level": 300,
       "dept": "PC"
     },
-    "PC320/CP320": {
+    "CP319": {
+      "title": "Digital System Design",
+      "lab": false,
+      "url": "https://academic-calendar.wlu.ca/course.php?c=79218&cal=1&d=3245&s=1170&y=93",
+      "level": 300,
+      "dept": "PC"
+    },
+    "PC320": {
+      "title": "Physical Computing: Digital Interaction with the Analog World",
+      "lab": true,
+      "url": "https://academic-calendar.wlu.ca/course.php?c=79240&cal=1&d=3245&s=1170&y=93",
+      "level": 300,
+      "dept": "PC"
+    },
+    "CP320": {
       "title": "Physical Computing: Digital Interaction with the Analog World",
       "lab": true,
       "url": "https://academic-calendar.wlu.ca/course.php?c=79240&cal=1&d=3245&s=1170&y=93",
@@ -4679,7 +4826,14 @@
       "level": 300,
       "dept": "PC"
     },
-    "PC351/CP351": {
+    "PC351": {
+      "title": "Quantum Computing",
+      "lab": false,
+      "url": "https://academic-calendar.wlu.ca/course.php?c=79241&cal=1&d=3245&s=1170&y=93",
+      "level": 300,
+      "dept": "PC"
+    },
+    "CP351": {
       "title": "Quantum Computing",
       "lab": false,
       "url": "https://academic-calendar.wlu.ca/course.php?c=79241&cal=1&d=3245&s=1170&y=93",
@@ -4693,7 +4847,14 @@
       "level": 300,
       "dept": "PC"
     },
-    "PC364/CP364": {
+    "PC364": {
+      "title": "Data Communication and Networks",
+      "lab": true,
+      "url": "https://academic-calendar.wlu.ca/course.php?c=79224&cal=1&d=3245&s=1170&y=93",
+      "level": 300,
+      "dept": "PC"
+    },
+    "CP364": {
       "title": "Data Communication and Networks",
       "lab": true,
       "url": "https://academic-calendar.wlu.ca/course.php?c=79224&cal=1&d=3245&s=1170&y=93",
@@ -5022,7 +5183,14 @@
       "level": 300,
       "dept": "PS"
     },
-    "PS368/HE368": {
+    "PS368": {
+      "title": "Functional Neuroanatomy",
+      "lab": true,
+      "url": "https://academic-calendar.wlu.ca/course.php?c=79308&cal=1&d=3246&s=1170&y=93",
+      "level": 300,
+      "dept": "PS"
+    },
+    "HE368": {
       "title": "Functional Neuroanatomy",
       "lab": true,
       "url": "https://academic-calendar.wlu.ca/course.php?c=79308&cal=1&d=3246&s=1170&y=93",
@@ -5092,7 +5260,14 @@
       "level": 300,
       "dept": "PS"
     },
-    "PS389/HE305": {
+    "PS389": {
+      "title": "Positive Psychology",
+      "lab": false,
+      "url": "https://academic-calendar.wlu.ca/course.php?c=79304&cal=1&d=3246&s=1170&y=93",
+      "level": 300,
+      "dept": "PS"
+    },
+    "HE305": {
       "title": "Positive Psychology",
       "lab": false,
       "url": "https://academic-calendar.wlu.ca/course.php?c=79304&cal=1&d=3246&s=1170&y=93",
@@ -5358,7 +5533,14 @@
       "level": 400,
       "dept": "ST"
     },
-    "ST492/EC455": {
+    "ST492": {
+      "title": "Time Series Analysis",
+      "lab": false,
+      "url": "https://academic-calendar.wlu.ca/course.php?c=79587&cal=1&d=3251&s=1170&y=93",
+      "level": 400,
+      "dept": "ST"
+    },
+    "EC455": {
       "title": "Time Series Analysis",
       "lab": false,
       "url": "https://academic-calendar.wlu.ca/course.php?c=79587&cal=1&d=3251&s=1170&y=93",
@@ -5371,34 +5553,6 @@
       "url": "https://academic-calendar.wlu.ca/course.php?c=79540&cal=1&d=3251&s=1170&y=93",
       "level": 400,
       "dept": "ST"
-    },
-    "HN210": {
-      "title": "Human Anatomy",
-      "lab": false,
-      "url": "https://academic-calendar.wlu.ca/course.php?c=79619&cal=1&d=3258&s=1170&y=93",
-      "level": 200,
-      "dept": "HE"
-    },
-    "KP221": {
-      "title": "Human Anatomy",
-      "lab": false,
-      "url": "https://academic-calendar.wlu.ca/course.php?c=79619&cal=1&d=3258&s=1170&y=93",
-      "level": 200,
-      "dept": "HE"
-    },
-    "HN220": {
-      "title": "Human Physiology",
-      "lab": false,
-      "url": "https://academic-calendar.wlu.ca/course.php?c=79620&cal=1&d=3258&s=1170&y=93",
-      "level": 200,
-      "dept": "HE"
-    },
-    "KP222": {
-      "title": "Human Physiology",
-      "lab": false,
-      "url": "https://academic-calendar.wlu.ca/course.php?c=79620&cal=1&d=3258&s=1170&y=93",
-      "level": 200,
-      "dept": "HE"
     },
     "HE100": {
       "title": "Health Issues I",
@@ -5419,20 +5573,6 @@
       "lab": false,
       "url": "https://academic-calendar.wlu.ca/course.php?c=79623&cal=1&d=3258&s=1170&y=93",
       "level": 200,
-      "dept": "HE"
-    },
-    "HE300": {
-      "title": "Epidemiology",
-      "lab": false,
-      "url": "https://academic-calendar.wlu.ca/course.php?c=79624&cal=1&d=3258&s=1170&y=93",
-      "level": 300,
-      "dept": "HE"
-    },
-    "KP434": {
-      "title": "Epidemiology",
-      "lab": false,
-      "url": "https://academic-calendar.wlu.ca/course.php?c=79624&cal=1&d=3258&s=1170&y=93",
-      "level": 300,
       "dept": "HE"
     },
     "HE400": {
@@ -5505,20 +5645,6 @@
       "level": 300,
       "dept": "HE"
     },
-    "HE431": {
-      "title": "Pathophysiology",
-      "lab": false,
-      "url": "https://academic-calendar.wlu.ca/course.php?c=79635&cal=1&d=3258&s=1170&y=93",
-      "level": 400,
-      "dept": "HE"
-    },
-    "BI416": {
-      "title": "Pathophysiology",
-      "lab": false,
-      "url": "https://academic-calendar.wlu.ca/course.php?c=79635&cal=1&d=3258&s=1170&y=93",
-      "level": 400,
-      "dept": "HE"
-    },
     "HE430": {
       "title": "Advanced nutrition and chronic disease",
       "lab": false,
@@ -5540,20 +5666,6 @@
       "level": 400,
       "dept": "HE"
     },
-    "HE432": {
-      "title": "Biomedical Virology",
-      "lab": false,
-      "url": "https://academic-calendar.wlu.ca/course.php?c=79639&cal=1&d=3258&s=1170&y=93",
-      "level": 400,
-      "dept": "HE"
-    },
-    "BI470": {
-      "title": "Biomedical Virology",
-      "lab": false,
-      "url": "https://academic-calendar.wlu.ca/course.php?c=79639&cal=1&d=3258&s=1170&y=93",
-      "level": 400,
-      "dept": "HE"
-    },
     "HE350": {
       "title": "Directed Studies",
       "lab": false,
@@ -5568,52 +5680,10 @@
       "level": 300,
       "dept": "HE"
     },
-    "HE435": {
-      "title": "Exercise is Medicine",
-      "lab": false,
-      "url": "https://academic-calendar.wlu.ca/course.php?c=79642&cal=1&d=3258&s=1170&y=93",
-      "level": 400,
-      "dept": "HE"
-    },
-    "KP435": {
-      "title": "Exercise is Medicine",
-      "lab": false,
-      "url": "https://academic-calendar.wlu.ca/course.php?c=79642&cal=1&d=3258&s=1170&y=93",
-      "level": 400,
-      "dept": "HE"
-    },
-    "HE305": {
-      "title": "Positive Psychology",
-      "lab": false,
-      "url": "https://academic-calendar.wlu.ca/course.php?c=79643&cal=1&d=3258&s=1170&y=93",
-      "level": 300,
-      "dept": "HE"
-    },
-    "PS389": {
-      "title": "Positive Psychology",
-      "lab": false,
-      "url": "https://academic-calendar.wlu.ca/course.php?c=79643&cal=1&d=3258&s=1170&y=93",
-      "level": 300,
-      "dept": "HE"
-    },
     "HE304": {
       "title": "Introduction to Indigenous Health and Well-Being",
       "lab": false,
       "url": "https://academic-calendar.wlu.ca/course.php?c=79644&cal=1&d=3258&s=1170&y=93",
-      "level": 300,
-      "dept": "HE"
-    },
-    "HE303": {
-      "title": "Introduction to Immunology",
-      "lab": false,
-      "url": "https://academic-calendar.wlu.ca/course.php?c=79645&cal=1&d=3258&s=1170&y=93",
-      "level": 300,
-      "dept": "HE"
-    },
-    "BI317": {
-      "title": "Introduction to Immunology",
-      "lab": false,
-      "url": "https://academic-calendar.wlu.ca/course.php?c=79645&cal=1&d=3258&s=1170&y=93",
       "level": 300,
       "dept": "HE"
     },
@@ -5624,20 +5694,6 @@
       "level": 200,
       "dept": "HE"
     },
-    "HE368": {
-      "title": "Functional Neuroanatomy",
-      "lab": true,
-      "url": "https://academic-calendar.wlu.ca/course.php?c=79647&cal=1&d=3258&s=1170&y=93",
-      "level": 300,
-      "dept": "HE"
-    },
-    "PS368": {
-      "title": "Functional Neuroanatomy",
-      "lab": true,
-      "url": "https://academic-calendar.wlu.ca/course.php?c=79647&cal=1&d=3258&s=1170&y=93",
-      "level": 300,
-      "dept": "HE"
-    },
     "HE438": {
       "title": "Cancer Biology",
       "lab": false,
@@ -5645,35 +5701,7 @@
       "level": 400,
       "dept": "HE"
     },
-    "HE224": {
-      "title": "Anatomy and Physiology I",
-      "lab": true,
-      "url": "https://academic-calendar.wlu.ca/course.php?c=82049&cal=1&d=3258&s=1170&y=93",
-      "level": 200,
-      "dept": "HE"
-    },
-    "KP224": {
-      "title": "Anatomy and Physiology I",
-      "lab": true,
-      "url": "https://academic-calendar.wlu.ca/course.php?c=82049&cal=1&d=3258&s=1170&y=93",
-      "level": 200,
-      "dept": "HE"
-    },
-    "HS202": {
-      "title": "Anatomy and Physiology I",
-      "lab": true,
-      "url": "https://academic-calendar.wlu.ca/course.php?c=82049&cal=1&d=3258&s=1170&y=93",
-      "level": 200,
-      "dept": "HE"
-    },
     "HE225": {
-      "title": "Anatomy and Physiology II",
-      "lab": true,
-      "url": "https://academic-calendar.wlu.ca/course.php?c=82050&cal=1&d=3258&s=1170&y=93",
-      "level": 200,
-      "dept": "HE"
-    },
-    "KP225": {
       "title": "Anatomy and Physiology II",
       "lab": true,
       "url": "https://academic-calendar.wlu.ca/course.php?c=82050&cal=1&d=3258&s=1170&y=93",
@@ -5685,34 +5713,6 @@
       "lab": true,
       "url": "https://academic-calendar.wlu.ca/course.php?c=82050&cal=1&d=3258&s=1170&y=93",
       "level": 200,
-      "dept": "HE"
-    },
-    "HE320": {
-      "title": "Integrative Human Physiology",
-      "lab": false,
-      "url": "https://academic-calendar.wlu.ca/course.php?c=82051&cal=1&d=3258&s=1170&y=93",
-      "level": 300,
-      "dept": "HE"
-    },
-    "KP320": {
-      "title": "Integrative Human Physiology",
-      "lab": false,
-      "url": "https://academic-calendar.wlu.ca/course.php?c=82051&cal=1&d=3258&s=1170&y=93",
-      "level": 300,
-      "dept": "HE"
-    },
-    "HE321": {
-      "title": "Regional Human Anatomy",
-      "lab": true,
-      "url": "https://academic-calendar.wlu.ca/course.php?c=82055&cal=1&d=3258&s=1170&y=93",
-      "level": 300,
-      "dept": "HE"
-    },
-    "KP321": {
-      "title": "Regional Human Anatomy",
-      "lab": true,
-      "url": "https://academic-calendar.wlu.ca/course.php?c=82055&cal=1&d=3258&s=1170&y=93",
-      "level": 300,
       "dept": "HE"
     },
     "HE601": {
@@ -5847,11 +5847,11 @@
       "id": "med",
       "label": "Medicine (MD)",
       "group": "Medicine & dentistry",
-      "exam": "MCAT + CASPer/Casper",
+      "exam": "MCAT, GPA, CASPer",
       "summary": "Most Canadian medical schools require NO specific prerequisite courses (e.g. McMaster, Queen's, Western, Calgary, Alberta). The binding gates are MCAT content coverage, GPA, and CASPer/interview. A prescriptive minority and new Indigenous Studies requirements are the exceptions, below.",
       "buckets": [
         {
-          "name": "Biology / life sciences",
+          "name": "Biology/life sciences",
           "courses": [
             "BI110",
             "BI111",
@@ -5892,7 +5892,7 @@
           "note": "McGill requires 2 physics WITH labs; MCAT content. Use life-sci PC141/142 (lab) not the lecture-only versions."
         },
         {
-          "name": "Statistics / quantitative",
+          "name": "Statistics/quantitative",
           "courses": [
             "ST231"
           ],
@@ -5921,6 +5921,7 @@
       ],
       "suggested": [
         {
+          "kind": "existing",
           "label": "Science-depth HE electives",
           "courses": [
             "HE303",
@@ -5928,12 +5929,12 @@
             "HE330",
             "HE368"
           ],
-          "note": "Reinforce MCAT biology/biochemistry content and a competitive transcript."
+          "note": "Existing electives that reinforce MCAT biology/biochemistry content and a competitive transcript."
         },
         {
-          "label": "Professional & interview readiness",
-          "gap": true,
-          "note": "CASPer/MMI and ethics preparation is a competency, not a course. Proposed: embed in an HE seminar rather than add a course."
+          "kind": "module",
+          "label": "CASPer/MMI & ethics prep",
+          "note": "The only addition. Could be embedded in an existing seminar, or may already be covered by the premed society. Not a new course."
         }
       ],
       "schoolNotes": [
@@ -5943,7 +5944,7 @@
     },
     {
       "id": "dent",
-      "label": "Dentistry (DDS / DMD)",
+      "label": "Dentistry (DDS/DMD)",
       "group": "Medicine & dentistry",
       "exam": "DAT (paused at McGill)",
       "summary": "Unlike medicine, ALL 10 Canadian dental schools have prescriptive prerequisites, and many specify 'with labs'. Biology, general chemistry and organic chemistry are near-universal; biochemistry (7/10) and physiology (5/10) are common.",
@@ -6012,13 +6013,13 @@
           "note": "Required at UAlberta specifically."
         },
         {
-          "name": "English / writing",
+          "name": "English/writing",
           "courses": [],
           "arts": true,
           "note": "Required at several; Faculty of Arts."
         },
         {
-          "name": "Humanities / social science",
+          "name": "Humanities/social science",
           "courses": [],
           "arts": true,
           "note": "Required at Dalhousie, Manitoba, Saskatchewan; Faculty of Arts."
@@ -6026,6 +6027,21 @@
       ],
       "suggested": [
         {
+          "kind": "advising",
+          "label": "Take CH250 and HN220 early",
+          "courses": [
+            "CH250",
+            "HN220"
+          ],
+          "note": "Biochemistry and physiology are common dental prerequisites; choosing them early avoids a Year-4 scramble. Advising, not a new course."
+        },
+        {
+          "kind": "substitution",
+          "label": "First-year biology lab",
+          "note": "BI110/BI111 carry no lab; for schools that require a first-year biology lab, pick a lab-bearing substitute."
+        },
+        {
+          "kind": "existing",
           "label": "HE science electives",
           "courses": [
             "HE303",
@@ -6033,19 +6049,6 @@
             "HE438"
           ],
           "note": "Reinforce the dental science base (immunology, pathophysiology, cancer biology)."
-        },
-        {
-          "label": "Pick biochem + physiology early",
-          "courses": [
-            "CH250",
-            "HN220"
-          ],
-          "note": "Both are common dental prerequisites; choosing them early avoids a Year-4 scramble (advising, not a new course)."
-        },
-        {
-          "label": "First-year biology lab",
-          "gap": true,
-          "note": "BI110/111 carry no lab; schools requiring a first-year bio lab may need a lab-bearing substitute."
         }
       ],
       "schoolNotes": [
@@ -6055,7 +6058,7 @@
     },
     {
       "id": "labmed",
-      "label": "Medical Laboratory Science / Clinical Genetics",
+      "label": "Medical Laboratory Science/Clinical Genetics",
       "group": "Other regulated clinical",
       "exam": "CSMLS certification (after accredited program)",
       "summary": "MLS and clinical-genetics paths value strong wet-lab technique, microbiology, biochemistry, genetics and cell/molecular biology. WLU is not an accredited MLT program, but these courses build the foundation and support bridging/graduate entry.",
@@ -6116,6 +6119,7 @@
       ],
       "suggested": [
         {
+          "kind": "existing",
           "label": "Lab-bearing & disease-biology electives",
           "courses": [
             "BI341",
@@ -6123,12 +6127,12 @@
             "HE431",
             "HE432"
           ],
-          "note": "Build hands-on technique and clinical relevance."
+          "note": "Hands-on technique and clinical relevance, all existing."
         },
         {
+          "kind": "external",
           "label": "Accredited MLT training is external",
-          "gap": true,
-          "note": "WLU is not a CSMLS-accredited MLT program; these courses build the foundation and support bridging/graduate entry only."
+          "note": "WLU is not a CSMLS-accredited MLT program; these courses build the foundation and support bridging or graduate entry only."
         }
       ],
       "schoolNotes": [
@@ -6180,7 +6184,7 @@
           "note": "Commonly required."
         },
         {
-          "name": "Communication / KT",
+          "name": "Communication/KT",
           "courses": [
             "HE605"
           ],
@@ -6189,18 +6193,19 @@
       ],
       "suggested": [
         {
+          "kind": "existing",
           "label": "Genetics depth + psychology",
           "courses": [
             "BI336",
             "PS101",
             "PS102"
           ],
-          "note": "Genetics depth plus developmental/abnormal psychology (PS/Arts) is commonly expected."
+          "note": "Genetics depth plus introductory (ideally developmental/abnormal) psychology, all existing."
         },
         {
-          "label": "Counselling / advocacy experience",
-          "gap": true,
-          "note": "GC programs expect demonstrated counselling, crisis-line, or advocacy experience."
+          "kind": "advising",
+          "label": "Counselling or advocacy experience",
+          "note": "Demonstrated counselling or advocacy experience, such as a crisis-line or peer-support placement. Advising, not a course."
         }
       ],
       "schoolNotes": [
@@ -6209,7 +6214,7 @@
     },
     {
       "id": "research",
-      "label": "Research / Graduate Study (thesis MSc, PhD)",
+      "label": "Research/Graduate Study (thesis MSc, PhD)",
       "group": "Research & graduate",
       "exam": "GPA + research experience + supervisor match",
       "summary": "Research paths weight experimental design, lab/computational technique, quantitative and bioinformatics skills, primary-literature appraisal, and scientific communication. The thesis MSc (HE699) and HE490 directed research are the capstones.",
@@ -6251,10 +6256,10 @@
           "courses": [
             "ST231"
           ],
-          "note": "Add upper-year stats / bioinformatics for omics."
+          "note": "Add upper-year stats/bioinformatics for omics."
         },
         {
-          "name": "Directed research / thesis",
+          "name": "Directed research/thesis",
           "courses": [
             "HE490",
             "HE699"
@@ -6274,22 +6279,26 @@
       ],
       "suggested": [
         {
+          "kind": "existing",
           "label": "Capstone research",
           "courses": [
             "HE490",
             "HE699"
           ],
-          "note": "UG thesis and MSc thesis are the differentiators for grad applications."
+          "note": "UG thesis and MSc thesis are the differentiators for graduate applications."
         },
         {
-          "label": "Redesigned experiential research",
-          "gap": true,
-          "note": "Proposed: a term-long research thread or a computational/dry CURE leveraging our bioinformatics strength, replacing the retired touch-everything-once lab."
+          "kind": "substitution",
+          "label": "Redesigned experiential lab",
+          "note": "Redesign the existing experiential lab into one research thread or computational Course-Based Research Experience (CURE) that students own end to end."
         },
         {
-          "label": "Bioinformatics / coding for omics",
-          "gap": true,
-          "note": "Proposed elective or module; increasingly expected for modern molecular research."
+          "kind": "addition",
+          "label": "Bioinformatics/coding for omics",
+          "courses": [
+            "BI326"
+          ],
+          "note": "Maybe a new elective, or route students to the existing BI326 Bioinformatics (cross-listed BI326/CH454)."
         }
       ],
       "schoolNotes": [
@@ -6298,7 +6307,7 @@
     },
     {
       "id": "industry",
-      "label": "Biotech / Pharma / Regulatory",
+      "label": "Biotech/Pharma/Regulatory",
       "group": "Industry",
       "exam": "Degree + technical skills (no single exam)",
       "summary": "Industry roles (QA/QC, clinical research associate, regulatory affairs, R&D technician) weight hands-on lab technique, GLP/regulatory literacy, data handling, and communication.",
@@ -6330,7 +6339,7 @@
           "note": ""
         },
         {
-          "name": "Virology / disease biology",
+          "name": "Virology/disease biology",
           "courses": [
             "HE432",
             "HE438"
@@ -6345,7 +6354,7 @@
           "note": "Plus coding/bioinformatics for data roles."
         },
         {
-          "name": "Communication / KT",
+          "name": "Communication/KT",
           "courses": [
             "HE605"
           ],
@@ -6354,6 +6363,7 @@
       ],
       "suggested": [
         {
+          "kind": "existing",
           "label": "Disease-biology & lab electives",
           "courses": [
             "HE432",
@@ -6361,17 +6371,17 @@
             "BI341",
             "BI374"
           ],
-          "note": "Relevant to biomanufacturing, QA/QC, and R&D roles."
+          "note": "Relevant to biomanufacturing, QA/QC, and R&D roles, all existing."
         },
         {
-          "label": "GLP/GMP & regulatory literacy, QA/QC",
-          "gap": true,
-          "note": "Not currently offered. Proposed as a module or micro-credential rather than a full course."
+          "kind": "module",
+          "label": "GLP/regulatory & QA/QC literacy",
+          "note": "Not currently offered. Proposed as a module or micro-credential, not a full course."
         },
         {
-          "label": "Scientific & regulatory writing",
-          "gap": true,
-          "note": "Covered at the MSc level (HE605) but thin in the UG cluster; proposed as an embedded component."
+          "kind": "module",
+          "label": "Scientific/regulatory writing",
+          "note": "Covered a bit at the MSc level (HE605); proposed as an embedded component in the UG cluster."
         }
       ],
       "schoolNotes": [
